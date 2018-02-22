@@ -1,0 +1,3 @@
+<?php
+// Interactive product finder
+?>

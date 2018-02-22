@@ -1,0 +1,3 @@
+<?php
+// Newsletter signup form
+?>
