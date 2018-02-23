@@ -25,7 +25,26 @@
       ?>
     </main>
 
-    <footer>
+    <footer class="universal-footer">
+      <?php // Universal footer blocks
+        // Newsletter signup form
+        get_template_part('partials/footer/newsletter');
+
+        // Footer masthead
+        get_template_part('partials/footer/masthead');
+
+        // Quicklink buttons
+        get_template_part('partials/footer/quicklinks');
+
+        // Contact blocks
+        get_template_part('partials/footer/contacts');
+
+        // Crediibility badges
+        get_template_part('partials/footer/badges');
+
+        // Copyright phrasing and links
+        get_template_part('partials/footer/copyright');
+      ?>
     </footer>
 
     <?php get_template_part('partials/meta/foot'); ?>
