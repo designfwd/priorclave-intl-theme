@@ -27,38 +27,38 @@
     <main>
       <?php
         // Introductory content
-        get_partial('partials/content/intro-decorated');
+        get_partial('content/intro-decorated');
 
         // Block links
-        get_partial('partials/navigation/link-blocks');
+        get_partial('navigation/link-blocks');
 
         // Brand slideshow
-        get_partial('partials/media/slider-brands');
+        get_partial('media/slider-brands');
 
         // Product spotlight
-        get_partial('partials/media/product-spotlight');
+        get_partial('media/product-spotlight');
       ?>
     </main>
 
     <footer class="universal-footer">
       <?php // Universal footer blocks
         // Newsletter signup form
-        get_partial('partials/footer/newsletter');
+        get_partial('footer/newsletter');
 
         // Footer masthead
-        get_partial('partials/footer/masthead');
+        get_partial('footer/masthead');
 
         // Quicklink buttons
-        get_partial('partials/footer/quicklinks');
+        get_partial('footer/quicklinks');
 
         // Contact blocks
-        get_partial('partials/footer/contacts');
+        get_partial('footer/contacts');
 
         // Crediibility badges
-        get_partial('partials/footer/badges');
+        get_partial('footer/badges');
 
         // Copyright phrasing and links
-        get_partial('partials/footer/copyright');
+        get_partial('footer/copyright');
       ?>
     </footer>
 

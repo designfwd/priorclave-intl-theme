@@ -7,47 +7,56 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
-  <?php get_partial('partials/meta/head'); ?>
+  <?php get_partial('meta/head'); ?>
 
   <body <?php body_class('content content--distributors'); ?>>
 
     <header>
+      <?php
+        // Primary navigation
+        get_partial('navigation/primary');
+
+        // Distributor map area
+        get_partial('hero/map-distributors');
+      ?>
     </header>
 
     <main>
       <?php
-        if ( have_posts() ):
-          while ( have_posts() ): the_post();
-            the_title();
-            the_content();
-          endwhile;
-        endif;
+        // Distributors navigation
+        get_partial('navigation/categories-blocks');
+
+        // Direcotry of distributors
+        get_partial('media/directory-distributors');
+
+        // CTA grid
+        get_partial('media/cta-grid');
       ?>
     </main>
 
     <footer class="universal-footer">
       <?php // Universal footer blocks
         // Newsletter signup form
-        get_partial('partials/footer/newsletter');
+        get_partial('footer/newsletter');
 
         // Footer masthead
-        get_partial('partials/footer/masthead');
+        get_partial('footer/masthead');
 
         // Quicklink buttons
-        get_partial('partials/footer/quicklinks');
+        get_partial('footer/quicklinks');
 
         // Contact blocks
-        get_partial('partials/footer/contacts');
+        get_partial('footer/contacts');
 
         // Crediibility badges
-        get_partial('partials/footer/badges');
+        get_partial('footer/badges');
 
         // Copyright phrasing and links
-        get_partial('partials/footer/copyright');
+        get_partial('footer/copyright');
       ?>
     </footer>
 
-    <?php get_partial('partials/meta/foot'); ?>
+    <?php get_partial('meta/foot'); ?>
 
   </body>
 

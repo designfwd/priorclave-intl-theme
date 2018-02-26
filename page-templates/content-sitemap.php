@@ -7,7 +7,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
-  <?php get_partial('partials/meta/head'); ?>
+  <?php get_partial('meta/head'); ?>
 
   <body <?php body_class('content content--sitemap'); ?>>
 
@@ -16,38 +16,38 @@
 
     <main>
       <?php
-        if ( have_posts() ):
-          while ( have_posts() ): the_post();
-            the_title();
-            the_content();
-          endwhile;
-        endif;
+        // Human-readable sitemap
+        get_partial('navigation/sitemap');
       ?>
     </main>
 
     <footer class="universal-footer">
-      <?php // Universal footer blocks
+      <?php
+        // Related product block
+        get_partial('media/product-related');
+
+        // Universal footer blocks
         // Newsletter signup form
-        get_partial('partials/footer/newsletter');
+        get_partial('footer/newsletter');
 
         // Footer masthead
-        get_partial('partials/footer/masthead');
+        get_partial('footer/masthead');
 
         // Quicklink buttons
-        get_partial('partials/footer/quicklinks');
+        get_partial('footer/quicklinks');
 
         // Contact blocks
-        get_partial('partials/footer/contacts');
+        get_partial('footer/contacts');
 
         // Crediibility badges
-        get_partial('partials/footer/badges');
+        get_partial('footer/badges');
 
         // Copyright phrasing and links
-        get_partial('partials/footer/copyright');
+        get_partial('footer/copyright');
       ?>
     </footer>
 
-    <?php get_partial('partials/meta/foot'); ?>
+    <?php get_partial('meta/foot'); ?>
 
   </body>
 
