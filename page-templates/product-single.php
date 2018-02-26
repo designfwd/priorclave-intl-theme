@@ -7,7 +7,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
-  <?php get_template_part('partials/meta/head'); ?>
+  <?php get_partial('partials/meta/head'); ?>
 
   <body <?php body_class('product product--single'); ?>>
 
@@ -28,26 +28,26 @@
     <footer class="universal-footer">
       <?php // Universal footer blocks
         // Newsletter signup form
-        get_template_part('partials/footer/newsletter');
+        get_partial('partials/footer/newsletter');
 
         // Footer masthead
-        get_template_part('partials/footer/masthead');
+        get_partial('partials/footer/masthead');
 
         // Quicklink buttons
-        get_template_part('partials/footer/quicklinks');
+        get_partial('partials/footer/quicklinks');
 
         // Contact blocks
-        get_template_part('partials/footer/contacts');
+        get_partial('partials/footer/contacts');
 
         // Crediibility badges
-        get_template_part('partials/footer/badges');
+        get_partial('partials/footer/badges');
 
         // Copyright phrasing and links
-        get_template_part('partials/footer/copyright');
+        get_partial('partials/footer/copyright');
       ?>
     </footer>
 
-    <?php get_template_part('partials/meta/foot'); ?>
+    <?php get_partial('partials/meta/foot'); ?>
 
   </body>
 
