@@ -1,9 +1,10 @@
-/* Colors used in the theme */
+/* Standard colors and those used in the theme */
 $black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
+
 $clear-black: rgba(0, 0, 0, 0);
 $clear-white: rgba(255, 255, 255, 0);
-$gold: rgba(252, 194, 21, 1);
-$gold-light: rgba(252, 225, 125, 1);
-$grey-dark: rgba(57, 56, 61, 1);
-$grey-light: rgba(156, 155, 158, 1);
-$white: rgba(255, 255, 255, 1);
+
+$yellow: rgba(#fcc215, 1);
+$grey-dark: rgba(#39383d, 1);
+$grey-light: rgba(#9c9c9e, 1);

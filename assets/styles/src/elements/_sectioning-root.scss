@@ -3,7 +3,7 @@
  */
 
 html {
-  font-family: $base-font-family;
+  @include open-sans-regular;
 }
 
 *,

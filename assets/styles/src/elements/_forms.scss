@@ -3,6 +3,9 @@
  */
 
 // button {}
+#{$all-buttons} {
+  @include proxima-nova-bold;
+}
 // datalist {}
 // fieldset {}
 // form {}
