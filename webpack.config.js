@@ -63,11 +63,11 @@ module.exports = {
               }
             ],
             fallback: 'style-loader'
-          })
+          }),
         },
         {
           test: /\.(ttf|eot|woff|woff2)$/,
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
             limit: 8192,
             name: '[name].[ext]',
