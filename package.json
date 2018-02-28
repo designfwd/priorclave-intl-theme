@@ -54,6 +54,8 @@
   },
   "dependencies": {
     "bourbon": "^5.0.0",
+    "holderjs": "^2.9.4",
+    "lazysizes": "^4.0.1",
     "modern-normalize": "^0.4.0"
   }
 }

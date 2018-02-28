@@ -1,0 +1,25 @@
+// Footer newsletter signup styles
+.o-footerNewsletter {
+  align-items: center;
+  background: radial-gradient(
+    tint($yellow, 18%),
+    shade($yellow, 8%)
+  );
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 0;
+
+  @include element('headline') {
+    @include proxima-nova-bold;
+    margin: 0;
+    padding-bottom: .8rem;
+    text-transform: uppercase;
+  }
+
+  @include element('form') {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

@@ -43,6 +43,7 @@
  * Settings
  * Definitons and variables used throughout the theme. Colors, typography, etc.
  */
+@import './settings/animation.scss';
 @import './settings/colors.scss';
 @import './settings/fonts.scss';
 @import './settings/sizes.scss';
@@ -68,8 +69,23 @@
 // WordPress editor styles
 @import './components/wp-core.scss';
 
+// Atoms
+
+// Molecules
+@import './components/molecules/m-footerForm.scss';
+
+// Organisms
+@import './components/organisms/o-footerNewsletter.scss';
+
+// Templates
+@import './components/templates/universal-footer.scss';
+
 
 /**
  * Overrides
  * !important styles and those that override any third-party styling
  */
+// Gravity Forms overrides
+@import './overrides/gravity-forms.scss';
+// lazysizes addons
+@import './overrides/lazysizes.scss';

@@ -3,13 +3,29 @@
  */
 
 // button {}
-#{$all-buttons} {
+
+#{$all-buttons},
+#{$all-text-inputs}, {
   @include proxima-nova-bold;
+  border: none;
+  padding: .8rem 1.6rem;
 }
+
 // datalist {}
 // fieldset {}
 // form {}
-// input {}
+
+#{$all-text-inputs} {
+  &::placeholder {
+    color: $yellow;
+  }
+}
+
+input[type="submit"] {
+  background-color: $grey-dark;
+  color: $yellow;
+}
+
 // label {}
 // legend {}
 // meter {}
