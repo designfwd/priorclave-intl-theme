@@ -1,0 +1,27 @@
+// Links in the website footer
+.a-footerLink {
+  color: inherit;
+
+  @include modifier('copyright') {
+    &::before {
+      color: $grey-medium;
+      content: "|";
+      padding-right: .25rem;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &:first-of-type {
+      &::before {
+        content: "";
+        padding-right: inherit;
+      }
+    }
+  }
+
+  @include modifier('feature') {
+    color: $yellow;
+  }
+}

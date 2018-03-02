@@ -8,7 +8,7 @@ a {
   transition: color $base-duration $base-timing;
 
   &:hover {
-    color: tint($grey-dark, 20%);
+    color: $yellow-dark;
   }
 }
 

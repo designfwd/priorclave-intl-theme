@@ -1,0 +1,42 @@
+// Individual blocks within the contact area of the footer
+.m-contactBlock {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  padding-left: 5vw;
+
+  @include element('headline') {
+    @include footer-title();
+    color: $white;
+    margin-bottom: .5rem;
+    width: 100%;
+  }
+
+  @include element('body') {
+    @include footer-text();
+    color: $white;
+    line-height: 1.22;
+  }
+
+  @include element('socialLink') {
+    background: $grey-medium-light;
+    border-radius: .125rem;
+    @include size(3rem);
+    margin-right: .25rem;
+    position: relative;
+    transition: background $base-duration $base-timing;
+
+    &:hover {
+      background: $yellow;
+    }
+
+    svg {
+      fill: $grey-dark;
+      height: 64%;
+      left: 18%;
+      position: absolute;
+      top: 18%;
+      width: auto;
+    }
+  }
+}

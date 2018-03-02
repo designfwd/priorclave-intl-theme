@@ -69,11 +69,16 @@
 @import './components/wp-core.scss';
 
 // Atoms
+@import './components/atoms/a-footerLink.scss';
 
 // Molecules
+@import './components/molecules/m-contactBlock.scss';
 @import './components/molecules/m-footerForm.scss';
 
 // Organisms
+@import './components/organisms/o-footerBadges.scss';
+@import './components/organisms/o-footerContacts.scss';
+@import './components/organisms/o-footerCopyright.scss';
 @import './components/organisms/o-footerMasthead.scss';
 @import './components/organisms/o-footerNewsletter.scss';
 @import './components/organisms/o-footerQuicklinks.scss';

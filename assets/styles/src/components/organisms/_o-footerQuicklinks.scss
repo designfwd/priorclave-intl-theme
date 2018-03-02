@@ -1,6 +1,6 @@
 // Styles for quicklink buttons in the footer
 .o-footerQuicklinks {
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: 1100px;
   margin: auto;
 
@@ -14,7 +14,7 @@
     border: 1px solid shade($yellow, 20%);
     color: $white;
     margin: .5rem 0;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.8rem;
     text-align: center;
     transition: background-color $base-duration $base-timing,
       border $base-duration $base-timing;
