@@ -57,3 +57,7 @@ if( function_exists('acf_add_options_page') ) {
 function get_partial( $slug ) {
   return include(locate_template('partials/' . $slug . '.php'));
 }
+
+function get_svg( $file ) {
+  echo file_get_contents( get_stylesheet_directory_uri() . '/assets/images/svg/' . $file . '.svg');
+}

@@ -21,9 +21,9 @@
       Contact Us
     </h4>
     <div class="m-contactBlock__body">
-      Phone: <a class="a-footerlink a-footerLink--white" href="tel:+12 34 5678 9012">+12 34 5678 9012</a><br />
+      Phone: <a class="a-footerlink" href="tel:+12 34 5678 9012">+12 34 5678 9012</a><br />
       Fax: +12 34 5678 9012<br />
-      <a class="a-footerLink" href="mailto:name@example.com">Email Us</a>
+      <a class="a-footerLink a-footerLink--feature" href="mailto:name@example.com">Email Us</a>
     </div>
   </div>
 
@@ -31,9 +31,22 @@
     <h4 class="m-contactBlock__headline">
       Connect
     </h4>
-    <a class="m-contactBlock__socialLink" href="#" target="_blank">
-      <img class="a-socialTile" alt="Facebook"  />
-    </a>
+    <?php // Shows social network links
+      $networks = array(
+        'facebook',
+        'linkedin',
+        'twitter'
+      );
+      foreach ($networks as $network):
+    ?>
+      <a class="m-contactBlock__socialLink" href="#" target="_blank">
+        <svg viewBox="0 0 16 16">
+          <?php get_svg( 'social-' . $network );?>
+        </svg>
+      </a>
+    <?php
+      endforeach;
+    ?>
   </div>
 
 </section>
