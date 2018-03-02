@@ -7,9 +7,11 @@
   padding: 1.6rem 0;
 
   @include element('headline') {
-    @include proxima-nova-bold;
+    @include footer-title;
     margin: 0;
+    max-width: 80%;
     padding-bottom: .8rem;
+    text-align: center;
     text-transform: uppercase;
   }
 

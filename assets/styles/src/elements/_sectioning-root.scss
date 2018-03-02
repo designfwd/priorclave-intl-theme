@@ -2,9 +2,7 @@
  * Sectioning Root
  */
 
-html {
-  @include open-sans-regular;
-}
+// html {}
 
 *,
 *::before,
@@ -15,4 +13,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-// body {}
+body {
+  @include open-sans-regular;
+}

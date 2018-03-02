@@ -3,7 +3,13 @@
  */
 
 a {
+  color: inherit;
   text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:hover {
+    color: tint($grey-dark, 20%);
+  }
 }
 
 // abbr {}

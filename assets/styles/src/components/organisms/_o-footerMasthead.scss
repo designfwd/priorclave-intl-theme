@@ -1,1 +1,9 @@
 // Styles for the masthead in the footer
+.o-footerMasthead {
+  padding: 2.4rem 0;
+
+  @include element('logo') {
+    max-width: 620px;
+    padding: 0 2rem;
+  }
+}

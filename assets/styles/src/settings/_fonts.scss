@@ -6,51 +6,56 @@
  */
 $system-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-// Lato font imports
-
-@font-face {
-  @include font('Lato', 'Lato-Bold');
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  @include font('Lato', 'Lato-Black');
-  font-style: normal;
-  font-weight: 900;
-}
-
-// Open Sans imports
-@font-face {
-  @include font('Open Sans', 'OpenSans-Bold');
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  @include font('Open Sans', 'OpenSans-Light');
-  font-style: normal;
-  font-weight: 300;
-}
-
-@font-face {
-  @include font('Open Sans', 'OpenSans-Regular');
-  font-style: normal;
-  font-weight: 400;
-}
-
-
-$lato: 'Lato', 'Trebuchet MS', sans-serif;
-$open-sans: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
-$proxima-nova: proxima-nova, sans-serif;
-
-
 // Font weight assignments. Not abbreviations, but useful interpretations
 $font-light: 300;
 $font-regular: 400;
 $font-semibold: 600;
 $font-bold: 700;
 $font-black: 900;
+
+
+// Lato font imports
+@font-face {
+  @include font('Lato', 'Lato-Regular');
+  font-style: normal;
+  font-weight: $font-regular;
+}
+
+@font-face {
+  @include font('Lato', 'Lato-Bold');
+  font-style: normal;
+  font-weight: $font-bold;
+}
+
+@font-face {
+  @include font('Lato', 'Lato-Black');
+  font-style: normal;
+  font-weight: $font-black;
+}
+
+// Open Sans imports
+@font-face {
+  @include font('Open Sans', 'OpenSans-Bold');
+  font-style: normal;
+  font-weight: $font-bold;
+}
+
+@font-face {
+  @include font('Open Sans', 'OpenSans-Light');
+  font-style: normal;
+  font-weight: $font-light;
+}
+
+@font-face {
+  @include font('Open Sans', 'OpenSans-Regular');
+  font-style: normal;
+  font-weight: $font-regular;
+}
+
+
+$lato: 'Lato', 'Trebuchet MS', sans-serif;
+$open-sans: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
+$proxima-nova: proxima-nova, sans-serif;
 
 
 // Font style mixins
@@ -74,6 +79,11 @@ $font-black: 900;
   font-weight: $font-bold;
 }
 
+@mixin lato-regular() {
+  font-family: $lato;
+  font-weight: $font-regular;
+}
+
 @mixin open-sans-bold() {
   font-family: $open-sans;
   font-weight: $font-bold;
@@ -87,4 +97,96 @@ $font-black: 900;
 @mixin open-sans-light() {
   font-family: $open-sans;
   font-weight: $font-light;
+}
+
+
+// Font styles with sizes
+@mixin primary-nav() {
+  font-size: rem(21);
+  @include proxima-nova-semibold;
+}
+
+@mixin banner-title() {
+  font-size: rem(65);
+  @include lato-black;
+}
+
+@mixin banner-text() {
+  font-size: rem(24);
+  @include open-sans-bold;
+}
+
+@mixin headline() {
+  font-size: rem(30);
+  @include lato-black;
+}
+
+@mixin subheadline() {
+  font-size: rem(16);
+  @include lato-bold;
+}
+
+@mixin headline-blog() {
+  font-size: rem(30);
+  @include lato-bold;
+}
+
+@mixin paragraph() {
+  font-size: rem(16);
+  @include open-sans-regular;
+}
+
+@mixin product-labels-grid() {
+  font-size: rem(18);
+  @include proxima-nova-bold;
+}
+
+@mixin cta-large-title() {
+  font-size: rem(60);
+  @include lato-black;
+}
+
+@mixin cta-large-text() {
+  font-size: rem(24);
+  @include open-sans-regular;
+}
+
+@mixin cta-small-title() {
+  font-size: rem(35);
+  @include lato-black;
+}
+
+@mixin cta-small-text() {
+  font-size: rem(16);
+  @include open-sans-regular;
+}
+
+@mixin cta-grid() {
+  font-size: rem(24);
+  @include proxima-nova-semibold;
+}
+
+@mixin large-button() {
+  font-size: rem(24);
+  @include proxima-nova-semibold;
+}
+
+@mixin testimonial-text() {
+  font-size: rem(48);
+  @include open-sans-light;
+}
+
+@mixin footer-button() {
+  font-size: rem(22);
+  @include proxima-nova-bold;
+}
+
+@mixin footer-title() {
+  font-size: rem(24);
+  @include lato-black;
+}
+
+@mixin footer-text() {
+  font-size: rem(18);
+  @include lato-regular;
 }

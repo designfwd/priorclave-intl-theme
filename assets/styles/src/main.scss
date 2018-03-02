@@ -29,8 +29,8 @@
 // Mathematical power function
 @import './tools/power.scss';
 
-// Pixel to em converter
-@import './tools/px-to-ems.scss';
+// Pixel to rem converter
+@import './tools/px-to-rems.scss';
 
 // Triangle generator
 @import './tools/triangles.scss';
@@ -46,7 +46,6 @@
 @import './settings/animation.scss';
 @import './settings/colors.scss';
 @import './settings/fonts.scss';
-@import './settings/sizes.scss';
 
 
 /**
@@ -77,6 +76,7 @@
 // Organisms
 @import './components/organisms/o-footerMasthead.scss';
 @import './components/organisms/o-footerNewsletter.scss';
+@import './components/organisms/o-footerQuicklinks.scss';
 
 // Templates
 @import './components/templates/universal-footer.scss';

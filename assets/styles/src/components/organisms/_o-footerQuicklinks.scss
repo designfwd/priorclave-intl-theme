@@ -1,0 +1,28 @@
+// Styles for quicklink buttons in the footer
+.o-footerQuicklinks {
+  justify-content: space-around;
+  max-width: 1100px;
+  margin: auto;
+
+  @media(min-width: 640px) {
+    flex-direction: row;
+  }
+
+  @include element('button') {
+    @include footer-button;
+    background-color: $clear-yellow;
+    border: 1px solid shade($yellow, 20%);
+    color: $white;
+    margin: .5rem 0;
+    padding: 1rem 2rem;
+    text-align: center;
+    transition: background-color $base-duration $base-timing,
+      border $base-duration $base-timing;
+
+    &:hover {
+      background-color: $yellow;
+      border-color: $yellow;
+      color: $white;
+    }
+  }
+}
