@@ -2,10 +2,10 @@
 import '../../styles/src/main.scss';
 'use strict';
 
-// Start writing JS here
-import 'lazysizes';
-import 'holderjs';
+// Global JS imports and settings
+import './vendor/lazysizes.js';
+import './vendor/jquery-globals.js';
+import 'slick-carousel';
 
-// Lazysizes settings
-/* global lazySizesConfig */
-lazySizesConfig.minSize = 16;
+// Module-level scripts
+import './modules/spotlight-slider.js';
