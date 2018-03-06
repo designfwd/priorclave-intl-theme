@@ -5,9 +5,9 @@
   <?php
     for( $i=0; $i<5; $i++):
   ?>
-    <img class="o-footerBadges__badge lazyload lazyload--blurUp"
+    <img class="o-footerBadges__badge"
       alt="badge"
-      data-src="holder.js/100px201?text=Badge"
+      src="<?php placeholder_img( 306, 201, 'text=Badge' ); ?>"
     />
   <?php
     endfor;
