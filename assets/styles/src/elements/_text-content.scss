@@ -15,6 +15,7 @@
 // ol {}
 
 p {
+  @include paragraph();
   orphans: 3;
   widows: 3;
 }
