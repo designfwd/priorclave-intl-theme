@@ -61,3 +61,12 @@ function get_partial( $slug ) {
 function get_svg( $file ) {
   echo file_get_contents( get_stylesheet_directory_uri() . '/assets/images/svg/' . $file . '.svg');
 }
+
+function placeholder_img( $width, $height, $text='' ) {
+  if( $text != ''):
+    $text = str_replace( ' ', '+', $text);
+    echo ( '//via.placeholder.com/' . $width . 'x' . $height . '?' . $text );
+  else:
+    echo ( '//via.placeholder.com/' . $width . 'x' . $height );
+  endif;
+}
