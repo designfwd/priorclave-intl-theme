@@ -69,7 +69,7 @@
  * Class- and ID-specific styles
  */
 // WordPress editor styles
-@import './components/wp-core.scss';
+@import './vendor/wp-core.scss';
 
 // Atoms
 @import './components/atoms/a-footerLink.scss';
