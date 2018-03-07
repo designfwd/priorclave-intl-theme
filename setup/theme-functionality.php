@@ -70,3 +70,19 @@ function placeholder_img( $width, $height, $text='' ) {
     echo ( '//via.placeholder.com/' . $width . 'x' . $height );
   endif;
 }
+
+function get_picsum( $width, $height='', $modifier='' ) {
+  // If a height is defined, append a '/' to it for the final URL
+  if( $height != '' ):
+    $height = '/' . $height;
+  endif;
+
+  // Modifier can be either "grayscale" or "blur"
+  if( $modifier == 'grayscale' ):
+    echo ( '//picsum.photos/g/' . $width . $height );
+  elseif ( $modifier == 'blur' ):
+    echo ( '//picsum.photos/' . $width . $height . '/?blur' );
+  else:
+    echo ( '//picsum.photos/' . $width . $height );
+  endif;
+}
