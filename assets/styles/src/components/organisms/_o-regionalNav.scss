@@ -44,28 +44,16 @@
       }
     }
 
-    .menu-item {
+    .menu-link {
       background-color: $clear-yellow;
+      line-height: 1.38;
+      overflow-x: hidden;
+      padding: .125rem 25% .125rem .125rem;
       transition: background-color $base-duration $base-timing;
 
       &:hover {
         background-color: $yellow;
         color: $white;
-      }
-
-      .sub-menu {
-        background-color: $grey-dark;
-        &:hover {
-          background-color: $grey-dark;
-        }
-      }
-
-      .menu-link {
-        line-height: 1.38;
-
-        &:hover {
-          color: $white;
-        }
       }
     }
   }
