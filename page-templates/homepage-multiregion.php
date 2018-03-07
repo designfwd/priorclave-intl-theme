@@ -11,7 +11,7 @@
 
   <body <?php body_class('homepage homepage--multiregion'); ?>>
 
-    <header class="homepage__header">
+    <header class="homepage__header" style="background-image:url('<?php get_picsum( 2400, 1600, 'blur'); ?>');">
       <?php
         // Simplified header navigation
         get_partial('navigation/simplified');
