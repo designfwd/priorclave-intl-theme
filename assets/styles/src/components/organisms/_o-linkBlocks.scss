@@ -1,0 +1,22 @@
+// Styles for block-style linked buttons
+.o-linkBlocks {
+  padding: 2rem 10% 4rem;
+  text-shadow: 1px 1px 2px $grey-dark;
+
+  @include element('headline') {
+    @include headline;
+    color: $yellow;
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @include element('links') {
+    display: flex;
+    flex-basis: 240px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+}

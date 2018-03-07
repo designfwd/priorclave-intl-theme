@@ -1,0 +1,24 @@
+// Styles for individual block-style buttons
+.m-blockLink {
+  align-items: center;
+  background-color: $clear-yellow;
+  border: 6px solid $yellow;
+  display: flex;
+  flex-direction: column;
+  margin: .25rem;
+  padding: 2rem;
+  transition: background-color $base-duration $base-timing;
+
+  &:hover {
+    background-color: $yellow;
+  }
+
+  @include element('text') {
+    color: $white;
+    text-align: center;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

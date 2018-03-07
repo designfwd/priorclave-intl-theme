@@ -3,7 +3,7 @@
 ?>
 <section class="o-linkBlocks" style="background-image: url('<?php get_picsum(2400,900,'grayscale'); ?>')">
   <h2 class="o-linkBlocks__headline">How Can We Help You?</h2>
-  <div class=o-linkedBlocks__links>
+  <div class=o-linkBlocks__links>
     <?php // Imitating the repeater likely to come from ACF
       $buttonText = array(
         'Find a Distributor',
