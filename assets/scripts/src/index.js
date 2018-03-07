@@ -8,4 +8,5 @@ import './vendor/jquery-globals.js';
 import 'slick-carousel';
 
 // Module-level scripts
+import './modules/brand-slideshow.js';
 import './modules/spotlight-slider.js';
