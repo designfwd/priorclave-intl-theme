@@ -1,0 +1,72 @@
+// Styles for the multiregion list-style nav
+.o-regionalNav {
+  background-color: $grey-dark;
+  padding: 4rem 2rem;
+
+  @include element('menu') {
+    @include proxima-nova;
+    color: $white;
+    columns: 2;
+    list-style-type: none;
+    max-width: 1280px;
+    -webkit-margin-after: 0; // webkit hack
+    -webkit-margin-before: 0; // webkit hack
+    -webkit-padding-start: 0; // webkit hack
+
+    @media(min-width: 480px) {
+      columns: 3;
+    }
+
+    @media(min-width: 960px) {
+      align-items: flex-start;
+      display: flex;
+      justify-content: center;
+    }
+
+    * > * { // Lobotomized owl to remove list style and padding
+      list-style-type: none;
+      -webkit-margin-after: 0;
+      -webkit-margin-before: 0;
+      -webkit-padding-start: 0;
+    }
+
+    .menu-item-depth-0 {
+      font-weight: $font-bold;
+      margin: auto;
+      width: 10rem;
+
+      @media(min-width: 960px) {
+        margin: inherit;
+      }
+
+      .menu-item-depth-1 {
+        font-weight: $font-regular;
+      }
+    }
+
+    .menu-item {
+      background-color: $clear-yellow;
+      transition: background-color $base-duration $base-timing;
+
+      &:hover {
+        background-color: $yellow;
+        color: $white;
+      }
+
+      .sub-menu {
+        background-color: $grey-dark;
+        &:hover {
+          background-color: $grey-dark;
+        }
+      }
+
+      .menu-link {
+        line-height: 1.38;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}

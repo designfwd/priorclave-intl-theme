@@ -59,6 +59,10 @@ $proxima-nova: proxima-nova, sans-serif;
 
 
 // Font style mixins
+@mixin proxima-nova() {
+  font-family: $proxima-nova;
+}
+
 @mixin proxima-nova-semibold() {
   font-family: $proxima-nova;
   font-weight: $font-semibold;
