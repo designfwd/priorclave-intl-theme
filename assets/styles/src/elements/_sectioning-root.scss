@@ -16,3 +16,7 @@
 body {
   @include open-sans-regular;
 }
+
+::selection {
+  background-color: $yellow;
+}
