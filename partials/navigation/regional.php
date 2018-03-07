@@ -1,11 +1,11 @@
 <?php
 // Regional navigation for use to link to a particular country or region
 ?>
-<nav id="multiregion-homepage-navigation">
+<nav class="o-regionalNav">
 
   <?php // Rough multiregion navigation structure, mimicing WP div structure ?>
   <div>
-    <ul class="o-regionalNav">
+    <ul class="o-regionalNav__menu">
       <li class="menu-item-depth-0 menu-item">
         <a class="menu-link" href="#">Africa</a>
       </li>
