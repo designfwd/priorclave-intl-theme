@@ -1,0 +1,17 @@
+// Styles for introductory content blocks
+.o-introContent {
+  background-color: $grey-dark;
+  color: $white;
+  padding: 4rem 10%;
+  text-align: center;
+
+  @include element('headline') {
+    @include headline;
+    text-transform: uppercase;
+  }
+
+  @include element('content') {
+    max-width: 960px;
+    padding-bottom: 1rem;
+  }
+}
