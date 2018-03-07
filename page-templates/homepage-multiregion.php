@@ -11,21 +11,21 @@
 
   <body <?php body_class('homepage homepage--multiregion'); ?>>
 
-    <header>
+    <header class="homepage__header">
       <?php
         // Simplified header navigation
         get_partial('navigation/simplified');
 
         // Homepage hero-area map
         get_partial('hero/map-homepage');
-
-        // Regional navigation
-        get_partial('navigation/regional');
       ?>
     </header>
 
     <main>
       <?php
+        // Regional navigation
+        get_partial('navigation/regional');
+
         // Introductory content
         get_partial('content/intro-decorated');
 
