@@ -1,0 +1,23 @@
+// Styling for the homepage map section
+.o-homepageMap {
+  padding: 15vh 0 20vh;
+  text-align: center;
+
+  @include element('headline') {
+    @include open-sans-bold;
+    color: $white;
+    line-height: 1.05;
+    margin-bottom: 0;
+    font-size: rem(24);
+    text-transform: uppercase;
+
+    @include modifier('subhead') {
+      @include lato-black;
+      font-size: 270%;
+    }
+  }
+
+  @include element('dropdown') {
+    padding-top: 2rem;
+  }
+}

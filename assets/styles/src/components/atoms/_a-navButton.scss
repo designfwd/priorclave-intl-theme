@@ -2,7 +2,7 @@
 .a-navButton {
   background-color: $white;
   font-weight: $font-bold;
-  padding: .5rem;
+  padding: .5rem 1rem;
   transition: background-color $base-duration $base-timing;
 
   &:hover {
