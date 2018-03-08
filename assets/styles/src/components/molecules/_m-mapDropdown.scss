@@ -1,0 +1,13 @@
+// Dropdown styling
+.m-mapDropdown {
+  background-color: $black-50;
+  border: none;
+  border-radius: 0;
+  color: $white;
+  padding: 1.6rem 2.4rem;
+  -webkit-appearance: none; // Kills base styling
+
+  @include element('region') {
+    font-weight: $font-semibold;
+  }
+}

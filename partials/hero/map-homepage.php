@@ -7,9 +7,14 @@
     <span class="o-homepageMap__headline--subhead">Autoclaves Worldwide</span>
   </h1>
   <div class="o-homepageMap__dropdown">
+    <a class="a-dropdownLabel" href="#">
+      Select Your Country or Region <span class="a-dropdownLabel__icon"><?php get_svg('angle-down'); ?></span>
+    </a>
+  </div>
+  <div class="o-homepageMap__dropdown">
     <select id="map-dropdown" class="m-mapDropdown">
       <option class="m-mapDropdown__initial" href="none" selected>
-        Select Your Country or Region
+        Select Your Country or Region +
       </option>
       <option class="m-mapDropdown__region" href="/en-africa">
         Africa
@@ -18,19 +23,19 @@
         Asia Pacific
       </option>
       <option class="m-mapDropdown__country">
-        Australia
+        - Australia
       </option>
       <option class="m-mapDropdown__country">
-        Malaysia
+        - Malaysia
       </option>
       <option class="m-mapDropdown__country">
-        Philippines
+        - Philippines
       </option>
       <<option class="m-mapDropdown__region">
         Europe
       </option>
       <option class="m-mapDropdown__country">
-        United Kingdom
+        - United Kingdom
       </option>
       <option class="m-mapDropdown_region">
         Middle East
@@ -39,10 +44,10 @@
         North America
       </option>
       <option class="m-mapDropdown__country">
-        Canada
+        - Canada
       </option>
       <option class="m-mapDropdown__country">
-        United States
+        - United States
       </option>
       <option class="m-mapDropdown__region">
         South America
