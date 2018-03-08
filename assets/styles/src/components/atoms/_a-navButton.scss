@@ -1,0 +1,12 @@
+// Navigation button styles
+.a-navButton {
+  background-color: $white;
+  font-weight: $font-bold;
+  padding: .5rem;
+  transition: background-color $base-duration $base-timing;
+
+  &:hover {
+    background-color: $yellow;
+    color: $black;
+  }
+}

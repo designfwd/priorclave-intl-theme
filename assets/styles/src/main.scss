@@ -73,6 +73,7 @@
 
 // Atoms
 @import './components/atoms/a-footerLink.scss';
+@import './components/atoms/a-navButton.scss';
 
 // Molecules
 @import './components/molecules/m-blockLink.scss';
@@ -92,6 +93,7 @@
 @import './components/organisms/o-introContent.scss';
 @import './components/organisms/o-productSpotlight.scss';
 @import './components/organisms/o-regionalNav.scss';
+@import './components/organisms/o-simpleNav.scss';
 
 // Templates
 @import './components/templates/universal-footer.scss';
