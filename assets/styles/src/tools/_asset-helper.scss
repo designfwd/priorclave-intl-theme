@@ -34,7 +34,7 @@ $font-src-path: $asset-base-path + '/fonts/src/' !default;
 /// Path for included image assets
 /// @public
 /// @type String
-$image-base-path: $asset-base-path + '/images/src/' !default;
+$image-base-path: ($asset-base-path + '/images') !default;
 
 @function gif( $file ) {
   @return ( $image-base-path + '/gif/' + $file + '.gif' );

@@ -12,7 +12,6 @@
 
 // Slick Carousel
 @import '~slick-carousel/slick/slick';
-@import './vendor/slick-theme.scss';
 
 /**
  * Tools
@@ -111,3 +110,5 @@
 @import './overrides/gravity-forms.scss';
 // lazysizes addons
 @import './overrides/lazysizes.scss';
+// Slick Carousel theme
+@import './vendor/slick-theme.scss';
