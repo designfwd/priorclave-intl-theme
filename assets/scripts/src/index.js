@@ -11,3 +11,4 @@ import 'slick-carousel';
 import './modules/brand-slideshow.js';
 import './modules/map-dropdown.js';
 import './modules/spotlight-slider.js';
+import './modules/testimonial-slider.js';

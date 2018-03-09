@@ -74,6 +74,17 @@ module.exports = {
             outputPath: '../../../assets/fonts/dist/',
           }
         },
+        {
+          test: /\.(gif|png|jp(e*)g|svg)$/,
+          use: [{
+              loader: 'file-loader',
+              options: {
+                  limit: 8192, // Convert images < 8kb to base64 strings
+                  name: '[name].[ext]',
+                  outputPath: '../../../assets/imagtes/dist',
+              }
+          }]
+        },
       ]
     }
 };

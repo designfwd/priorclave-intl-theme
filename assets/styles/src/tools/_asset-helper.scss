@@ -34,20 +34,20 @@ $font-src-path: $asset-base-path + '/fonts/src/' !default;
 /// Path for included image assets
 /// @public
 /// @type String
-$image-base-path: $asset-base-path + '/images/' !default;
+$image-base-path: $asset-base-path + '/images/src/' !default;
 
 @function gif( $file ) {
-  @return ( $image-base-path + $file + '.gif' );
+  @return ( $image-base-path + '/gif/' + $file + '.gif' );
 }
 
 @function jpg( $file ) {
-  @return ( $image-base-path + $file + '.jpg' );
+  @return ( $image-base-path + '/jpg/' + $file + '.jpg' );
 }
 
 @function png( $file ) {
-  @return ( $image-base-path + $file + '.png' );
+  @return ( $image-base-path + '/png/' + $file + '.png' );
 }
 
 @function svg( $file ) {
-  @return ( $image-base-path + $file + '.svg' );
+  @return ( $image-base-path + '/svg/' + $file + '.svg' );
 }
