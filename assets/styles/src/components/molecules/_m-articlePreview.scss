@@ -1,0 +1,50 @@
+// Styles for article previews
+.m-articlePreview {
+  align-items: center;
+  background-color: $white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: .5rem;
+  outline: 0 solid $clear-yellow;
+  position: relative;
+  text-shadow: none;
+  transition: outline $base-duration $base-timing;
+  width: 300px;
+
+  &:hover {
+    outline: 4px solid $yellow;
+  }
+
+  @include element('featuredImage') {
+    width: 100%;
+  }
+
+  @include element('photo') {
+    align-self: flex-start;
+    border: 2px solid $yellow;
+    border-radius: 50%;
+    margin-top: -2.6rem;
+    margin-left: 8%;
+    z-index: 1;
+  }
+
+  @include element('headline') {
+    @include subheadline;
+    font-weight: $font-bold;
+    text-align: left;
+    width: 80%;
+  }
+
+  @include element('article') {
+    @include paragraph;
+    width: 80%;
+  }
+
+  @include element('link') {
+    color: $yellow-dark;
+    padding: 1rem 0 2rem;
+    width: 80%;
+    text-align: left;
+  }
+}

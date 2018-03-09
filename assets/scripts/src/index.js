@@ -8,6 +8,7 @@ import './vendor/jquery-globals.js';
 import 'slick-carousel';
 
 // Module-level scripts
+import './modules/article-preview.js';
 import './modules/brand-slideshow.js';
 import './modules/map-dropdown.js';
 import './modules/spotlight-slider.js';

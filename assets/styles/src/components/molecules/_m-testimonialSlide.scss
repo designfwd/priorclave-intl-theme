@@ -1,0 +1,21 @@
+// Styles for individual testimonial slides
+.m-testimonialSlide {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  @media(min-width: 640px) {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  @include element('content') {
+    padding: 1rem 0;
+
+    @media(min-width: 640px) {
+      padding: 0 0 0 2rem;
+    }
+  }
+}

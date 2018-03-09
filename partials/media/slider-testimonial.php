@@ -7,12 +7,14 @@
     <?php // Slide loop
       for( $i=0; $i<8; $i++):
     ?>
-      <div class="m-testimonialSlide">
-        <img class="m-testimonialSlide__logo lazyload" src="<?php placeholder_img( 280, 187, ('text=Testimonial ' . ($i+1))); ?>" />
-        <div class="m-testimonialSlide__content a-testimonial">
-          <span class="a-testimonial__quoteBefore">&#8220;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea consequat.<span class="a-testimonial--quoteAfter">&#8220;</span>
-          <div class="a-testimonial__credit">
-            -John Smith, CEO
+      <div class="o-testimonialSlider__slides--wrapper">
+        <div class="m-testimonialSlide --preload">
+          <img class="m-testimonialSlide__logo lazyload" src="<?php placeholder_img( 280, 187, ('text=Testimonial ' . ($i+1))); ?>" />
+          <div class="m-testimonialSlide__content a-testimonial">
+            <span class="a-testimonial__quote">&#8220;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea consequat.<span class="a-testimonial__quote">&#8221;</span>
+            <div class="a-testimonial__credit">
+              - John Smith, CEO
+            </div>
           </div>
         </div>
       </div>
