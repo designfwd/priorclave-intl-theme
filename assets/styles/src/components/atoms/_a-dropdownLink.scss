@@ -1,0 +1,34 @@
+// Styles for dropdown-related links, icons, etc.
+.a-dropdownLink {
+  align-items: center;
+  background-color: $clear-yellow;
+  color: $white;
+  display: flex;
+  transition: background-color $base-duration $base-timing;
+
+  &:hover {
+    background-color: $yellow;
+    color: $white;
+  }
+
+  @include modifier('icon') {
+    background-color: $clear-yellow;
+    @include size(2rem);
+    fill: $white;
+    transform: rotate(0);
+    transition: transform $base-duration $base-timing;
+
+    &:hover {
+      background-color: $clear-yellow;
+    }
+
+    @include modifier('toggled') {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include modifier('flag') {
+    @include size(2.4rem);
+    margin-right: .5rem;
+  }
+}

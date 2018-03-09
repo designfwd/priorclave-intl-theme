@@ -18,6 +18,9 @@
   }
 
   @include element('dropdown') {
-    padding-top: 2rem;
+    background-color: $black-50;
+    margin: 4rem 0;
+    padding: .6rem 1.4rem;
+    position: relative;
   }
 }
