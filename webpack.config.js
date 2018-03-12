@@ -79,7 +79,7 @@ module.exports = {
               loader: 'file-loader',
               options: {
                   name: '[name].[ext]',
-                  outputPath: '../../../assets/images/gif/',
+                  outputPath: '../../../assets/images/dist/gif',
               }
           }]
         },
@@ -89,7 +89,7 @@ module.exports = {
               loader: 'file-loader',
               options: {
                   name: '[name].[ext]',
-                  outputPath: '../../../assets/images/png/',
+                  outputPath: '../../../assets/images/dist/png',
               }
           }]
         },
@@ -99,7 +99,7 @@ module.exports = {
               loader: 'file-loader',
               options: {
                   name: '[name].[ext]',
-                  outputPath: '../../../assets/images/jpg/',
+                  outputPath: '../../../assets/images/dist/jpg',
               }
           }]
         },
@@ -109,7 +109,7 @@ module.exports = {
               loader: 'file-loader',
               options: {
                   name: '[name].[ext]',
-                  outputPath: '../../../assets/images/svg/',
+                  outputPath: '../../../assets/images/dist/svg',
               }
           }]
         },
