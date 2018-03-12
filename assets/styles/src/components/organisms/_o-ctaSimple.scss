@@ -1,0 +1,35 @@
+// Styles for simple CTAs
+.o-ctaSimple {
+  background-size: cover;
+  padding: 4rem 10%;
+
+  @include element('headline') {
+    @include cta-small-title;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 0 2rem $white;
+  }
+
+  @include element('description') {
+    @include cta-small-text;
+    max-width: 800px;
+    padding-bottom: 1.6rem;
+    text-align: center;
+    text-shadow: 0 0 2rem $white;
+    width: 80%;
+  }
+
+  @include element('button') {
+    @include large-button;
+    background-color: $yellow;
+    min-width: 240px;
+    max-width: 540px;
+    padding: .8rem;
+    text-align: center;
+    width: 60%;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

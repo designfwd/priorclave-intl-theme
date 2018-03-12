@@ -1,0 +1,17 @@
+// Feature block styles
+.o-featureBlock {
+  background-color: $grey-dark;
+  color: $white;
+  padding: 4rem 10%;
+
+  @include element('headline') {
+    @include headline;
+    color: $yellow;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @include element('content') {
+    max-width: 960px;
+  }
+}
