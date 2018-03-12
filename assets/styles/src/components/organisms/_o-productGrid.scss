@@ -1,0 +1,19 @@
+// Styles for grids of products
+.o-productGrid {
+  padding: 2rem 0;
+
+  @include element('headline') {
+    @include headline;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @include element('products') {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1280px;
+    padding: 2rem .5rem 0;
+  }
+}

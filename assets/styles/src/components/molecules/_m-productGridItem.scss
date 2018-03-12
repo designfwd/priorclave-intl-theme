@@ -1,0 +1,29 @@
+// Styles for individual products within a product grid
+.m-productGridItem {
+  align-items: center;
+  display: flex;
+  flex-basis: 35%;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 100%;
+  margin: 1rem .5rem;
+  outline: 0 solid $clear-yellow;
+  transition: outline $base-duration $base-timing;
+
+  &:hover {
+    outline: .2rem solid $yellow;
+  }
+
+  @media(min-width: 640px) {
+    flex-basis: 26%;
+  }
+
+  @include element('image') {
+    padding: 1rem 0 0;
+  }
+
+  @include element('title') {
+    text-align: center;
+  }
+}
