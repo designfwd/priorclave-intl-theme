@@ -84,7 +84,9 @@
 @import './components/molecules/m-articlePreview.scss';
 @import './components/molecules/m-blockLink.scss';
 @import './components/molecules/m-contactBlock.scss';
+@import './components/molecules/m-ctaGridItem.scss';
 @import './components/molecules/m-footerForm.scss';
+@import './components/molecules/m-linkGridItem.scss';
 @import './components/molecules/m-mapDropdown.scss';
 @import './components/molecules/m-spotlightSlider.scss';
 @import './components/molecules/m-testimonialSlide.scss';
@@ -92,6 +94,7 @@
 // Organisms
 @import './components/organisms/o-brandSlider.scss';
 @import './components/organisms/o-ctaBackground.scss';
+@import './components/organisms/o-ctaGrid.scss';
 @import './components/organisms/o-featuredPosts.scss';
 @import './components/organisms/o-footerBadges.scss';
 @import './components/organisms/o-footerContacts.scss';
@@ -102,6 +105,7 @@
 @import './components/organisms/o-homepageMap.scss';
 @import './components/organisms/o-introContent.scss';
 @import './components/organisms/o-linkBlocks.scss';
+@import './components/organisms/o-linkGrid.scss';
 @import './components/organisms/o-productSpotlight.scss';
 @import './components/organisms/o-regionalNav.scss';
 @import './components/organisms/o-simpleNav.scss';

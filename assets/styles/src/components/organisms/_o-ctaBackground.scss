@@ -6,6 +6,7 @@
   @include element('headline') {
     @include cta-small-title;
     text-align: center;
+    text-shadow: 0 0 2rem $white;
     text-transform: uppercase;
   }
 

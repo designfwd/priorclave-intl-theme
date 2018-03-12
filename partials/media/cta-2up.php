@@ -46,12 +46,12 @@
       )
     );
 
-    for( $i=0; $i<rand(2,count($ctaGrid)); $i++):
+    for( $i=0; $i<2; $i++):
   ?>
-    <a class="o-ctaGrid__item" href="#">
+    <a class="o-ctaGrid__item o-ctaGrid__item--large" href="#">
       <div class="m-ctaGridItem">
-        <h3 class="m-ctaGridItem__headline"><?php echo $ctaGrid[$i]["headline"]; ?></h3>
-        <h4 class="m-ctaGridItem__subhead"><?php echo $ctaGrid[$i]["subhead"]; ?></h4>
+        <h3 class="m-ctaGridItem__headline m-ctaGridItem__headline--large"><?php echo $ctaGrid[$i]["headline"]; ?></h3>
+        <h4 class="m-ctaGridItem__subhead m-ctaGridItem__subhead--large"><?php echo $ctaGrid[$i]["subhead"]; ?></h4>
         <img class="m-ctaGridItem__image" src="<?php placeholder_img(267, 247, ('text=item ' . ($i+1))); ?>" />
       </div>
     </a>

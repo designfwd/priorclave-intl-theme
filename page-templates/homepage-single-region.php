@@ -38,8 +38,8 @@
         // Links grid
         get_partial('navigation/link-grid');
 
-        // CTA grid
-        get_partial('media/cta-grid');
+        // CTA 2-up
+        get_partial('media/cta-2up');
 
         // Background-image CTA
         get_partial('media/cta-background');

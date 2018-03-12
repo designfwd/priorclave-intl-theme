@@ -1,0 +1,26 @@
+// Styles for grids of links with background images
+.o-linkGrid {
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: .25rem 0;
+  width: 100%;
+
+  @include element('item') {
+    background-position: center;
+    background-size: 110%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 48%;
+    margin: 2px;
+    transition: background-size $base-duration $base-timing;
+
+    &:hover {
+      background-size: 100%;
+    }
+
+    @media(min-width: 640px) {
+      flex-basis: 32%;
+    }
+  }
+}
