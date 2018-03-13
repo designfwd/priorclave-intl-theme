@@ -1,0 +1,10 @@
+// Styles for the mobile-first navigation
+.o-mobileNav {
+  @include primary-nav;
+  flex-direction: row;
+  padding: 1rem 2.5vw;
+
+  @media(min-width: 980px) {
+    display: none;
+  }
+}

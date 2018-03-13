@@ -1,0 +1,8 @@
+.o-desktopNav {
+  display: none;
+  flex-direction: row;
+
+  @media(min-width: 980px) {
+    display: flex;
+  }
+}

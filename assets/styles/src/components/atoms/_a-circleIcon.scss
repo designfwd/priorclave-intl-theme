@@ -1,0 +1,16 @@
+.a-circleIcon {
+  @include size(2.5rem);
+  border: 2px solid $black;
+  border-radius: 50%;
+  margin: 0 .5rem;
+
+  @include element('svg') {
+    @include size(1.25rem);
+    fill: $black;
+    margin: 25%;
+
+    @include modifier('phone') {
+      transform: rotate(90deg);
+    }
+  }
+}

@@ -1,6 +1,7 @@
 // Styles for the marketing feature-style hero module
 .o-heroMarketing {
   align-content: center;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 2rem;
 
@@ -15,11 +16,11 @@
     text-transform: uppercase;
     transition: margin $base-duration $base-timing,
       width $base-duration $base-timing;
-    width: 80%;
+    max-width: 80%;
 
     @media(min-width: 720px) {
       margin-left: 5vw;
-      width: 50%;
+      max-width: 50%;
     }
 
     @media(min-width: 1100px) {
@@ -61,6 +62,32 @@
       align-self: flex-end;
       max-width: 40%;
       padding-right: 2.5vw;
+    }
+  }
+
+  @include element('button') {
+    @include large-button;
+    align-items: center;
+    background-color: $yellow;
+    color: $black;
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+    transition: border-color $base-duration $base-timing,
+      color $base-duration $base-timing,
+      fill $base-duration $base-timing;
+    width: 100%;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:hover * { // Hack-y, but gets the job done - consider changing later
+      transition: border-color $base-duration $base-timing,
+        color $base-duration $base-timing,
+        fill $base-duration $base-timing;
+      border-color: $white;
+      fill: $white;
     }
   }
 }

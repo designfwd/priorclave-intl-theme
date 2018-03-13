@@ -33,4 +33,10 @@
     </div>
   </h1>
   <img class="o-heroMarketing__image" src="<?php placeholder_img(650,460,'text=Marketing Image'); ?>" />
+
+  <?php // On some homepages, a contact local distributor button will be visible ?>
+  <a class="o-heroMarketing__button" href="#">
+    <span class="a-circleIcon"><svg class="a-circleIcon__svg a-circleIcon__svg--phone" viewBox="0 0 16 16"><?php get_svg('icon-phone'); ?></svg></span>
+    Contact Local Distributor
+  </a>
 </section>

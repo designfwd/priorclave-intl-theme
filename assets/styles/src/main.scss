@@ -75,6 +75,7 @@
 @import './vendor/wp-core.scss';
 
 // Atoms
+@import './components/atoms/a-circleIcon.scss';
 @import './components/atoms/a-dropdownLink.scss';
 @import './components/atoms/a-footerLink.scss';
 @import './components/atoms/a-navButton.scss';
@@ -97,6 +98,7 @@
 @import './components/organisms/o-ctaBackground.scss';
 @import './components/organisms/o-ctaGrid.scss';
 @import './components/organisms/o-ctaSimple.scss';
+@import './components/organisms/o-desktopNav.scss';
 @import './components/organisms/o-featureBlock.scss';
 @import './components/organisms/o-featuredPosts.scss';
 @import './components/organisms/o-footerBadges.scss';
@@ -110,6 +112,7 @@
 @import './components/organisms/o-introContent.scss';
 @import './components/organisms/o-linkBlocks.scss';
 @import './components/organisms/o-linkGrid.scss';
+@import './components/organisms/o-mobileNav.scss';
 @import './components/organisms/o-productGrid.scss';
 @import './components/organisms/o-productSpotlight.scss';
 @import './components/organisms/o-regionalNav.scss';
