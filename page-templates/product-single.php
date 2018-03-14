@@ -24,7 +24,7 @@
     <main>
       <?php
         // Product section navigation
-        get_partial('navigation/product-grid');
+        get_partial('navigation/product-blocks');
 
         // Product features
         get_partial('content/product-features');
