@@ -2,7 +2,19 @@
 // Primary navigation system
 ?>
 <section class="o-mobileNav">
-  mobile nav
+  <a class="o-mobileNav__menuToggle" href="#">
+    <svg id="mobileNav--toggleIcon" class="a-navIcon" viewBox="0 0 16 16">
+      <?php get_svg('icon-bars'); ?>
+    </svg>
+  </a>
+  <a class="o-mobileNav__logo" href="#">
+    <img class="o-mobileNav__logo--image" src="<?php placeholder_img(219,57,'text=logo'); ?>" />
+  </a>
+  <a class="o-mobileNav__iconLink" href="#">
+    <svg class="a-navIcon" viewBox="0 0 16 16">
+      <?php get_svg('icon-search'); ?>
+    </svg>
+  </a>
 </section>
 
 <section class="o-desktopNav">
@@ -25,7 +37,7 @@
 
     <div class="m-navButtons">
       <a class="m-navButtons__iconLink" href="#">
-        <svg viewBox="0 0 16 16">
+        <svg class="a-navIcon" viewBox="0 0 16 16">
           <?php get_svg('icon-search'); ?>
         </svg>
       </a>

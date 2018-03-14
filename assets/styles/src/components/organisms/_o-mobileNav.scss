@@ -1,10 +1,53 @@
 // Styles for the mobile-first navigation
 .o-mobileNav {
   @include primary-nav;
+  align-items: center;
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 1rem 2.5vw;
 
   @media(min-width: 980px) {
     display: none;
+  }
+
+  @include element('menuToggle') {
+    @include size(3rem);
+    background-color: $grey-light;
+    position: relative;
+
+    svg {
+      fill: $white;
+      height: 50%;
+      left: 25%;
+      position: absolute;
+      top: 25%;
+      width: auto;
+    }
+  }
+
+  @include element('logo') {
+    align-items: center;
+    display: flex;
+    padding: 0 .5rem;
+
+    @include modifier('image') {
+      width: 100%;
+    }
+  }
+
+  @include element('iconLink') {
+    @include size(3rem);
+    background-color: $grey-light;
+    position: relative;
+
+    svg {
+      fill: $white;
+      height: 50%;
+      left: 25%;
+      position: absolute;
+      top: 25%;
+      width: auto;
+    }
   }
 }
