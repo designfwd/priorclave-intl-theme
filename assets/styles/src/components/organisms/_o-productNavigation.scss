@@ -1,0 +1,38 @@
+// Styles for the intra-page navigation on product pages
+.o-productNavigation {
+  align-content: center;
+  border: 1px solid $white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include element('link') {
+    @include proxima-nova-semibold;
+    background-color: $grey-dark;
+    color: $white;
+    border: 1px solid $white;
+    font-size: rem(18);
+    padding: 2.5vw 0;
+    text-align: center;
+    transition: background-color $base-duration $base-timing,
+      font-size $base-duration $base-timing;
+    width: 50%;
+
+    &:hover {
+      background-color: $yellow;
+      color: $white;
+    }
+
+    @media(min-width: 640px) {
+      width: 25%;
+    }
+
+    @media(min-width: 800px) {
+      font-size: rem(24);
+    }
+
+    @media(min-width: 1280px) {
+      padding: 2rem 0;
+    }
+  }
+}
