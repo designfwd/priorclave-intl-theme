@@ -1,0 +1,61 @@
+// Styles for the general hero area
+.o-heroGeneral {
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 2rem;
+
+  @media(min-width: 720px) {
+    flex-direction: row;
+  }
+
+  @include element('content') {
+    @include banner-text;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 80%;
+
+    @media(min-width: 720px) {
+      margin-left: 5vw;
+      max-width: 50%;
+      text-align: left;
+    }
+
+    @media(min-width: 1100px) {
+      margin-left: 8vw;
+    }
+
+    @media(min-width: 1100px) {
+      margin-left: 12vw;
+    }
+
+    @include modifier('feature') {
+      @include lato-black;
+      font-size: rem(36);
+      border-bottom: 1px solid $black;
+      transition: font-size $base-duration $base-timing;
+
+      @media(min-width: 445px) {
+        font-size: rem(42);
+      }
+
+      @media(min-width: 890px) {
+        font-size: rem(65);
+      }
+    }
+
+    @include modifier('breadcrumbs') {
+      @include cta-small-text;
+      text-transform: none;
+    }
+  }
+
+  @include element('image') {
+    align-self: center;
+    max-width: 80%;
+
+    @media(min-width: 720px) {
+      align-self: flex-end;
+      max-width: 40%;
+    }
+  }
+}
