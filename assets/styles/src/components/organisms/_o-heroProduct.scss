@@ -1,0 +1,39 @@
+// Styles for the product hero area
+.o-heroProduct {
+  align-items: center;
+  background: linear-gradient($clear-black, $clear-black 50%, $black-15);
+  justify-content: space-around;
+  padding: 2rem 0 3rem;
+
+  @media(min-width: 720px) {
+    flex-direction: row;
+  }
+
+  @include element('content') {
+    margin-left: 20vw;
+    max-width: 80%;
+
+    @media(min-width: 720px) {
+      margin-left: 5vw;
+      max-width: 50%;
+    }
+
+    @media(min-width: 1100px) {
+      margin-left: 8vw;
+    }
+
+    @media(min-width: 1100px) {
+      margin-left: 12vw;
+    }
+  }
+
+  @include element('slider') {
+    align-self: center;
+    max-width: 80%;
+
+    @media(min-width: 720px) {
+      align-self: flex-end;
+      max-width: 40%;
+    }
+  }
+}

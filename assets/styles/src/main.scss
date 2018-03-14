@@ -87,9 +87,11 @@
 @import './components/molecules/m-contactBlock.scss';
 @import './components/molecules/m-ctaGridItem.scss';
 @import './components/molecules/m-footerForm.scss';
+@import './components/molecules/m-heroSlider.scss';
 @import './components/molecules/m-linkGridItem.scss';
 @import './components/molecules/m-mapDropdown.scss';
 @import './components/molecules/m-productGridItem.scss';
+@import './components/molecules/m-productHero.scss';
 @import './components/molecules/m-spotlightSlider.scss';
 @import './components/molecules/m-testimonialSlide.scss';
 
@@ -108,6 +110,7 @@
 @import './components/organisms/o-footerNewsletter.scss';
 @import './components/organisms/o-footerQuicklinks.scss';
 @import './components/organisms/o-heroGeneral.scss';
+@import './components/organisms/o-heroProduct.scss';
 @import './components/organisms/o-heroMarketing.scss';
 @import './components/organisms/o-homepageMap.scss';
 @import './components/organisms/o-introContent.scss';

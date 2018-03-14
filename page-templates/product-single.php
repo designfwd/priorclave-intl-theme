@@ -39,7 +39,7 @@
         get_partial('navigation/product-downloads');
 
         // CTA grid
-        get_partial('media/cta-grid');
+        get_partial('media/cta-2up');
 
         // Testimonial slider
         get_partial('media/slider-testimonial');

@@ -1,0 +1,40 @@
+// Styles for the description area of the product hero module
+.m-productHero {
+  text-align: left;
+
+  @include element('headline') {
+    @include open-sans-regular;
+    border-left: 1rem solid $yellow;
+    font-size: rem(24);
+    margin-left: -2rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+
+    @include modifier('capacity') {
+      font-weight: $font-bold;
+    }
+
+    @include modifier('category') {
+      @include lato-black;
+      font-size: rem(36);
+      border-bottom: 1px solid $black;
+      transition: font-size $base-duration $base-timing;
+
+      @media(min-width: 445px) {
+        font-size: rem(54);
+      }
+
+      @media(min-width: 890px) {
+        font-size: rem(65);
+      }
+    }
+  }
+
+  @include element('description') {
+    max-width: 80%;
+  }
+
+  @include element('price') {
+    font-weight: $font-bold;
+  }
+}
