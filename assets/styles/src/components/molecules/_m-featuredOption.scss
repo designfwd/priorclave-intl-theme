@@ -1,0 +1,40 @@
+// Featured option styles
+.m-featuredOption {
+  background-color: $white;
+  border: 1px solid $grey-medium;
+  cursor: pointer;
+  width: 50%;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  @media(min-width: 640px) {
+    width: 33.3333333333%;
+  }
+
+  @media(min-width: 960px) {
+    width: 25%;
+  }
+
+  @media(min-width: 1140px) {
+    width: 20%;
+  }
+
+  @include element('thumbnail') {
+    border: none;
+    width: 100%;
+  }
+
+  @include element('title') {
+    border: none;
+    font-size: 80%;
+    height: 5.4rem;
+    padding: .5rem;
+    transition: color $base-duration $base-timing;
+
+    @media(min-width: 540px) {
+      font-size: 100%;
+    }
+  }
+}
