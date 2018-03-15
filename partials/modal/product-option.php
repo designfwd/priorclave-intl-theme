@@ -1,4 +1,5 @@
-<?php // Product options modal dialog. Requires a $dialogID variable to function properly
+<?php // Product options modal dialog. Requires a dialogID query variable to function properly
+  $dialogID = get_query_var('dialogID');
 ?>
 <dialog id="<?php echo $dialogID; ?>" class="m-optionsDialog">
   <img class="m-optionsDialog__thumbnail lazyload" src="<?php placeholder_img(440,320,'text=thumbnail'); ?>" />

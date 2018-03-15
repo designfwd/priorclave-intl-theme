@@ -39,8 +39,8 @@
         </div>
       </div>
     <?php
-        $dialogID = 'optionDialog-' . $i;
-        include(locate_template('partials/modal/product-option.php'));
+        set_query_var( 'dialogID', ('optionDialog-' . $i));
+        get_partial('modal/product-option');
       endfor;
     ?>
 
@@ -53,8 +53,8 @@
       <li id="productOption-<?php echo $i; ?>" class="o-productOptions__item">
         <?php
           echo $optionsList[$i];
-          $dialogID = 'optionDialog-' . $i;
-          include(locate_template('partials/modal/product-option.php'));
+          set_query_var( 'dialogID', ('optionDialog-' . $i));
+          get_partial('modal/product-option');
         ?>
       </li>
     <?php
