@@ -18,8 +18,7 @@
           <h3 class="a-productSection__headline">
             Models
           </h3>
-          <?php // Extra "2-up" modifier class, wich should be defined by an ACF choice ?>
-          <ul class="a-productSection__list a-productSection__list--2up">
+          <ul class="a-productSection__list">
             <li class="a-productSection__item">
               Model: BTSD 40 Liter Capacity
             </li>

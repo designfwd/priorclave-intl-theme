@@ -1,0 +1,22 @@
+// Styles for the product "standard features" block
+.m-productStandards {
+
+  @include element('headline') {
+    color: $yellow;
+  }
+
+  @include element('list') {
+    display: flex;
+    flex-direction: column;
+    margin: .25rem 0 1.5rem;
+    padding-inline-start: 0;
+    list-style-type: none;
+  }
+
+  @include element('item') {
+    align-items: center;
+    border-top: 1px solid $grey-medium-light;
+    display: flex;
+    padding: .5rem 0;
+  }
+}

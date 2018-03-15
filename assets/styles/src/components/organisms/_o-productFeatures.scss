@@ -1,0 +1,22 @@
+// Styles for product features module
+.o-productFeatures {
+  align-items: flex-start;
+  background-color: $grey-dark;
+  color: $white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 5%;
+
+  @media(min-width: 640px) {
+    padding: 2rem 2.5%;
+  }
+
+  @include element('content') {
+    width: 100%;
+
+    @media(min-width: 640px) {
+      width: 50%;
+    }
+  }
+}
