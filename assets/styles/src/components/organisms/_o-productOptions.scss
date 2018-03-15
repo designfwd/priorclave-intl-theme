@@ -42,20 +42,18 @@
     padding-inline-start: 0;
     padding-top: 1rem;
     list-style-type: none;
+    transition: height $slow-duration $base-timing,
+      opacity $slow-duration $base-timing;
 
     @media(min-width: 880px) {
       columns: 2;
-    }
-
-    @include modifier('visible') {
-      display: inherit;
     }
   }
 
   @include element('item') {
     color: $white;
     cursor: pointer;
-    padding: .25rem 1rem .125rem;
+    padding: .5rem 1rem 0;
     transition: color $base-duration $base-timing;
 
     &:hover {

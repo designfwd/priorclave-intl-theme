@@ -139,6 +139,8 @@
  * Overrides
  * !important styles and those that override any third-party styling
  */
+// Dialog Polyfill theming
+@import './vendor/dialog-polyfill.scss';
 // Gravity Forms overrides
 @import './overrides/gravity-forms.scss';
 // lazysizes addons

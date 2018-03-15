@@ -39,17 +39,23 @@
         </div>
       </div>
     <?php
+        $dialogID = 'optionDialog-' . $i;
+        include(locate_template('partials/modal/product-option.php'));
       endfor;
     ?>
 
   </div>
-  <p class="o-productOptions__listToggle">View a Full List of Options</p>
-  <ul class="o-productOptions__list">
+  <p id="productOptions-toggle" class="o-productOptions__listToggle">View a Full List of Options</p>
+  <ul id="productOptions-list" class="o-productOptions__list">
     <?php // Displays the non-featured options
       for( $i=$featuredNumber; $i<count($optionsList); $i++):
     ?>
       <li id="productOption-<?php echo $i; ?>" class="o-productOptions__item">
-        <?php echo $optionsList[$i]; ?>
+        <?php
+          echo $optionsList[$i];
+          $dialogID = 'optionDialog-' . $i;
+          include(locate_template('partials/modal/product-option.php'));
+        ?>
       </li>
     <?php
       endfor;
