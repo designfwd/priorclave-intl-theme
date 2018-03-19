@@ -8,7 +8,17 @@
   @include modifier('filler') {
     flex-basis: 278px;
     flex-grow: 1;
+    flex-shrink: 1;
     width: 100%;
+  }
+
+  @include modifier('fillerHider') {
+    height: 0;
+
+    .m-specificationCell__header,
+    .m-specificationCell__contents {
+      height: 0;
+    }
   }
 
   @include element('header') {
