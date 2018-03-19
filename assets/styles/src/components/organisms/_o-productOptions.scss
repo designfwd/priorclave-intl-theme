@@ -1,7 +1,7 @@
 // Styles for the product options module
 .o-productOptions {
   background-color: $grey-medium;
-  padding: 1rem 5% 2rem;
+  padding: 2rem 5%;
 
   @include element('headline') {
     color: $white;
