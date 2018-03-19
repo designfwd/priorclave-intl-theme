@@ -14,5 +14,6 @@ import './modules/brand-slideshow.js';
 import './modules/hero-slider.js';
 import './modules/map-dropdown.js';
 import './modules/product-options.js';
+import './modules/product-specifications.js'
 import './modules/spotlight-slider.js';
 import './modules/testimonial-slider.js';
