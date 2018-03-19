@@ -17,6 +17,7 @@
     color: $white;
     cursor: pointer;
     font-size: rem(24);
+    margin-top: 1px;
     max-width: 280px;
     padding: 1.2rem;
     text-align: center;
@@ -41,6 +42,10 @@
       max-width: 1120px;
     }
 
+    @media(min-width: 1573px) {
+      max-width: 1400px;
+    }
+
     @include modifier('active') {
       background-color: $yellow;
       color: $grey-medium-dark;
@@ -63,6 +68,10 @@
 
     @media(min-width: 1264px) {
       max-width: 1120px;
+    }
+
+    @media(min-width: 1573px) {
+      max-width: 1400px;
     }
   }
 }
