@@ -22,24 +22,8 @@ jQuery(document).ready(function() {
   // Hides products on page load
   jQuery('.o-productSpecifications__table').hide();
 
-  // Fires cellHider on window resize end
-  let rtime;
-  let timeout = false;
-  let delta = 200;
+  // Fires cellHider on window resize
   jQuery(window).resize(function() {
-      rtime = new Date();
-      if (timeout === false) {
-          timeout = true;
-          setTimeout(resizeend, delta);
-      }
+    cellHider();
   });
-
-  function resizeend() {
-      if (new Date() - rtime < delta) {
-          setTimeout(resizeend, delta);
-      } else {
-          timeout = false;
-          cellHider();
-      }
-  }
 });
