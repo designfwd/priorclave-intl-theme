@@ -1,0 +1,45 @@
+// Styles for individual product downloads
+.m-productDownload {
+  align-items: center;
+  display: flex;
+  margin: 1px 1rem;
+
+  &:hover {
+    .m-productDownload__icon {
+      background-color: $yellow;
+    }
+
+    .m-productDownload__title {
+      background-color: $yellow;
+      border-left: 1px solid $grey-light;
+      color: $grey-medium;
+    }
+  }
+
+  @include element('icon') {
+    @include size(3.2rem);
+    background-color: $white;
+    position: relative;
+    transition: background-color $base-duration $base-timing;
+
+    @include modifier('svg') {
+      @include size(2.4rem);
+      fill: $grey-medium;
+      left: 12.5%;
+      position: absolute;
+      top: 12.5%;
+    }
+  }
+
+  @include element('title') {
+    @include size(100%);
+    background-color: $grey-medium-dark;
+    border-left: 1px solid $grey-medium-dark;
+    color: $white;
+    font-weight: $font-bold;
+    padding: 1.04rem;
+    transition: background-color $base-duration $base-timing,
+      border $base-duration $base-timing,
+      color $base-duration $base-timing;
+  }
+}
