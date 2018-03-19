@@ -1,5 +1,13 @@
 // Scripting for the product specifications module
 jQuery(document).ready(function() {
+
+  // If a product title is clicked, it toggles the visibility of its table
+  jQuery('.o-productSpecifications__product').click( function() {
+    let productSlug = jQuery(this).attr('id').replace('Title', 'Specs');
+    jQuery('#' + productSlug).slideToggle();
+    jQuery(this).toggleClass('o-productSpecifications__product--active');
+  });
+
   // If the filler cell is full-width, hide it
   function cellHider() {
     let fillerWidth = jQuery('.m-specificationCell--filler').width();
@@ -11,6 +19,8 @@ jQuery(document).ready(function() {
     }
   }
   cellHider();
+  // Hides products on page load
+  jQuery('.o-productSpecifications__table').hide();
 
   // Fires cellHider on window resize end
   let rtime;
