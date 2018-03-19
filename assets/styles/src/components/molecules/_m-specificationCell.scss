@@ -1,0 +1,39 @@
+// Styles for individual cells within a product specifications table
+.m-specificationCell {
+  @include product-labels-grid;
+  margin: 1px;
+  text-align: center;
+  width: 278px;
+
+  @include modifier('filler') {
+    flex-basis: 278px;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  @include element('header') {
+    align-items: center;
+    background-color: $grey-light;
+    color: $grey-medium-dark;
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+    justify-content: center;
+
+    @include modifier('subtitle') {
+      font-size: 67%;
+      font-weight: $font-regular;
+    }
+  }
+
+  @include element('contents') {
+    align-items: center;
+    background-color: $white;
+    color: $grey-medium;
+    display: flex;
+    font-weight: $font-regular;
+    height: 72px;
+    justify-content: center;
+    padding: 0 .25rem;
+  }
+}

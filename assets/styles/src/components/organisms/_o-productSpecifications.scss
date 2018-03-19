@@ -1,0 +1,67 @@
+// Styles for product specifications
+.o-productSpecifications {
+  background-color: $grey-medium-light;
+  padding: 2rem 5vw 4rem;
+
+  @include element('headline') {
+    color: $white;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  @include element('product') {
+    @include proxima-nova-bold;
+    background-color: $grey-medium-dark;
+    color: $white;
+    font-size: rem(24);
+    max-width: 280px;
+    padding: 1.2rem;
+    text-align: center;
+    transition: background-color $base-duration $base-timing,
+      color $base-duration $base-timing;
+    width: 100%;
+
+    &:hover {
+      background-color: $yellow;
+      color: $grey-medium-dark;
+    }
+
+    @media(min-width: 640px) {
+      max-width: 560px;
+    }
+
+    @media(min-width: 950px) {
+      max-width: 840px;
+    }
+
+    @media(min-width: 1264px) {
+      max-width: 1120px;
+    }
+
+    @include modifier('active') {
+      background-color: $yellow;
+      color: $grey-medium-dark;
+    }
+  }
+
+  @include element('table') {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 280px;
+    width: 100%;
+
+    @media(min-width: 640px) {
+      max-width: 560px;
+    }
+
+    @media(min-width: 950px) {
+      max-width: 840px;
+    }
+
+    @media(min-width: 1264px) {
+      max-width: 1120px;
+    }
+  }
+}
