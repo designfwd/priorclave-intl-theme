@@ -1,0 +1,52 @@
+// Styles for the product options dialog
+.m-optionsDialog {
+  @include proxima-nova;
+  border: none;
+  cursor: default;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 80%;
+
+  &::backdrop,
+  & + .backdrop {
+    @include position(fixed, 0);
+    background-color: $black-75;
+  }
+
+  @include element('thumbnail') {
+    float: none;
+    margin: 0;
+    width: 100%;
+
+    @media(min-width: 768px) {
+      float: left;
+      margin: 0 1rem 1rem 0;
+      width: 35%;
+    }
+  }
+
+  @include element('title') {
+    font-size: rem(24);
+    font-weight: $font-bold;
+    padding: 0 1rem;
+  }
+
+  @include element('description') {
+    padding: 0 1rem;
+  }
+
+  @include element('button') {
+    background-color: $yellow;
+    cursor: pointer;
+    font-weight: $font-bold;
+    padding: .5rem;
+    text-align: center;
+    transition: color $base-duration $base-timing;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

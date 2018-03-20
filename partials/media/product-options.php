@@ -53,12 +53,16 @@
       <li id="productOption-<?php echo $i; ?>" class="o-productOptions__item">
         <?php
           echo $optionsList[$i];
-          set_query_var( 'dialogID', ('optionDialog-' . $i));
-          get_partial('modal/product-option');
         ?>
       </li>
     <?php
       endfor;
     ?>
   </ul>
+  <?php // Creates the dialog boxes associated with the list above
+    for( $i=$featuredNumber; $i<count($optionsList); $i++):
+      set_query_var( 'dialogID', ('optionDialog-' . $i));
+      get_partial('modal/product-option');
+    endfor;
+  ?>
 </section>

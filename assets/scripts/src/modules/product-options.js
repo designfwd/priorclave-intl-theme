@@ -13,4 +13,9 @@ jQuery(document).ready(function() {
     let optionID = jQuery(this).attr('id').replace('productOption-','');
     document.getElementById('optionDialog-' + optionID).showModal();
   });
+
+  jQuery('.m-optionsDialog__button').click(function() {
+    let button = jQuery(this).parent().attr('id');
+    document.getElementById(button).close();
+  });
 });
