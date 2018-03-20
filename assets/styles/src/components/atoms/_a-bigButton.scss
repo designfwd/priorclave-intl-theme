@@ -1,0 +1,8 @@
+// Big button styling
+.a-bigButton {
+  @include large-button;
+
+  &:hover {
+    color: $white;
+  }
+}

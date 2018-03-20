@@ -1,0 +1,19 @@
+// Styles for the related product module
+.o-relatedProduct {
+  background-color: $white;
+  padding-bottom: 2rem;
+
+  @include element('headline') {
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @include element('content') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 960px;
+    width: 90%;
+  }
+}

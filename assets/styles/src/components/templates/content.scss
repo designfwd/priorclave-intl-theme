@@ -1,0 +1,19 @@
+// Content page styles
+.content {
+
+  @include element('article') {
+    width: 100%;
+
+    @media(min-width: 1024px) {
+      width: 65%;
+    }
+  }
+
+  @include element('sidebar') {
+    width: 50%;
+
+    @media(min-width: 1024px) {
+      width: 35%;
+    }
+  }
+}

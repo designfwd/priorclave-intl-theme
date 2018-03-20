@@ -75,6 +75,7 @@
 @import './vendor/wp-core.scss';
 
 // Atoms
+@import './components/atoms/a-bigButton.scss';
 @import './components/atoms/a-circleIcon.scss';
 @import './components/atoms/a-dropdownLink.scss';
 @import './components/atoms/a-footerLink.scss';
@@ -99,6 +100,7 @@
 @import './components/molecules/m-productGridItem.scss';
 @import './components/molecules/m-productHero.scss';
 @import './components/molecules/m-productStandards.scss';
+@import './components/molecules/m-relatedContent.scss';
 @import './components/molecules/m-specificationCell.scss';
 @import './components/molecules/m-spotlightSlider.scss';
 @import './components/molecules/m-testimonialSlide.scss';
@@ -133,11 +135,13 @@
 @import './components/organisms/o-productSpecifications.scss';
 @import './components/organisms/o-productSpotlight.scss';
 @import './components/organisms/o-regionalNav.scss';
+@import './components/organisms/o-relatedProduct.scss';
 @import './components/organisms/o-simpleNav.scss';
 @import './components/organisms/o-testimonialSlider.scss';
 
 // Templates
-@import './components/templates/universal-footer.scss';
+@import './components/templates/content.scss'; // Content page styles
+@import './components/templates/universal-footer.scss'; // Footer modules
 
 
 /**
