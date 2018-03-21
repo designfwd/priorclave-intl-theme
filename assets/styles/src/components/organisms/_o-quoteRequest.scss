@@ -1,0 +1,37 @@
+// Styles for the quote request form module
+.o-quoteRequest {
+  background-color: $grey-dark;
+  color: $white;
+
+  @include element('headline') {
+    color: $yellow;
+    max-width: 800px;
+    padding-top: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @include element('description') {
+    max-width: 800px;
+  }
+
+  @include element('form') {
+    max-width: 800px;
+    padding: 2rem 0;
+  }
+
+  @include element('subtitle') {
+    text-align: center;
+  }
+
+  @include element('phone') {
+    color: $white;
+    font-size: rem(24);
+    font-weight: $font-bold;
+    padding-bottom: 2rem;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
