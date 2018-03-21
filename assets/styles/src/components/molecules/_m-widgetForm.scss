@@ -1,0 +1,41 @@
+// Styles specific to the Gravity Forms form in sidebar modules
+.m-widgetForm {
+  display: flex;
+  font-size: rem(18);
+  margin: auto;
+  max-width: 800px;
+
+  .gform_body {
+    width: 65%;
+
+    input {
+      background-color: $grey-lightest;
+      font-weight: $font-regular;
+      width: 100%;
+
+      &::placeholder {
+        color: $grey-medium-dark;
+        font-size: rem(18);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .gform_footer {
+    width: 35%;
+
+    .gform_button {
+      background-color: $yellow;
+      color: $white;
+      height: 100%;
+      font-size: rem(18);
+      text-transform: uppercase;
+      transition: color $base-duration $base-timing;
+      width: 100%;
+
+      &:hover {
+        color: $grey-dark;
+      }
+    }
+  }
+}

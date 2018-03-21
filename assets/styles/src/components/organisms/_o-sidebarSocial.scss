@@ -3,6 +3,7 @@
   flex-basis: 48px;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 1rem;
 
   @include element('button') {
     @include size(100%);

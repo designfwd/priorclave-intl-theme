@@ -1,0 +1,18 @@
+// Sidebar widget styles
+.o-widget {
+  color: $grey-dark;
+
+  @include element('headline') {
+    @include headline-blog();
+    background-color: $grey-lightest;
+    margin: 2rem 0 .25rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  @include element('form') {
+    width: 100%;
+  }
+}
