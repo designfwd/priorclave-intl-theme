@@ -10,24 +10,32 @@
     $linkedInLink = 'https://www.linkedin.com/shareArticle?mini=true&url=' . $shareURL;
     $googlePlusLink = 'https://plus.google.com/share?url={' . $shareURL . '}';
   ?>
-  <a class="o-sidebarSocial__button o-sidebarSocial__button--facebook" href="<?php echo $facebookLink; ?>" target="_blank">
-    <svg class="a-sidebarIcon" viewBox="0 0 16 16">
-      <?php get_svg('social-facebook'); ?>
-    </svg>
-  </a>
-  <a class="o-sidebarSocial__button o-sidebarSocial__button--twitter" href="<?php echo $twitterLink; ?>" target="_blank">
-    <svg class="a-sidebarIcon" viewBox="0 0 16 16">
-      <?php get_svg('social-twitter'); ?>
-    </svg>
-  </a>
-  <a class="o-sidebarSocial__button o-sidebarSocial__button--linkedIn" href="<?php echo $linkedInLink; ?>" target="_blank">
-    <svg class="a-sidebarIcon" viewBox="0 0 16 16">
-      <?php get_svg('social-linkedin'); ?>
-    </svg>
-  </a>
-  <a class="o-sidebarSocial__button o-sidebarSocial__button--googlePlus" href="<?php echo $googlePlusLink; ?>" target="_blank">
-    <svg class="a-sidebarIcon" viewBox="0 0 16 16">
-      <?php get_svg('social-google-plus'); ?>
-    </svg>
-  </a>
+  <div class="o-sidebarSocial__button o-sidebarSocial__button--facebook" href="<?php echo $facebookLink; ?>" target="_blank">
+    <a class="a-socialIcon" href="<?php echo $facebookLink; ?>" target="_blank">
+      <svg class="a-socialIcon__svg" viewBox="0 0 16 16">
+        <?php get_svg('social-facebook'); ?>
+      </svg>
+    </a>
+  </div>
+  <div class="o-sidebarSocial__button o-sidebarSocial__button--twitter" href="<?php echo $twitterLink; ?>" target="_blank">
+    <a class="a-socialIcon" href="<?php echo $twitterLink; ?>" target="_blank">
+      <svg class="a-socialIcon__svg" viewBox="0 0 16 16">
+        <?php get_svg('social-twitter'); ?>
+      </svg>
+    </a>
+  </div>
+  <div class="o-sidebarSocial__button o-sidebarSocial__button--linkedIn" href="<?php echo $linkedInLink; ?>" target="_blank">
+    <a class="a-socialIcon" href="<?php echo $linkedInLink; ?>" target="_blank">
+      <svg class="a-socialIcon__svg" viewBox="0 0 16 16">
+        <?php get_svg('social-facebook'); ?>
+      </svg>
+    </a>
+  </div>
+  <div class="o-sidebarSocial__button o-sidebarSocial__button--googlePlus" href="<?php echo $googlePlusLink; ?>" target="_blank">
+    <a class="a-socialIcon" href="<?php echo $googlePlusLink; ?>" target="_blank">
+      <svg class="a-socialIcon__svg" viewBox="0 0 16 16">
+        <?php get_svg('social-twitter'); ?>
+      </svg>
+    </a>
+  </div>
 </section>
