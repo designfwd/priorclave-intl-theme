@@ -1,18 +1,32 @@
 // Content page styles
 .content {
 
+  &.content--general {
+    display: flex;
+    flex-wrap: wrap;
+
+    header,
+    footer {
+      width: 100%;
+    }
+  }
+
   @include element('article') {
+    padding: 1rem 1rem 0;
     width: 100%;
 
-    @media(min-width: 1024px) {
+    @media(min-width: 920px) {
+      padding: 1rem 1rem 1rem 2rem;
       width: 65%;
     }
   }
 
   @include element('sidebar') {
-    width: 50%;
+    padding: 1rem 1rem 0;
+    width: 100%;
 
-    @media(min-width: 1024px) {
+    @media(min-width: 920px) {
+      padding: 1rem;
       width: 35%;
     }
   }
