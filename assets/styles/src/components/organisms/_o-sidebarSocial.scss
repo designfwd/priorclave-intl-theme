@@ -6,6 +6,7 @@
 
   @include element('button') {
     @include size(100%);
+    border-radius: .125rem;
     flex-grow: 1;
     max-height: 48px;
     margin: 0 .5rem;
