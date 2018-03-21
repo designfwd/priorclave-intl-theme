@@ -14,7 +14,7 @@
 
   </div>
   <div class="o-quoteRequest__subtitle">
-    Or Contact an Expert by Phone at:<br />
+    Or Contact an Expert by Phone at:
   </div>
   <a class="o-quoteRequest__phone" href="tel:+12 34 5678 9012">+12 34 5678 9012</a>
 </section>
