@@ -1,0 +1,11 @@
+// Styles for individual social icons, primarily in the sidebar
+.a-socialIcon {
+  @include size(100%);
+  display: flex;
+  justify-content: center;
+
+  @include element('svg') {
+    @include size(1rem);
+    fill: $white;
+  }
+}

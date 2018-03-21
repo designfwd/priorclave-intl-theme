@@ -1,0 +1,35 @@
+// Styles for the social sharing sidebar widget
+.o-sidebarSocial {
+  flex-basis: 48px;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include element('button') {
+    @include size(100%);
+    flex-grow: 1;
+    max-height: 48px;
+    margin: 0 .5rem;
+    padding: .5rem;
+    transition: background-color $base-duration $base-timing;
+
+    &:hover {
+      background-color: $yellow;
+    }
+
+    @include modifier('facebook') {
+      background-color: $color-facebook;
+    }
+
+    @include modifier('twitter') {
+      background-color: $color-twitter;
+    }
+
+    @include modifier('linkedIn') {
+      background-color: $color-linkedin;
+    }
+
+    @include modifier('googlePlus') {
+      background-color: $color-googleplus;
+    }
+  }
+}
