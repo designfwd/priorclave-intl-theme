@@ -27,14 +27,14 @@
   <div class="o-sidebarSocial__button o-sidebarSocial__button--linkedIn" href="<?php echo $linkedInLink; ?>" target="_blank">
     <a class="a-socialIcon" href="<?php echo $linkedInLink; ?>" target="_blank">
       <svg class="a-socialIcon__svg" viewBox="0 0 16 16">
-        <?php get_svg('social-facebook'); ?>
+        <?php get_svg('social-linkedin'); ?>
       </svg>
     </a>
   </div>
   <div class="o-sidebarSocial__button o-sidebarSocial__button--googlePlus" href="<?php echo $googlePlusLink; ?>" target="_blank">
     <a class="a-socialIcon" href="<?php echo $googlePlusLink; ?>" target="_blank">
       <svg class="a-socialIcon__svg" viewBox="0 0 16 16">
-        <?php get_svg('social-twitter'); ?>
+        <?php get_svg('social-google-plus'); ?>
       </svg>
     </a>
   </div>
