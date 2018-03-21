@@ -1,0 +1,23 @@
+// Styles for rich links within the sidebar
+.m-richLink {
+  display: flex;
+
+  @include element('image') {
+    margin: auto;
+    max-width: 40%;
+    padding: 1rem;
+  }
+
+  @include element('content') {
+    @include lato-black;
+    align-content: center;
+    display: flex;
+    font-size: rem(18);
+    flex-wrap: wrap;
+    padding-right: 1rem;
+
+    @include modifier('description') {
+      @include open-sans-regular;
+    }
+  }
+}
