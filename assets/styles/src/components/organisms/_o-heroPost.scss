@@ -1,0 +1,28 @@
+// Styles for the featured post in the hero section of the blog homepage
+.o-heroPost {
+  background-color: $grey-lightest;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem;
+
+  @include element('image') {
+    margin: auto;
+    padding: 1rem;
+  }
+
+  @include element('content') {
+    @include headline;
+    max-width: 50%;
+    padding: 1rem;
+
+    @include modifier('description') {
+      @include paragraph;
+    }
+
+    @include modifier('link') {
+      @include paragraph;
+      color: $yellow;
+      text-transform: uppercase;
+    }
+  }
+}
