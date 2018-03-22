@@ -1,0 +1,29 @@
+// Styles for individual sections within the contact module
+.m-gridSection {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include element('icon') {
+    @include size(4.8rem);
+    background-color: $white;
+    border-radius: 50%;
+    margin: 2rem auto;
+
+    @include modifier('phone') {
+      border: .25rem solid $yellow;
+      padding: 1rem;
+    }
+
+    svg {
+      fill: $yellow;
+      transform: rotateY(180deg);
+    }
+  }
+
+  @include element('item') {
+    padding: .5rem .25rem;
+    text-align: center;
+  }
+}

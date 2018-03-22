@@ -1,0 +1,19 @@
+// Styles for the contact grid module
+.o-contactGrid {
+
+  @media(min-width: 640px) {
+    flex-direction: row;
+  }
+
+  @include element('section') {
+    background-color: $grey-lightest;
+    margin: 1% 2.5%;
+    padding-bottom: 2rem;
+    width: 95%;
+
+    @media(min-width: 640px) {
+      margin: 1%;
+      width: 48%;
+    }
+  }
+}
