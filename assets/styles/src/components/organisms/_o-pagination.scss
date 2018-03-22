@@ -1,0 +1,75 @@
+// Pagination styles
+.o-pagination {
+  @include product-labels-grid;
+  color: $white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include element('adjacent') {
+    background-color: $yellow;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
+    transition: color $base-duration $base-timing;
+    width: calc(100% - 4rem);
+
+    &:hover {
+      color: $yellow-dark;
+    }
+
+    @media(min-width: 640px) {
+      width: calc(25% - 4rem);
+    }
+
+    @media(min-width: 960px) {
+      width: calc(33.3333333333% - 4rem);
+    }
+
+    @include modifier('previous') {
+      margin: 1rem 1rem 1rem 3rem;
+      text-indent: -1rem;
+
+      &::before {
+        @include triangle('left', 2rem, 3.2rem, $yellow);
+        content: "";
+        position: absolute;
+        left: -2rem;
+        top: 0;
+      }
+    }
+
+    @include modifier('next') {
+      margin: 1rem 3rem 1rem 1rem;
+      text-indent: 1rem;
+
+      &::after {
+        @include triangle('right', 2rem, 3.2rem, $yellow);
+        content: "";
+        position: absolute;
+        right: -2rem;
+        top: 0;
+      }
+    }
+  }
+
+  @include element('pages') {
+    background-color: $yellow;
+    justify-content: space-around;
+    margin: 0 1rem;
+    padding: 1rem .25rem;
+    width: 100%;
+
+    @media(min-width: 640px) {
+      margin: 0;
+      width: 50%;
+    }
+
+    @media(min-width: 960px) {
+      width: 33.3333333333%;
+    }
+  }
+}
