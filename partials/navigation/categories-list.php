@@ -24,7 +24,7 @@
       <?php
         if($i<(count($categories)-1)):
       ?>
-        <a class="o-categoriesList__categories--link" href="#"><?php echo $categories[$i]; ?>, </a>
+        <a class="o-categoriesList__categories--link" href="#"><?php echo $categories[$i]; ?></a>, 
       <?php
         else:
       ?>
