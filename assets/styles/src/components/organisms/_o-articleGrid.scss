@@ -1,0 +1,18 @@
+// Styles for a grid of articles
+.o-articleGrid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 5vw 1rem;
+
+  @include element('article') {
+    width: 100%;
+
+    @media(min-width: 640px) {
+      width: 50%;
+    }
+
+    @media(min-width: 960px) {
+      width: 33%;
+    }
+  }
+}

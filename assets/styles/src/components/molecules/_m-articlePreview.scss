@@ -10,10 +10,15 @@
   position: relative;
   text-shadow: none;
   transition: outline $base-duration $base-timing;
-  width: 300px;
+  flex-basis: 300px;
 
   &:hover {
     outline: 4px solid $yellow;
+  }
+
+  @include modifier('blog') {
+    background-color: $grey-dark;
+    color: $white;
   }
 
   @include element('featuredImage') {
