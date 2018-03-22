@@ -2,7 +2,7 @@
 // Pagination links for placement on archive pages
 ?>
 <section class="o-pagination">
-  <div class="o-pagination__adjacent o-pagination__adjacent--previous" data-href="#">
+  <div class="o-pagination__adjacent o-pagination__adjacent--previous" onClick="window.location=('#')">
     Previous
   </div>
   <div class="o-pagination__pages">
@@ -22,7 +22,7 @@
       endfor;
     ?>
   </div>
-  <div class="o-pagination__adjacent o-pagination__adjacent--next" data-href="#">
+  <div class="o-pagination__adjacent o-pagination__adjacent--next" onClick="window.location=('#')">
     Next
   </div>
 </section>
