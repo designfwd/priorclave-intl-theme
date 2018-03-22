@@ -1,0 +1,20 @@
+// Styles for the categories list module
+.o-categoriesList {
+  @include footer-button;
+  align-items: flex-start;
+  border-bottom: 1px solid $grey-light;
+  flex-direction: row;
+  margin: auto;
+  padding: 1rem 0 2rem;
+  text-transform: uppercase;
+  width: 95%;
+
+  @include element('headline') {
+    color: $yellow;
+  }
+
+  @include element('categories') {
+    color: $grey-dark;
+    padding: 0 1rem;
+  }
+}
