@@ -86,6 +86,3 @@ function get_picsum( $width, $height='', $modifier='' ) {
     echo ( '//picsum.photos/' . $width . $height );
   endif;
 }
-
-// Google Maps API for testing (only works for local and staging development environments)
-$googleMapsAPIKey = 'AIzaSyB_Z8zKRb41BTb51kOrkunVwzpZF7J4SnU';
