@@ -9,7 +9,7 @@
 
   <?php get_partial('meta/head'); ?>
 
-  <body <?php body_class('blog blog--post'); ?>>
+  <body <?php body_class('content content--blogPost'); ?>>
 
     <header>
       <?php
