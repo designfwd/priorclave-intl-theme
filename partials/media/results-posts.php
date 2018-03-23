@@ -2,6 +2,9 @@
 // Grid of posts resulting from a search
 ?>
 <section class="o-articleGrid">
+  <h2 class="o-articleGrid__headline">
+    Search Results for "Lorem Ipsum Dolor Sit Amet"
+  </h2>
   <?php
     for( $i=0; $i<rand(7,11); $i++):
   ?>

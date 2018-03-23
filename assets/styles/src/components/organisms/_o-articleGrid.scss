@@ -4,6 +4,12 @@
   flex-wrap: wrap;
   padding: 0 5vw 1rem;
 
+  @include element('headline') {
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
   @include element('article') {
     width: 100%;
 
