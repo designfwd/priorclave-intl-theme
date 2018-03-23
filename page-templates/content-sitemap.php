@@ -12,6 +12,13 @@
   <body <?php body_class('content content--sitemap'); ?>>
 
     <header>
+      <?php
+        // Primary navigation
+        get_partial('navigation/primary');
+
+        // General hero area
+        get_partial('hero/general');
+      ?>
     </header>
 
     <main>
