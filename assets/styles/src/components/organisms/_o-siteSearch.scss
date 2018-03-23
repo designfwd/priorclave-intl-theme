@@ -1,0 +1,45 @@
+// Site search module styles
+.o-siteSearch {
+  padding: 2rem 5% 0;
+
+  @include element('form') {
+    display: flex;
+    width: 100%;
+
+    .search-field {
+      @include cta-large-text;
+      background-color: $grey-lightest;
+      line-height: 1.5;
+      padding: 1rem;
+      width: 100%;
+
+      &::placeholder {
+        color: $grey-dark;
+        text-transform: uppercase;
+      }
+    }
+
+    .search-submit {
+      @include size(68px);
+      background-color: $yellow;
+      cursor: pointer;
+      fill: $white;
+      position: relative;
+      transition: fill $base-duration $base-timing;
+
+      &:hover {
+        fill: $grey-dark;
+      }
+
+      svg {
+        @include size(36px);
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
