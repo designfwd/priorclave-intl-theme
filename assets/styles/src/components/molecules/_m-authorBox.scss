@@ -1,0 +1,28 @@
+// Styles for the author box in the author widget
+.m-authorBox {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+
+  @include element('photo') {
+    border: .25rem solid $yellow;
+    border-radius: 50%;
+  }
+
+  @include element('name') {
+    @include headline-blog;
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  @include element('title') {
+    @include subheadline;
+    margin: 0;
+    padding: .25rem 0;
+  }
+
+  @include element('description') {
+    text-align: center;
+  }
+}

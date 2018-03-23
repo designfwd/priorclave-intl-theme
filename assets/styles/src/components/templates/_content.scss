@@ -1,9 +1,14 @@
 // Content page styles
 .content {
 
-  &.content--general {
+  &.content--general,
+  &.content--blogPost {
     display: flex;
     flex-wrap: wrap;
+
+    @media(min-width: 920px) {
+      flex-direction: row;
+    }
 
     header,
     footer {
@@ -16,8 +21,8 @@
     width: 100%;
 
     @media(min-width: 920px) {
-      padding: 1rem 1rem 1rem 2rem;
-      width: 65%;
+      padding: 1rem 1% 1rem 6%;
+      width: 60%;
     }
   }
 
@@ -26,7 +31,7 @@
     width: 100%;
 
     @media(min-width: 920px) {
-      padding: 1rem;
+      padding: 1rem 1%;
       width: 35%;
     }
   }
