@@ -159,7 +159,7 @@
                     endif;
                   ?>
                 </div>
-                <input type="<?php echo $product['type']; ?>" name="<?php echo $slug; ?>" value="<?php echo $name; ?>" />
+                <input class="a-finderChoice__input" type="<?php echo $product['type']; ?>" name="<?php echo $slug; ?>" value="<?php echo $name; ?>" />
               </div>
             <?php
               endfor;
