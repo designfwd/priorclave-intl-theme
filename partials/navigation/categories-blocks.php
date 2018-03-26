@@ -13,6 +13,7 @@
       'North America',
       'South America',
     );
+    set_query_var('regions', $options); // Sets variable for access by other modules
 
     foreach( $options as $option ):
   ?>
