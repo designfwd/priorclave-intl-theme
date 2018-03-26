@@ -1,0 +1,38 @@
+// Styles for individual choices within product finder sections
+.a-finderChoice {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @include element('image') {
+    height: 225px;
+    object-fit: contain;
+    width: 150px;
+  }
+
+  @include element('label') {
+    @include footer-title;
+    padding: .5rem 0;
+    text-align: center;
+
+    @include modifier('subtitle') {
+      color: $grey-medium;
+      font-size: 75%;
+      font-weight: $font-regular;
+    }
+  }
+
+  @include element('input') {
+    appearance: none;
+    border: 2px solid $grey-medium;
+    @include size(2rem);
+
+    &[type='radio'] {
+      border-radius: 50%;
+    }
+
+    &[type='checkbox'] {
+      border-radius: 12.5%;
+    }
+  }
+}

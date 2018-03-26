@@ -1,0 +1,30 @@
+// Styles for individual sections within the product finder form
+.m-finderSection {
+  @include cta-small-title;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  @include element('number') {
+    @include size(48px);
+    background-color: $yellow;
+    border-radius: 50%;
+    color: $white;
+    margin: 1rem auto;
+    padding-top: .25rem;
+  }
+
+  @include element('headline') {
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  @include element('choices') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+}

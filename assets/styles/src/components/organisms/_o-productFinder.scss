@@ -1,0 +1,14 @@
+// Product finder form styles
+.o-productFinder {
+  width: 100%;
+
+  @include element('section') {
+    background-color: $grey-lightest;
+    padding: 1rem;
+    width: 100%;
+
+    @include modifier('alternate') {
+      background-color: $white;
+    }
+  }
+}
