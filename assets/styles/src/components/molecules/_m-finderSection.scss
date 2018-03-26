@@ -27,4 +27,40 @@
     justify-content: space-around;
     width: 100%;
   }
+
+  @include element('submit') {
+
+    &[type='submit'] {
+      @include large-button;
+      background-color: $yellow;
+      color: $grey-dark;
+      cursor: pointer;
+      max-width: 800px;
+      transition: color $base-duration $base-timing;
+      width: 50%;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  @include element('reset') {
+    @include large-button;
+    background-color: $grey-lightest;
+    border: .125rem solid $grey-light;
+    color: $grey-light;
+    cursor: pointer;
+    margin: 1rem;
+    padding: .5rem 4rem;
+    transition: background-color $base-duration $base-timing,
+      border $base-duration $base-timing,
+      color $base-duration $base-timing;
+
+    &:hover {
+      background-color: $yellow;
+      border: .125rem solid $clear-black;
+      color: $white;
+    }
+  }
 }
