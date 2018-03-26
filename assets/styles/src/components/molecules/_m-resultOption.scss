@@ -1,0 +1,23 @@
+// Styles for individual results from a product result grid
+.m-resultOption {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include element('headline') {
+    @include banner-text;
+    margin-bottom: 0;
+
+    @include modifier('regular') {
+      font-weight: $font-regular;
+    }
+  }
+
+  @include element('subhead') {
+    @include lato-black;
+    font-size: rem(48);
+    margin: .25rem;
+  }
+}

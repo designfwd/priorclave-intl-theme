@@ -1,0 +1,18 @@
+// Styles for the product results module
+.o-productResults {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include element('item') {
+    background-color: $grey-lightest;
+    margin: 1rem;
+    outline: 0 solid $clear-yellow;
+    padding: 2rem;
+    transition: outline $base-duration $base-timing;
+
+    &:hover {
+      outline: .25rem solid $yellow;
+    }
+  }
+}
