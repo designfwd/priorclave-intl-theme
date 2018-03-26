@@ -30,7 +30,7 @@
         get_partial('media/directory-distributors');
 
         // CTA grid
-        get_partial('media/cta-grid');
+        get_partial('media/cta-2up');
       ?>
     </main>
 
