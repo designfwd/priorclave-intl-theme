@@ -1,7 +1,7 @@
 <?php
 // A list of category links arranged in blocks
 ?>
-<section class="o-categoryNav">
+<section class="o-categoryNav o-categoryNav--faq">
   <?php
     // Options to be passed via ACF
     $category = 'faq'; // Used as a modifier for IDs
@@ -16,8 +16,8 @@
 
     foreach( $options as $option ):
   ?>
-    <a class="o-categoryNav__link" href="#<?php echo $category . '-' . urlencode($option); ?>">
-      <div class="o-categoryNav__block">
+    <a class="o-categoryNav__link o-categoryNav__link--faq" href="#<?php echo $category . '-' . urlencode($option); ?>">
+      <div class="o-categoryNav__block o-categoryNav__block--faq">
         <?php echo $option; ?>
       </div>
     </a>

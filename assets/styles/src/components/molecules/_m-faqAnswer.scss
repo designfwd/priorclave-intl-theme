@@ -1,0 +1,17 @@
+// Styling for individual countries in the distributor table
+.m-faqAnswer {
+  @include footer-text;
+  display: flex;
+  flex-wrap: wrap;
+  transition: background-color $base-duration $base-timing;
+  width: 100%;
+
+  @include element('content') {
+    padding: 0 1rem;
+    transition: padding $base-duration $base-timing;
+
+    @media(min-width: 800px) {
+      padding: 0 2rem 2rem 3.5rem;
+    }
+  }
+}

@@ -18,6 +18,19 @@
       flex-grow: 1;
       width: auto;
     }
+
+    @include modifier('faq') {
+      flex-grow: 1;
+      width: 50%;
+
+      @media(min-width: 660px) {
+        width: 33.3333333333%;
+      }
+
+      @media(min-width: 1080px) {
+        width: auto;
+      }
+    }
   }
 
   @include element('block') {
@@ -30,6 +43,10 @@
     &:hover {
       background-color: $yellow;
       color: $white;
+    }
+
+    @include modifier('faq') {
+      font-weight: $font-bold;
     }
   }
 }

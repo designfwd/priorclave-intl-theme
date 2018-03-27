@@ -1,0 +1,39 @@
+// Styles for the toggle section of distributor information blocks
+.m-faqToggle {
+  @include footer-text;
+  background-color: $grey-light;
+  position: relative;
+  transition: background-color $base-duration $base-timing;
+  width: 100%;
+
+  &.--toggled {
+    background-color: $white;
+  }
+
+  @include element('icon') {
+    @include size(1.5rem);
+    fill: $white;
+    left: 1rem;
+    top: 1rem;
+    position: absolute;
+    transform: rotate(0);
+    transform-origin: center;
+    transition: fill $base-duration $base-timing,
+      transform $base-duration $base-timing;
+
+    &.--toggled {
+      fill: $yellow-dark;
+      transform: rotate(90deg);
+    }
+
+    svg {
+      @include size(100%);
+    }
+  }
+
+  @include element('category') {
+    font-weight: $font-bold;
+    margin: 0;
+    padding: 1rem 0 1rem 3.5rem;
+  }
+}
