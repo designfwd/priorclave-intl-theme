@@ -27,7 +27,7 @@
         get_partial('content/intro-inverted');
 
         // FAQ navigation
-        get_partial('navigation/categories-blocks');
+        get_partial('navigation/categories-faq');
 
         // Direcotry of FAQs
         get_partial('media/directory-faq');
