@@ -4,11 +4,20 @@
   color: $white;
   padding: 4rem 10%;
 
+  @include modifier('inverted') {
+    background-color: $white;
+    color: $grey-dark;
+  }
+
   @include element('headline') {
     @include headline;
     color: $yellow;
     text-align: center;
     text-transform: uppercase;
+
+    @include modifier('inverted') {
+      color: $grey-dark;
+    }
   }
 
   @include element('content') {
