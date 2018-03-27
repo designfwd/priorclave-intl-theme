@@ -4,10 +4,8 @@
   background-color: $clear-yellow;
   color: $white;
   display: flex;
-  transition: background-color $base-duration $base-timing;
 
   &:hover {
-    background-color: $yellow;
     color: $white;
   }
 

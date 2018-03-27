@@ -22,5 +22,10 @@
     margin: 4rem 0;
     padding: .6rem 1.4rem;
     position: relative;
+    transition: background-color $base-duration $base-timing;
+
+    &:hover {
+      background-color: $yellow;
+    }
   }
 }
