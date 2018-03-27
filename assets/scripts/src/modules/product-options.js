@@ -1,7 +1,11 @@
 // Scripting for the product options module
 jQuery(document).ready(function() {
+  // Preload removal
+  jQuery('#productOptions-list').hide();
+  jQuery('#productOptions-list').removeClass('--preload');
+
   jQuery('#productOptions-toggle').click(function() {
-    jQuery('#productOptions-list').toggle();
+    jQuery('#productOptions-list').slideToggle();
   });
 
   jQuery('.m-featuredOption').click(function() {

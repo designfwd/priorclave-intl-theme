@@ -1,5 +1,8 @@
 // Scripting for the product specifications module
 jQuery(document).ready(function() {
+  // Preload removal
+  jQuery('.o-productSpecifications__table').hide();
+  jQuery('.o-productSpecifications__table').removeClass('--preload');
 
   // If a product title is clicked, it toggles the visibility of its table
   jQuery('.o-productSpecifications__product').click( function() {

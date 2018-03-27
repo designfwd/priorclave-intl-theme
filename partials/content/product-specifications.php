@@ -14,7 +14,7 @@
     <div id="<?php echo $productSlug . '-productTitle'; ?>" class="o-productSpecifications__product">
       <?php echo $product; ?> Specifications
     </div>
-    <div id="<?php echo $productSlug . '-productSpecs'; ?>" class="o-productSpecifications__table">
+    <div id="<?php echo $productSlug . '-productSpecs'; ?>" class="o-productSpecifications__table --preload">
       <?php // Sample product specs
         $specifications = array(
           array(

@@ -46,19 +46,19 @@
 
   </div>
   <p id="productOptions-toggle" class="o-productOptions__listToggle">View a Full List of Options</p>
-  <ul id="productOptions-list" class="o-productOptions__list">
+  <div id="productOptions-list" class="o-productOptions__list --preload">
     <?php // Displays the non-featured options
       for( $i=$featuredNumber; $i<count($optionsList); $i++):
     ?>
-      <li id="productOption-<?php echo $i; ?>" class="o-productOptions__item">
+      <div id="productOption-<?php echo $i; ?>" class="o-productOptions__item">
         <?php
           echo $optionsList[$i];
         ?>
-      </li>
+      </div>
     <?php
       endfor;
     ?>
-  </ul>
+  </div>
   <?php // Creates the dialog boxes associated with the list above
     for( $i=$featuredNumber; $i<count($optionsList); $i++):
       set_query_var( 'dialogID', ('optionDialog-' . $i));
