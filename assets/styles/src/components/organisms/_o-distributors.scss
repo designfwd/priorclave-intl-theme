@@ -1,0 +1,17 @@
+// Styling for the distributor table
+.o-distributors {
+  padding: 0 2.5% 2rem;
+
+  @include element('region') {
+    @include proxima-nova-bold;
+    background-color: $grey-medium-dark;
+    border-bottom: .125rem solid $white;
+    border-top: .125rem solid $white;
+    color: $white;
+    font-size: rem(24);
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+}

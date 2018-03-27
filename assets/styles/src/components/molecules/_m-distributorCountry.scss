@@ -1,0 +1,60 @@
+// Styling for individual countries in the distributor table
+.m-distributorCountry {
+  @include footer-text;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: background-color $base-duration $base-timing;
+  width: 100%;
+
+  @include element('content') {
+    padding: 0 1rem;
+    transition: padding $base-duration $base-timing;
+
+    @media(min-width: 800px) {
+      padding: 0 0 2rem 3.5rem;
+    }
+
+    @include modifier('company') {
+      font-weight: $font-bold;
+    }
+
+    @include modifier('address') {
+      font-style: normal;
+    }
+
+    @include modifier('link') {
+      color: $yellow;
+    }
+  }
+
+  @include element('contact') {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 2rem 0;
+    width: 100%;
+
+    @media(min-width: 800px) {
+      margin: -2rem 0 0;
+      padding: 0 10vw 0 0;
+      width: auto;
+    }
+
+    @include modifier('button') {
+      @include large-button;
+      background-color: $yellow;
+      color: $grey-dark;
+      margin: 0 2rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      transition: color $base-duration $base-timing;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
