@@ -1,0 +1,29 @@
+// Styles for video grid items
+.o-videoGrid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 2.5%;
+
+  // Video styles from embedresponsively.com
+  @include element('video') {
+    height: 320px;
+    margin: 1rem;
+    max-width: 100%;
+    min-width: 280px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    width: calc(33% - 2rem);
+
+    iframe,
+    object,
+    embed {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
