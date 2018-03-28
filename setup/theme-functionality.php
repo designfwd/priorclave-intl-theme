@@ -38,6 +38,14 @@ if (!current_user_can('administrator')) :
   // show_admin_bar(false);
 endif;
 
+// Updates initial ACF settings
+function bellhop_acf_init() {
+
+  acf_update_setting('save_json', (get_stylesheet_directory() . '/assets/json/acf/'));
+  acf_update_setting('load_json', (get_stylesheet_directory() . '/assets/json/acf/'));
+}
+add_action('acf/init', 'bellhop_acf_init');
+
 // Creates ACF Options page
 if( function_exists('acf_add_options_page') ) {
 
