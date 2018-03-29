@@ -1,0 +1,7 @@
+// Styles for homepage templates
+.homepage {
+
+  @include element('header') {
+    background-size: cover;
+  }
+}
