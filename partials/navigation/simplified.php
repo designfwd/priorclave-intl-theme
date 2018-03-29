@@ -10,7 +10,7 @@
  */
 
 // Assigns defaults if the variables are not set
-if( !isset($logo) && $logo == '' ):
+if( !isset($logo) || ($logo == '') ):
   $logo = array(
     'alt' => 'logo',
     'sizes' => array(
@@ -21,7 +21,7 @@ if( !isset($logo) && $logo == '' ):
   );
 endif;
 
-if( !isset($url) && $url == '' ):
+if( !isset($url) || ($url == '') ):
   $url = '#';
 endif;
 ?>
