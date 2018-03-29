@@ -31,7 +31,8 @@
 
     <header class="homepage__header lazyload"
       data-bg="<?php echo $headerBackground['url']; ?>"
-      style="background-image:url('<?php echo $headerBackground['sizes']['preload']; ?>');">
+      style="background-image:url('<?php echo $headerBackground['sizes']['preload']; ?>');"
+    >
       <?php
         // Simplified header navigation
         get_partial('navigation/simplified');
