@@ -3,6 +3,11 @@
   flex-direction: row;
   justify-content: space-between;
 
+  @include element('logo') {
+    max-width: 192px;
+    width: 50%;
+  }
+
   @include element('button') {
     padding-right: 2rem;
   }
