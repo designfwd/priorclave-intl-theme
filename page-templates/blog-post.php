@@ -23,6 +23,9 @@
 
     <main class="content__article">
       <?php
+        // Article masthead
+        get_partial('content/article-masthead');
+
         // Page body content
         get_partial('content/general-block');
       ?>

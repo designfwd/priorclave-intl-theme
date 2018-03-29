@@ -1,0 +1,34 @@
+// Styles for the masthead of blog posts
+.o-articleMasthead {
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  @media(min-width: 640px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  @include element('title') {
+    @include headline-blog;
+    width: 100%;
+  }
+
+  @include element('byline') {
+    @include cta-small-text;
+    margin: 0;
+
+    @media(min-width: 640px) {
+      margin: 0 .5vw 0 0;
+    }
+
+    @include modifier('link') {
+      color: $yellow;
+
+      &:hover {
+        color: $yellow-dark;
+      }
+    }
+  }
+}
