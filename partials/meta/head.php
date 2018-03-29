@@ -1,4 +1,11 @@
-<?php // Metatags and other links for the <head> area of the page ?>
+<?php
+/**
+ * Metatags and other links for the <head> area of the page
+ *
+ * Includes basic meta markup as well as Google site certification, tag manager, and TypeKit before calling
+ * the wp_head() function;
+ */
+?>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
