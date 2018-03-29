@@ -3,5 +3,6 @@
 
   @include element('header') {
     background-size: cover;
+    background-position: center;
   }
 }
