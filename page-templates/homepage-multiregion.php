@@ -3,6 +3,24 @@
  * Template Name: Homepage - Multiregion
  * Description: Homepage for group of coutries or regions
  */
+
+/**
+ * Homepage for multiregion child sites
+ *
+ * Homepage for site within the multisite network that have information on multiple countries
+ * and/or regions.
+ *
+ * @var array $headerBackground   The image to appear in the background of the header
+ */
+
+ if( !isset($headerBackground) || ($headerBackground == '') ):
+   $headerBackground = array(
+     'sizes' => array(
+       'preload' => '//picsum.photos/64/64/?blur'
+     ),
+     'url' => '//picsum.photos/2400/1600/?blur'
+   );
+ endif;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -11,7 +29,9 @@
 
   <body <?php body_class('homepage homepage--multiregion'); ?>>
 
-    <header class="homepage__header" style="background-image:url('<?php get_picsum( 2400, 1600, 'blur'); ?>');">
+    <header class="homepage__header lazyload"
+      data-bg="<?php echo $headerBackground['url']; ?>"
+      style="background-image:url('<?php echo $headerBackground['sizes']['preload']; ?>');">
       <?php
         // Simplified header navigation
         get_partial('navigation/simplified');
