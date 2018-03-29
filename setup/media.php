@@ -26,5 +26,7 @@ function bellhop_image_sizes() {
   add_image_size('1440w', 1366, 9999);
   add_image_size('1600w', 1600, 9999);
   add_image_size('1920w', 1920, 9999);
+  add_image_size('2560w', 2560, 9999);
+  add_image_size('3840w', 3840, 9999);
 }
 add_action( 'after_setup_theme', 'bellhop_image_sizes' );
