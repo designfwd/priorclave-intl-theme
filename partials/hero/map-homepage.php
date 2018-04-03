@@ -10,6 +10,13 @@
  * @var string $language    The abbreviation of the language used throughout the site and its children
  */
 
+// Sets variables, with fallbacks
+if( function_exists('get_field') ):
+  $ID = get_the_ID();
+  $headline = get_field('hero_mapHomepage_headline', $ID);
+  $subhead = get_field('hero_mapHomepage_subhead', $ID);
+  $options = get_field('hero_mapHomepage_options', $ID);
+endif;
 
 if( !isset($headline) || ($headline == '') ):
   $headline = 'Reliable. Flexible. Programmable. Affordable';
