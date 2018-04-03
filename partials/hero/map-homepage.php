@@ -10,7 +10,7 @@
  * @var string $language    The abbreviation of the language used throughout the site and its children
  */
 
-// Sets variables, with fallbacks
+// Sets variables, with fallbacks if ACF is not installed or if variables are empty
 if( function_exists('get_field') ):
   $ID = get_the_ID();
   $headline = get_field('hero_mapHomepage_headline', $ID);
