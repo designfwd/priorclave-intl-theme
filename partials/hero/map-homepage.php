@@ -31,15 +31,18 @@ if( !isset($options) || ($options == '') ):
       'countries' => array(
         array(
           'abbreviation' => 'au',
-          'name' => 'Australia'
+          'name' => 'Australia',
+          'external_site' => false,
         ),
         array(
           'abbreviation' => 'my',
-          'name' => 'Malaysia'
+          'name' => 'Malaysia',
+          'external_site' => false,
         ),
         array(
           'abbreviation' => 'ph',
-          'name' => 'Philippines'
+          'name' => 'Philippines',
+          'external_site' => false,
         ),
       ),
     ),
@@ -49,7 +52,8 @@ if( !isset($options) || ($options == '') ):
       'countries' => array(
         array(
           'abbreviation' => 'gb',
-          'name' => 'United Kingdom'
+          'name' => 'United Kingdom',
+          'external_site' => true
         ),
       ),
     ),
@@ -63,11 +67,13 @@ if( !isset($options) || ($options == '') ):
       'countries' => array(
         array(
           'abbreviation' => 'ca',
-          'name' => 'Canada'
+          'name' => 'Canada',
+          'external_site' => false,
         ),
         array(
           'abbreviation' => 'us',
-          'name' => 'United States'
+          'name' => 'United States',
+          'external_site' => true,
         ),
       ),
     ),
@@ -94,7 +100,7 @@ endif;
     <ul id="homepageMap-dropdownList" class="m-mapDropdown m-mapDropdown--hidden">
       <?php
         foreach( $options as $region ):
-          $regionLink = get_site_url(1) . '/' . $language . '-' . $region['slug'];
+          $regionLink = get_site_url(1) . '/' . $language . '/' . $region['slug'];
       ?>
         <li class="m-mapDropdown__region">
           <a class="a-dropdownLink" href="<?php echo $regionLink; ?>">
@@ -104,7 +110,11 @@ endif;
         <?php // if there are countries, create items for them
           if( $region['countries'] ):
             foreach( $region['countries'] as $country ):
-              $countryLink = get_site_url(1) . '/' . $language . '-' . $country['abbreviation'];
+              if( $country['external_site'] == true ):
+                $countryLink = get_site_url(1) . '/' . $language . '-' . $country['abbreviation'];
+              else:
+                $countryLink = $regionLink . '/' . $country['abbreviation'];
+              endif;
           ?>
             <li class="m-mapDropdown__country">
               <a class="a-dropdownLink" href="<?php echo $countryLink; ?>">
