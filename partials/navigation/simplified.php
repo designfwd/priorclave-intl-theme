@@ -9,7 +9,10 @@
  * @var string $url   A string denoting the URL of the website contact page
  */
 
-// Assigns defaults if the variables are not set
+// Sets variable values, with default fallbacks
+if( function_exists('get_field') ):
+  $logo = get_field('site_logo', 'option');
+endif;
 if( !isset($logo) || ($logo == '') ):
   $logo = array(
     'alt' => 'logo',
@@ -21,6 +24,9 @@ if( !isset($logo) || ($logo == '') ):
   );
 endif;
 
+if( function_exists('get_field') ):
+  $url = get_field('site_contactPage');
+endif;
 if( !isset($url) || ($url == '') ):
   $url = '#';
 endif;
