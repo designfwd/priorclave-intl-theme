@@ -13,7 +13,7 @@
  * @var array $headerBackground   The image to appear in the background of the header
  */
 
-// Sets $headerBackground
+// Sets $headerBackground, with fallback if ACF is not installed or if variable is empty
 if( function_exists('get_field') ):
   $headerBackground = get_field('homepage_headerBackground');
 endif;
