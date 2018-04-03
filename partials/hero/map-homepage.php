@@ -16,6 +16,7 @@ if( function_exists('get_field') ):
   $headline = get_field('hero_mapHomepage_headline', $ID);
   $subhead = get_field('hero_mapHomepage_subhead', $ID);
   $options = get_field('hero_mapHomepage_options', $ID);
+  $language = get_field('site_languageAbbreviation', 'option');
 endif;
 
 if( !isset($headline) || ($headline == '') ):
