@@ -30,7 +30,7 @@
       <a class="m-navLocations__link" href="#">CALL +12 34 5678 9012</a>
       <a class="m-navLocations__flag" href="#">
         <svg id="desktopNav--toggleIcon" class="a-dropdownLink a-dropdownLink--icon" viewBox="0 0 640 480">
-          <?php get_svg('flag-gb'); ?>
+          <?php get_svg('flag/gb'); ?>
         </svg>
       </a>
     </div>
