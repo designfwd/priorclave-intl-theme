@@ -13,14 +13,18 @@
  * @var array $headerBackground   The image to appear in the background of the header
  */
 
- if( !isset($headerBackground) || ($headerBackground == '') ):
-   $headerBackground = array(
-     'sizes' => array(
-       'preload' => '//picsum.photos/64/64/?blur'
-     ),
-     'url' => '//picsum.photos/2400/1600/?blur'
-   );
- endif;
+// Sets $headerBackground
+if( function_exists('get_field') ):
+  $headerBackground = get_field('homepage_headerBackground');
+endif;
+if( !isset($headerBackground) || ($headerBackground == '') ):
+ $headerBackground = array(
+   'sizes' => array(
+     'preload' => '//picsum.photos/64/64/?blur'
+   ),
+   'url' => '//picsum.photos/2400/1600/?blur'
+ );
+endif;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
