@@ -1,5 +1,8 @@
 // Styles for block-style linked buttons
 .o-linkBlocks {
+  background-size: cover;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 2rem 10% 4rem;
   text-shadow: 1px 1px 2px $grey-dark;
 
@@ -9,12 +12,13 @@
     padding-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
+    width: 100%;
   }
 
   @include element('links') {
     display: flex;
-    flex-basis: 240px;
     flex-direction: row;
+    flex-grow: 0;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;

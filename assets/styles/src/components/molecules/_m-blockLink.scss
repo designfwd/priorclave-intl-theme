@@ -8,9 +8,15 @@
   margin: .25rem;
   padding: 2rem;
   transition: background-color $base-duration $base-timing;
+  max-width: 300px;
 
   &:hover {
     background-color: $yellow;
+  }
+
+  @include element('icon') {
+    margin: auto;
+    max-width: 90px;
   }
 
   @include element('text') {
