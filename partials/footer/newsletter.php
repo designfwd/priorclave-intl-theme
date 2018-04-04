@@ -10,8 +10,8 @@
 
 // Sets variables, with fallbacks if ACF is not installed or if variables are empty
 if( function_exists('get_field') ):
-  $headline = get_field('footer_newsletter_headline');
-  $form = get_field('footer_newsletter_headline');
+  $headline = get_field('footer_newsletter_headline', 'option');
+  $form = get_field('footer_newsletter_headline', 'option');
 endif;
 
 if( !isset($headline) || $headline == ''):
