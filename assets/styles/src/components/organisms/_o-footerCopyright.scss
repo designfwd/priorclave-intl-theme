@@ -1,9 +1,16 @@
 // Copyright text styling
 .o-footerCopyright {
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
+  padding: 0 1rem;
   max-width: 1100px;
+
+  @media(min-width: 640px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   @include element('content') {
     @include proxima-nova-semibold;
