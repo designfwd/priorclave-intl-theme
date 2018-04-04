@@ -28,7 +28,6 @@ if( !isset($logo) || $logo == ''):
     )
   );
 endif;
-//
 ?>
 <section class="o-footerMasthead">
   <img class="o-footerMasthead__logo lazyload"
