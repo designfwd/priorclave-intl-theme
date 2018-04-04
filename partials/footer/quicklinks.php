@@ -36,7 +36,7 @@ endif;
 <section class="o-footerQuicklinks">
   <?php
     if( $linksFallback != true ):
-      while( have_rows($links, 'option') ):
+      while( have_rows($links, 'option') ): the_row();
         $label = get_sub_field('label');
         $url = get_sub_field('url');
     ?>

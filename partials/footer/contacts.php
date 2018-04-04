@@ -95,7 +95,7 @@ endif;
     </h4>
     <?php // Shows social network links
       if( $networksFallback != true ):
-        while( have_rows($networks, 'option') ):
+        while( have_rows($networks, 'option') ): the_row();
           $network = $networks['network'];
           $url = $networks['url'];
       ?>
