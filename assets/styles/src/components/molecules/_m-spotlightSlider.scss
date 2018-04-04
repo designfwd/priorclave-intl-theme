@@ -1,7 +1,9 @@
 .m-spotlightSlider {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 4rem 0;
   width: 100%;
 
   @include element('image') {
@@ -20,17 +22,17 @@
   }
 
   @include element('thumbnail') {
-    border-bottom: 2px solid $clear-yellow;
-    margin: .25rem;
-    padding: 4rem 0 .25rem;
+    border-bottom: .125rem solid $clear-yellow;
+    margin: .5rem;
+    padding: 0 0 .25rem;
     transition: border $base-duration $base-timing;
 
     &:hover {
-      border-bottom: 2px solid $yellow-dark;
+      border-bottom: .125rem solid $yellow-dark;
     }
 
     @include modifier('current') {
-      border-bottom: 2px solid $yellow;
+      border-bottom: .125rem solid $yellow;
     }
   }
 }
