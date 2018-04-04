@@ -6,10 +6,12 @@
   margin: auto;
   padding: 0 1rem;
   max-width: 1100px;
+  text-align: center;
 
   @media(min-width: 640px) {
     flex-direction: row;
     justify-content: space-between;
+    text-align: inherit;
   }
 
   @include element('content') {
