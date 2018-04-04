@@ -46,7 +46,7 @@ endif;
       while( have_rows($sliders, $ID) ): the_row();
         $slides = get_sub_field('slides');
     ?>
-      <div class="m-logoSlider">
+      <div class="m-logoSlider --preload">
         <?php
           while( have_rows($slides ) ): the_row();
             $image = get_sub_field('image');
@@ -72,7 +72,7 @@ endif;
     else:
       for( $i=0; $i<$sliderRows; $i++ ):
     ?>
-      <div class="m-logoSlider">
+      <div class="m-logoSlider --preload">
         <?php
           $slides = rand(7,10);
           for( $j=0; $j<$slides; $j++ ):
