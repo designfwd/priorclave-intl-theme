@@ -59,6 +59,18 @@ if( function_exists('acf_add_options_page') ) {
     'icon_url'    => 'dashicons-index-card'
   ));
 
+  if( is_multisite() && (get_current_blog_id() == 1) ){
+    acf_add_options_page(array(
+      'page_title'  => 'Parent Site Settings',
+      'menu_title'  => 'Parent Site Settings',
+      'menu_slug'   => 'parent-site-settings',
+      'capability'  => 'edit_posts',
+      'redirect'    => false,
+      'position'    => '58',
+      'icon_url'    => 'dashicons-forms'
+    ));
+  }
+
 }
 
 // Simplified partials integration for cleaner markup
