@@ -6,14 +6,14 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-
   <?php get_partial('meta/head'); ?>
-
   <body <?php body_class('blog blog--category'); ?>>
-
     <header>
+      <?php
+        get_partial('navigation/primary'); // Primary navigation
+        get_partial('hero/general'); // General hero area
+      ?>
     </header>
-
     <main>
       <?php
         if ( have_posts() ):
@@ -24,31 +24,16 @@
         endif;
       ?>
     </main>
-
     <footer class="universal-footer">
       <?php // Universal footer blocks
-        // Newsletter signup form
-        get_partial('footer/newsletter');
-
-        // Footer masthead
-        get_partial('footer/masthead');
-
-        // Quicklink buttons
-        get_partial('footer/quicklinks');
-
-        // Contact blocks
-        get_partial('footer/contacts');
-
-        // Crediibility badges
-        get_partial('footer/badges');
-
-        // Copyright phrasing and links
-        get_partial('footer/copyright');
+        get_partial('footer/newsletter'); // Newsletter signup form
+        get_partial('footer/masthead'); // Footer masthead
+        get_partial('footer/quicklinks'); // Quicklink buttons
+        get_partial('footer/contacts'); // Contact blocks
+        get_partial('footer/badges'); // Crediibility badges
+        get_partial('footer/copyright'); // Copyright phrasing and links
       ?>
     </footer>
-
     <?php get_partial('meta/foot'); ?>
-
   </body>
-
 </html>

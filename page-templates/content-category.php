@@ -6,61 +6,32 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-
   <?php get_partial('meta/head'); ?>
-
   <body <?php body_class('content content--category'); ?>>
-
     <header>
       <?php
-        // Primary navigation
-        get_partial('navigation/primary');
-
-        // General hero area
-        get_partial('hero/general');
+        get_partial('navigation/primary'); // Primary navigation
+        get_partial('hero/general'); // General hero area
       ?>
     </header>
-
     <main>
       <?php
-        // Intro content block, with inverted colors from the homepage
-        get_partial('content/intro-inverted');
-
-        // Grid of cta links
-        get_partial('media/cta-grid');
-
-        // Feature content block
-        get_partial('content/feature-block');
-
-        // Background-image CTA
-        get_partial('media/cta-background');
+        get_partial('content/intro-inverted'); // Intro content block
+        get_partial('media/cta-grid'); // Grid of cta links
+        get_partial('content/feature-block'); // Feature content block
+        get_partial('media/cta-background'); // Background-image CTA
       ?>
     </main>
-
     <footer class="universal-footer">
       <?php // Universal footer blocks
-        // Newsletter signup form
-        get_partial('footer/newsletter');
-
-        // Footer masthead
-        get_partial('footer/masthead');
-
-        // Quicklink buttons
-        get_partial('footer/quicklinks');
-
-        // Contact blocks
-        get_partial('footer/contacts');
-
-        // Crediibility badges
-        get_partial('footer/badges');
-
-        // Copyright phrasing and links
-        get_partial('footer/copyright');
+        get_partial('footer/newsletter'); // Newsletter signup form
+        get_partial('footer/masthead'); // Footer masthead
+        get_partial('footer/quicklinks'); // Quicklink buttons
+        get_partial('footer/contacts'); // Contact blocks
+        get_partial('footer/badges'); // Crediibility badges
+        get_partial('footer/copyright'); // Copyright phrasing and links
       ?>
     </footer>
-
     <?php get_partial('meta/foot'); ?>
-
   </body>
-
 </html>

@@ -6,67 +6,34 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-
   <?php get_partial('meta/head'); ?>
-
   <body <?php body_class('content content--video'); ?>>
-
     <header>
       <?php
-        // Primary navigation
-        get_partial('navigation/primary');
-
-        // General hero area
-        get_partial('hero/general');
+        get_partial('navigation/primary'); // Primary navigation
+        get_partial('hero/general'); // General hero area
       ?>
     </header>
-
     <main>
       <?php
-        // Featured video
-        get_partial('media/featured-video');
-
-        // Intro content
-        get_partial('content/intro-inverted');
-
-        // Video grid
-        get_partial('media/video-grid');
-
-        // Pagination for videos
-        get_partial('navigation/pagination');
-
-        // Other resources info block
-        get_partial('content/feature-inverted');
-
-        // Grid of links
-        get_partial('media/cta-grid');
+        get_partial('media/featured-video'); // Featured video
+        get_partial('content/intro-inverted'); // Intro content
+        get_partial('media/video-grid'); // Video grid
+        get_partial('navigation/pagination'); // Pagination for videos
+        get_partial('content/feature-inverted'); // Other resources info block
+        get_partial('media/cta-grid'); // Grid of links
       ?>
     </main>
-
     <footer class="universal-footer">
       <?php // Universal footer blocks
-        // Newsletter signup form
-        get_partial('footer/newsletter');
-
-        // Footer masthead
-        get_partial('footer/masthead');
-
-        // Quicklink buttons
-        get_partial('footer/quicklinks');
-
-        // Contact blocks
-        get_partial('footer/contacts');
-
-        // Crediibility badges
-        get_partial('footer/badges');
-
-        // Copyright phrasing and links
-        get_partial('footer/copyright');
+        get_partial('footer/newsletter'); // Newsletter signup form
+        get_partial('footer/masthead'); // Footer masthead
+        get_partial('footer/quicklinks'); // Quicklink buttons
+        get_partial('footer/contacts'); // Contact blocks
+        get_partial('footer/badges'); // Crediibility badges
+        get_partial('footer/copyright'); // Copyright phrasing and links
       ?>
     </footer>
-
     <?php get_partial('meta/foot'); ?>
-
   </body>
-
 </html>
