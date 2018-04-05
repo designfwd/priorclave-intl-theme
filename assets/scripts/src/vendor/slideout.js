@@ -1,2 +1,0 @@
-// Slideout settings
-import 'slideout';
