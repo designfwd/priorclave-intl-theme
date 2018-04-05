@@ -1,5 +1,5 @@
 <?php
-if ( ! function_exists('autoclave_post_type') ):
+if( !function_exists('autoclave_post_type') ):
   function autoclave_post_type() {
     $labels = array(
       'name'                  => _x( 'Autoclaves', 'Post Type General Name', 'bellhop' ),
@@ -58,7 +58,7 @@ endif;
 
 
 // Post type specific to parent site on multisite setup
-if ( ! function_exists('distributor_post_type') && is_multisite() && (get_current_blog_id() == 1) ):
+if( !function_exists('distributor_post_type') && is_multisite() && (get_current_blog_id() == 1) ):
   function distributor_post_type() {
     $labels = array(
       'name'                  => _x( 'Distributors', 'Post Type General Name', 'bellhop' ),
@@ -115,7 +115,7 @@ if ( ! function_exists('distributor_post_type') && is_multisite() && (get_curren
 endif;
 
 
-if ( ! function_exists('badges_post_type') ):
+if( !function_exists('badges_post_type') ):
   function badges_post_type() {
     $labels = array(
       'name'                  => _x( 'Badges', 'Post Type General Name', 'bellhop' ),
