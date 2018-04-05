@@ -15,6 +15,7 @@
 
 body {
   @include open-sans-regular;
+  @include size(100%);
 }
 
 ::selection {
