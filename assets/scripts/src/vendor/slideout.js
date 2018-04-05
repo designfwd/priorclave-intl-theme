@@ -1,0 +1,2 @@
+// Slideout settings
+import 'slideout';
