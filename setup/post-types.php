@@ -122,3 +122,64 @@ function distributor_post_type() {
 add_action( 'init', 'distributor_post_type', 0 );
 
 }
+
+
+if ( ! function_exists('badges_post_type') ) {
+
+// Register Custom Post Type
+function badges_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Badges', 'Post Type General Name', 'bellhop' ),
+		'singular_name'         => _x( 'Badge', 'Post Type Singular Name', 'bellhop' ),
+		'menu_name'             => __( 'Badges', 'bellhop' ),
+		'name_admin_bar'        => __( 'Badges', 'bellhop' ),
+		'archives'              => __( 'Badge Archives', 'bellhop' ),
+		'attributes'            => __( 'Badge Attributes', 'bellhop' ),
+		'parent_item_colon'     => __( 'Parent Badge:', 'bellhop' ),
+		'all_items'             => __( 'All Badges', 'bellhop' ),
+		'add_new_item'          => __( 'Add New Badge', 'bellhop' ),
+		'add_new'               => __( 'Add New', 'bellhop' ),
+		'new_item'              => __( 'New Badge', 'bellhop' ),
+		'edit_item'             => __( 'Edit Badge', 'bellhop' ),
+		'update_item'           => __( 'Update Badge', 'bellhop' ),
+		'view_item'             => __( 'View Badge', 'bellhop' ),
+		'view_items'            => __( 'View Badges', 'bellhop' ),
+		'search_items'          => __( 'Search Badge', 'bellhop' ),
+		'not_found'             => __( 'Not found', 'bellhop' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'bellhop' ),
+		'featured_image'        => __( 'Featured Image', 'bellhop' ),
+		'set_featured_image'    => __( 'Set featured image', 'bellhop' ),
+		'remove_featured_image' => __( 'Remove featured image', 'bellhop' ),
+		'use_featured_image'    => __( 'Use as featured image', 'bellhop' ),
+		'insert_into_item'      => __( 'Insert into badge', 'bellhop' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this badge', 'bellhop' ),
+		'items_list'            => __( 'Badges list', 'bellhop' ),
+		'items_list_navigation' => __( 'Badges list navigation', 'bellhop' ),
+		'filter_items_list'     => __( 'Filter badges list', 'bellhop' ),
+	);
+	$args = array(
+		'label'                 => __( 'Badge', 'bellhop' ),
+		'description'           => __( 'Credibility Indicators', 'bellhop' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 15,
+		'menu_icon'             => 'dashicons-awards',
+		'show_in_admin_bar'     => false,
+		'show_in_nav_menus'     => false,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'badges', $args );
+
+}
+add_action( 'init', 'badges_post_type', 0 );
+
+}
