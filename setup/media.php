@@ -1,5 +1,4 @@
 <?php
-
 function bellhop_image_sizes() {
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
