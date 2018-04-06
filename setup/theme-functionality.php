@@ -28,7 +28,7 @@ add_action( 'admin_menu', 'bellhop_remove_menus');
 
 // Renames the default page template to encourage use of custom templates
 add_filter('default_page_template_title', function() {
-    return __('--Pick a page template--', 'bellhop');
+  return __('--Pick a page template--', 'bellhop');
 });
 
 // Removes the admin bar for all but admins on the front-end
