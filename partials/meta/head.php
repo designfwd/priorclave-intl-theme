@@ -12,9 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <?php // Google site verification
-    if( get_field('webmaster_verification_code', 'option') ):
+    if( get_field('google_site_verification_id', 'option') ):
   ?>
-    <meta name="google-site-verification" content="<?php the_field('webmaster_verification_code', 'option'); ?>" />
+    <meta name="google-site-verification" content="<?php the_field('google_site_verification_id', 'option'); ?>" />
   <?php
     endif;
   ?>
