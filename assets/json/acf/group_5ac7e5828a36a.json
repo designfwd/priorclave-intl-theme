@@ -1,0 +1,167 @@
+{
+    "key": "group_5ac7e5828a36a",
+    "title": "hero_mapHomepage",
+    "fields": [
+        {
+            "key": "field_5ac7e5ae0eb07",
+            "label": "Headline",
+            "name": "hero_mapHomepage_headline",
+            "type": "text",
+            "instructions": "Top-row text, above the country dropdown",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Reliable. Flexible. Programmable. Affordable.",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ac7ee03e4f6d",
+            "label": "Subhead",
+            "name": "hero_mapHomepage_subhead",
+            "type": "text",
+            "instructions": "Second-row text shown above the country dropdown",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Autoclaves Worldwide",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ac7ee79e4f6e",
+            "label": "Countries and Regions",
+            "name": "hero_mapHomepage_options",
+            "type": "repeater",
+            "instructions": "Countries and regions included in the dropdown",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Region",
+            "sub_fields": [
+                {
+                    "key": "field_5ac7f40cbf5e3",
+                    "label": "Region",
+                    "name": "region",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_5ac7f05a87393"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_5ac7f446cfe46",
+                    "label": "Countries",
+                    "name": "countries",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "row",
+                    "button_label": "Add Country",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ac7f47acfe47",
+                            "label": "Country",
+                            "name": "country",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5ac7f15476528"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5ac7fb62ec144",
+                            "label": "Separate Site?",
+                            "name": "separate",
+                            "type": "true_false",
+                            "instructions": "If this should link to a separate site, check this",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523055600
+}
