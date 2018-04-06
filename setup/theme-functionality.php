@@ -67,6 +67,12 @@ if( function_exists('acf_add_options_page') ):
 endif;
 
 
+// Removes ACF options from child sites
+if( is_multisite() && (get_current_blog_id() != 1) ):
+  add_filter('acf/settings/show_admin', '__return_false');
+endif;
+
+
 // Simplified partials integration for cleaner markup
 function get_partial( $slug ) {
   return include(locate_template('partials/' . $slug . '.php'));

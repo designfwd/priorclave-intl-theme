@@ -5,7 +5,7 @@
  */
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php bellhop_lang(); ?>>
   <?php get_partial('meta/head'); ?>
   <body <?php body_class('product product--single'); ?>>
     <header>
