@@ -39,14 +39,6 @@ if (!current_user_can('administrator')) :
 endif;
 
 
-// Updates initial ACF settings
-function bellhop_acf_init() {
-  acf_update_setting('save_json', (get_stylesheet_directory() . '/assets/json/acf/'));
-  acf_update_setting('load_json', (get_stylesheet_directory() . '/assets/json/acf/'));
-}
-add_action('acf/init', 'bellhop_acf_init');
-
-
 // Creates ACF Options page
 if( function_exists('acf_add_options_page') ):
 
@@ -109,5 +101,21 @@ function get_picsum( $width, $height='', $modifier='' ) {
     echo ( '//picsum.photos/' . $width . $height . '/?blur' );
   else:
     echo ( '//picsum.photos/' . $width . $height );
+  endif;
+}
+
+
+function bellhop_lang() {
+  if( function_exists('get_field') ):
+    $lang = get_field('site_language', 'option');
+    $geo = get_field('site_country', 'option');
+  else:
+    $lang = 'en';
+    $geo = 'us';
+  endif;
+  if( $geo['value'] != 'none' ):
+    echo 'lang="' . $lang['value'] . '-' . strtoupper($geo['value']) . '"';
+  else:
+    echo 'lang="' . $lang['value'] . '"';
   endif;
 }
