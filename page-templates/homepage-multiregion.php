@@ -17,7 +17,8 @@
 
 // Sets $headerBackground, with fallback if ACF is not installed or if variable is empty
 if( function_exists('get_field') ):
-  $headerBackground = get_field('homepage_headerBackground');
+  $ID = get_the_ID();
+  $headerBackground = get_field('homepage_headerBackground', $ID);
 endif;
 if( !isset($headerBackground) || ($headerBackground == '') ):
  $headerBackground = array(
