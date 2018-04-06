@@ -1,6 +1,6 @@
 {
     "key": "group_5ac7b890915ff",
-    "title": "settings_supersite",
+    "title": "Supersite Settings",
     "fields": [
         {
             "key": "field_5ac7b9183a110",
@@ -90,11 +90,11 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523045678
+    "modified": 1523046427
 }
