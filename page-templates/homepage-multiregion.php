@@ -8,10 +8,11 @@
 /**
  * Homepage for multiregion child sites
  *
- * Homepage for site within the multisite network that have information on multiple countries
- * and/or regions.
+ * Homepage for site within the multisite network that have information on
+ * multiple countries and/or regions.
  *
- * @var array $headerBackground   The image to appear in the background of the header
+ * @var array $headerBackground   The image to appear in the background of the
+ *                                header
  */
 
 // Sets $headerBackground, with fallback if ACF is not installed or if variable is empty

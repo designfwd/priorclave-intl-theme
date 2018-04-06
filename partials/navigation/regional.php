@@ -1,5 +1,97 @@
 <?php
-// Regional navigation for use to link to a particular country or region
+/**
+ * Regional navigation
+ *
+ * Regional navigation for use to link to a particular country or region
+ *
+ * @var array $options      Countries and regions
+ * @var string $language    The abbreviation of the language used
+ *                          throughout the site and its children
+ */
+
+// Sets variables with fallbacks if they're unset or if ACF is not in use
+if( function_exists('get_field') ):
+  $ID = get_the_ID();
+  $options = get_field('hero_mapHomepage_options', $ID);
+  $language = get_field('site_language', 'option')['value'];
+endif;
+
+if( !isset($headline) || ($headline == '') ):
+  $headline = 'Reliable. Flexible. Programmable. Affordable';
+endif;
+
+if( !isset($subhead) || ($subhead == '') ):
+  $subhead = 'Autoclaves Worldwide';
+endif;
+
+if( !isset($options) || ($options == '') ):
+  $options = array(
+    array(
+      'slug' => 'africa',
+      'name' => 'Africa',
+    ),
+    array(
+      'slug' => 'asia-pacific',
+      'name' => 'Asia Pacific',
+      'countries' => array(
+        array(
+          'abbreviation' => 'au',
+          'name' => 'Australia',
+          'external_site' => false,
+        ),
+        array(
+          'abbreviation' => 'my',
+          'name' => 'Malaysia',
+          'external_site' => false,
+        ),
+        array(
+          'abbreviation' => 'ph',
+          'name' => 'Philippines',
+          'external_site' => false,
+        ),
+      ),
+    ),
+    array(
+      'slug' => 'europe',
+      'name' => 'Europe',
+      'countries' => array(
+        array(
+          'abbreviation' => 'gb',
+          'name' => 'United Kingdom',
+          'external_site' => true
+        ),
+      ),
+    ),
+    array(
+      'slug' => 'middle-east',
+      'name' => 'Middle East',
+    ),
+    array(
+      'slug' => 'north-america',
+      'name' => 'North America',
+      'countries' => array(
+        array(
+          'abbreviation' => 'ca',
+          'name' => 'Canada',
+          'external_site' => false,
+        ),
+        array(
+          'abbreviation' => 'us',
+          'name' => 'United States',
+          'external_site' => true,
+        ),
+      ),
+    ),
+    array(
+      'slug' => 'south-america',
+      'name' => 'South America'
+    )
+  );
+endif;
+
+if( !isset($language) || ($language == '') ):
+  $language = 'en';
+endif;
 ?>
 <nav class="o-regionalNav">
 

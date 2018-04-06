@@ -12,13 +12,13 @@
  *                          throughout the site and its children
  */
 
-// Sets variables, with fallbacks if ACF is not installed or if variables are empty
+// Sets variables, with fallbacks if ACF is not installed or if vars are empty
 if( function_exists('get_field') ):
   $ID = get_the_ID();
   $headline = get_field('hero_mapHomepage_headline', $ID);
   $subhead = get_field('hero_mapHomepage_subhead', $ID);
   $options = get_field('hero_mapHomepage_options', $ID);
-  $language = get_field('site_languageAbbreviation', 'option');
+  $language = get_field('site_language', 'option')['value'];
 endif;
 
 if( !isset($headline) || ($headline == '') ):

@@ -2,14 +2,14 @@
 /**
  * Navigation to use in lieu of primary nav on international homepages
  *
- * Displays a non-clickable logo and a contact button. The contact button links to the contact page as
- * as identified in the child site settings.
+ * Displays a non-clickable logo and a contact button. The contact button links
+ * to the contact page as as identified in the child site settings.
  *
  * @var array $logo   An image array set via ACF that shows the website logo
  * @var string $url   A string denoting the URL of the website contact page
  */
 
-// Sets variables, with fallbacks if ACF is not installed or if variables are empty
+// Sets variables, with fallbacks if ACF is not installed or if vars are empty
 if( function_exists('get_field') ):
   $logo = get_field('site_logo', 'option');
   $url = get_field('site_contactPage', 'option');
