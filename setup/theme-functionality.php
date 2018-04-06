@@ -74,20 +74,19 @@ endif;
 
 
 // Changes the save location for ACF fields
-add_filter('acf/settings/save_json', 'my_acf_json_save_point');
- function my_acf_json_save_point( $path ) {
-    $path = get_stylesheet_directory() . '/assets/json/acf';
-    return $path;
+add_filter('acf/settings/save_json', 'bellhop_acf_json_save_point');
+function bellhop_acf_json_save_point( $path ) {
+  $path = get_stylesheet_directory() . '/assets/json/acf';
+  return $path;
 }
-add_filter('acf/settings/load_json', 'my_acf_json_load_point');
 
 
 // Changes the load location for ACF fields
-function my_acf_json_load_point( $paths ) {
-    // remove original path (optional)
-    unset($paths[0]);
-    $paths[] = get_stylesheet_directory() . '/assets/json/acf';
-    return $paths;
+add_filter('acf/settings/load_json', 'bellhop_acf_json_load_point');
+function bellhop_acf_json_load_point( $paths ) {
+  unset($paths[0]);
+  $paths[] = get_stylesheet_directory() . '/assets/json/acf';
+  return $paths;
 }
 
 
