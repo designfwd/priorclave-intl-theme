@@ -1,0 +1,100 @@
+{
+    "key": "group_5ac7b890915ff",
+    "title": "settings_supersite",
+    "fields": [
+        {
+            "key": "field_5ac7b9183a110",
+            "label": "Google Site Verification ID",
+            "name": "google_site_verification_id",
+            "type": "text",
+            "instructions": "Verification is the process of proving that you own the site or app that you claim to own, using the ID provided here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Verification ID",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ac7ba413a111",
+            "label": "Google Analytics ID",
+            "name": "google_analytics_id",
+            "type": "text",
+            "instructions": "You'll use this tracking ID in the tracking code snippet in the header metadata",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Tracking ID",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ac7bacf3a112",
+            "label": "Google Maps API Key",
+            "name": "google_maps_api_key",
+            "type": "text",
+            "instructions": "To use the Google Maps JavaScript API, you must register your app project on the Google API Console and get a Google API key which you can add to your app.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "API Key",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ac7bb303a113",
+            "label": "Typekit Kid ID",
+            "name": "typekit_id",
+            "type": "text",
+            "instructions": "The advanced embed code loads asynchronously. It provides better control over rendering using the ID provided",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Kit ID",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "parent-site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1523041219
+}
