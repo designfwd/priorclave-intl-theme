@@ -73,6 +73,24 @@ if( is_multisite() && (get_current_blog_id() != 1) ):
 endif;
 
 
+// Changes the save location for ACF fields
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+ function my_acf_json_save_point( $path ) {
+    $path = get_stylesheet_directory() . '/assets/json/acf';
+    return $path;
+}
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+
+
+// Changes the load location for ACF fields
+function my_acf_json_load_point( $paths ) {
+    // remove original path (optional)
+    unset($paths[0]);
+    $paths[] = get_stylesheet_directory() . '/assets/json/acf';
+    return $paths;
+}
+
+
 // Simplified partials integration for cleaner markup
 function get_partial( $slug ) {
   return include(locate_template('partials/' . $slug . '.php'));
