@@ -2,12 +2,14 @@
 /**
  * Homepage navigation for multiregion sites
  *
- * Navigation-accompanying map for use on homepages that guide the user to country/region selection
+ * Navigation-accompanying map for use on homepages that guide the user to
+ * country/region selection
  *
  * @var string $headline    Top-row text show above the country dropdown
  * @var string $subhead     Second-row text shown above the country dropdown
  * @var array $options      Countries and regions
- * @var string $language    The abbreviation of the language used throughout the site and its children
+ * @var string $language    The abbreviation of the language used
+ *                          throughout the site and its children
  */
 
 // Sets variables, with fallbacks if ACF is not installed or if variables are empty
