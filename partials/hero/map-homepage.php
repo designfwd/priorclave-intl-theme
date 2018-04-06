@@ -9,93 +9,16 @@
  * @var string $subhead     Second-row text shown above the country dropdown
  * @var array $options      Countries and regions
  * @var string $language    The abbreviation of the language used
- *                          throughout the site and its children
+ *                          to target regions and countries
  */
 
-// Sets variables, with fallbacks if ACF is not installed or if vars are empty
+// Sets variables
 if( function_exists('get_field') ):
   $ID = get_the_ID();
   $headline = get_field('hero_mapHomepage_headline', $ID);
   $subhead = get_field('hero_mapHomepage_subhead', $ID);
-  $options = get_field('hero_mapHomepage_options', $ID);
+  $options = 'hero_mapHomepage_options';
   $language = get_field('site_language', 'option')['value'];
-endif;
-
-if( !isset($headline) || ($headline == '') ):
-  $headline = 'Reliable. Flexible. Programmable. Affordable';
-endif;
-
-if( !isset($subhead) || ($subhead == '') ):
-  $subhead = 'Autoclaves Worldwide';
-endif;
-
-if( !isset($options) || ($options == '') ):
-  $options = array(
-    array(
-      'slug' => 'africa',
-      'name' => 'Africa',
-    ),
-    array(
-      'slug' => 'asia-pacific',
-      'name' => 'Asia Pacific',
-      'countries' => array(
-        array(
-          'abbreviation' => 'au',
-          'name' => 'Australia',
-          'external_site' => false,
-        ),
-        array(
-          'abbreviation' => 'my',
-          'name' => 'Malaysia',
-          'external_site' => false,
-        ),
-        array(
-          'abbreviation' => 'ph',
-          'name' => 'Philippines',
-          'external_site' => false,
-        ),
-      ),
-    ),
-    array(
-      'slug' => 'europe',
-      'name' => 'Europe',
-      'countries' => array(
-        array(
-          'abbreviation' => 'gb',
-          'name' => 'United Kingdom',
-          'external_site' => true
-        ),
-      ),
-    ),
-    array(
-      'slug' => 'middle-east',
-      'name' => 'Middle East',
-    ),
-    array(
-      'slug' => 'north-america',
-      'name' => 'North America',
-      'countries' => array(
-        array(
-          'abbreviation' => 'ca',
-          'name' => 'Canada',
-          'external_site' => false,
-        ),
-        array(
-          'abbreviation' => 'us',
-          'name' => 'United States',
-          'external_site' => true,
-        ),
-      ),
-    ),
-    array(
-      'slug' => 'south-america',
-      'name' => 'South America'
-    )
-  );
-endif;
-
-if( !isset($language) || ($language == '') ):
-  $language = 'en';
 endif;
 ?>
 <section class="o-homepageMap">
@@ -109,34 +32,39 @@ endif;
     </a>
     <ul id="homepageMap-dropdownList" class="m-mapDropdown m-mapDropdown--hidden">
       <?php
-        foreach( $options as $region ):
-          $regionLink = get_site_url(1) . '/' . $language . '/' . $region['slug'];
-      ?>
-        <li class="m-mapDropdown__region">
-          <a class="a-dropdownLink" href="<?php echo $regionLink; ?>">
-            <?php echo $region['name']; ?>
-          </a>
-        </li>
-        <?php // if there are countries, create items for them
-          if( $region['countries'] ):
-            foreach( $region['countries'] as $country ):
-              if( $country['external_site'] == true ):
-                $countryLink = get_site_url(1) . '/' . $language . '-' . $country['abbreviation'];
-              else:
-                $countryLink = $regionLink . '/' . $country['abbreviation'];
-              endif;
+        if( have_rows($options, $ID) ):
+          while( have_rows($options, $ID) ): the_row();
+            $region = get_sub_field('region');
+            $regionLink = get_site_url(1) . '/' . $language . '/' . $region['value'];
           ?>
-            <li class="m-mapDropdown__country">
-              <a class="a-dropdownLink" href="<?php echo $countryLink; ?>">
-                <svg class="a-dropdownLink a-dropdownLink--flag" viewBox="0 0 640 480"><?php get_svg( 'flag/' . $country['abbreviation'] ); ?></svg><?php echo $country['name']; ?>
+            <li class="m-mapDropdown__region">
+              <a class="a-dropdownLink" href="<?php echo $regionLink; ?>">
+                <?php echo $region['label']; ?>
               </a>
             </li>
+            <?php
+              if( have_rows('countries') ):
+                while( have_rows('countries') ): the_row();
+                  $country = get_sub_field('country');
+                  $separateCheck = get_sub_field('separate');
+                  if( $separateCheck == true ):
+                    $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
+                  else:
+                    $countryLink = get_site_url(1) . '/' . $language . '/' . str_replace(' ', '-', strtolower($country['label']));
+                  endif;
+                ?>
+                  <li class="m-mapDropdown__country">
+                    <a class="a-dropdownLink" href="<?php echo $countryLink; ?>">
+                      <svg class="a-dropdownLink a-dropdownLink--flag" viewBox="0 0 640 480"><?php get_svg( 'flag/' . $country['value'] ); ?></svg><?php echo $country['label']; ?>
+                    </a>
+                  </li>
+                <?php
+                endwhile;
+              endif;
+            ?>
           <?php
-            endforeach;
-          endif;
-        ?>
-      <?php
-        endforeach;
+          endwhile;
+        endif;
       ?>
     </ul>
   </div>
