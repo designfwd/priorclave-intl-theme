@@ -6,7 +6,7 @@
  *
  * @var array $background   The image object to appear in the background of the section
  * @var string $headline    Headline text for the section
- * @var array $links        The links in the block
+ * @var string $links       The ACF field to grab links from
  */
 
 // Sets variables, with fallback if ACF is not installed or if variables are empty
