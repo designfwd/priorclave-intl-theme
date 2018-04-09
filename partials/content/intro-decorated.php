@@ -17,16 +17,6 @@ if( function_exists('get_field') ):
   $decoration = get_field('content_introDecorated_decoration', $ID);
 endif;
 
-if( !isset($headline) || ($headline == '') ):
-  $headline = 'Leader in Steam Autoclaves';
-endif;
-
-if( !isset($content) || ($content == '') ):
-  $content = '<p>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-  </p>';
-endif;
-
 if( !isset($decoration) || ($decoration == '') ):
   $decoration = array(
     'alt' => 'Decoration',
