@@ -6,33 +6,15 @@
  *
  * @var string $headline      Headline text for the section
  * @var string $description   Description for the slider blocks
- * @var array $sliders        Rows of brand logos
+ * @var string $sliders       The ACF field to draw logos from
  */
 
 // Sets variables, with fallback if ACF is not installed or if variables are empty
 if( function_exists('get_field') ):
   $ID = get_the_ID();
-  $headline = get_field('media_slideBrands_headline', $ID);
-  $description = get_field('media_slideBrands_description', $ID);
-  $sliders = 'media_slideBrands_sliders';
-endif;
-
-if( !isset($headline) || $headline == '' ):
-  $headline = 'Trusted All Over the World';
-endif;
-
-if( !isset($description) || $description == ''):
-  $description = '<p>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-  </p>';
-endif;
-
-if(
-  !function_exists('get_field') ||
-  (function_exists('get_field') && !have_rows($sliders))
-):
-  $slidersFallback = true;
-  $sliderRows = 2;
+  $headline = get_field('media_sliderBrands_headline', $ID);
+  $description = get_field('media_sliderBrands_description', $ID);
+  $sliders = 'media_sliderBrands_sliders';
 endif;
 ?>
 <section class="o-brandSlider">
@@ -42,25 +24,28 @@ endif;
   </div>
   <div class="o-brandSlider__sliders">
   <?php
-    if( $slidersFallback == false ): // If ACF is installed, use that
+    if( have_rows($sliders, $ID) ): // If ACF is installed, use that
       while( have_rows($sliders, $ID) ): the_row();
-        $slides = get_sub_field('slides');
+        $slides = 'slides';
     ?>
       <div class="m-logoSlider --preload">
         <?php
-          while( have_rows($slides ) ): the_row();
+          while( have_rows($slides) ): the_row();
             $image = get_sub_field('image');
+            if( !isset($image) || ($image == '') ):
+              $row = get_row_index();
+              $image = array(
+                'alt' => 'Lorem Ipsum',
+                'sizes' => array(
+                  '320w' => '//via.placeholder.com/240x105?text=logo+' . $row,
+                ),
+              );
+            endif;
         ?>
           <div class="m-logoSlider__slide">
-            <img class="a-brandLogo lazyload"
+            <img class="a-brandLogo"
               alt="<?php echo $image['alt']; ?>"
-              src="<?php echo $image['sizes']['preload']; ?>"
-              data-sizes="auto"
-              data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
-                <?php echo $image['sizes']['128w']; ?> 65w,
-                <?php echo $image['sizes']['240w']; ?> 129w,
-                <?php echo $image['sizes']['320w']; ?> 241w
-              "
+              src="<?php echo $image['sizes']['320w']; ?>"
             />
           </div>
         <?php
