@@ -28,27 +28,50 @@
       -webkit-margin-before: 0;
       -webkit-padding-start: 0;
     }
+  }
 
-    .menu-item-depth-0 {
-      font-weight: $font-bold;
-      margin: auto;
-      width: 10rem;
+  @include element('region') {
+    font-weight: $font-bold;
+    margin: auto;
+    width: 10rem;
 
-      @media(min-width: 960px) {
-        margin: inherit;
-      }
-
-      .menu-item-depth-1 {
-        font-weight: $font-regular;
-      }
+    @media(min-width: 960px) {
+      margin: inherit;
     }
 
-    .menu-link {
+    @include modifier('link') {
       background-color: $clear-yellow;
+      display: block;
       line-height: 1.38;
       overflow-x: hidden;
       padding: .125rem 25% .125rem .125rem;
       transition: background-color $base-duration $base-timing;
+      width: 100%;
+
+      &:hover {
+        background-color: $yellow;
+        color: $white;
+      }
+    }
+  }
+
+  @include element('country') {
+    font-weight: $font-regular;
+    margin: auto;
+    width: 10rem;
+
+    @media(min-width: 960px) {
+      margin: inherit;
+    }
+
+    @include modifier('link') {
+      background-color: $clear-yellow;
+      display: block;
+      line-height: 1.38;
+      overflow-x: hidden;
+      padding: .125rem 25% .125rem .125rem;
+      transition: background-color $base-duration $base-timing;
+      width: 100%;
 
       &:hover {
         background-color: $yellow;
