@@ -1,0 +1,46 @@
+{
+    "key": "group_5aca8a0001992",
+    "title": "navigation_linkBlocks",
+    "fields": [
+        {
+            "key": "field_5aca8a8da209c",
+            "label": "Links",
+            "name": "navigation_linkBlocks_links",
+            "type": "repeater",
+            "instructions": "The links for this block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523223249
+}
