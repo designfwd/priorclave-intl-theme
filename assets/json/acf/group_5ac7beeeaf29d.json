@@ -456,6 +456,31 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5acbd032f1cde",
+            "label": "Credibility Badges",
+            "name": "footer_badges",
+            "type": "relationship",
+            "instructions": "Badges to include in the footer of the site",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "badges"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         }
     ],
     "location": [
@@ -475,5 +500,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523304728
+    "modified": 1523306600
 }
