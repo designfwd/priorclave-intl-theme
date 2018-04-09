@@ -5,40 +5,16 @@
  * Content block with images and information about a particular product or category
  *
  * @var string $headline      Headline text for the section
- * @var string $content       Content block
+ * @var string $content       Descriptive content for this block
  * @var string $images        The field to use for image objects
  */
 
-// Sets variables, with fallback if ACF is not installed or if variables are empty
+// Sets variables
 if( function_exists('get_field') ):
   $ID = get_the_ID();
   $headline = get_field('media_productSpotlight_headline', $ID);
   $content = get_field('media_productSpotlight_content', $ID);
   $images = 'media_productSpotlight_images';
-endif;
-
-if( !isset($headline) || $headline == '' ):
-  $headline = 'Priorclave Steam Autoclaves';
-endif;
-
-if( !isset($content) || $content == '' ):
-  $content = '<p>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-  </p>
-  <p>
-    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat commodo consequat.
-  </p>';
-endif;
-
-if(
-  !function_exists('get_field') ||
-  (function_exists('get_field') && !have_rows($images))
-):
-  $imagesFallback = true;
-  $images = 5;
 endif;
 ?>
 <section class="o-productSpotlight">
@@ -46,11 +22,20 @@ endif;
   <div class="o-productSpotlight__content">
     <?php echo $content; ?>
     <div class="m-spotlightSlider">
-      <?php // If ACFs are set, use those
-        if( $imagesFallback == false ):
-          while( have_rows($images) ): the_row();
-            $image = get_sub_field('image');
+      <?php
+        if( have_rows($images, $ID) ):
+          while( have_rows($images, $ID) ): the_row();
             $row = get_row_index();
+            $image = get_sub_field('image');
+            if( !isset($image) || ($image == '') ):
+              $image = array(
+                'alt' => 'Lorem Ipsum',
+                'sizes' => array(
+                  'preload' => '//via.placeholder.com/64x96?text=Image+' . $row,
+                  '128w' => '//via.placeholder.com/128x192?text=Image+' . $row,
+                )
+              );
+            endif;
         ?>
           <img data-img="spotlight-<?php echo $row; ?>"
             class="m-spotlightSlider__thumbnail <?php if($row==1){echo 'm-spotlightSlider__thumbnail--current';} ?> lazyload"
@@ -58,31 +43,36 @@ endif;
             src="<?php echo $image['sizes']['preload']; ?>"
             data-sizes="auto"
             data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
-              <?php echo $image['url']; ?> 65w
+              <?php echo $image['sizes']['128w']; ?> 65w
             "
           />
         <?php
           endwhile;
-        else: // If ACFs are not set, use a fallback
-          for( $i=0; $i<$images; $i++):
-        ?>
-          <img data-img="spotlight-<?php echo $i; ?>"
-            class="m-spotlightSlider__thumbnail <?php if($i<1){echo 'm-spotlightSlider__thumbnail--current';} ?> lazyload"
-            src="<?php placeholder_img( 86, 129, ('text=slide ' . ($i+1)) ); ?>"
-          />
-        <?php
-          endfor;
         endif;
       ?>
     </div>
   </div>
   <div class="o-productSpotlight__content">
     <div class="m-spotlightSlider">
-      <?php // If ACFs are set, use those
-        if( $imagesFallback == false ):
-          while( have_rows($images) ): the_row();
-            $image = get_sub_field('image');
+      <?php
+        if( have_rows($images, $ID) ):
+          while( have_rows($images, $ID) ): the_row();
             $row = get_row_index();
+            $image = get_sub_field('image');
+            if( !isset($image) || ($image == '') ):
+              $image = array(
+                'alt' => 'Lorem Ipsum',
+                'sizes' => array(
+                  'preload' => '//via.placeholder.com/64x96?text=Image+' . $row,
+                  '128w' => '//via.placeholder.com/128x192?text=Image+' . $row,
+                  '240w' => '//via.placeholder.com/240x360?text=Image+' . $row,
+                  '320w' => '//via.placeholder.com/320x480?text=Image+' . $row,
+                  '360w' => '//via.placeholder.com/360x540?text=Image+' . $row,
+                  '375w' => '//via.placeholder.com/375x563?text=Image+' . $row,
+                  '480w' => '//via.placeholder.com/480x721?text=Image+' . $row,
+                )
+              );
+            endif;
         ?>
           <img class="m-spotlightSlider__image <?php if($row==1){echo'm-spotlightSlider__image--current';} ?> lazyload"
             id="spotlight-<?php echo $row; ?>"
@@ -97,17 +87,9 @@ endif;
               <?php echo $image['sizes']['375w']; ?> 361w,
               <?php echo $image['sizes']['480w']; ?> 378w,
             "
+          />
         <?php
           endwhile;
-        else: // If ACFs are not set, use a fallback
-          for( $i=0; $i<$images; $i++):
-      ?>
-        <img class="m-spotlightSlider__image <?php if($i<1){echo 'm-spotlightSlider__image--current';} ?> lazyload"
-          id="spotlight-<?php echo $i; ?>"
-          src="<?php placeholder_img( 431, 649, ('text=slide' . ($i+1)) ); ?>"
-        />
-      <?php
-          endfor;
         endif;
       ?>
     </div>
