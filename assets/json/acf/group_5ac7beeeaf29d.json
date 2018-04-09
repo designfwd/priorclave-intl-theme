@@ -108,6 +108,82 @@
             "endpoint": 0
         },
         {
+            "key": "field_5acbc6f8dc875",
+            "label": "Company Name",
+            "name": "site_contact_name",
+            "type": "text",
+            "instructions": "The name of the company, for contact purposes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Priorclave Ltd.",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5acbc740dc876",
+            "label": "Contact Address",
+            "name": "site_contact_address",
+            "type": "wysiwyg",
+            "instructions": "The mailing address of the company, for contact purposes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "1234 Main St.\r\nWest Somewhere Business Park\r\nLondon\r\n28SE AB0\r\nUK",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5acbc7addc877",
+            "label": "Contact Phone Number",
+            "name": "site_contact_phone",
+            "type": "text",
+            "instructions": "The phone number of the company, for contact purposes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+12 34 5678 9012",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5acbc7cadc878",
+            "label": "Contact Fax Number",
+            "name": "site_contact_fax",
+            "type": "text",
+            "instructions": "The fax number of the company, for contact purposes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+12 34 5678 9012",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5ac7d74f5c9ae",
             "label": "Logo",
             "name": "site_logo",
@@ -317,6 +393,69 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5acbc830dc87a",
+            "label": "Social Media Pages",
+            "name": "footer_networks",
+            "type": "repeater",
+            "instructions": "Social media pages for the company",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Network",
+            "sub_fields": [
+                {
+                    "key": "field_5acbc857dc87b",
+                    "label": "Network Name",
+                    "name": "network",
+                    "type": "select",
+                    "instructions": "The name of the network to connect to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "facebook": "Facebook",
+                        "linkedIn": "LinkedIn",
+                        "twitter": "Twitter"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "array",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5acbc898dc87c",
+                    "label": "Page URL",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "The URL of the page to connect to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -336,5 +475,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523303724
+    "modified": 1523304728
 }
