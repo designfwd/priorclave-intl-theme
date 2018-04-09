@@ -3,6 +3,49 @@
     "title": "navigation_linkBlocks",
     "fields": [
         {
+            "key": "field_5acb90e4e31a4",
+            "label": "Background Image",
+            "name": "navigation_linkBlocks_background",
+            "type": "image",
+            "instructions": "The background image for this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5acb90b6e31a3",
+            "label": "Headline",
+            "name": "navigation_linkBlocks_headline",
+            "type": "text",
+            "instructions": "Headline text for the section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "How Can We Help You?",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5aca8a8da209c",
             "label": "Links",
             "name": "navigation_linkBlocks_links",
@@ -20,7 +63,123 @@
             "max": 0,
             "layout": "row",
             "button_label": "",
-            "sub_fields": []
+            "sub_fields": [
+                {
+                    "key": "field_5acb9123e31a5",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The text associated with this link",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Find a Distributor",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5acb9190e31a6",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "instructions": "The icon associated with this link (should be PNG or SVG to allow for transparency).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "128w",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,svg"
+                },
+                {
+                    "key": "field_5acb91cce31a7",
+                    "label": "Internal Link?",
+                    "name": "linkType",
+                    "type": "true_false",
+                    "instructions": "Specify whether this link is linked to an internal page or an outside URL. If linking to another Priorclave WordPress install, please select \"No\".",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No"
+                },
+                {
+                    "key": "field_5acb9254e31a8",
+                    "label": "Page",
+                    "name": "page",
+                    "type": "page_link",
+                    "instructions": "The page this link is associated with",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5acb91cce31a7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_5acb928ae31a9",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "The URL this link is associated with",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5acb91cce31a7",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "https:\/\/www.google.com\/search?q=priorclave",
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -42,5 +201,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1523223249
+    "modified": 1523290894
 }
