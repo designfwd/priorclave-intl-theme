@@ -25,22 +25,6 @@ if( !isset($background) || ($background == '') ):
     'url' => '//picsum.photos/g/2400/1600'
   );
 endif;
-
-if( !isset($headline) || ($headline == '') ):
-  $headline = 'How Can We Help You?';
-endif;
-
-if(
-  !function_exists('get_field') ||
-  (function_exists('get_field') && !have_rows($links))
-):
-  $linksFallback = true;
-  $links = array(
-    'Find a Distributor',
-    'Request a Quote',
-    'Request Support'
-  );
-endif;
 ?>
 <section class="o-linkBlocks lazyload"
   data-bg="<?php echo $background['url']; ?>"
@@ -49,11 +33,26 @@ endif;
   <h2 class="o-linkBlocks__headline"><?php echo $headline; ?></h2>
   <div class=o-linkBlocks__links>
     <?php
-      if( $linksFallback == false ): // If ACF is installed, use that
+      if( have_rows($links, $ID) ):
         while( have_rows($links, $ID) ): the_row();
-          $link = get_sub_field('link');
           $label = get_sub_field('label');
+
           $icon = get_sub_field('icon');
+          if( !isset($icon) || ($icon == '') ):
+            $icon = array(
+              'sizes' => array(
+                'preload' => '//via.placeholder.com/64x64?text=icon',
+                '128w' => '//via.placeholder.com/128x128?text=icon'
+              ),
+            );
+          endif;
+
+          $linkType = get_sub_field('linkType');
+          if( $linkType == true ):
+            $link = get_sub_field('page');
+          else:
+            $link = get_sub_field('url');
+          endif;
       ?>
         <a class="m-blockLink" href="<?php echo $link; ?>">
           <img class="m-blockLink__icon lazyload"
@@ -61,29 +60,13 @@ endif;
             src="<?php echo $icon['sizes']['preload']; ?>"
             data-sizes="auto"
             data-srcset="<?php echo $icon['sizes']['preload']; ?> 64w,
-              <?php echo $icon['url']; ?> 65w
+              <?php echo $icon['sizes']['128w']; ?> 65w
             "
           />
           <h3 class="m-blockLink__text"><?php echo $label; ?></h3>
         </a>
       <?php
         endwhile;
-      else: // If ACF is not installed or variables are not set, use placeholder info
-        foreach( $links as $link ):
-      ?>
-        <a class="m-blockLink" href="#">
-          <img class="m-blockLink__icon lazyload"
-            alt="Icon"
-            src="<?php placeholder_img( 64, 64, 'text=icon'); ?>"
-            data-sizes="auto"
-            data-srcset="<?php placeholder_img( 64, 64, 'text=icon'); ?> 64w,
-              <?php placeholder_img( 90, 90, 'text=icon'); ?> 65w
-            "
-          />
-          <h3 class="m-blockLink__text"><?php echo $link; ?></h3>
-        </a>
-      <?php
-        endforeach;
       endif;
     ?>
   </div>
