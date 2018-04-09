@@ -189,7 +189,7 @@
         },
         {
             "key": "field_5acbc2e14140d",
-            "label": "Gravity Form ID",
+            "label": "Newsletter Form ID",
             "name": "footer_newsletter_form",
             "type": "text",
             "instructions": "The ID of the Gravity Form to use in the footer",
@@ -224,5 +224,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523303182
+    "modified": 1523303368
 }
