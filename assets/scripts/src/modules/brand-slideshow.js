@@ -5,17 +5,15 @@ jQuery(document).ready(function() {
   jQuery('.m-logoSlider').fadeIn();
 
   jQuery('.m-logoSlider').slick({
-    speed: 16000,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 0,
-    centerMode: true,
+    buttons: false,
     cssEase: 'linear',
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    speed: 16000,
     variableWidth: true,
-    infinite: true,
-    initialSlide: 1,
-    arrows: false,
-    buttons: false
   });
 })
