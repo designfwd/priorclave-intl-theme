@@ -11,11 +11,7 @@
 // Sets variables, with fallbacks if ACF is not installed or if variables are empty
 if( function_exists('get_field') ):
   $headline = get_field('footer_newsletter_headline', 'option');
-  $form = get_field('footer_newsletter_headline', 'option');
-endif;
-
-if( !isset($headline) || $headline == ''):
-  $headline = 'Stay connected by joining our mailing list';
+  $form = get_field('footer_newsletter_form', 'option');
 endif;
 ?>
 <section class="o-footerNewsletter">
@@ -24,9 +20,7 @@ endif;
   </h3>
   <div class="o-footerNewsletter__form">
     <?php // If $form is defined, place Gravity Form here
-      if( isset($form) && function_exists('gravity_form') ):
-        gravity_form( $form, false, false, false, null, true, 1, true);
-      else:
+      if( !isset($form) || ($form == '') ):
     ?>
       <form class="m-footerForm">
         <div class="gform_body">
@@ -43,6 +37,8 @@ endif;
         </div>
       </form>
     <?php
+      elseif( isset($form) && function_exists('gravity_form') ):
+        gravity_form( $form, false, false, false, null, true, 1, true);
       endif;
     ?>
   </div>

@@ -151,6 +151,60 @@
             "allow_null": 0,
             "allow_archives": 1,
             "multiple": 0
+        },
+        {
+            "key": "field_5acbc28d4140b",
+            "label": "Footer Content Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5acbc2ae4140c",
+            "label": "Newsletter Signup Headline",
+            "name": "footer_newsletter_headline",
+            "type": "text",
+            "instructions": "Call to action text for the section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Stay connected by joining our mailing list",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5acbc2e14140d",
+            "label": "Gravity Form ID",
+            "name": "footer_newsletter_form",
+            "type": "text",
+            "instructions": "The ID of the Gravity Form to use in the footer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -162,7 +216,7 @@
             }
         ]
     ],
-    "menu_order": "",
+    "menu_order": 0,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -170,5 +224,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523046390
+    "modified": 1523303182
 }
