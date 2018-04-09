@@ -1,0 +1,110 @@
+{
+    "key": "group_5acbced4ec8ea",
+    "title": "Badge  Content",
+    "fields": [
+        {
+            "key": "field_5acbcf02b3f15",
+            "label": "Label",
+            "name": "badge_label",
+            "type": "text",
+            "instructions": "The name of the badge to use for descriptions in the site (e.g. ISO 9001 Registered, ASME, etc.). This may match the title of the badge, but is used specifically for identification throughout the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5acbcf6ab3f16",
+            "label": "Description",
+            "name": "badge_description",
+            "type": "wysiwyg",
+            "instructions": "Describe what this badge signifies",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5acbcfd8b3f18",
+            "label": "Badge Imagery (Grayscale)",
+            "name": "badge_image_grayscale",
+            "type": "image",
+            "instructions": "A grayscale version of the badge.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "320w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5acbcf9fb3f17",
+            "label": "Badge Imagery (Color)",
+            "name": "badge_image_color",
+            "type": "image",
+            "instructions": "A full-color version of the badge, if available.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "320w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "badges"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1523306487
+}
