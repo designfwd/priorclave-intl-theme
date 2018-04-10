@@ -1,5 +1,6 @@
 // Styles for the marketing feature-style hero module
 .o-heroMarketing {
+  background-size: cover;
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 2rem;
@@ -56,6 +57,7 @@
     align-self: center;
     max-width: 80%;
     padding-right: 0;
+    width: 100%;
 
     @media(min-width: 720px) {
       align-self: flex-end;

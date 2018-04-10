@@ -1,0 +1,128 @@
+{
+    "key": "group_5acd1c3e1f9e1",
+    "title": "hero_featuredMarketing",
+    "fields": [
+        {
+            "key": "field_5acd1c7b8b708",
+            "label": "Background Image",
+            "name": "hero_featuredMarketing_background",
+            "type": "image",
+            "instructions": "The image to appear in the background of this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5acd1cc08b709",
+            "label": "Headline Text",
+            "name": "hero_featuredMarketing_headline",
+            "type": "repeater",
+            "instructions": "Lines of text to use in the headline. The bottom row appears more prominently.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Line",
+            "sub_fields": [
+                {
+                    "key": "field_5acd1cef8b70a",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Autoclaves",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5acd220c22e9b",
+            "label": "Subtitle",
+            "name": "hero_featuredMarketing_subtitle",
+            "type": "text",
+            "instructions": "Text to display below the headline",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "The Right Autoclave for Your Industry",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5acd22f39f591",
+            "label": "Display \"Contact Local Distributor\" Link?",
+            "name": "hero_featuredMarketing_link",
+            "type": "true_false",
+            "instructions": "If a link to the contact page should be included, please check the box.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523393351
+}

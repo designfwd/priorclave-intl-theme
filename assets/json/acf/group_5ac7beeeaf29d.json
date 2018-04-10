@@ -537,6 +537,46 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5accea0189ff2",
+            "label": "Content Defaults",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5accea9126fa0",
+            "label": "Hero Background Image",
+            "name": "default_hero_backgroundImage",
+            "type": "image",
+            "instructions": "The default background image to use for hero areas, when one is not set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -556,5 +596,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523307845
+    "modified": 1523378893
 }

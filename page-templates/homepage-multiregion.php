@@ -25,7 +25,7 @@ if( !isset($headerBackground) || ($headerBackground == '') ):
    'sizes' => array(
      'preload' => '//picsum.photos/64/64/?blur'
    ),
-   'url' => '//picsum.photos/2400/1600/?blur'
+   'url' => '//picsum.photos/2400/1200/?blur'
  );
 endif;
 ?>
