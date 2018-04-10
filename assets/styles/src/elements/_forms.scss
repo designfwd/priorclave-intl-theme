@@ -2,6 +2,13 @@
  * Forms
  */
 
+label,
+button,
+input,
+select {
+  cursor: pointer;
+}
+
 // button {}
 
 #{$all-buttons},
