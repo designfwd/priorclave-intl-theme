@@ -2,10 +2,15 @@
  * Image and Multimedia
  */
 
-// area {}
-// audio {}
-img {
+img,
+video,
+audio {
+  height: auto;
   max-width: 100%;
 }
+
+// area {}
+// audio {}
+// img {}
 // map {}
 // video {}
