@@ -1,11 +1,23 @@
 <?php
-// Introductory content block with a headline and body content
+/**
+ * Intro block
+ *
+ * Introductory content block with a headline and body content
+ *
+ * @var string $headline    Header text for this section
+ * @var string $body        Text content for this section
+ */
+
+if( function_exists('get_field') ):
+  $headline = get_field('content_introBlock_headline');
+  $body = get_field('content_introBlock_body');
+endif;
 ?>
 <section class="o-introContent">
-  <h1 class="o-introContent__headline">Leader in Steam Autoclaves</h1>
+  <h1 class="o-introContent__headline">
+    <?php echo $headline; ?>
+  </h1>
   <div class="o-introContent__content">
-    <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-    </p>
+    <?php echo $body; ?>
   </div>
 </section>
