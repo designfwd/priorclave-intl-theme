@@ -113,8 +113,9 @@ endif;
 
   <?php
     if( $link == true ):
+      $url = get_field('site_contactPage', 'option');
   ?>
-    <a class="o-heroMarketing__button" href="#">
+    <a class="o-heroMarketing__button" href="<?php echo $url; ?>">
       <span class="a-circleIcon"><svg class="a-circleIcon__svg a-circleIcon__svg--phone" viewBox="0 0 16 16"><?php get_svg('icon-phone'); ?></svg></span>
       Contact Local Distributor
     </a>
