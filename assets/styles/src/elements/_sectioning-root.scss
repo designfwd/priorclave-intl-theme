@@ -2,11 +2,14 @@
  * Sectioning Root
  */
 
-// html {}
+html {
+  box-sizing: border-box;
+}
 
 *,
 *::before,
 *::after {
+  box-sizing: inherit;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
