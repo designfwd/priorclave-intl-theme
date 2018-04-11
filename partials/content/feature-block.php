@@ -9,7 +9,7 @@
  */
 
 if( function_exists('get_field') ):
-  $ID = get_the_id();
+  $ID = get_the_ID();
   $headline = get_field('content_featureBlock_headline', $ID);
   $content = get_field('content_featureBlock_content', $ID);
 endif;
