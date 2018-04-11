@@ -9,8 +9,9 @@
  */
 
 if( function_exists('get_field') ):
-  $headline = get_field('content_introBlock_headline');
-  $body = get_field('content_introBlock_body');
+  $ID = get_the_ID();
+  $headline = get_field('content_introBlock_headline', $ID);
+  $body = get_field('content_introBlock_body', $ID);
 endif;
 ?>
 <section class="o-introContent">
