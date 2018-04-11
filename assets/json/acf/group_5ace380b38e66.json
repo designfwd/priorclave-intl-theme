@@ -1,0 +1,107 @@
+{
+    "key": "group_5ace380b38e66",
+    "title": "navigation_productGrid",
+    "fields": [
+        {
+            "key": "field_5ace38c94600f",
+            "label": "Headline",
+            "name": "navigation_productGrid_headline",
+            "type": "text",
+            "instructions": "Headline text for this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Steam Autoclaves",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ace38e7eb96c",
+            "label": "Grid Items",
+            "name": "navigation_productGrid_items",
+            "type": "repeater",
+            "instructions": "Pages and labels to include in the category grid",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Category",
+            "sub_fields": [
+                {
+                    "key": "field_5ace3952eb96d",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label to apply to this link",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Custom Autoclaves",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ace398aeb96e",
+                    "label": "Linked Page",
+                    "name": "page_id",
+                    "type": "post_object",
+                    "instructions": "The page to link this item to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523465128
+}

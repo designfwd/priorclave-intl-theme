@@ -20,7 +20,10 @@
   }
 
   @include element('image') {
-    padding: 1rem 0 0;
+    object-fit: contain;
+    padding: 1rem 5% 0;
+    max-width: 720px;
+    width: 100%;
   }
 
   @include element('title') {

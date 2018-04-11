@@ -57,8 +57,8 @@ if( !$image ):
       '960w' => '//via.placeholder.com/960x674?text=image',
       '1024w' => '//via.placeholder.com/1024x719?text=image',
       '1280w' => '//via.placeholder.com/1280x898?text=image',
+      '1366w' => '//via.placeholder.com/1366x959?text=image',
     ),
-    'url' => '//via.placeholder.com/1315x923?text=image',
   );
 endif;
 ?>
@@ -107,7 +107,7 @@ endif;
       <?php echo $image['sizes']['960w']; ?> 801w,
       <?php echo $image['sizes']['1024w']; ?> 961w,
       <?php echo $image['sizes']['1280w']; ?> 1025w,
-      <?php echo $image['url']; ?> 1281w,
+      <?php echo $image['sizes']['1366w']; ?> 1281w,
     "
   />
 
