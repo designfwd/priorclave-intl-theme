@@ -1,11 +1,22 @@
 <?php
-// A block of content featured after hero and introductory content
+/**
+ * Feature content block
+ *
+ * A block of content featured after hero and introductory content
+ *
+ * @var string $headline      Headline text for this section
+ * @var string $content       Body content for this section
+ */
+
+if( function_exists('get_field') ):
+  $ID = get_the_id();
+  $headline = get_field('content_featureBlock_headline', $ID);
+  $content = get_field('content_featureBlock_content', $ID);
+endif;
 ?>
 <section class="o-featureBlock">
-  <h2 class="o-featureBlock__headline">Autoclaves for Your Industry</h2>
+  <h2 class="o-featureBlock__headline"><?php echo $headline; ?></h2>
   <div class="o-featureBlock__content">
-    <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-    </p>
+    <?php echo $content; ?>
   </div>
 </section>
