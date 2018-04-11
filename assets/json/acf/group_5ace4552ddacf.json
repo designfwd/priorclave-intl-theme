@@ -1,0 +1,102 @@
+{
+    "key": "group_5ace4552ddacf",
+    "title": "media_ctaSimple",
+    "fields": [
+        {
+            "key": "field_5ace4566e4f9f",
+            "label": "Headline",
+            "name": "media_ctaSimple_headline",
+            "type": "text",
+            "instructions": "Headline text for this area",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Get Pricing for Your Perfect Autoclave Fast",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ace4592e4fa0",
+            "label": "Description",
+            "name": "media_ctaSimple_description",
+            "type": "wysiwyg",
+            "instructions": "Descriptive text ot include for this CTA",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5ace45b9e4fa1",
+            "label": "Button Label",
+            "name": "media_ctaSimple_label",
+            "type": "text",
+            "instructions": "Label text for the button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Request a Quote",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ace45d4e4fa2",
+            "label": "Linked Page",
+            "name": "media_ctaSimple_url",
+            "type": "page_link",
+            "instructions": "Linked page for the CTA button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523467765
+}
