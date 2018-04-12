@@ -14,6 +14,9 @@ function bellhop_supports() {
   // Enable HTML5 markup support
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
+
+  // Enable wide images
+  add_theme_support('align-wide');
 }
 add_action( 'after_setup_theme', 'bellhop_supports' );
 
