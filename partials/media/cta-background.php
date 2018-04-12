@@ -30,11 +30,9 @@ if( !$background ):
 endif;
 ?>
 <section class="o-ctaBackground lazyload" data-bg="<?php echo $background['sizes']['2560w']; ?>" style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
-  <h2 class="o-ctaBackground__headline">We're Here to Help</h2>
+  <h2 class="o-ctaBackground__headline"><?php echo $headline; ?></h2>
   <div class="o-ctaBackground__description">
-    <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-    </p>
+    <?php echo $description; ?>
   </div>
-  <a class="o-ctaBackground__button" href="#">Service & Maintenance</a>
+  <a class="o-ctaBackground__button" href="<?php echo $page; ?>"><?php echo $label; ?></a>
 </section>
