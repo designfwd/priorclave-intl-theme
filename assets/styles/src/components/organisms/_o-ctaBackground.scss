@@ -1,12 +1,12 @@
 // Styles for CTAs with an image background
 .o-ctaBackground {
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 4rem 10% 16rem;
 
   @include element('headline') {
     @include cta-small-title;
     text-align: center;
-    text-shadow: 0 0 2rem $white;
     text-transform: uppercase;
   }
 
@@ -15,7 +15,6 @@
     max-width: 800px;
     padding-bottom: 1.6rem;
     text-align: center;
-    text-shadow: 0 0 2rem $white;
     width: 80%;
   }
 
