@@ -1,61 +1,57 @@
 <?php
-// Call-to-action grid with image-enhanced links
+/**
+ * CTA 2-up
+ *
+ * Call-to-action side-by-side with image-enhanced links
+ *
+ * @var string $items     The ACF field to look for items in
+ * @var string $headline  Short text description of the CTA's purpose
+ * @var string $subhead   Longer description of what the CTA link accomplishes
+ * @var array $image      The image to use in the CTA block
+ * @var string $page      The linked page for the CTA
+ */
+
+if( function_exists('get_field') ):
+  $ID = get_the_ID();
+  $items = 'media_cta2Up_items';
+endif;
 ?>
 <section class="o-ctaGrid">
-  <?php // Creates random number of CTA grid boxes for testing purposes
-    $ctaGrid = array(
-      array(
-        "headline" => "Find",
-        "subhead" => "Find the perfect autoclave fast"
-      ),
-      array(
-        "headline" => "Why Us?",
-        "subhead" => "Why is Priorclave the right choice?"
-      ),
-      array(
-        "headline" => "Technical Support",
-        "subhead" => "Contact a technical support expert"
-      ),
-      array(
-        "headline" => "Service & Maintenance",
-        "subhead" => "Request service and maintenance for your autoclave"
-      ),
-      array(
-        "headline" => "Autoclave Calibration",
-        "subhead" => "Request calibration and testing for you autoclave"
-      ),
-      array(
-        "headline" => "Parts & Consumables",
-        "subhead" => "Order parts and consumables for your autoclave"
-      ),
-      array(
-        "headline" => "Warranty",
-        "subhead" => "Lean about your Priorclave warranty"
-      ),
-      array(
-        "headline" => "FAQ",
-        "subhead" => "Find answers to your questions"
-      ),
-      array(
-        "headline" => "Downloads",
-        "subhead" => "Download resources from our website"
-      ),
-      array(
-        "headline" => "Video Gallery",
-        "subhead" => "View helpful videos from experts"
-      )
-    );
-
-    for( $i=0; $i<2; $i++):
-  ?>
-    <a class="o-ctaGrid__item o-ctaGrid__item--large" href="#">
-      <div class="m-ctaGridItem">
-        <h3 class="m-ctaGridItem__headline m-ctaGridItem__headline--large"><?php echo $ctaGrid[$i]["headline"]; ?></h3>
-        <h4 class="m-ctaGridItem__subhead m-ctaGridItem__subhead--large"><?php echo $ctaGrid[$i]["subhead"]; ?></h4>
-        <img class="m-ctaGridItem__image" src="<?php placeholder_img(267, 247, ('text=item ' . ($i+1))); ?>" />
-      </div>
-    </a>
   <?php
-    endfor;
+    if( have_rows($items, $ID) ):
+      while( have_rows($items, $ID) ): the_row();
+        $headline = get_sub_field('headline');
+        $subhead = get_sub_field('subhead');
+        $page = get_sub_field('page');
+        $image = get_sub_field('image');
+        if( !$image ):
+          $image = array(
+            'sizes' => array(
+              'preload' => '//via.placeholder.com/64x59?text=CTA',
+              '128w' => '//via.placeholder.com/128x118?text=CTA',
+              '240w' => '//via.placeholder.com/240x222?text=CTA',
+              '320w' => '//via.placeholder.com/320x296?text=CTA',
+            ),
+          );
+        endif;
+      ?>
+        <a class="o-ctaGrid__item o-ctaGrid__item--large" href="<?php echo $page; ?>">
+          <div class="m-ctaGridItem">
+            <h3 class="m-ctaGridItem__headline m-ctaGridItem__headline--large"><?php echo $headline; ?></h3>
+            <h4 class="m-ctaGridItem__subhead m-ctaGridItem__subhead--large"><?php echo $subhead; ?></h4>
+            <img class="m-ctaGridItem__image lazyload lazyload--blurUp"
+              src="<?php echo $image['sizes']['preload']; ?>"
+              data-sizes="auto"
+              data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+                <?php echo $image['sizes']['128w']; ?> 65w,
+                <?php echo $image['sizes']['240w']; ?> 129w,
+                <?php echo $image['sizes']['320w']; ?> 241w,
+              "
+            />
+          </div>
+        </a>
+      <?php
+      endwhile;
+    endif;
   ?>
 </section>
