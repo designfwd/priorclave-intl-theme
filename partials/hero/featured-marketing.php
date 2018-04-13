@@ -21,10 +21,10 @@ if( function_exists('get_field') ):
   $link = get_field('hero_featuredMarketing_link', $ID);
 
   // Fallbacks if variables are not set for the page
-  if( !get_field('hero_featuredMarketing_background', $ID) ):
+  if( !$background ):
     $background = get_field('default_hero_backgroundImage', 'option');
   endif;
-  if( !get_field('hero_featuredMarketing_image', $ID) ):
+  if( !$image ):
     $image = get_field('default_hero_image', 'option');
   endif;
 endif;
