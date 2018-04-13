@@ -555,6 +555,23 @@
             "endpoint": 0
         },
         {
+            "key": "field_5ad10d5a54dea",
+            "label": "Hero Area",
+            "name": "",
+            "type": "accordion",
+            "instructions": "This section defines defaults for the header area of content pages",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
             "key": "field_5accea9126fa0",
             "label": "Hero Background Image",
             "name": "default_hero_backgroundImage",
@@ -601,6 +618,123 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5ad10d8954deb",
+            "label": "Related Information Block",
+            "name": "",
+            "type": "accordion",
+            "instructions": "This section sets defaults for the related information block at the bottom of some content pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad10c3054de4",
+            "label": "Related Info Headline",
+            "name": "default_related_headline",
+            "type": "text",
+            "instructions": "Header text for the related product\/page info section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Priorclave Steam Autoclaves",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad10c6554de5",
+            "label": "Related Info Content",
+            "name": "default_related_content",
+            "type": "wysiwyg",
+            "instructions": "Body copy for the related content section on general content pages",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5ad10cd554de6",
+            "label": "Related Info Image",
+            "name": "default_related_image",
+            "type": "image",
+            "instructions": "The image to use for related information content section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "360w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ad10d0354de7",
+            "label": "Related Info Button Label",
+            "name": "default_related_label",
+            "type": "text",
+            "instructions": "The button label for related info blocks",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "View Autoclaves",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad10d2f54de8",
+            "label": "Related Info Linked Page",
+            "name": "default_related_page",
+            "type": "page_link",
+            "instructions": "The linked page for related info blocks",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
         }
     ],
     "location": [
@@ -620,5 +754,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523643314
+    "modified": 1523650342
 }
