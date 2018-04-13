@@ -577,6 +577,30 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5ad0f38a07aee",
+            "label": "Hero Image",
+            "name": "default_hero_image",
+            "type": "image",
+            "instructions": "The default image to use in foreground of hero areas, when one is not set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -596,5 +620,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523378893
+    "modified": 1523643314
 }
