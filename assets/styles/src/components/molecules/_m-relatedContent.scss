@@ -11,7 +11,7 @@
   @include modifier('image') {
     max-width: 65%;
     padding-top: 1.5rem;
-    width: auto;
+    width: 100%;
 
     @media(min-width: 1024px) {
       max-width: 35%;
