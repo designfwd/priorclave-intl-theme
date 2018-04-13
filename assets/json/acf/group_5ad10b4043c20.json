@@ -1,0 +1,45 @@
+{
+    "key": "group_5ad10b4043c20",
+    "title": "content_generalBlock",
+    "fields": [
+        {
+            "key": "field_5ad10b529f2d1",
+            "label": "Body Content",
+            "name": "content_generalBlock_content",
+            "type": "wysiwyg",
+            "instructions": "The body content for this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem Ipsum Dolor Sit amet, Consect Etur Adipiscing\u0003\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Eam si varietatem diceres, intellegerem, ut etiam non dicente te intellego; Nam illud vehementer repugnat, eundem beatum esse et multis malis oppressum. Quamquam te quidem video minime esse deterritum. Idem iste, inquam, de voluptate quid sentit? Omnia peccata paria dicitis.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523649420
+}

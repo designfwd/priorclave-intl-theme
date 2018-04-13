@@ -1,0 +1,143 @@
+{
+    "key": "group_5ad1135736011",
+    "title": "media_productRelated",
+    "fields": [
+        {
+            "key": "field_5ad11472352f0",
+            "label": "WARNING: Overrides Site Defaults",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Please only fill out information in these fields if you want to override whatever is set for the site in Theme Settings. This page will not revert to defaults unless all fields are empty (including space characters).",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ad113650d5b9",
+            "label": "Headline",
+            "name": "media_productRelated_headline",
+            "type": "text",
+            "instructions": "Header text for this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad1138e0d5ba",
+            "label": "Content",
+            "name": "media_productRelated_content",
+            "type": "wysiwyg",
+            "instructions": "The content related to this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5ad113ad0d5bb",
+            "label": "Image",
+            "name": "media_productRelated_image",
+            "type": "image",
+            "instructions": "The image associated to this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "320w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ad113e80d5bc",
+            "label": "Button Label",
+            "name": "media_productRelated_label",
+            "type": "text",
+            "instructions": "Label for this section's button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad114010d5bd",
+            "label": "Linked Page",
+            "name": "media_productRelated_page",
+            "type": "page_link",
+            "instructions": "Linked page for the button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523651897
+}
