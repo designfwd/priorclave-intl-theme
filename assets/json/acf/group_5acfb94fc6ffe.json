@@ -1,0 +1,86 @@
+{
+    "key": "group_5acfb94fc6ffe",
+    "title": "Testimonial Options",
+    "fields": [
+        {
+            "key": "field_5acfbae0a5a2d",
+            "label": "Content",
+            "name": "testimonial_content",
+            "type": "wysiwyg",
+            "instructions": "The quotation to include in the testimonial. Please do not include quotation marks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea consequat.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5acfbb99a5a2e",
+            "label": "Author Credit",
+            "name": "testimonial_credit",
+            "type": "text",
+            "instructions": "Who do you want credited for the testimonial? Enter text how you'd like it to appear on the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "John Smith, CEO",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5acfbbd7a5a2f",
+            "label": "Image",
+            "name": "testimonial_image",
+            "type": "image",
+            "instructions": "The image associated with this testimonial. Likely either a photo of the author or the logo for their company.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "240w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1523563532
+}

@@ -1,0 +1,73 @@
+{
+    "key": "group_5acfbc2ba6c48",
+    "title": "media_sliderTestimonial",
+    "fields": [
+        {
+            "key": "field_5acfbc44cd19b",
+            "label": "Headline",
+            "name": "media_sliderTestimonial_headline",
+            "type": "text",
+            "instructions": "Header text for this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Trusted All Over the World",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5acfbc67cd19c",
+            "label": "Testimonials",
+            "name": "media_sliderTestimonial_testimonials",
+            "type": "relationship",
+            "instructions": "The testimonials you'd like included in the slider",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "testimonials"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523563822
+}
