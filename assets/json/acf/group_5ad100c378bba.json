@@ -1,0 +1,128 @@
+{
+    "key": "group_5ad100c378bba",
+    "title": "media_ctaGrid",
+    "fields": [
+        {
+            "key": "field_5ad100c37ddb6",
+            "label": "Items",
+            "name": "media_ctaGrid_items",
+            "type": "repeater",
+            "instructions": "The items to include in the call-to-action grid",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add CTA",
+            "sub_fields": [
+                {
+                    "key": "field_5ad100c380a2f",
+                    "label": "Headline",
+                    "name": "headline",
+                    "type": "text",
+                    "instructions": "Short text description of the CTA's purpose",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Find",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ad100c380a94",
+                    "label": "Subhead",
+                    "name": "subhead",
+                    "type": "text",
+                    "instructions": "Longer description of what the CTA link accomplishes",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Find the Perfect Autoclave Fast.",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ad100c380af0",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "The image to use in the CTA block",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "240w",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,svg"
+                },
+                {
+                    "key": "field_5ad100c380b6c",
+                    "label": "Page",
+                    "name": "page",
+                    "type": "page_link",
+                    "instructions": "The linked page for the CTA",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523646690
+}
