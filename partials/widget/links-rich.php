@@ -1,28 +1,66 @@
 <?php
-// Sidebar widget to display image-enhanced links with descriptions
+/**
+ * Featured pages widget
+ *
+ * Sidebar widget to display image-enhanced links with descriptions
+ *
+ * @var string $pages         The ACF field to query for linked pages
+ * @var string $page          The linked page ID
+ * @var string $label         The label for the link
+ * @var string $description   Short description of the linked page
+ */
+
+if( function_exists('get_field') ):
+  $pages = 'widget_featured_pages';
+endif;
 ?>
 <section class="o-widget">
   <?php
-    // Placeholder content to mimic what feeds from ACF
-    $links = array(
-      'Locate a Distributor',
-      'Request a Quote',
-      'Request Support',
-    );
-    foreach( $links as $link ):
-  ?>
-    <a class="o-widget__link" href="#">
-      <div class="m-richLink">
-        <img class="m-richLink__image lazyload" src="<?php placeholder_img(145,145,'text=icon'); ?>" />
-        <div class="m-richLink__content">
-          <?php echo $link; ?><br />
-          <span class="m-richLink__content--description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </span>
-        </div>
-      </div>
-    </a>
-  <?php
-    endforeach;
+    if( have_rows($pages, 'option') ):
+      while( have_rows($pages, 'option') ): the_row();
+        $label = get_sub_field('label');
+        $description = get_sub_field('description');
+        $page = get_sub_field('page');
+        if( $page ):
+          $post = $page;
+          setup_postdata($post);
+          $image = get_field('page_preview_image');
+        endif;
+        if( !$image ):
+          $image = array(
+            'sizes' => array(
+              'preload' => '//via.placeholder.com/64x66?text=image',
+              '128w' => '//via.placeholder.com/128x132?text=image',
+              '240w' => '//via.placeholder.com/240x247?text=image',
+              '320w' => '//via.placeholder.com/320x329?text=image',
+            ),
+          );
+        endif;
+      ?>
+        <a class="o-widget__link" href="<?php echo get_permalink(); ?>">
+          <div class="m-richLink">
+            <img class="m-richLink__image lazyload"
+              src="<?php echo $image['sizes']['preload']; ?>"
+              data-sizes="auto"
+              data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+                <?php echo $image['sizes']['128w']; ?> 65w,
+                <?php echo $image['sizes']['240w']; ?> 129w,
+                <?php echo $image['sizes']['320w']; ?> 241w,
+              "
+            />
+            <div class="m-richLink__content">
+              <?php echo $label; ?><br />
+              <span class="m-richLink__content--description">
+                <?php echo $description; ?>
+              </span>
+            </div>
+          </div>
+        </a>
+      <?php
+        if( $page ):
+          wp_reset_postdata();
+        endif;
+      endwhile;
+    endif;
   ?>
 </section>

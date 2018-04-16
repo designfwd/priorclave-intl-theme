@@ -259,7 +259,7 @@
             },
             "open": 1,
             "multi_expand": 1,
-            "endpoint": 1
+            "endpoint": 0
         },
         {
             "key": "field_5ad4cba953521",
@@ -298,6 +298,104 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5ad4ce92bf4cc",
+            "label": "Featured Pages",
+            "name": "",
+            "type": "accordion",
+            "instructions": "Pages to feature in the sidebar",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5ad4d0b5bf4cd",
+            "label": "Featured Pages",
+            "name": "widget_featured_pages",
+            "type": "repeater",
+            "instructions": "Pages to feature in the sidebar",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Page",
+            "sub_fields": [
+                {
+                    "key": "field_5ad4d111bf4ce",
+                    "label": "Linked page",
+                    "name": "page",
+                    "type": "post_object",
+                    "instructions": "The page to link to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5ad4d12fbf4cf",
+                    "label": "Link Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label to use for this link",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Locate a Distributor",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ad4d150bf4d0",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "Short description of the linked page",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         },
         {
             "key": "field_5acbc28d4140b",
@@ -825,5 +923,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523895339
+    "modified": 1523897229
 }
