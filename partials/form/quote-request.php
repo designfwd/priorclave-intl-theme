@@ -1,20 +1,40 @@
 <?php
-  // A content block with form for submitting quote requests
+/**
+ * Quote request block
+ *
+ * A content block with form for submitting quote requests
+ *
+ * @var string $headline        Header text for this section
+ * @var string $description     Descriptive text for the quote request form
+ * @var string $form            The form ID to use with Gravity Forms
+ * @var string $phone           The site's contact phone number
+ */
+
+if( function_exists('get_field') ):
+  $ID = get_the_ID();
+  $headline = get_field('form_quoteRequest_headline', $ID);
+  $description = get_field('form_quoteRequest_description', $ID);
+  $form = get_field('form_quoteRequest_form', $ID);
+  $phone = get_field('site_contact_phone', 'option');
+endif;
 ?>
 <section class="o-quoteRequest">
   <h2 class="o-quoteRequest__headline">
-    Lorem Ipsum Dolor Sit Amet Consectetur
+    <?php echo $headline; ?>
   </h2>
   <div class="o-quoteRequest__description">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eam si varietatem diceres, intellegerem, ut etiam non dicente te intellego; Nam illud vehementer repugnat, eundem beatum esse et multis malis.
-    </p>
+    <?php echo $description; ?>
   </div>
   <div class="o-quoteRequest__form">
-
+    <?php
+      if( isset($form) && function_exists('gravity_form') ):
+        gravity_form( $form, false, false, false, null, true, 1, true);
+      endif;
+    ?>
+  </div>
   </div>
   <div class="o-quoteRequest__subtitle">
     Or Contact an Expert by Phone at:
   </div>
-  <a class="o-quoteRequest__phone" href="tel:+12 34 5678 9012">+12 34 5678 9012</a>
+  <a class="o-quoteRequest__phone" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
 </section>

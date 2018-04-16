@@ -154,9 +154,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "page"
+                "value": "page-templates\/content-general.php"
             }
         ]
     ],
@@ -170,5 +170,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1523905492
+    "modified": 1523906453
 }

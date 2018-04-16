@@ -229,6 +229,25 @@
             "multiple": 0
         },
         {
+            "key": "field_5ad4fd6af60e8",
+            "label": "Operating Days & Hours",
+            "name": "site_operatingTimes",
+            "type": "wysiwyg",
+            "instructions": "The days and hours (adjusted to GMT) of operation. Should be in 24-hour format",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Monday - Friday: 08:30 - 17:30\r\nSaturday - Sunday: Closed",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5ad4cb5e5351f",
             "label": "Sidebar Settings",
             "name": "",
@@ -923,5 +942,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523897229
+    "modified": 1523908079
 }

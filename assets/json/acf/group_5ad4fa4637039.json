@@ -1,0 +1,83 @@
+{
+    "key": "group_5ad4fa4637039",
+    "title": "form_quoteRequest",
+    "fields": [
+        {
+            "key": "field_5ad4fa6241eef",
+            "label": "Headline",
+            "name": "form_quoteRequest_headline",
+            "type": "text",
+            "instructions": "Header text for this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem Ipsum Dolor Sit Amet Consectetur",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad4fa9741ef0",
+            "label": "Description",
+            "name": "form_quoteRequest_description",
+            "type": "wysiwyg",
+            "instructions": "Descriptive text for the quote Request Form",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eam si varietatem diceres, intellegerem, ut etiam non dicente te intellego; Nam illud vehementer repugnat, eundem beatum esse et multis malis.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5ad4fce341ef1",
+            "label": "Gravity Forms ID",
+            "name": "form_quoteRequest_form",
+            "type": "text",
+            "instructions": "The form ID to use with Gravity Forms.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523907868
+}
