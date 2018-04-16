@@ -1,5 +1,9 @@
 <?php
-// Social media sharing links, arranged in icon blocks
+/**
+ * Social sharing widget
+ *
+ * Social media sharing links, arranged in icon blocks
+ */
 ?>
 <section class="o-sidebarSocial">
   <?php
