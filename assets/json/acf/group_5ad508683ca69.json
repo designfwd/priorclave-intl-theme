@@ -1,0 +1,45 @@
+{
+    "key": "group_5ad508683ca69",
+    "title": "media_locationMap",
+    "fields": [
+        {
+            "key": "field_5ad5087893633",
+            "label": "Map ID",
+            "name": "media_locationMap_map",
+            "type": "text",
+            "instructions": "The ID of the map to use from WP Google Maps",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523910830
+}
