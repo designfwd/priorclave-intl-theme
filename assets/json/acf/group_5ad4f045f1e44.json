@@ -1,0 +1,107 @@
+{
+    "key": "group_5ad4f045f1e44",
+    "title": "widget_relatedLinks",
+    "fields": [
+        {
+            "key": "field_5ad4f12f65750",
+            "label": "Headline",
+            "name": "widget_relatedLinks_headline",
+            "type": "text",
+            "instructions": "Header text for this section. Will not display if no links are set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Related Pages",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad4f06a6574f",
+            "label": "Links Collection",
+            "name": "widget_relatedLinks_links",
+            "type": "repeater",
+            "instructions": "A collection of related links. If none are set, neither this nor the headline will display.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Page",
+            "sub_fields": [
+                {
+                    "key": "field_5ad4f15c65751",
+                    "label": "Linked Page",
+                    "name": "page",
+                    "type": "page_link",
+                    "instructions": "The page to link",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post",
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_5ad4f18565752",
+                    "label": "Link Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label for this link",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "About Us",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1523905482
+}

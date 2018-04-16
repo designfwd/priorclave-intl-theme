@@ -77,6 +77,43 @@
             "prefix_name": 0
         },
         {
+            "key": "field_5ad4f1c05da35",
+            "label": "Related Links (Sidebar)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad4f1d85da36",
+            "label": "widget_relatedLinks",
+            "name": "widget_relatedLinks",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5ad4f045f1e44"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5ad11422196c5",
             "label": "Related Information",
             "name": "",
@@ -133,5 +170,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1523651651
+    "modified": 1523905492
 }
