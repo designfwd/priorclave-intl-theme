@@ -230,10 +230,10 @@
         },
         {
             "key": "field_5ad4fd6af60e8",
-            "label": "Operating Days & Hours",
-            "name": "site_operatingTimes",
-            "type": "wysiwyg",
-            "instructions": "The days and hours (adjusted to GMT) of operation. Should be in 24-hour format",
+            "label": "Operation Days & Times",
+            "name": "site_operation_times",
+            "type": "repeater",
+            "instructions": "Typical days and hours of operation, in 24-hour format and adjusted for GMT. Add a row for each block of days or times necessary.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -241,11 +241,32 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Monday - Friday: 08:30 - 17:30\r\nSaturday - Sunday: Closed",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Block",
+            "sub_fields": [
+                {
+                    "key": "field_5ad502450d71a",
+                    "label": "Time Block",
+                    "name": "time",
+                    "type": "text",
+                    "instructions": "Days and hours of either being open or closed.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Monday - Friday: 08:30 - 17:30",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         },
         {
             "key": "field_5ad4cb5e5351f",
@@ -942,5 +963,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523908079
+    "modified": 1523909342
 }

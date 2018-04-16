@@ -1,5 +1,19 @@
 <?php
-// Icon-paired grid of contact information
+/**
+ * Contact grid 2-up
+ *
+ * Icon-paired grid of contact information with phone, fax, and operation hours
+ *
+ * @var string $phone         The phone number to use for contacting
+ * @var string $fax           The fax number to use for contacting
+ * @var string $times         ACF field to query for operation times
+ */
+
+if( function_exists('get_field') ):
+  $phone = get_field('site_contact_phone', 'option');
+  $fax = get_field('site_contact_fax', 'option');
+  $times = 'site_operation_times';
+endif;
 ?>
 <section class="o-contactGrid">
   <div class="o-contactGrid__section">
@@ -9,33 +23,12 @@
           <?php get_svg('icon-phone-solid'); ?>
         </svg>
       </div>
-      <?php
-        // Phone numbers
-        $numbers = array(
-          array(
-            'title' => 'Phone (UK)',
-            'type' => 'tel',
-            'content' => '123 4567 8901'
-          ),
-          array(
-            'title' => 'Phone',
-            'type' => 'tel',
-            'content' => '+12 34 5678 9012'
-          ),
-          array(
-            'title' => 'Fax',
-            'type' => 'fax',
-            'content' => '+12 34 5678 9012'
-          )
-        );
-        foreach( $numbers as $number ):
-      ?>
-        <div class="m-gridSection__item">
-          <?php echo $number['title'];?>: <a class="m-gridSection__link" href="<?php echo $number['type'] . ':' . $number['content']; ?>"><?php echo $number['content']; ?></a>
-        </div>
-      <?php
-        endforeach;
-      ?>
+      <div class="m-gridSection__item">
+        Phone: <a class="m-gridSection__link" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+      </div>
+      <div class="m-gridSection__item">
+        Fax: <a class="m-gridSection__link" href="fax:<?php echo $fax; ?>"><?php echo $fax; ?></a>
+      </div>
     </div>
   </div>
   <div class="o-contactGrid__section">
@@ -47,11 +40,17 @@
     <div class="m-gridSection__item">
       Current Time: <?php echo current_time('H:i',true); ?> GMT
     </div>
-    <div class="m-gridSection__item">
-      Monday - Friday: 08:30 - 17:30
-    </div>
-    <div class="m-gridSection__item">
-      Saturday - Sunday: Closed
-    </div>
+    <?php
+      if( function_exists('have_rows') ):
+        while( have_rows($times, 'option') ): the_row();
+          $time = get_sub_field('time');
+      ?>
+        <div class="m-gridSection__item">
+          <?php echo $time; ?>
+        </div>
+      <?php
+        endwhile;
+      endif;
+    ?>
   </div>
 </section>
