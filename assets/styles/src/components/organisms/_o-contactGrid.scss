@@ -2,6 +2,7 @@
 .o-contactGrid {
 
   @media(min-width: 640px) {
+    align-items: stretch;
     flex-direction: row;
   }
 
