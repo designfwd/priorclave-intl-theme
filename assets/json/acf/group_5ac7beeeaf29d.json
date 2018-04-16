@@ -229,6 +229,77 @@
             "multiple": 0
         },
         {
+            "key": "field_5ad4cb5e5351f",
+            "label": "Sidebar Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad4cb7853520",
+            "label": "Newsletter Signup",
+            "name": "",
+            "type": "accordion",
+            "instructions": "Settings for the newsletter signup widget in sidebars on the site",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 1,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5ad4cba953521",
+            "label": "Headline",
+            "name": "widget_newsletter_headline",
+            "type": "text",
+            "instructions": "Header text for the widget",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Stay Informed",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad4cbd453522",
+            "label": "Gravity Forms ID",
+            "name": "widget_newsletter_form",
+            "type": "text",
+            "instructions": "The ID of the form to use for this sidebar",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5acbc28d4140b",
             "label": "Footer Content Settings",
             "name": "",
@@ -754,5 +825,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523650342
+    "modified": 1523895339
 }
