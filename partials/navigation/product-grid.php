@@ -29,7 +29,7 @@ endif;
           $image = get_field('page_preview_image', $page_id);
           if( !$image ):
             $image = array(
-              'sizes' => array( // max 668 x 814
+              'sizes' => array(
                 'preload' => '//via.placeholder.com/64x78?text=category',
                 '128w' => '//via.placeholder.com/128x156?text=category',
                 '240w' => '//via.placeholder.com/240x292?text=category',
