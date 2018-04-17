@@ -1,10 +1,10 @@
 {
-    "key": "group_5ad4f9a444ee9",
-    "title": "Page Template - Contact Us",
+    "key": "group_5ad601ba54cc3",
+    "title": "Page Template - Sitemap",
     "fields": [
         {
-            "key": "field_5ad4f9c163d29",
-            "label": "Header Area",
+            "key": "field_5ad601d00614d",
+            "label": "Hero Area",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5ad4f9ca63d2a",
+            "key": "field_5ad601dc0614e",
             "label": "hero_general",
             "name": "hero_general",
             "type": "clone",
@@ -40,8 +40,8 @@
             "prefix_name": 0
         },
         {
-            "key": "field_5ad4fa0d63d2b",
-            "label": "Quote Request",
+            "key": "field_5ad601fc0614f",
+            "label": "Related Content Block",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -56,9 +56,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5ad4fa1a63d2c",
-            "label": "form_quoteRequest",
-            "name": "form_quoteRequest",
+            "key": "field_5ad6021106150",
+            "label": "media_productRelated",
+            "name": "media_productRelated",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -69,44 +69,7 @@
                 "id": ""
             },
             "clone": [
-                "group_5ad4fa4637039"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_5ad508b3c2fce",
-            "label": "Map",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5ad508c6c2fcf",
-            "label": "media_locationMap",
-            "name": "media_locationMap",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_5ad508683ca69"
+                "group_5ad1135736011"
             ],
             "display": "seamless",
             "layout": "block",
@@ -119,14 +82,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/content-contact.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-templates\/content-contact-international.php"
+                "value": "page-templates\/content-sitemap.php"
             }
         ]
     ],
@@ -140,5 +96,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1523980111
+    "modified": 1523974711
 }
