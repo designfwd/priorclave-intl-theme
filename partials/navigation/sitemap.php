@@ -38,20 +38,24 @@ endif;
     wp_nav_menu( $args );
   ?>
 
+  <?php
+    if( have_rows($links, 'option') ):
+  ?>
   <h2 class="o-sitemap__headline">Other Links</h2>
   <ul class="o-sitemap__list">
-    <?php // Displays footer links
-      if( have_rows($links, 'option') ):
-        while( have_rows($links, 'option') ): the_row();
-          $label = get_sub_field('label');
-          $url = get_sub_field('url');
-      ?>
-        <li class="menu-item">
-          <a href="<?php echo $url; ?>" target="_blank"><?php echo $label; ?></a>
-        </li>
-      <?php
-        endwhile;
-      endif;
+    <?php
+      while( have_rows($links, 'option') ): the_row();
+        $label = get_sub_field('label');
+        $url = get_sub_field('url');
+    ?>
+      <li class="menu-item">
+        <a href="<?php echo $url; ?>" target="_blank"><?php echo $label; ?></a>
+      </li>
+    <?php
+      endwhile;
     ?>
   </ul>
+  <?php
+    endif;
+  ?>
 </section>
