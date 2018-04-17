@@ -42,7 +42,7 @@ endif;
     if( have_rows($links, 'option') ):
   ?>
   <h2 class="o-sitemap__headline">Other Links</h2>
-  <ul class="o-sitemap__list">
+  <ul class="o-sitemap__list o-sitemap__list--singleColumn">
     <?php
       while( have_rows($links, 'option') ): the_row();
         $label = get_sub_field('label');
