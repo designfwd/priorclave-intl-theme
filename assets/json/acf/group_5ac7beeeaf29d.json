@@ -21,8 +21,8 @@
         {
             "key": "field_5ac7bf127fb76",
             "label": "Website Language",
-            "name": "site_language",
-            "type": "select",
+            "name": "site_",
+            "type": "clone",
             "instructions": "Please select the language to use for meta information in the <html> tag.",
             "required": 0,
             "conditional_logic": 0,
@@ -31,16 +31,13 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "en": "English"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "array",
-            "placeholder": ""
+            "clone": [
+                "group_5ad61945f3687"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
         },
         {
             "key": "field_5ac7c1d0542e2",
@@ -64,8 +61,8 @@
         {
             "key": "field_5ac7c4682cbb1",
             "label": "Website Country",
-            "name": "site_country",
-            "type": "select",
+            "name": "site_",
+            "type": "clone",
             "instructions": "Please select the country this site represents",
             "required": 0,
             "conditional_logic": 0,
@@ -74,22 +71,13 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "none": "None - International or Regional",
-                "au": "Australia",
-                "ca": "Canada",
-                "my": "Malaysia",
-                "ph": "Philippines",
-                "gb": "United Kingdom",
-                "us": "United States of America"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "array",
-            "placeholder": ""
+            "clone": [
+                "group_5ac7f15476528"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
         },
         {
             "key": "field_5ac7d72b5c9ad",
@@ -963,5 +951,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523909342
+    "modified": 1523995691
 }
