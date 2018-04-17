@@ -87,7 +87,7 @@ if( !function_exists( 'orientation_taxonomy' ) ):
     $labels = array(
       'name'                       => _x( 'Orientations', 'Taxonomy General Name', 'bellhop' ),
       'singular_name'              => _x( 'Orientation', 'Taxonomy Singular Name', 'bellhop' ),
-      'menu_name'                  => __( 'Orientations', 'bellhop' ),
+      'menu_name'                  => __( 'Orientations / Categories', 'bellhop' ),
       'all_items'                  => __( 'All Orientations', 'bellhop' ),
       'parent_item'                => __( 'Parent Orientation', 'bellhop' ),
       'parent_item_colon'          => __( 'Parent Orientation:', 'bellhop' ),
