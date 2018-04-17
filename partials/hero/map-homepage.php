@@ -18,7 +18,7 @@ if( function_exists('get_field') ):
   $headline = get_field('hero_mapHomepage_headline', $ID);
   $subhead = get_field('hero_mapHomepage_subhead', $ID);
   $options = 'hero_mapHomepage_options';
-  $language = get_field('site_language', 'option')['value'];
+  $siteLang = get_field('site_language', 'option')['value'];
 endif;
 ?>
 <section class="o-homepageMap">
@@ -35,7 +35,8 @@ endif;
         if( have_rows($options, $ID) ):
           while( have_rows($options, $ID) ): the_row();
             $region = get_sub_field('region');
-            $regionLink = get_site_url(1) . '/' . $language . '/' . $region['value'];
+            $regionLang = get_sub_field('language')['value'];
+            $regionLink = get_site_url(1) . '/' . $regionLang . '/' . $region['value'];
           ?>
             <li class="m-mapDropdown__region">
               <a class="a-dropdownLink" href="<?php echo $regionLink; ?>">
@@ -46,6 +47,7 @@ endif;
               if( have_rows('countries') ):
                 while( have_rows('countries') ): the_row();
                   $country = get_sub_field('country');
+                  $language = get_sub_field('language')['value'];
                   $separateCheck = get_sub_field('separate');
                   if( $separateCheck == true ):
                     $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
@@ -55,7 +57,14 @@ endif;
                 ?>
                   <li class="m-mapDropdown__country">
                     <a class="a-dropdownLink" href="<?php echo $countryLink; ?>">
-                      <svg class="a-dropdownLink a-dropdownLink--flag" viewBox="0 0 640 480"><?php get_svg( 'flag/' . $country['value'] ); ?></svg><?php echo $country['label']; ?>
+                      <svg class="a-dropdownLink a-dropdownLink--flag" viewBox="0 0 640 480"><?php get_svg( 'flag/' . $country['value'] ); ?></svg>
+                      <?php
+                        echo $country['label'];
+                        // If the site language is different from the language  being linked to, display that value
+                        if( $language != $siteLang ):
+                          echo ' (' . $language . ')';
+                        endif;
+                      ?>
                     </a>
                   </li>
                 <?php

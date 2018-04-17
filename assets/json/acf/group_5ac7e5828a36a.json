@@ -65,7 +65,7 @@
                     "name": "region",
                     "type": "clone",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -74,6 +74,27 @@
                     },
                     "clone": [
                         "group_5ac7f05a87393"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_5ad61d9cd5e82",
+                    "label": "Region Language",
+                    "name": "language",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_5ad61945f3687"
                     ],
                     "display": "seamless",
                     "layout": "block",
@@ -105,7 +126,7 @@
                             "name": "country",
                             "type": "clone",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -114,6 +135,27 @@
                             },
                             "clone": [
                                 "group_5ac7f15476528"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5ad61cf2aa767",
+                            "label": "Site Language",
+                            "name": "language",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5ad61945f3687"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -163,5 +205,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1523055600
+    "modified": 1523981763
 }
