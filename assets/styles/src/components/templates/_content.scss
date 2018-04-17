@@ -35,4 +35,10 @@
       width: 35%;
     }
   }
+
+  &.content--contact {
+    .o-simpleNav {
+      position: fixed;
+    }
+  }
 }
