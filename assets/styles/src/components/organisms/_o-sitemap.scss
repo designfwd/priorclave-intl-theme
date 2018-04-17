@@ -1,0 +1,44 @@
+// Sitemap styles
+.o-sitemap {
+  align-items: center;
+  color: $grey-dark;
+  text-transform: uppercase;
+  padding: 0 5%;
+
+  @include element('headline') {
+    @include headline;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  @include element('list') {
+    @include banner-text;
+    @include list-reset;
+    columns: 1;
+
+    @media(min-width: 800px) {
+      columns: 2;
+    }
+
+    @media(min-width: 1140px) {
+      columns: 3;
+    }
+
+    .menu-item {
+      margin: .5rem 0;
+    }
+
+    .sub-menu {
+      @include cta-small-text;
+      @include list-reset;
+      margin: .25rem 0;
+      text-transform: none;
+    }
+
+    @include modifier('singleColumn') {
+      @include cta-small-text;
+      columns: 1;
+      text-transform: none;
+    }
+  }
+}

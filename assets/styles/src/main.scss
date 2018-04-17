@@ -29,6 +29,9 @@
 // Mathematical constants
 @import './tools/constants.scss';
 
+// List style resets
+@import './tools/list-reset.scss';
+
 // Full-size overlay mixin
 @import './tools/overlay.scss';
 
@@ -165,6 +168,7 @@
 @import './components/organisms/o-relatedProduct.scss';
 @import './components/organisms/o-sidebarSocial.scss';
 @import './components/organisms/o-simpleNav.scss';
+@import './components/organisms/o-sitemap.scss';
 @import './components/organisms/o-siteSearch.scss';
 @import './components/organisms/o-testimonialSlider.scss';
 @import './components/organisms/o-videoGrid.scss';
