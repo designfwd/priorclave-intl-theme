@@ -19,6 +19,23 @@
             "endpoint": 0
         },
         {
+            "key": "field_5ad7b2656186a",
+            "label": "Site Meta Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These fields define information used in meta tags and links to and from other Priorclave sites<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_5ac7bf127fb76",
             "label": "Website Language",
             "name": "site_",
@@ -94,6 +111,23 @@
             },
             "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b3239d5f3",
+            "label": "Site Settings Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These fields define information used in various portions of the website and define basic contact information<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5acbc6f8dc875",
@@ -257,8 +291,8 @@
             ]
         },
         {
-            "key": "field_5ad4cb5e5351f",
-            "label": "Sidebar Settings",
+            "key": "field_5ad7b49be485d",
+            "label": "Primary Navigation Menu Settings",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -273,10 +307,900 @@
             "endpoint": 0
         },
         {
-            "key": "field_5ad4cb7853520",
-            "label": "Newsletter Signup",
+            "key": "field_5ad7b4b0e485e",
+            "label": "Menu Settings Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These settings define the content of the primary navigation menu<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ad7b540f9279",
+            "label": "\"Autoclaves\" Menu Settings",
             "name": "",
             "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b5d752346",
+            "label": "Menu Label",
+            "name": "menu_autoclaves_label",
+            "type": "text",
+            "instructions": "The label for this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Autoclaves",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7b60752347",
+            "label": "Grid Items",
+            "name": "menu_autoclaves_grid",
+            "type": "repeater",
+            "instructions": "The items to include in a grid for this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Block",
+            "sub_fields": [
+                {
+                    "key": "field_5ad7b62c52348",
+                    "label": "Linked Page",
+                    "name": "page",
+                    "type": "post_object",
+                    "instructions": "The linked page for this block",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5ad7b65d5234a",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label for this block",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Steam Autoclaves",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5ad7b6965234b",
+            "label": "List Heading",
+            "name": "menu_autoclaves_listHeading",
+            "type": "text",
+            "instructions": "The text to use for the header of the menu's list",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Autoclaves",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7b6d05234d",
+            "label": "List Items",
+            "name": "menu_autoclaves_list",
+            "type": "repeater",
+            "instructions": "The items to include in a list for this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_5ad7b6d05234e",
+                    "label": "Linked Page",
+                    "name": "page",
+                    "type": "post_object",
+                    "instructions": "The linked page for this block",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5ad7b6d05234f",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label for this block",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Steam Autoclaves",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5ad7b765a421b",
+            "label": "Button Link",
+            "name": "menu_autoclaves_buttonLink",
+            "type": "post_object",
+            "instructions": "The page to link this menu's footer button to",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5ad7b79fa421c",
+            "label": "Button Label",
+            "name": "menu_autoclaves_buttonLabel",
+            "type": "text",
+            "instructions": "The label to use for the bottom button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "All Autoclaves",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7b570f927a",
+            "label": "\"Customers\" Menu Settings",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b88e7e1fd",
+            "label": "Menu Label",
+            "name": "menu_customers_label",
+            "type": "text",
+            "instructions": "The label for this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Customers",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7b8c07e1fe",
+            "label": "Link Lists",
+            "name": "menu_customers_list",
+            "type": "repeater",
+            "instructions": "A group of link lists to use in this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add List",
+            "sub_fields": [
+                {
+                    "key": "field_5ad7b94d7e1ff",
+                    "label": "Headline Page",
+                    "name": "headline_page",
+                    "type": "post_object",
+                    "instructions": "The page the headline should link to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5ad7b9857e200",
+                    "label": "Headline Label",
+                    "name": "headline_label",
+                    "type": "text",
+                    "instructions": "The label for the headline of this list",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Customers",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5ad7b99e7e201",
+                    "label": "Link List",
+                    "name": "list",
+                    "type": "repeater",
+                    "instructions": "The links to use in this list",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "",
+                    "button_label": "Add Item",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ad7b9e37e202",
+                            "label": "Page",
+                            "name": "page",
+                            "type": "post_object",
+                            "instructions": "The linked page for this item",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_5ad7ba017e203",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "The label for this list item",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Architects",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5ad7ba437e20a",
+            "label": "Button Link",
+            "name": "menu_customers_buttonLink",
+            "type": "post_object",
+            "instructions": "The page to link the bottom button to",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5ad7ba657e20b",
+            "label": "Button Label",
+            "name": "menu_customers_buttonLabel",
+            "type": "text",
+            "instructions": "The label for the bottom button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "View All Customers",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7b575f927b",
+            "label": "\"About Us\" Menu Settings",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7baec30526",
+            "label": "Menu Label",
+            "name": "menu_about_label",
+            "type": "text",
+            "instructions": "The text to use to label this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Why Priorclave?",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7bb1330527",
+            "label": "Grid Items",
+            "name": "menu_about_grid",
+            "type": "repeater",
+            "instructions": "The items to use in a grid pattern for this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_5ad7bb4030528",
+                    "label": "Page",
+                    "name": "page",
+                    "type": "post_object",
+                    "instructions": "The page to link to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5ad7bb5430529",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label for this grid item",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5ad7bb753052a",
+            "label": "Button Link",
+            "name": "menu_about_buttonLink",
+            "type": "post_object",
+            "instructions": "The linked page for the bottom button in this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5ad7bbae3052b",
+            "label": "Button Label",
+            "name": "menu_about_buttonLabel",
+            "type": "text",
+            "instructions": "The label for the button at the bottom of the menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "View All Why Priorclave Links",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7b57df927c",
+            "label": "\"Support\" Menu Settings",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7bc5e6cecd",
+            "label": "Menu Label",
+            "name": "menu_support_label",
+            "type": "text",
+            "instructions": "The text to use to label this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Support",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7bc756cece",
+            "label": "Grid Items",
+            "name": "menu_support_grid",
+            "type": "repeater",
+            "instructions": "The items to use in a grid pattern for this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_5ad7bc756cecf",
+                    "label": "Page",
+                    "name": "page",
+                    "type": "post_object",
+                    "instructions": "The page to link to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5ad7bc756ced0",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label for this grid item",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5ad7bc8c6ced1",
+            "label": "Button Link",
+            "name": "menu_support_buttonLink",
+            "type": "post_object",
+            "instructions": "The linked page for the bottom button in this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5ad7bca36ced2",
+            "label": "Button Label",
+            "name": "menu_support_buttonLabel",
+            "type": "text",
+            "instructions": "The label for the button at the bottom of the menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "View All Support",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7b587f927d",
+            "label": "\"Contact\" Menu Settings",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7bccf6ced3",
+            "label": "Menu Label",
+            "name": "menu_contact_label",
+            "type": "text",
+            "instructions": "The text to use to label this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Contact",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad7bce36ced4",
+            "label": "Grid Items",
+            "name": "menu_contact_grid",
+            "type": "repeater",
+            "instructions": "The items to use in a grid pattern for this menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_5ad7bce36ced5",
+                    "label": "Page",
+                    "name": "page",
+                    "type": "post_object",
+                    "instructions": "The page to link to",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5ad7bce36ced6",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label for this grid item",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5ad7bd0990566",
+            "label": "End of Menu Settings",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5ad10d5a54dea",
+            "label": "Hero Area Defaults",
+            "name": "",
+            "type": "tab",
+            "instructions": "This section defines defaults for the header area of content pages",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b3675dfbd",
+            "label": "Hero Area Defaults Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These fields define fallbacks for the general hero area on content pages throughout the site<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5accea9126fa0",
+            "label": "Hero Background Image",
+            "name": "default_hero_backgroundImage",
+            "type": "image",
+            "instructions": "The default background image to use for hero areas, when one is not set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ad0f38a07aee",
+            "label": "Hero Image",
+            "name": "default_hero_image",
+            "type": "image",
+            "instructions": "The default image to use in foreground of hero areas, when one is not set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ad4cb7853520",
+            "label": "Newsletter Widget Settings",
+            "name": "",
+            "type": "tab",
             "instructions": "Settings for the newsletter signup widget in sidebars on the site",
             "required": 0,
             "conditional_logic": 0,
@@ -285,9 +1209,25 @@
                 "class": "",
                 "id": ""
             },
-            "open": 1,
-            "multi_expand": 1,
+            "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b3915dfbe",
+            "label": "Newsletter Widget Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These settings define the content of the newsletter signup widget in sidebars on the site<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5ad4cba953521",
@@ -329,9 +1269,9 @@
         },
         {
             "key": "field_5ad4ce92bf4cc",
-            "label": "Featured Pages",
+            "label": "Featured Pages Widget Settings",
             "name": "",
-            "type": "accordion",
+            "type": "tab",
             "instructions": "Pages to feature in the sidebar",
             "required": 0,
             "conditional_logic": 0,
@@ -340,9 +1280,25 @@
                 "class": "",
                 "id": ""
             },
-            "open": 0,
-            "multi_expand": 1,
-            "endpoint": 1
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b3c25dfbf",
+            "label": "Widget Settings Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These settings define the content of the featured pages widget in sidebars on the site<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5ad4d0b5bf4cd",
@@ -426,6 +1382,139 @@
             ]
         },
         {
+            "key": "field_5ad10d8954deb",
+            "label": "Related Information Block Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "This section sets defaults for the related information block at the bottom of some content pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b3e15dfc0",
+            "label": "Block Settings Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These settings define default and fallback content for the related information block at the base of many content pages<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ad10c3054de4",
+            "label": "Related Info Headline",
+            "name": "default_related_headline",
+            "type": "text",
+            "instructions": "Header text for the related product\/page info section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Priorclave Steam Autoclaves",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad10c6554de5",
+            "label": "Related Info Content",
+            "name": "default_related_content",
+            "type": "wysiwyg",
+            "instructions": "Body copy for the related content section on general content pages",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5ad10cd554de6",
+            "label": "Related Info Image",
+            "name": "default_related_image",
+            "type": "image",
+            "instructions": "The image to use for related information content section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "360w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ad10d0354de7",
+            "label": "Related Info Button Label",
+            "name": "default_related_label",
+            "type": "text",
+            "instructions": "The button label for related info blocks",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "View Autoclaves",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad10d2f54de8",
+            "label": "Related Info Linked Page",
+            "name": "default_related_page",
+            "type": "page_link",
+            "instructions": "The linked page for related info blocks",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
             "key": "field_5acbc28d4140b",
             "label": "Footer Content Settings",
             "name": "",
@@ -440,6 +1529,23 @@
             },
             "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b4125dfc1",
+            "label": "Content Settings Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These define values used in the footer for all pages throughout the site<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5acbc2ae4140c",
@@ -734,204 +1840,6 @@
                     "placeholder": ""
                 }
             ]
-        },
-        {
-            "key": "field_5accea0189ff2",
-            "label": "Content Defaults",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5ad10d5a54dea",
-            "label": "Hero Area",
-            "name": "",
-            "type": "accordion",
-            "instructions": "This section defines defaults for the header area of content pages",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 1,
-            "multi_expand": 1,
-            "endpoint": 0
-        },
-        {
-            "key": "field_5accea9126fa0",
-            "label": "Hero Background Image",
-            "name": "default_hero_backgroundImage",
-            "type": "image",
-            "instructions": "The default background image to use for hero areas, when one is not set.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "640w",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5ad0f38a07aee",
-            "label": "Hero Image",
-            "name": "default_hero_image",
-            "type": "image",
-            "instructions": "The default image to use in foreground of hero areas, when one is not set.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "640w",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5ad10d8954deb",
-            "label": "Related Information Block",
-            "name": "",
-            "type": "accordion",
-            "instructions": "This section sets defaults for the related information block at the bottom of some content pages.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 1,
-            "endpoint": 0
-        },
-        {
-            "key": "field_5ad10c3054de4",
-            "label": "Related Info Headline",
-            "name": "default_related_headline",
-            "type": "text",
-            "instructions": "Header text for the related product\/page info section",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Priorclave Steam Autoclaves",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5ad10c6554de5",
-            "label": "Related Info Content",
-            "name": "default_related_content",
-            "type": "wysiwyg",
-            "instructions": "Body copy for the related content section on general content pages",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_5ad10cd554de6",
-            "label": "Related Info Image",
-            "name": "default_related_image",
-            "type": "image",
-            "instructions": "The image to use for related information content section",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "360w",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5ad10d0354de7",
-            "label": "Related Info Button Label",
-            "name": "default_related_label",
-            "type": "text",
-            "instructions": "The button label for related info blocks",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "View Autoclaves",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5ad10d2f54de8",
-            "label": "Related Info Linked Page",
-            "name": "default_related_page",
-            "type": "page_link",
-            "instructions": "The linked page for related info blocks",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
         }
     ],
     "location": [
@@ -951,5 +1859,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523995691
+    "modified": 1524088090
 }
