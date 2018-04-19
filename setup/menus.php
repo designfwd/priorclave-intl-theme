@@ -3,7 +3,8 @@
 function bellhop_menus() {
   register_nav_menus(
     [
-      'primary_nav' => __('Primary Navigation', 'bellhop')
+      'primary_nav' => __('Primary Navigation', 'bellhop'),
+      'sitemap_menu' => __('Sitemap Menu', 'bellhop'),
     ]
   );
 }
