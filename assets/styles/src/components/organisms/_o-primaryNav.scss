@@ -1,4 +1,25 @@
 // Primary navigation menu styles
 .o-primaryNav {
+  align-items: flex-end;
+  background-color: $white;
   flex-direction: row;
+  height: 6rem;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  z-index: 2;
+
+  @include element('logo') {
+    align-self: center;
+    max-width: 15rem;
+    width: 100%;
+  }
+
+  @include element('menu') {
+
+    ul {
+      @include list-reset;
+      display: flex;
+    }
+  }
 }
