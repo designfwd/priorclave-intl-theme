@@ -85,8 +85,12 @@
 @import './components/atoms/a-finderChoice.scss';
 @import './components/atoms/a-footerLink.scss';
 @import './components/atoms/a-inlineIcon.scss';
+@import './components/atoms/a-menuButton.scss';
 @import './components/atoms/a-menuLogo.scss';
+@import './components/atoms/a-navBlock.scss';
 @import './components/atoms/a-navButton.scss';
+@import './components/atoms/a-navItem.scss';
+@import './components/atoms/a-navList.scss';
 @import './components/atoms/a-productSection.scss';
 @import './components/atoms/a-socialIcon.scss';
 @import './components/atoms/a-testimonial.scss';
@@ -109,6 +113,8 @@
 @import './components/molecules/m-heroSlider.scss';
 @import './components/molecules/m-linkGridItem.scss';
 @import './components/molecules/m-mapDropdown.scss';
+@import './components/molecules/m-navBlock.scss';
+@import './components/molecules/m-navMenu.scss';
 @import './components/molecules/m-optionsDialog.scss';
 @import './components/molecules/m-productDescription.scss';
 @import './components/molecules/m-productDownload.scss';
