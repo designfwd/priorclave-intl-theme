@@ -1,0 +1,40 @@
+// Styles for a block within a navigation grid
+.a-navBlock {
+  align-items: center;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+  min-width: 20%;
+  padding: 1rem .25rem;
+  text-align: center;
+
+  @include modifier('autoclaves') {
+    background-color: $white;
+    border: .125rem solid $grey-dark;
+    color: $grey-dark;
+    transition: background-color $base-duration $base-timing;
+
+    &:hover {
+      background-color: $yellow;
+      color: $grey-dark;
+    }
+  }
+
+  @include element('image') {
+    padding-top: 1rem;
+  }
+
+  @include element('title') {
+    @include proxima-nova-bold;
+    font-size: rem(16);
+    margin: 0;
+  }
+
+  @include element('description') {
+    @include proxima-nova-semibold;
+    font-size: rem(16);
+    margin: 0;
+  }
+}

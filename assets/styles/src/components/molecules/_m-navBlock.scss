@@ -1,0 +1,49 @@
+// Styles for dropdown blocks
+.m-navBlock {
+  background-color: $grey-dark;
+  display: flex;
+  flex-wrap: wrap;
+  left: 0;
+  position: absolute;
+  padding: 1rem 1rem 2rem;
+  top: 100%;
+  width: 100%;
+
+  @include element('grid') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+    @include modifier('autoclaves') {
+      width: 100%;
+
+      @media(min-width: 1140px) {
+        width: 80%;
+      }
+    }
+  }
+
+  @include element('list') {
+    width: 100%;
+
+    @media(min-width: 880px) {
+      width: 50%;
+    }
+
+    @include modifier('autoclaves') {
+      @media(min-width: 880px) {
+        width: 100%;
+      }
+
+      @media(min-width: 1140px) {
+        width: 20%;
+      }
+    }
+  }
+
+  @include element('button') {
+    padding-top: 1rem;
+    width: 100%;
+  }
+}

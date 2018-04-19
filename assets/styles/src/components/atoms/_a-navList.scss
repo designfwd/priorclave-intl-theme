@@ -1,0 +1,30 @@
+// List styles for navigation items
+.a-navList {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  width: 100%;
+
+  @include element('headline') {
+    @include primary-nav;
+    border-bottom: 1px solid $yellow-dark;
+    color: $yellow;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+
+    @media(min-width: 1140px) {
+      padding: 0 0 1rem;
+    }
+  }
+
+  @include element('list') {
+    @include list-reset;
+    color: $white;
+    padding: 1rem 0 0;
+
+    @media(min-width: 1140px) {
+      padding: 1rem 0 0 1rem;
+    }
+  }
+}

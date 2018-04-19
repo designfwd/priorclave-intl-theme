@@ -1,0 +1,20 @@
+// Styles for the buttons in dropdown menu blocks
+.a-menuButton {
+  @include element('label') {
+    background-color: $clear-yellow;
+    border: 1px solid $yellow-dark;
+    color: $white;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color $base-duration $base-timing,
+      border $base-duration $base-timing,
+      color $base-duration $base-timing;
+    width: 100%;
+
+    &:hover {
+      background-color: $yellow;
+      border: 1px solid $yellow;
+      color: $grey-dark;
+    }
+  }
+}

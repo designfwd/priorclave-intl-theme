@@ -1,0 +1,10 @@
+// Styles for individual navigation list items
+.a-navItem {
+  font-size: rem(16);
+  margin-bottom: .5rem;
+  text-align: center;
+
+  @media(min-width: 1140px) {
+    text-align: left;
+  }
+}
