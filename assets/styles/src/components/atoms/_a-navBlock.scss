@@ -10,7 +10,7 @@
   padding: 1rem .25rem;
   text-align: center;
 
-  @include modifier('autoclaves') {
+  @include modifier('pictureGrid') {
     background-color: $white;
     border: .125rem solid $grey-dark;
     color: $grey-dark;

@@ -15,7 +15,7 @@
     justify-content: center;
     width: 100%;
 
-    @include modifier('autoclaves') {
+    @include modifier('pictureGrid') {
       width: 100%;
 
       @media(min-width: 1140px) {
@@ -31,7 +31,7 @@
       width: 50%;
     }
 
-    @include modifier('autoclaves') {
+    @include modifier('littleList') {
       @media(min-width: 880px) {
         width: 100%;
       }
