@@ -100,6 +100,34 @@
             "maxlength": ""
         },
         {
+            "key": "field_5ade4baf8b86e",
+            "label": "Badges",
+            "name": "hero_product_badges",
+            "type": "relationship",
+            "instructions": "Badges to add to this area",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "badges"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
             "key": "field_5ade4945ea4a0",
             "label": "Gallery Images",
             "name": "hero_product_images",
@@ -164,5 +192,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1524517363
+    "modified": 1524517879
 }
