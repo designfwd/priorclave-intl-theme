@@ -141,7 +141,10 @@ endif;
                         <ul class="a-navList__list">
                           <?php
                           foreach( $items as $item ):
-                            if( $item->menu_item_parent == $currentSubID ):
+                            if(
+                              $item->menu_item_parent == $currentSubID &&
+                              (in_array('list-heading', $item->classes) == 0)
+                            ):
                               ?>
                               <li class="a-navItem">
                                 <a class="a-navItem__link" href="<?php echo $item->url; ?>">
