@@ -9,6 +9,7 @@
     .m-navMenu__label {
       background-color: $clear-black;
       color: $grey-medium-light;
+      cursor: default;
       display: relative;
       padding: 1rem;
       transition: background-color $base-duration $base-timing,
@@ -16,12 +17,13 @@
 
       &.--has-loaded {
         color: $grey-dark;
-      }
+        cursor: pointer;
 
-      &:hover,
-      &.--active {
-        background-color: $grey-dark;
-        color: $yellow;
+        &:hover,
+        &.--active {
+          background-color: $grey-dark;
+          color: $yellow;
+        }
       }
     }
   }
