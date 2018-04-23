@@ -1,0 +1,46 @@
+// Styles for the quicklinks block of the primary nav
+.m-navQuicklinks {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: .25rem;
+  width: 100%;
+
+  @include element('phone') {
+    @include lato-black;
+    font-size: 1rem;
+    padding-bottom: .25rem;
+    width: calc(100% - 2.4rem);
+  }
+
+  @include element('menu') {
+    padding-bottom: .25rem;
+    width: 2.4rem;
+  }
+
+  @include element('search') {
+    background-color: $grey-light;
+    @include size(3rem);
+    transition: background-color $base-duration $base-timing;
+
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+
+  @include element('button') {
+    @include primary-nav;
+    align-items: center;
+    background-color: $yellow;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    text-align: center;
+    width: calc(100% - 3.25rem);
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
