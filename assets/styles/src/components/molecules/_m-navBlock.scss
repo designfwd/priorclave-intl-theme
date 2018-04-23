@@ -1,13 +1,17 @@
 // Styles for dropdown blocks
 .m-navBlock {
   background-color: $grey-dark;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   left: 0;
   position: absolute;
   padding: 1rem 1rem 2rem;
   top: 100%;
   width: 100%;
+
+  &.--has-loaded {
+    display: flex;
+  }
 
   @include element('grid') {
     display: flex;
