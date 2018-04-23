@@ -15,6 +15,7 @@ import './modules/directory-faq.js';
 import './modules/distirbutor-country.js';
 import './modules/hero-slider.js';
 import './modules/map-dropdown.js';
+import './modules/primary-nav.js';
 import './modules/product-options.js';
 import './modules/product-specifications.js';
 import './modules/spotlight-slider.js';
