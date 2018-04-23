@@ -7,15 +7,18 @@ jQuery(document).ready(function() {
   jQuery('.m-navMenu__label').addClass('--has-loaded');
 
   jQuery('.m-navMenu__label').click(function() {
-    let menu = jQuery(this).data('menu');
-    jQuery('.m-navBlock').hide();
-    jQuery('.m-navMenu__label').removeClass('--active');
-    jQuery('#menuToggle-' + menu).addClass('--active');
-    jQuery('#menu-' + menu).toggle();
-
-    jQuery(this).click(function() {
-      jQuery(this).toggleClass('--active');
-    })
+    // If the menu is open, close it
+    if( jQuery(this).hasClass('--active') ){
+      jQuery('.m-navBlock').hide();
+      jQuery('.m-navMenu__label').removeClass('--active');
+    }
+    else { // Otherwise, close other menus and open the selected one
+      let menu = jQuery(this).data('menu');
+      jQuery('.m-navBlock').hide();
+      jQuery('.m-navMenu__label').removeClass('--active');
+      jQuery('#menuToggle-' + menu).addClass('--active');
+      jQuery('#menu-' + menu).slideToggle();
+    }
   });
 
 });
