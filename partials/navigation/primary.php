@@ -61,10 +61,10 @@ endif;
           $classList = implode(' ', $item->classes);
         ?>
           <li class="m-navMenu__item <?php echo $classList; ?>">
-            <a id="menuToggle-<?php echo $item->ID; ?>" class="m-navMenu__label" href="<?php echo $item->url; ?>">
+            <div id="menuToggle-<?php echo $item->ID; ?>" data-menu="<?php echo $item->ID; ?>" class="m-navMenu__label">
               <?php echo $item->title; ?>
-            </a>
-            <div id="menu-<?php echo $item->ID; ?>" class="m-navBlock">
+            </div>
+            <div id="menu-<?php echo $item->ID; ?>" class="m-navBlock --preload">
               <?php
               foreach( $items as $subnav ):
                 if( $subnav->menu_item_parent == $currentNavItemID ):
