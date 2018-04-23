@@ -8,7 +8,7 @@
   @include element('item') {
     .m-navMenu__label {
       background-color: $clear-black;
-      color: $grey-dark;
+      color: $grey-medium;
       display: relative;
       padding: 1rem;
       transition: background-color $base-duration $base-timing,
@@ -18,6 +18,10 @@
       &.--active {
         background-color: $grey-dark;
         color: $yellow;
+      }
+
+      &.--has-loaded {
+        color: $grey-dark;
       }
     }
   }
