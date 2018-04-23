@@ -14,6 +14,7 @@ endif;
 ?>
 <section class="o-footerBadges">
   <?php
+  if($badges):
     foreach( $badges as $badge ):
       setup_postdata($badge);
         $label = get_field('badge_label');
@@ -42,5 +43,6 @@ endif;
       <?php
       wp_reset_postdata();
     endforeach;
+  endif;
   ?>
 </section>
