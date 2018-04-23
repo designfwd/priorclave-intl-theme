@@ -21,4 +21,12 @@ jQuery(document).ready(function() {
     }
   });
 
+  // Close menus if user clicks outside of them
+  jQuery(document).mouseup(function(e) {
+    let target = e.target; // Record target div
+    if( jQuery(target).parents('.o-primaryNav').length == 0 ) {
+      jQuery('.m-navBlock').hide();
+      jQuery('.m-navMenu__label').removeClass('--active');
+    }
+  });
 });
