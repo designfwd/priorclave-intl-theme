@@ -16,6 +16,8 @@
 
 if( function_exists('get_field') ):
   $siteLogo = get_field('site_logo', 'option');
+  $sitePhone = get_field('site_contact_phone', 'option');
+  $contactPage = get_field('site_contactPage', 'option');
 endif;
 
 // Fallback logo if none is set
@@ -78,9 +80,27 @@ endif;
                       <?php
                       foreach( $items as $block ):
                         if( $block->menu_item_parent == $currentSubID ):
+                          if( function_exists('get_field') ):
+                            $preview = get_field('page_preview_icon', $block->ID);
+                          endif;
+                          if(!$preview):
+                            $preview = array(
+                              'sizes' => array(
+                                'preload' => '//via.placeholder.com/64x94?text=image',
+                                '128w' => '//via.placeholder/128x188?text=image'
+                              )
+                            );
+                          endif;
                         ?>
                         <a class="a-navBlock" href="<?php echo $block->url; ?>">
-                          <img class="a-navBlock__image" src="//via.placeholder.com/72x106?text-image" />
+                          <img class="a-navBlock__image lazyload"
+                            src="<?php echo $preview['sizes']['preload']; ?>"
+                            data-sizes="auto"
+                            data-srcset = "
+                              <?php echo $preview['sizes']['preload']; ?> 64w,
+                              <?php echo $preview['sizes']['128w']; ?> 65w
+                            "
+                          />
                           <h3 class="a-navBlock__title">
                             <?php echo $block->title; ?>
                           </h3>
@@ -103,9 +123,27 @@ endif;
                       <?php
                       foreach( $items as $block ):
                         if( $block->menu_item_parent == $currentSubID ):
+                          if( function_exists('get_field') ):
+                            $preview = get_field('page_preview_icon', $block->ID);
+                          endif;
+                          if(!$preview):
+                            $preview = array(
+                              'sizes' => array(
+                                'preload' => '//via.placeholder.com/64x94?text=image',
+                                '128w' => '//via.placeholder/128x188?text=image'
+                              )
+                            );
+                          endif;
                         ?>
                         <a class="a-navBlock a-navBlock--pictureGrid" href="<?php echo $block->url; ?>">
-                          <img class="a-navBlock__image" src="//via.placeholder.com/72x106?text-image" />
+                          <img class="a-navBlock__image lazyload"
+                            src="<?php echo $preview['sizes']['preload']; ?>"
+                            data-sizes="auto"
+                            data-srcset = "
+                              <?php echo $preview['sizes']['preload']; ?> 64w,
+                              <?php echo $preview['sizes']['128w']; ?> 65w
+                            "
+                          />
                           <h3 class="a-navBlock__title">
                             <?php echo $block->title; ?>
                           </h3>
@@ -182,7 +220,10 @@ endif;
                         <ul class="a-navList__list">
                           <?php
                           foreach( $items as $item ):
-                            if( $item->menu_item_parent == $currentSubID ):
+                            if(
+                              $item->menu_item_parent == $currentSubID &&
+                              (in_array('list-heading', $item->classes) == 0)
+                            ):
                               ?>
                               <li class="a-navItem">
                                 <a class="a-navItem__link" href="<?php echo $item->url; ?>">
@@ -227,7 +268,7 @@ endif;
 
   <div class="o-primaryNav__quicklinks">
     <div class="m-navQuicklinks">
-      <a class="m-navQuicklinks__phone" href="#">CALL +12 34 5678 9012</a>
+      <a class="m-navQuicklinks__phone" href="tel:<?php echo $sitePhone; ?>">CALL <?php echo $sitePhone; ?></a>
       <a class="m-navQuicklinks__menu" href="#">
         <svg id="" class="a-dropdownLink a-dropdownLink--icon" viewBox="0 0 640 480">
           <?php get_svg('flag/gb'); ?>
@@ -239,7 +280,7 @@ endif;
           <?php get_svg('icon-search'); ?>
         </svg>
       </a>
-      <a class="a-navButton a-navButton--primary" href="#">
+      <a class="m-navQuicklinks__button" href="<?php echo $contactPage; ?>">
         Request Quote
       </a>
     </div>
