@@ -8,20 +8,20 @@
   @include element('item') {
     .m-navMenu__label {
       background-color: $clear-black;
-      color: $grey-medium;
+      color: $grey-medium-light;
       display: relative;
       padding: 1rem;
       transition: background-color $base-duration $base-timing,
         color $base-duration $base-timing;
 
+      &.--has-loaded {
+        color: $grey-dark;
+      }
+
       &:hover,
       &.--active {
         background-color: $grey-dark;
         color: $yellow;
-      }
-
-      &.--has-loaded {
-        color: $grey-dark;
       }
     }
   }
