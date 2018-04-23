@@ -11,11 +11,16 @@
 
   @include element('logo') {
     align-self: center;
-    max-width: 15rem;
+    max-width: 13rem;
     width: 100%;
   }
 
   @include element('menu') {
+    width: 100%;
+  }
+
+  @include element('quicklinks') {
+    max-width: 15rem;
     width: 100%;
   }
 }
