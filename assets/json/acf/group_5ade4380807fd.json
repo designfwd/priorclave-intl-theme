@@ -1,0 +1,69 @@
+{
+    "key": "group_5ade4380807fd",
+    "title": "Universal Currency Selector",
+    "fields": [
+        {
+            "key": "field_5ade439eccbec",
+            "label": "Currency",
+            "name": "currency",
+            "type": "select",
+            "instructions": "Please select the currency to use",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "AUD $": "Australian Dollar",
+                "BRL $": "Brazilian Real",
+                "CAD $": "Canadian Dollar",
+                "EUR €": "Euro",
+                "HKD $": "Hong Kong Dollar",
+                "INR ₹": "Indian Rupee",
+                "JPY ¥": "Japanese Yen",
+                "MXN $": "Mexican Peso",
+                "NZD $": "New Zealand Dollar",
+                "NOK kr": "Norwegian Krone",
+                "GBP £": "Pound Sterling (Great Britain)",
+                "CNY 元": "Renminbi",
+                "RUB ₽": "Russian Ruble",
+                "SGD $": "Singapore Dollar",
+                "ZAR R": "South African Rand",
+                "KRW ₩": "South Korean Won",
+                "SEK kr": "Swedish Krona",
+                "CHF Fr": "Swiss Franc",
+                "TRY ₺": "Turkish Lira",
+                "USD $": "United States Dollar"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "array",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1524516419
+}
