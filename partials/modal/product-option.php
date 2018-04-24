@@ -1,13 +1,25 @@
 <?php // Product options modal dialog. Requires a dialogID query variable to function properly
   $dialogID = get_query_var('dialogID');
+  $title = get_query_var('dialogTitle');
+  $description = get_query_var('dialogDescription');
+  $image = get_query_var('dialogImage');
 ?>
 <dialog id="<?php echo $dialogID; ?>" class="m-optionsDialog">
-  <img class="m-optionsDialog__thumbnail lazyload" src="<?php placeholder_img(440,320,'text=thumbnail'); ?>" />
-  <h2 class="m-optionsDialog__title"><?php echo $dialogID; ?></h2>
+  <img class="m-optionsDialog__thumbnail lazyload lazyload--blurUp"
+    src="<?php echo $image['sizes']['preload']; ?>"
+    data-sizes="auto"
+    data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+      <?php echo $image['sizes']['128w']; ?> 65w,
+      <?php echo $image['sizes']['240w']; ?> 129w,
+      <?php echo $image['sizes']['320w']; ?> 241w,
+      <?php echo $image['sizes']['360w']; ?> 321w,
+      <?php echo $image['sizes']['375w']; ?> 361w,
+      <?php echo $image['sizes']['480w']; ?> 376w,
+    "
+  />
+  <h2 class="m-optionsDialog__title"><?php echo $title; ?></h2>
   <div class="m-optionsDialog__description">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <?php echo $description; ?>
   </div>
   <div class="m-optionsDialog__button">
     Close
