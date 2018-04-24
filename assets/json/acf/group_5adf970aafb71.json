@@ -1,0 +1,51 @@
+{
+    "key": "group_5adf970aafb71",
+    "title": "media_productOptions",
+    "fields": [
+        {
+            "key": "field_5adf971d4a86e",
+            "label": "Product Options",
+            "name": "media_productOptions_items",
+            "type": "relationship",
+            "instructions": "Options to associate with this product type. The first 10 will be featured, others included on a list.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product_option"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1524602779
+}
