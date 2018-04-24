@@ -1,0 +1,201 @@
+{
+    "key": "group_5adf8ba8f1580",
+    "title": "Autoclave Template",
+    "fields": [
+        {
+            "key": "field_5adf8bd2fbb35",
+            "label": "Model Name",
+            "name": "autoclave_model",
+            "type": "text",
+            "instructions": "The model name for this autoclave",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5adf8bfefbb36",
+            "label": "Short Name",
+            "name": "autoclave_name",
+            "type": "text",
+            "instructions": "A shorter name for reference to this model.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5adf9019d2412",
+            "label": "Specifications",
+            "name": "autoclave_specifications",
+            "type": "repeater",
+            "instructions": "Autoclave specifications table items",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Specification",
+            "sub_fields": [
+                {
+                    "key": "field_5adf904ed2413",
+                    "label": "Specification Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Title for the specification",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Working Volume",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5adf9087d2414",
+                    "label": "Specification Subtitle",
+                    "name": "subtitle",
+                    "type": "text",
+                    "instructions": "The optional subtitle for the specification. Appears alongside or below the title",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5adf90dbd2415",
+                    "label": "Specification Content",
+                    "name": "content",
+                    "type": "text",
+                    "instructions": "The content of the specification (e.g. working volume should be something like \"XX liters\")",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "40 liters",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5adf9125842de",
+            "label": "Associated Downloads",
+            "name": "autoclave_downloads",
+            "type": "repeater",
+            "instructions": "Datasheets, user manuals, and other documents associated with this autoclave model",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_5adf9181842df",
+                    "label": "File",
+                    "name": "file",
+                    "type": "file",
+                    "instructions": "The file to associate with this item",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5adf91b2842e0",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "The title text to associate with this download",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "autoclave"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1524601296
+}
