@@ -1,68 +1,119 @@
 <?php
-// Relevant product options, with featured imagery and listing of all available options
+/**
+ * Product options
+ *
+ * Relevant product options, with featured imagery and a modal with more info
+ *
+ * @var array $options      The options to include in this section
+ */
 
-  // Array of options to mimic ACF from admin
-  $featuredNumber = 10;
-  $optionsList = array(
-    'TACTROL Control System 10 Program Memory',
-    'Priorclave Tactrol Printer',
-    'Combined Pre-Cycle Vacuum & Vacuum Cooling',
-    'Setting Lock Keyswitch',
-    'TACTROL Control System',
-    'TACTROL Control System 10 Program Memory 02',
-    'Priorclave Tactrol Printer 02',
-    'Combined Pre-Cycle Vacuum & Vacuum Cooling 02',
-    'Setting Lock Keyswitch 02',
-    'TACTROL Control System 02',
-    'TACTROL Control System 10 Program Memory 03',
-    'Priorclave Tactrol Printer 03',
-    'Combined Pre-Cycle Vacuum & Vacuum Cooling 03',
-    'Setting Lock Keyswitch 03',
-    'TACTROL Control System 03',
-    'TACTROL Control System 10 Program Memory 04',
-    'Priorclave Tactrol Printer 04',
-    'Combined Pre-Cycle Vacuum & Vacuum Cooling 04',
-    'Setting Lock Keyswitch 04',
-    'TACTROL Control System 04',
-  );
+if( function_exists('get_field') ):
+  $ID = get_the_ID();
+  $items = get_field('media_productOptions_items', $ID);
+endif;
 ?>
 <section id="productOptions" class="o-productOptions">
   <h2 class="o-productOptions__headline">Options</h2>
-  <div class="o-productOptions__featured">
-    <?php // Displays the featured options
-      for( $i=0; $i<$featuredNumber; $i++):
-    ?>
-      <div id="productOption-<?php echo $i; ?>" class="m-featuredOption">
-        <img class="m-featuredOption__thumbnail lazyload" src="<?php placeholder_img(440,320,'text=thumbnail'); ?>" />
-        <div class="m-featuredOption__title">
-          <?php echo $optionsList[$i]; ?>
-        </div>
-      </div>
-    <?php
-        set_query_var( 'dialogID', ('optionDialog-' . $i));
-        get_partial('modal/product-option');
-      endfor;
-    ?>
-
-  </div>
-  <p id="productOptions-toggle" class="o-productOptions__listToggle">View a Full List of Options</p>
-  <div id="productOptions-list" class="o-productOptions__list --preload">
-    <?php // Displays the non-featured options
-      for( $i=$featuredNumber; $i<count($optionsList); $i++):
-    ?>
-      <div id="productOption-<?php echo $i; ?>" class="o-productOptions__item">
+  <?php
+  if( $items ):
+    $rows = count($items);
+  ?>
+    <div class="o-productOptions__featured">
+      <?php
+      for( $i=0; $i<10; $i++ ):
+        if( $items[$i] ):
+          $post = $items[$i];
+          setup_postdata($post);
+          $title = get_the_title($post->ID);
+          $description = get_field('product_options_description', $post->ID);
+          $image = get_field('product_options_image', $post->ID);
+          if( !$image ):
+            $image = array( // 440 x 320
+              'sizes' => array(
+                'preload' => '//via.placeholder.com/64x47?text=thumbnail+' . ($i + 1),
+                '128w' => '//via.placeholder.com/128x93?text=thumbnail+' . ($i + 1),
+                '240w' => '//via.placeholder.com/240x175?text=thumbnail+' . ($i + 1),
+                '320w' => '//via.placeholder.com/320x233?text=thumbnail+' . ($i + 1),
+                '360w' => '//via.placeholder.com/360x262?text=thumbnail+' . ($i + 1),
+                '375w' => '//via.placeholder.com/375x273?text=thumbnail+' . ($i + 1),
+                '480w' => '//via.placeholder.com/480x349?text=thumbnail+' . ($i + 1),
+              ),
+            );
+          endif;
+        ?>
+          <div id="productOption-<?php echo $i; ?>" class="m-featuredOption">
+            <img class="m-featuredOption__thumbnail lazyload lazyload--blurUp"
+              src="<?php echo $image['sizes']['preload']; ?>"
+              data-sizes="auto"
+              data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+                <?php echo $image['sizes']['128w']; ?> 65w,
+                <?php echo $image['sizes']['240w']; ?> 129w,
+                <?php echo $image['sizes']['320w']; ?> 241w,
+                <?php echo $image['sizes']['360w']; ?> 321w,
+                <?php echo $image['sizes']['375w']; ?> 361w,
+                <?php echo $image['sizes']['480w']; ?> 376w,
+              "
+            />
+            <div class="m-featuredOption__title">
+              <?php echo $title; ?>
+            </div>
+          </div>
         <?php
-          echo $optionsList[$i];
+        set_query_var( 'dialogID', ('optionDialog-' . $i));
+        set_query_var( 'dialogTitle', $title);
+        set_query_var( 'dialogDescription', $description);
+        set_query_var( 'dialogImage', $image);
+        get_partial('modal/product-option');
+        endif;
+      endfor;
+      ?>
+
+    </div>
+    <?php
+    if($rows>10):
+    ?>
+      <p id="productOptions-toggle" class="o-productOptions__listToggle">View a Full List of Options</p>
+      <div id="productOptions-list" class="o-productOptions__list --preload">
+        <?php // Displays the non-featured options
+          for( $i=10; $i<$rows; $i++):
+            $post = $items[$i];
+            setup_postdata($post);
+            $title = get_the_title($post->ID);
+            $description = get_field('product_options_description', $post->ID);
+            $image = get_field('product_options_image', $post->ID);
+            if( !$image ):
+              $image = array( // 440 x 320
+                'sizes' => array(
+                  'preload' => '//via.placeholder.com/64x47?text=thumbnail+' . ($i + 1),
+                  '128w' => '//via.placeholder.com/128x93?text=thumbnail+' . ($i + 1),
+                  '240w' => '//via.placeholder.com/240x175?text=thumbnail+' . ($i + 1),
+                  '320w' => '//via.placeholder.com/320x233?text=thumbnail+' . ($i + 1),
+                  '360w' => '//via.placeholder.com/360x262?text=thumbnail+' . ($i + 1),
+                  '375w' => '//via.placeholder.com/375x273?text=thumbnail+' . ($i + 1),
+                  '480w' => '//via.placeholder.com/480x349?text=thumbnail+' . ($i + 1),
+                ),
+              );
+            endif;
+        ?>
+          <div id="productOption-<?php echo $i; ?>" class="o-productOptions__item">
+            <?php
+              echo $title;
+            ?>
+          </div>
+        <?php
+          endfor;
         ?>
       </div>
-    <?php
+      <?php // Creates the dialog boxes associated with the list above
+      for( $i=10; $i<$rows; $i++):
+        set_query_var( 'dialogID', ('optionDialog-' . $i));
+        set_query_var( 'dialogTitle', $title);
+        set_query_var( 'dialogDescription', $description);
+        set_query_var( 'dialogImage', $image);
+        get_partial('modal/product-option');
       endfor;
-    ?>
-  </div>
-  <?php // Creates the dialog boxes associated with the list above
-    for( $i=$featuredNumber; $i<count($optionsList); $i++):
-      set_query_var( 'dialogID', ('optionDialog-' . $i));
-      get_partial('modal/product-option');
-    endfor;
+    endif;
+  endif;
+  wp_reset_postdata();
   ?>
 </section>
