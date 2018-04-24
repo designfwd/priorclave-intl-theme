@@ -225,3 +225,60 @@ if( !function_exists('testimonials_post_type') ):
   }
   add_action( 'init', 'testimonials_post_type', 0 );
 endif;
+
+
+if ( ! function_exists('product_options_post_type') ):
+  function product_options_post_type() {
+    $labels = array(
+      'name'                  => _x( 'Product Options', 'Post Type General Name', 'bellhop' ),
+      'singular_name'         => _x( 'Product Option', 'Post Type Singular Name', 'bellhop' ),
+      'menu_name'             => __( 'Product Options', 'bellhop' ),
+      'name_admin_bar'        => __( 'Product Option', 'bellhop' ),
+      'archives'              => __( 'Product Option Archives', 'bellhop' ),
+      'attributes'            => __( 'Product Option Attributes', 'bellhop' ),
+      'parent_item_colon'     => __( 'Parent Product Option:', 'bellhop' ),
+      'all_items'             => __( 'All Product Options', 'bellhop' ),
+      'add_new_item'          => __( 'Add New Product Option', 'bellhop' ),
+      'add_new'               => __( 'Add New', 'bellhop' ),
+      'new_item'              => __( 'New Product Option', 'bellhop' ),
+      'edit_item'             => __( 'Edit Product Option', 'bellhop' ),
+      'update_item'           => __( 'Update Product Option', 'bellhop' ),
+      'view_item'             => __( 'View Product Option', 'bellhop' ),
+      'view_items'            => __( 'View Product Options', 'bellhop' ),
+      'search_items'          => __( 'Search Product Option', 'bellhop' ),
+      'not_found'             => __( 'Not found', 'bellhop' ),
+      'not_found_in_trash'    => __( 'Not found in Trash', 'bellhop' ),
+      'featured_image'        => __( 'Featured Image', 'bellhop' ),
+      'set_featured_image'    => __( 'Set featured image', 'bellhop' ),
+      'remove_featured_image' => __( 'Remove featured image', 'bellhop' ),
+      'use_featured_image'    => __( 'Use as featured image', 'bellhop' ),
+      'insert_into_item'      => __( 'Insert into product option', 'bellhop' ),
+      'uploaded_to_this_item' => __( 'Uploaded to this product option', 'bellhop' ),
+      'items_list'            => __( 'Product Options list', 'bellhop' ),
+      'items_list_navigation' => __( 'Product Options list navigation', 'bellhop' ),
+      'filter_items_list'     => __( 'Filter items list', 'bellhop' ),
+    );
+    $args = array(
+      'label'                 => __( 'Product Option', 'bellhop' ),
+      'description'           => __( 'Product Options', 'bellhop' ),
+      'labels'                => $labels,
+      'supports'              => array( 'title' ),
+      'hierarchical'          => false,
+      'public'                => true,
+      'show_ui'               => true,
+      'show_in_menu'          => true,
+      'menu_position'         => 15,
+      'menu_icon'             => 'dashicons-portfolio',
+      'show_in_admin_bar'     => false,
+      'show_in_nav_menus'     => false,
+      'can_export'            => true,
+      'has_archive'           => false,
+      'exclude_from_search'   => false,
+      'publicly_queryable'    => true,
+      'capability_type'       => 'post',
+      'show_in_rest'          => true,
+    );
+    register_post_type( 'product_option', $args );
+  }
+  add_action( 'init', 'product_options_post_type', 0 );
+endif;
