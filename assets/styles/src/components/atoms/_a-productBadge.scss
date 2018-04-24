@@ -1,0 +1,9 @@
+// Product badge styles
+.a-productBadge {
+  width: 4.5rem;
+
+  @include element('image') {
+    object-fit: contain;
+    width: 100%;
+  }
+}

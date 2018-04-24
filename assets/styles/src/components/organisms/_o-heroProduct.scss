@@ -29,6 +29,7 @@
 
   @include element('slider') {
     align-self: center;
+    width: 100%;
     max-width: 80%;
 
     @media(min-width: 720px) {

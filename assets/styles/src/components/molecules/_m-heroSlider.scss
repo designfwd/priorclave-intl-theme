@@ -12,9 +12,9 @@
 
   @include element('image') {
     display: none;
-    height: 80%;
-    margin: 0 10%;
-    width: 80%;
+    height: 100%;
+    padding: 0 10%;
+    width: 100%;
 
     @include modifier('current') {
       display: inherit;
