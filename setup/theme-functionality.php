@@ -7,10 +7,6 @@ function bellhop_supports() {
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
   add_theme_support('title-tag');
 
-  // Enable post formats
-  // http://codex.wordpress.org/Post_Formats
-  add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
-
   // Enable HTML5 markup support
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
@@ -23,9 +19,18 @@ add_action( 'after_setup_theme', 'bellhop_supports' );
 
 // Removes unnecessary items from the admin menu
 function bellhop_remove_menus() {
-  // remove_menu_page('edit.php');
-  remove_menu_page('edit-comments.php');
-  remove_menu_page('link-manager.php');
+  // remove_menu_page( 'index.php' );                  //Dashboard
+  // remove_menu_page( 'jetpack' );                    //Jetpack*
+  // remove_menu_page( 'edit.php' );                   //Posts
+  // remove_menu_page( 'upload.php' );                 //Media
+  // remove_menu_page( 'edit.php?post_type=page' );    //Pages
+  remove_menu_page( 'edit-comments.php' );          //Comments
+  // remove_menu_page( 'themes.php' );                 //Appearance
+  // remove_menu_page( 'plugins.php' );                //Plugins
+  // remove_menu_page( 'users.php' );                  //Users
+  // remove_menu_page( 'tools.php' );                  //Tools
+  // remove_menu_page( 'options-general.php' );        //Settings
+  remove_menu_page( 'link-manager.php' );           //Links
 }
 add_action( 'admin_menu', 'bellhop_remove_menus');
 
@@ -99,6 +104,7 @@ function get_partial( $slug ) {
 }
 
 
+// SVG importer
 function get_svg( $file ) {
   echo file_get_contents( get_stylesheet_directory_uri() . '/assets/images/dist/svg/' . $file . '.svg');
 }
