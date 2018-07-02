@@ -1,7 +1,7 @@
 {
-  "name": "bellhop",
+  "name": "priorclave-international-theme",
   "version": "0.1.0",
-  "description": "A starter theme for WordPress that does some of the lifting for you",
+  "description": "A theme built for Priorclave International based on Bellhop",
   "main": "index.js",
   "browserslist": [
     "> 1%",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benjatron/bellhop.git"
+    "url": "git+https://github.com/benjatron/priorclave-intl-theme.git"
   },
   "keywords": [
     "wordpress"
@@ -26,9 +26,9 @@
   "author": "Ben Davidson",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/benjatron/bellhop/issues"
+    "url": "https://github.com/benjatron/priorclave-intl-theme/issues"
   },
-  "homepage": "https://github.com/benjatron/bellhop#readme",
+  "homepage": "https://github.com/benjatron/priorclave-intl-theme#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.6",
     "babel-core": "^6.26.3",
