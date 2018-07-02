@@ -1,5 +1,5 @@
 <?php
-function bellhop_image_sizes() {
+function priorclave_image_sizes() {
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
@@ -28,4 +28,4 @@ function bellhop_image_sizes() {
   add_image_size('2560w', 2560, 9999);
   add_image_size('3840w', 3840, 9999);
 }
-add_action( 'after_setup_theme', 'bellhop_image_sizes' );
+add_action( 'after_setup_theme', 'priorclave_image_sizes' );

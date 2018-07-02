@@ -1,24 +1,21 @@
 <?php
-function bellhop_supports() {
-  // Make theme available for translation
-  load_theme_textdomain('bellhop', get_template_directory() . '/lang');
-
+function priorclave_supports() {
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
   add_theme_support('title-tag');
 
   // Enable HTML5 markup support
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
-  add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
+  add_theme_support('html5');
 
   // Enable wide images
   add_theme_support('align-wide');
 }
-add_action( 'after_setup_theme', 'bellhop_supports' );
+add_action( 'after_setup_theme', 'priorclave_supports' );
 
 
 // Removes unnecessary items from the admin menu
-function bellhop_remove_menus() {
+function priorclave_remove_menus() {
   // remove_menu_page( 'index.php' );                  //Dashboard
   // remove_menu_page( 'jetpack' );                    //Jetpack*
   // remove_menu_page( 'edit.php' );                   //Posts
@@ -32,12 +29,12 @@ function bellhop_remove_menus() {
   // remove_menu_page( 'options-general.php' );        //Settings
   remove_menu_page( 'link-manager.php' );           //Links
 }
-add_action( 'admin_menu', 'bellhop_remove_menus');
+add_action( 'admin_menu', 'priorclave_remove_menus');
 
 
 // Renames the default page template to encourage use of custom templates
 add_filter('default_page_template_title', function() {
-  return __('--Pick a page template--', 'bellhop');
+  return __('--Pick a page template--', 'priorclave');
 });
 
 
@@ -82,16 +79,16 @@ endif;
 
 
 // Changes the save location for ACF fields
-add_filter('acf/settings/save_json', 'bellhop_acf_json_save_point');
-function bellhop_acf_json_save_point( $path ) {
+add_filter('acf/settings/save_json', 'priorclave_acf_json_save_point');
+function priorclave_acf_json_save_point( $path ) {
   $path = get_stylesheet_directory() . '/assets/json/acf';
   return $path;
 }
 
 
 // Changes the load location for ACF fields
-add_filter('acf/settings/load_json', 'bellhop_acf_json_load_point');
-function bellhop_acf_json_load_point( $paths ) {
+add_filter('acf/settings/load_json', 'priorclave_acf_json_load_point');
+function priorclave_acf_json_load_point( $paths ) {
   unset($paths[0]);
   $paths[] = get_stylesheet_directory() . '/assets/json/acf';
   return $paths;
@@ -137,7 +134,7 @@ function get_picsum( $width, $height='', $modifier='' ) {
 }
 
 
-function bellhop_lang() {
+function priorclave_lang() {
   if( function_exists('get_field') ):
     $lang = get_field('site_language', 'option');
     $geo = get_field('site_country', 'option');

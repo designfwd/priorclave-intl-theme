@@ -1,6 +1,6 @@
 <?php
 // Sets menu locations
-function bellhop_menus() {
+function priorclave_menus() {
   register_nav_menus(
     [
       'primary_nav' => __('Primary Navigation', 'bellhop'),
@@ -8,4 +8,4 @@ function bellhop_menus() {
     ]
   );
 }
-add_action( 'after_setup_theme', 'bellhop_menus');
+add_action( 'after_setup_theme', 'priorclave_menus');

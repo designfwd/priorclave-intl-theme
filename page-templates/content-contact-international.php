@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Template Name: Contact Us - International
  * Description: Contact us page for the international base site
  */
