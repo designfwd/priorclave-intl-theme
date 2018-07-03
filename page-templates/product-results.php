@@ -5,7 +5,7 @@
  */
 ?>
 <!doctype html>
-<html <?php bellhop_lang(); ?>>
+<html <?php priorclave_lang(); ?>>
   <?php get_partial('meta/head'); ?>
   <body <?php body_class('product product--results'); ?>>
     <header>

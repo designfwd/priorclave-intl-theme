@@ -30,7 +30,7 @@ if( !isset($headerBackground) || ($headerBackground == '') ):
 endif;
 ?>
 <!doctype html>
-<html <?php bellhop_lang(); ?>>
+<html <?php priorclave_lang(); ?>>
   <?php get_partial('meta/head'); ?>
   <body <?php body_class('homepage homepage--multiregion'); ?>>
     <header class="homepage__header lazyload"
