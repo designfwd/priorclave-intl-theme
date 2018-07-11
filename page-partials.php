@@ -148,12 +148,6 @@ section {
 <h3>video-grid</h3>
 <?php get_partial('media/video-grid'); ?>
 
-
-<h2>modal</h2>
-<h3>product-option</h3>
-<?php get_partial('modal/product-option'); ?>
-
-
 <h2>navigation</h2>
 <h3>categories-blocks</h3>
 <?php get_partial('navigation/categories-blocks'); ?>
