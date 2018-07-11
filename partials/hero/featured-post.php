@@ -1,5 +1,20 @@
 <?php
-// Preview of a specific post for feature
+/**
+ * Featured post in the hero area
+ *
+ * Preview of a specific post for feature in the hero area of the page
+ *
+ * @var string $newsPage  The page to pull news-related settings from
+ * @var array $posts      The list of posts to feature. Must have single value.
+ *
+ */
+
+if( function_exists('get_field') ):
+  $newsPage = get_field('site_newsPage', 'option', false);
+  $posts = get_field('hero_featuredPost_post', $newsPage);
+
+
+endif;
 ?>
 <section class="o-heroPost">
   <a href="#">

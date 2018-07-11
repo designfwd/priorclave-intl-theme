@@ -82,6 +82,14 @@ endif;
             echo $text . '<br />';
           endif;
         endwhile;
+      else:
+      ?>
+        Lorem <br/>
+        Ipsum <br/>
+        <span class="o-heroMarketing__content--feature">
+          Dolor Sit
+        </span>
+      <?php
       endif;
     ?>
     <div class="o-heroMarketing__content--subtitle">

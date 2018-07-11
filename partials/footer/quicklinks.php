@@ -29,6 +29,12 @@ endif;
       </a>
     <?php
       endwhile;
+    else:
+    ?>
+      <p class="o-footerQuicklinks__button">
+        No links set
+      </p>
+    <?php
     endif;
   ?>
 </section>

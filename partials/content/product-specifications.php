@@ -1,107 +1,60 @@
 <?php
-// Product specifications table
+/**
+ * Product specifications table
+ *
+ * Table of autoclave models with their associated specifications
+ *
+ * @var array $models       The list of autoclave models associated with
+ *                          this autoclave type
+ */
+
+if( function_exists('get_field') ):
+  $ID = get_the_ID();
+  $models = get_field('content_productFeatures_models', $ID);
+endif;
 ?>
 <section id="productSpecifications" class="o-productSpecifications">
   <h2 class="o-productSpecifications__headline">Specifications</h2>
-  <?php // Product specifications table
-    $products = array(
-      '40L Compact',
-      '60L Compact',
-    );
-    foreach ($products as $product):
-      $productSlug = str_replace(' ', '-', strtolower($product)); // creates a lowercase, JS-able slug
-  ?>
-    <div id="<?php echo $productSlug . '-productTitle'; ?>" class="o-productSpecifications__product">
-      <?php echo $product; ?> Specifications
+  <?php
+  if( $models ):
+    foreach( $models as $model ):
+      $modelID = $model->ID;
+      $shortName = get_field('autoclave_name', $modelID);
+      $slug = str_replace(' ', '-', strtolower($shortName)); // creates a lowercase, JS-able slug
+      $specifications = 'autoclave_specifications';
+    ?>
+    <div id="<?php echo $shortName . '-productTitle'; ?>" class="o-productSpecifications__product">
+      <?php echo $shortName; ?> Specifications
     </div>
-    <div id="<?php echo $productSlug . '-productSpecs'; ?>" class="o-productSpecifications__table --preload">
-      <?php // Sample product specs
-        $specifications = array(
-          array(
-            'title' => 'Working Volume',
-            'subtitle' => '',
-            'description' => '40 liters',
-          ),
-          array(
-            'title' => 'Operating Range',
-            'subtitle' => '',
-            'description' => 'Up to 138°C, 2.4 Bar (280°F, 34.8 psi)',
-          ),
-          array(
-            'title' => 'Loading Format',
-            'subtitle' => '',
-            'description' => 'Front Loading',
-          ),
-          array(
-            'title' => 'Loading Height',
-            'subtitle' => 'w x d x h (and Door Swing)',
-            'description' => 'Front Loading',
-          ),
-          array(
-            'title' => 'Heating',
-            'subtitle' => '',
-            'description' => 'Electrical',
-          ),
-          array(
-            'title' => 'Heat Input',
-            'subtitle' => '',
-            'description' => '3kW Single Phase',
-          ),
-          array(
-            'title' => 'Working Dimensions',
-            'subtitle' => 'diameter x depth',
-            'description' => '350mm x 420mm 13.8" x 16.5"',
-          ),
-          array(
-            'title' => 'Bottom Shelf Dimensions',
-            'subtitle' => 'w x d x h',
-            'description' => '9.7"W x 16.5"D with 11.6" clearance (upper shelf removed)',
-          ),
-          array(
-            'title' => 'Working Volume',
-            'subtitle' => '',
-            'description' => '13.6"W x 16.5"D with 6.9" clearance',
-          ),
-          array(
-            'title' => 'Operating Range',
-            'subtitle' => '',
-            'description' => '520mm x 610mm x 640mm 20.5" x 24" x 25.2"',
-          ),
-          array(
-            'title' => 'Loading Format',
-            'subtitle' => '',
-            'description' => '70kg (154.3lbs)',
-          ),
-          array(
-            'title' => 'Loading Height',
-            'subtitle' => ' w x d x h (and Door Swing)',
-            'description' => '826mm x 762mm x 796mm 32.5" x 30" x 31.2" (520mm, 20.5")',
-          ),
-        );
-        foreach( $specifications as $specification ):
+    <div id="<?php echo $shortName . '-productSpecs'; ?>" class="o-productSpecifications__table --preload">
+      <?php
+        while( have_rows($shortName, $modelID) ): the_row();
+          $title = get_sub_field('title');
+          $subtitle = get_sub_field('subtitle');
+          $content = get_sub_field('content');
       ?>
         <div class="m-specificationCell">
           <div class="m-specificationCell__header">
             <?php
-              echo $specification['title'];
+              echo $title;
 
               // If there's a subtitle, show it
-              if( $specification['subtitle'] != '' ):
+              if( $subtitle != '' ):
             ?>
               <br />
               <span class="m-specificationCell__header--subtitle">
-                <?php echo $specification['subtitle']; ?>
+                <?php echo $subtitle; ?>
               </span>
             <?php
               endif;
             ?>
           </div>
           <div class="m-specificationCell__contents">
-            <?php echo $specification['description']; ?>
+            <?php echo $content; ?>
           </div>
         </div>
       <?php
-        endforeach;
+        endwhile;
       ?>
       <div class="m-specificationCell m-specificationCell--filler">
         <div class="m-specificationCell__header"></div>
@@ -110,5 +63,12 @@
     </div>
   <?php
     endforeach;
+  else:
+  ?>
+    <h3 class="o-productSpecifications__headline">
+      -- No Specifications Set For This Product --
+    </h3>
+  <?php
+  endif;
   ?>
 </section>

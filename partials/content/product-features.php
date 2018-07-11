@@ -20,6 +20,9 @@ if( function_exists('get_field') ):
   $extras = 'content_productFeatures_extras';
   $features = 'content_productFeatures_features';
 endif;
+if( !isset($description) ):
+  $description = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>';
+endif;
 ?>
 <section id="productFeatures" class="o-productFeatures">
 
@@ -104,6 +107,17 @@ endif;
             </li>
           <?php
           endwhile;
+        else: // If no features are set, use placeholders
+        ?>
+          <li class="m-productStandards__item">
+            <svg class="a-inlineIcon" viewBox="0 0 16 16"><?php get_svg('icon-check-circle'); ?></svg>
+            Placeholder Item #1
+          </li>
+          <li class="m-productStandards__item">
+            <svg class="a-inlineIcon" viewBox="0 0 16 16"><?php get_svg('icon-check-circle'); ?></svg>
+            Placeholder Item #2
+          </li>
+        <?php
         endif;
         ?>
       </ul>
