@@ -25,7 +25,7 @@ if(function_exists('get_field') ):
 endif;
 
 // Creates fallbacks if no defaults are set
-if( !$background ):
+if( !$background || $background == '' ):
   $background = array(
     'url' => '//picsum.photos/g/2400/800',
     'sizes' => array(
@@ -34,7 +34,7 @@ if( !$background ):
   );
 endif;
 
-if( !$image ):
+if( !$image || $image == '' ):
   $image = array(
     'alt' => 'image',
     'sizes' => array(

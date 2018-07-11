@@ -28,6 +28,14 @@ if( !$background ):
     ),
   );
 endif;
+
+if( !$headline ):
+  $headline = 'No Headline Set';
+endif;
+
+if( !$page ):
+  $label = 'No Page Set';
+endif;
 ?>
 <section class="o-ctaBackground lazyload" data-bg="<?php echo $background['sizes']['2560w']; ?>" style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
   <h2 class="o-ctaBackground__headline"><?php echo $headline; ?></h2>

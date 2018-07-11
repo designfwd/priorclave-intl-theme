@@ -17,6 +17,14 @@ if( function_exists('get_field') ):
   $label = get_field('media_ctaSimple_label', $ID);
   $url = get_field('media_ctaSimple_url', $ID);
 endif;
+
+if( !$headline ):
+  $headline = 'No Headline Set';
+endif;
+
+if( !$url ):
+  $label = 'No Link Set';
+endif;
 ?>
 <section class="o-ctaSimple">
   <h2 class="o-ctaSimple__headline"><?php echo $headline; ?></h2>

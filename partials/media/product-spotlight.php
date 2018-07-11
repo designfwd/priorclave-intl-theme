@@ -16,6 +16,10 @@ if( function_exists('get_field') ):
   $content = get_field('media_productSpotlight_content', $ID);
   $images = 'media_productSpotlight_images';
 endif;
+
+if( !$headline || $headline == '' ):
+  $headline = 'Headline Not Set';
+endif;
 ?>
 <section class="o-productSpotlight">
   <h2 class="o-productSpotlight__headline"><?php echo $headline; ?></h2>
