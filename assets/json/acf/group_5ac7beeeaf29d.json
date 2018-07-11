@@ -238,7 +238,28 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5b451b2ad9e56",
+            "label": "News & Events Page",
+            "name": "site_newsPage",
+            "type": "page_link",
+            "instructions": "The page to use for news and events",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -1034,5 +1055,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1524154564
+    "modified": 1531255885
 }
