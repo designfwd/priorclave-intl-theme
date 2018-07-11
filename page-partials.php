@@ -67,17 +67,6 @@ section {
 <?php get_partial('footer/quicklinks'); ?>
 
 
-<h2>form</h2>
-<h3>product-finder</h3>
-<?php get_partial('form/product-finder'); ?>
-
-<h3>quote-request</h3>
-<?php get_partial('form/quote-request'); ?>
-
-<h3>site-search</h3>
-<?php get_partial('form/site-search'); ?>
-
-
 <h2>hero</h2>
 <h3>featured-marketing</h3>
 <?php get_partial('hero/featured-marketing'); ?>
