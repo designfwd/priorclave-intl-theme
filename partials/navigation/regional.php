@@ -31,26 +31,34 @@ endif;
             <a class="o-regionalNav__region--link" href="<?php echo $regionLink; ?>">
               <?php echo $region['label']; ?>
             </a>
+          <?php
+          if( have_rows('countries') ):
+          ?>
+            <ul class="o-regionalNav__subList">
+            <?php
+            while( have_rows('countries') ): the_row();
+              $country = get_sub_field('country');
+              $separateCheck = get_sub_field('separate');
+              if( $separateCheck == true ):
+                $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
+              else:
+                $countryLink = get_site_url(1) . '/' . $language . '/' . str_replace(' ', '-', strtolower($country['label']));
+              endif;
+            ?>
+              <li class="o-regionalNav__country">
+                <a class="o-regionalNav__country--link" href="<?php echo $countryLink; ?>">
+                  <?php echo $country['label']; ?>
+                </a>
+              </li>
+            <?php
+            endwhile;
+            ?>
+            </ul>
+          <?php
+          endif;
+          ?>
           </li>
           <?php
-            if( have_rows('countries') ):
-              while( have_rows('countries') ): the_row();
-                $country = get_sub_field('country');
-                $separateCheck = get_sub_field('separate');
-                if( $separateCheck == true ):
-                  $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
-                else:
-                  $countryLink = get_site_url(1) . '/' . $language . '/' . str_replace(' ', '-', strtolower($country['label']));
-                endif;
-              ?>
-                <li class="o-regionalNav__country">
-                  <a class="o-regionalNav__country--link" href="<?php echo $countryLink; ?>">
-                    <?php echo $country['label']; ?>
-                  </a>
-                </li>
-              <?php
-              endwhile;
-            endif;
         endwhile;
       endif;
     ?>
