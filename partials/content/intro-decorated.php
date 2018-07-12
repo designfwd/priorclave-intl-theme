@@ -14,7 +14,7 @@ if( function_exists('get_field') ):
   $ID = get_the_ID();
   $headline = get_field('content_introDecorated_headline', $ID);
   $content = get_field('content_introDecorated_content', $ID);
-  $decoration = get_field('content_introDecorated_decoration', $ID);
+  $decoration = get_field('content_introDecorated_image', $ID);
 endif;
 
 if(
