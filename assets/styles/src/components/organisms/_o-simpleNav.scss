@@ -4,7 +4,9 @@
   justify-content: space-between;
 
   @include element('logo') {
+    background-color: $white;
     max-width: 192px;
+    padding: 1rem;
     width: 50%;
   }
 
