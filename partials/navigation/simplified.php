@@ -34,7 +34,7 @@ endif;
     alt="<?php echo $logo['alt']; ?>"
     src="<?php echo $logo['sizes']['preload']; ?>"
     data-sizes="auto"
-    data-srcset="<?php echo $logo['sizes']['preload']; ?> 16w,
+    data-srcset="<?php echo $logo['sizes']['preload']; ?> 64w,
       <?php echo $logo['sizes']['128w']; ?> 65w,
       <?php echo $logo['url']; ?> 129w
     "
