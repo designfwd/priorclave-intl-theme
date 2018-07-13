@@ -15,10 +15,11 @@ endif;
 <section class="o-footerBadges">
   <?php
   if($badges):
-    foreach( $badges as $badge ):
-      setup_postdata($badge);
-        $label = get_field('badge_label');
-        $image = get_field('badge_image_grayscale');
+    foreach( $badges as $post ):
+      setup_postdata($post);
+        $id = $post->ID;
+        $label = get_field('badge_label', $id);
+        $image = get_field('badge_image_grayscale', $id);
         if( !isset($image) || $image == '' ):
           $image = array(
             'sizes' => array(
