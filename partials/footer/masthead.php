@@ -9,7 +9,12 @@
 
 // Sets variables, with fallbacks if ACF is not installed or if variables are empty
 if( function_exists('get_field') ):
-  $logo = get_field('site_logo', 'option');
+  // If the footer logo is set, use that instead of site logo
+  if( get_field('footer_logo', 'option') ):
+    $logo = get_field('footer_logo', 'option');
+  else:
+    $logo = get_field('site_logo', 'option');
+  endif;
 endif;
 
 if( !isset($logo) || $logo == ''):
@@ -21,10 +26,7 @@ if( !isset($logo) || $logo == ''):
       '128w' => '//via.placeholder.com/128x34?text=Footer+Logo',
       '240w' => '//via.placeholder.com/240x64?text=Footer+Logo',
       '320w' => '//via.placeholder.com/320x85?text=Footer+Logo',
-      '360w' => '//via.placeholder.com/360x95?text=Footer+Logo',
-      '375w' => '//via.placeholder.com/375x99?text=Footer+Logo',
-      '480w' => '//via.placeholder.com/480x127?text=Footer+Logo',
-      '540w' => '//via.placeholder.com/540x143?text=Footer+Logo',
+      '360w' => '//via.placeholder.com/360x95?text=Footer+Logo'
     )
   );
 endif;
@@ -39,10 +41,6 @@ endif;
       <?php echo $logo['sizes']['240w']; ?> 129w,
       <?php echo $logo['sizes']['320w']; ?> 241w,
       <?php echo $logo['sizes']['360w']; ?> 321w,
-      <?php echo $logo['sizes']['375w']; ?> 361w,
-      <?php echo $logo['sizes']['480w']; ?> 376w,
-      <?php echo $logo['sizes']['540w']; ?> 481w,
-      <?php echo $logo['url']; ?> 541w
     "
   />
 </section>
