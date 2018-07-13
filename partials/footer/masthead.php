@@ -20,7 +20,6 @@ endif;
 if( !isset($logo) || $logo == ''):
   $logo = array(
     'alt' => 'Priorclave International',
-    'url' => '//via.placeholder.com/621x164?text=Footer+Logo',
     'sizes' => array(
       'preload' => '//via.placeholder.com/64x17?text=Footer+Logo',
       '128w' => '//via.placeholder.com/128x34?text=Footer+Logo',
