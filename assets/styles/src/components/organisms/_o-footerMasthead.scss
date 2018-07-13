@@ -3,7 +3,7 @@
   padding: 2.4rem 0;
 
   @include element('logo') {
-    max-width: 620px;
+    max-width: 360px;
     object-fit: contain;
     width: 65%;
   }
