@@ -43,9 +43,15 @@ endif;
             endif;
         ?>
           <div class="m-logoSlider__slide">
-            <img class="a-brandLogo"
+            <img class="a-brandLogo lazyload lazyload--blurUp"
               alt="<?php echo $image['alt']; ?>"
-              src="<?php echo $image['sizes']['320w']; ?>"
+              src="<?php echo $image['sizes']['preload']; ?>"
+              data-sizes="auto"
+              data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+                <?php echo $image['sizes']['128w']; ?> 65w,
+                <?php echo $image['sizes']['240w']; ?> 129w,
+                <?php echo $image['sizes']['320w']; ?> 241w,
+              "
             />
           </div>
         <?php
@@ -54,25 +60,6 @@ endif;
       </div>
     <?php
       endwhile;
-    else:
-      for( $i=0; $i<$sliderRows; $i++ ):
-    ?>
-      <div class="m-logoSlider --preload">
-        <?php
-          $slides = rand(7,10);
-          for( $j=0; $j<$slides; $j++ ):
-        ?>
-          <div class="m-logoSlider__slide">
-            <img class="a-brandLogo lazyload"
-              src="<?php placeholder_img( rand(133, 275), rand(120, 160), ('text=slide-' . $j) ); ?>"
-            />
-          </div>
-        <?php
-          endfor;
-        ?>
-      </div>
-    <?php
-      endfor;
     endif;
     ?>
   </div>
