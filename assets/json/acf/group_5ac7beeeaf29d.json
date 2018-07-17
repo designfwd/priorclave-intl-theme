@@ -38,7 +38,7 @@
         {
             "key": "field_5ac7bf127fb76",
             "label": "Website Language",
-            "name": "site_",
+            "name": "site",
             "type": "clone",
             "instructions": "Please select the language to use for meta information in the <html> tag.",
             "required": 0,
@@ -78,7 +78,7 @@
         {
             "key": "field_5ac7c4682cbb1",
             "label": "Website Country",
-            "name": "site_",
+            "name": "site",
             "type": "clone",
             "instructions": "Please select the country this site represents",
             "required": 0,
@@ -1044,11 +1044,11 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5acbd518acefa",
-                    "label": "Link URL",
-                    "name": "url",
-                    "type": "url",
-                    "instructions": "The URL associated with this link",
+                    "key": "field_5b4e16500e457",
+                    "label": "Internal Link?",
+                    "name": "linkType",
+                    "type": "true_false",
+                    "instructions": "Specify whether this link is linked to an internal page or an outside URL. If linking to another Priorclave WordPress install, please select \"No\".",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1056,8 +1056,64 @@
                         "class": "",
                         "id": ""
                     },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5acbd518acefa",
+                    "label": "Link URL",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "The URL associated with this link",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5b4e16500e457",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "https:\/\/www.google.com\/search?q=priorclave",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_5b4e169a0e458",
+                    "label": "Link Page",
+                    "name": "page",
+                    "type": "page_link",
+                    "instructions": "The page associated with this link",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5b4e16500e457",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
                 }
             ]
         }
@@ -1079,5 +1135,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531497859
+    "modified": 1531844315
 }
