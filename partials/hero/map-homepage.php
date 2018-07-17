@@ -48,10 +48,6 @@ endif;
                 while( have_rows('countries') ): the_row();
                   $country = get_sub_field('country');
                   $language = get_sub_field('language')['value'];
-                  // If the language shouldn't be shown, set language to empty
-                  if( !get_field('site_language_show', 'option') ):
-                    $language = '';
-                  endif;
                   $separateCheck = get_sub_field('separate');
                   if( $separateCheck == true ):
                     $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
