@@ -20,7 +20,12 @@ endif;
       if( have_rows($links, 'option') ):
         while( have_rows($links, 'option') ): the_row();
           $label = get_sub_field('label');
-          $url = get_sub_field('url');
+          $linkType = get_sub_field('linkType');
+          if( $linkType == true ):
+            $url = get_sub_field('page');
+          else:
+            $url = get_sub_field('url');
+          endif;
       ?>
         <a class="a-footerLink a-footerLink--copyright" href="<?php echo $url; ?>" target="_blank"><?php echo $label; ?></a>
       <?php
