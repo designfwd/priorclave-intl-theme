@@ -2,9 +2,6 @@
 // Theme assets to load
 function priorclave_asset_loader()
 {
-  wp_deregister_script('jquery');
-  wp_deregister_script('jquery-migrate');
-
   // Styles
   wp_enqueue_style('main', get_stylesheet_directory_uri() . '/assets/styles/dist/main.min.css', false, null);
 
