@@ -6,7 +6,36 @@ label,
 button,
 input,
 select {
+  @include footer-button;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 0;
+  color: $yellow;
   cursor: pointer;
+  padding: .8rem 1.6rem;
+}
+
+select {
+  background: url(svg(select-arrow-yellow)) 90% / 10% no-repeat $white;
+  transition: background 700ms ease;
+
+  @media(min-width: 420px) {
+    background: url(svg(select-arrow-yellow)) 92.5% / 7.5% no-repeat $white;
+  }
+
+  @media(min-width: 540px) {
+    background: url(svg(select-arrow-yellow)) 95% / 5% no-repeat $white;
+  }
+
+  @media(min-width: 720px) {
+    background: url(svg(select-arrow-yellow)) 97.5% / 2.5% no-repeat $white;
+  }
+
+  &::-ms-expand { // Hack for IE 10 and 11
+    display: none;
+  }
 }
 
 // button {}
