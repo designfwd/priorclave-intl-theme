@@ -87,7 +87,7 @@ endif;
                             $preview = array(
                               'sizes' => array(
                                 'preload' => '//via.placeholder.com/64x94?text=image',
-                                '128w' => '//via.placeholder/128x188?text=image'
+                                '128w' => '//via.placeholder.com/128x188?text=image'
                               )
                             );
                           endif;
@@ -130,7 +130,7 @@ endif;
                             $preview = array(
                               'sizes' => array(
                                 'preload' => '//via.placeholder.com/64x94?text=image',
-                                '128w' => '//via.placeholder/128x188?text=image'
+                                '128w' => '//via.placeholder.com/128x188?text=image'
                               )
                             );
                           endif;
