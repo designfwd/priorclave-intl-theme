@@ -3,7 +3,7 @@
   display: flex;
   max-width: 800px;
   margin: 0 2rem;
-  width: 100%;
+  width: calc( 100% - 4rem );
 
   @include element('email') {
     width: 100%;
