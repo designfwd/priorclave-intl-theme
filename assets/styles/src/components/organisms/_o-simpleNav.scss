@@ -2,6 +2,7 @@
 .o-simpleNav {
   flex-direction: row;
   justify-content: space-between;
+  z-index: 1;
 
   @include element('logo') {
     background-color: $white;
