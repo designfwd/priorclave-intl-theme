@@ -17,13 +17,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
     width: 100%;
 
     @include modifier('pictureGrid') {
       width: 100%;
 
       @media(min-width: 1140px) {
-        width: 80%;
+        max-width: 80%;
       }
     }
   }
