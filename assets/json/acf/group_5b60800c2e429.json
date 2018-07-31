@@ -1,0 +1,45 @@
+{
+    "key": "group_5b60800c2e429",
+    "title": "hero_mapDistributors",
+    "fields": [
+        {
+            "key": "field_5b608036e327a",
+            "label": "Map ID",
+            "name": "hero_mapDistributors_id",
+            "type": "text",
+            "instructions": "The ID of the map to include",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1533050964
+}
