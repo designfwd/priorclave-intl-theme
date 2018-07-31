@@ -10,14 +10,18 @@
   <body <?php body_class('content content--distributors'); ?>>
     <header>
       <?php
-        get_partial('navigation/primary'); // Primary navigation
+        if( get_current_blog_id() == 1 ):
+          get_partial('navigation/simplified'); // Multisite navigation
+        else:
+          get_partial('navigation/primary'); // Primary navigation
+        endif;
         get_partial('hero/map-distributors'); // Distributor map area
       ?>
     </header>
     <main>
       <?php
-        get_partial('navigation/categories-blocks'); // Distributors navigation
-        get_partial('media/directory-distributors'); // Direcotry of distributors
+        get_partial('navigation/regions-blocks'); // Distributors navigation
+        get_partial('media/directory-distributors'); // Directory of distributors
         get_partial('media/cta-2up'); // CTA grid
       ?>
     </main>
