@@ -1,35 +1,47 @@
 <?php
 // A table of downloadable materials related to a particular product
+/** Table of downloadable materials
+ *
+ * A table of downloads related to a particular product presented as a grid of
+ * links
+ *
+ * @param string $downloads     The field to reference for downloads
+ */
+
+if( function_exists('get_field') ):
+  $downloads = 'navigation_productDownloads_downloads';
+endif;
 ?>
 <section id="productDownloads" class="o-productDownloads">
   <h2 class="o-productDownloads__headline">Downloads</h2>
-  <div class="o-productDownloads__grid">
-    <?php
-      $downloads = array(
-        '40L Compact Data Sheet',
-        '40L Compact Data Sheet B',
-        '40L Compact User Manual',
-        '40L Compact User Manual B',
-        '60L Compact Data Sheet',
-        '60L Compact Data Sheet B',
-        '60L Compact User Manual',
-        '60L Compact User Manual B',
-      );
-
-      foreach( $downloads as $download ):
+  <?php
+  if( have_rows($downloads) ):
+  ?>
+    <div class="o-productDownloads__grid">
+      <?php
+      while( have_rows($downloads) ): the_row();
+        $label = get_sub_field('label');
+        $file = get_sub_field('file')['url'];
+      ?>
+        <a class="m-productDownload" href="<?php echo $file; ?>" target="_blank" download>
+          <div class="m-productDownload__icon">
+            <svg class="m-productDownload__icon--svg" viewBox="0 0 16 16">
+              <?php get_svg('icon-file-alt'); ?>
+            </svg>
+          </div>
+          <div class="m-productDownload__title">
+            <?php echo $label; ?>
+          </div>
+        </a>
+      <?php
+      endwhile;
     ?>
-      <a class="m-productDownload" href="#" target="_blank" download>
-        <div class="m-productDownload__icon">
-          <svg class=m-productDownload__icon--svg viewBox="0 0 16 16">
-            <?php get_svg('icon-file-alt'); ?>
-          </svg>
-        </div>
-        <div class="m-productDownload__title">
-          <?php echo $download; ?>
-        </div>
-      </a>
+    </div>
     <?php
-      endforeach;
+    else:
     ?>
-  </div>
+    <h3 class="o-productDownloads__headline">No Downloads Set</h3>
+  <?php
+  endif;
+  ?>
 </section>
