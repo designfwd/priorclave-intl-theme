@@ -41,4 +41,10 @@
       position: fixed;
     }
   }
+
+  &.content--distributors {
+    .o-generalBlock {
+      padding: 2rem 10vw 0;
+    }
+  }
 }
