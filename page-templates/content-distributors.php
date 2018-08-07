@@ -20,6 +20,7 @@
     </header>
     <main>
       <?php
+        get_partial('content/general-block'); // Intro general block
         get_partial('navigation/regions-blocks'); // Distributors navigation
         get_partial('media/directory-distributors'); // Directory of distributors
         get_partial('media/cta-2up'); // CTA grid
@@ -31,7 +32,7 @@
         get_partial('footer/masthead'); // Footer masthead
         get_partial('footer/quicklinks'); // Quicklink buttons
         get_partial('footer/contacts'); // Contact blocks
-        get_partial('footer/badges'); // Crediibility badges
+        get_partial('footer/badges'); // Credibility badges
         get_partial('footer/copyright'); // Copyright phrasing and links
       ?>
     </footer>
