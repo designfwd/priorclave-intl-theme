@@ -282,3 +282,60 @@ if ( ! function_exists('product_options_post_type') ):
   }
   add_action( 'init', 'product_options_post_type', 0 );
 endif;
+
+if( ! function_exists('faq_post_type') ):
+  function faq_post_type() {
+    $labels = array(
+      'name'                  => _x( 'FAQs', 'Post Type General Name', 'priorclave' ),
+      'singular_name'         => _x( 'FAQ', 'Post Type Singular Name', 'priorclave' ),
+      'menu_name'             => __( 'FAQs', 'priorclave' ),
+      'name_admin_bar'        => __( 'FAQ', 'priorclave' ),
+      'archives'              => __( 'FAQ Archives', 'priorclave' ),
+      'attributes'            => __( 'FAQ Attributes', 'priorclave' ),
+      'parent_item_colon'     => __( 'Parent FAQ:', 'priorclave' ),
+      'all_items'             => __( 'All FAQs', 'priorclave' ),
+      'add_new_item'          => __( 'Add New FAQ', 'priorclave' ),
+      'add_new'               => __( 'Add FAQ', 'priorclave' ),
+      'new_item'              => __( 'New FAQ', 'priorclave' ),
+      'edit_item'             => __( 'Edit FAQ', 'priorclave' ),
+      'update_item'           => __( 'Update FAQ', 'priorclave' ),
+      'view_item'             => __( 'View FAQ', 'priorclave' ),
+      'view_items'            => __( 'View FAQs', 'priorclave' ),
+      'search_items'          => __( 'Search FAQ', 'priorclave' ),
+      'not_found'             => __( 'Not found', 'priorclave' ),
+      'not_found_in_trash'    => __( 'Not found in Trash', 'priorclave' ),
+      'featured_image'        => __( 'Featured Image', 'priorclave' ),
+      'set_featured_image'    => __( 'Set featured image', 'priorclave' ),
+      'remove_featured_image' => __( 'Remove featured image', 'priorclave' ),
+      'use_featured_image'    => __( 'Use as featured image', 'priorclave' ),
+      'insert_into_item'      => __( 'Insert into FAQ', 'priorclave' ),
+      'uploaded_to_this_item' => __( 'Uploaded to this FAQ', 'priorclave' ),
+      'items_list'            => __( 'FAQs list', 'priorclave' ),
+      'items_list_navigation' => __( 'FAQs list navigation', 'priorclave' ),
+      'filter_items_list'     => __( 'Filter FAQs list', 'priorclave' ),
+    );
+    $args = array(
+      'label'                 => __( 'FAQ', 'priorclave' ),
+      'description'           => __( 'Frequently asked questions', 'priorclave' ),
+      'labels'                => $labels,
+      'supports'              => array( 'title','editor' ),
+      'taxonomies'            => array( 'subject' ),
+      'hierarchical'          => false,
+      'public'                => true,
+      'show_ui'               => true,
+      'show_in_menu'          => true,
+      'menu_position'         => 15,
+      'menu_icon'             => 'dashicons-lightbulb',
+      'show_in_admin_bar'     => true,
+      'show_in_nav_menus'     => false,
+      'can_export'            => true,
+      'has_archive'           => false,
+      'exclude_from_search'   => true,
+      'publicly_queryable'    => true,
+      'capability_type'       => 'page',
+      'show_in_rest'          => true,
+    );
+    register_post_type( 'faq', $args );
+  }
+  add_action( 'init', 'faq_post_type', 0 );
+endif;
