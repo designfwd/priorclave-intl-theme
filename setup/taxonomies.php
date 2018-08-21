@@ -282,3 +282,42 @@ if( !function_exists( 'country_taxonomy' ) ):
   }
   add_action( 'init', 'country_taxonomy', 0 );
 endif;
+
+if( ! function_exists( 'subject_taxonomy' ) ):
+  function subject_taxonomy() {
+    $labels = array(
+      'name'                       => _x( 'Subjects', 'Taxonomy General Name', 'priorclave' ),
+      'singular_name'              => _x( 'Subject', 'Taxonomy Singular Name', 'priorclave' ),
+      'menu_name'                  => __( 'Subjects', 'priorclave' ),
+      'all_items'                  => __( 'All Subjects', 'priorclave' ),
+      'parent_item'                => __( 'Parent Subject', 'priorclave' ),
+      'parent_item_colon'          => __( 'Parent Subject:', 'priorclave' ),
+      'new_item_name'              => __( 'New Subject', 'priorclave' ),
+      'add_new_item'               => __( 'Add New Subject', 'priorclave' ),
+      'edit_item'                  => __( 'Edit Subject', 'priorclave' ),
+      'update_item'                => __( 'Update Subject', 'priorclave' ),
+      'view_item'                  => __( 'View Subject', 'priorclave' ),
+      'separate_items_with_commas' => __( 'Separate subjects with commas', 'priorclave' ),
+      'add_or_remove_items'        => __( 'Add or remove subjects', 'priorclave' ),
+      'choose_from_most_used'      => __( 'Choose from the most used', 'priorclave' ),
+      'popular_items'              => __( 'Popular Subjects', 'priorclave' ),
+      'search_items'               => __( 'Search Subjects', 'priorclave' ),
+      'not_found'                  => __( 'Not Found', 'priorclave' ),
+      'no_terms'                   => __( 'No subjects', 'priorclave' ),
+      'items_list'                 => __( 'Subjects list', 'priorclave' ),
+      'items_list_navigation'      => __( 'Subjects list navigation', 'priorclave' ),
+    );
+    $args = array(
+      'labels'                     => $labels,
+      'hierarchical'               => false,
+      'public'                     => true,
+      'show_ui'                    => true,
+      'show_admin_column'          => true,
+      'show_in_nav_menus'          => false,
+      'show_tagcloud'              => false,
+      'show_in_rest'               => true,
+    );
+    register_taxonomy( 'subject', array( 'faq' ), $args );
+  }
+  add_action( 'init', 'subject_taxonomy', 0 );
+endif;
