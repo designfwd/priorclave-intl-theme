@@ -18,7 +18,7 @@
       <?php
         get_partial('content/intro-inverted'); // Intro block
         get_partial('navigation/categories-faq'); // FAQ navigation
-        get_partial('media/directory-faq'); // Direcotry of FAQs
+        get_partial('media/directory-faq'); // Directory of FAQs
         get_partial('media/cta-grid'); // CTA grid
       ?>
     </main>
@@ -28,7 +28,7 @@
         get_partial('footer/masthead'); // Footer masthead
         get_partial('footer/quicklinks'); // Quicklink buttons
         get_partial('footer/contacts'); // Contact blocks
-        get_partial('footer/badges'); // Crediibility badges
+        get_partial('footer/badges'); // Credibility badges
         get_partial('footer/copyright');// Copyright phrasing and links
       ?>
     </footer>
