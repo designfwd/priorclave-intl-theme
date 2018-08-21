@@ -7,6 +7,7 @@ import './vendor/dialog-polyfill';
 import './vendor/lazysizes.js';
 import './vendor/jquery-globals.js';
 import 'slick-carousel';
+import './vendor/smoothscroll-polyfill.js';
 
 // Module-level scripts
 import './modules/article-preview.js';
