@@ -1,24 +1,25 @@
 <?php
 // A list of category links arranged in blocks
+/**
+ * Blocks of linked FAQ subjects
+ *
+ * A list of the FAQ subject taxonomy terns, set in the admin and displayed in
+ * a set order as link blocks
+ *
+ * @param array $subjects     The FAQ subjects to display
+ */
+
+if( function_exists('get_field') ):
+  $subjects = get_field('navigation_categoriesFAQ_subjects');
+endif;
 ?>
 <section class="o-categoryNav o-categoryNav--faq">
   <?php
-    // Options to be passed via ACF
-    $category = 'faq'; // Used as a modifier for IDs
-    $options = array(
-      'Choosing an Autoclave',
-      'Operation Questions',
-      'Service Questions',
-      'Technical Questions',
-      'Maintenance Questions',
-    );
-    set_query_var('categories', $options); // Sets variable for access by other modules
-
-    foreach( $options as $option ):
+    foreach( $subjects as $subject ):
   ?>
-    <a class="o-categoryNav__link o-categoryNav__link--faq" href="#<?php echo $category . '-' . urlencode($option); ?>">
+    <a class="o-categoryNav__link o-categoryNav__link--faq" href="#faq-<?php echo $subject->slug; ?>">
       <div class="o-categoryNav__block o-categoryNav__block--faq">
-        <?php echo $option; ?>
+        <?php echo $subject->name; ?>
       </div>
     </a>
   <?php

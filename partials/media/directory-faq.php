@@ -1,60 +1,58 @@
 <?php
 // Collapsible directory of frequently asked questions
-$categories = get_query_var('categories');
+/**
+ * List of FAQs, separated by subject
+ *
+ * A collapsible directory of frequently asked questions, grouped by the
+ * 'subject' taxonomy
+ *
+ * @param array $subjects     The FAQ subjects to display
+ */
+
+if( function_exists('get_field') ):
+  $subjects = get_field('navigation_categoriesFAQ_subjects');
+endif;
 ?>
 <section class="o-faq">
   <?php
-    if( $categories != ''):
-      foreach( $categories as $category ):
-    ?>
-      <div id="faq-<?php echo urlencode($category); ?>" class="o-faq__category">
-        <?php echo $category; ?>
-      </div>
-      <?php // Placeholder questions
-        $faq = array(
-          array(
-            'question' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim hic etiam dolore. Quis istud possit, inquit, negare?',
-            'answer' => 'Sed erat a equius Triarium aliquid de dissensione nostra iudicare. Ut nemo dubitet, eorum omnia officia quo spectare, quid sequi, quid fugere debeant? Nunc de hominis summo bono quaeritur',
-          ),
-          array(
-            'question' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim hic etiam dolore. Quis istud possit, inquit, negare?',
-            'answer' => 'Sed erat a equius Triarium aliquid de dissensione nostra iudicare. Ut nemo dubitet, eorum omnia officia quo spectare, quid sequi, quid fugere debeant? Nunc de hominis summo bono quaeritur',
-          ),
-          array(
-            'question' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim hic etiam dolore. Quis istud possit, inquit, negare?',
-            'answer' => 'Sed erat a equius Triarium aliquid de dissensione nostra iudicare. Ut nemo dubitet, eorum omnia officia quo spectare, quid sequi, quid fugere debeant? Nunc de hominis summo bono quaeritur',
-          ),
-          array(
-            'question' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim hic etiam dolore. Quis istud possit, inquit, negare?',
-            'answer' => 'Sed erat a equius Triarium aliquid de dissensione nostra iudicare. Ut nemo dubitet, eorum omnia officia quo spectare, quid sequi, quid fugere debeant? Nunc de hominis summo bono quaeritur',
-          ),
-        );
-
-        for( $i=0; $i<count($faq); $i++ ):
-          $question = $faq[$i]['question'];
-          $answer = $faq[$i]['answer'];
-      ?>
-
-        <div id="toggle-<?php echo $i; ?>" class="m-faqToggle">
-          <div class="m-faqToggle__icon" data-question="<?php echo $i; ?>">
-            <svg viewBox="0 0 8 16">
-              <polygon points="0,0 0,16 8,8" />
-            </svg>
-          </div>
-          <h3 class="m-faqToggle__category"><?php echo $question; ?></h3>
-        </div>
-        <div id="content-<?php echo $i; ?>" class="m-faqAnswer --preload">
-          <div class="m-faqAnswer__content">
-            <p>
-              <?php echo $answer; ?>
-            </p>
-          </div>
-        </div>
-      <?php
-        endfor;
-      ?>
+  // Creates a block for each subject, with FAQs for each nested within
+  foreach( $subjects as $subject ):
+  ?>
+    <div id="faq-<?php echo $subject->slug; ?>" class="o-faq__category">
+      <?php echo $subject->name; ?>
+    </div>
     <?php
-      endforeach;
-    endif;
+    $faqs = get_posts(array(
+      'post_type' => 'faq',
+      'numberposts' => '-1',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'subject',
+          'field' => 'id',
+          'terms' => $subject->term_id,
+        )
+      )
+    ));
+    foreach( $faqs as $faq ):
+      $slug = $faq->post_name;
+      $question = $faq->post_title;
+      $answer = $faq->post_content;
+    ?>
+      <div id="toggle-<?php echo $slug; ?>" class="m-faqToggle">
+        <div class="m-faqToggle__icon" data-question="<?php echo $slug; ?>">
+          <svg viewBox="0 0 8 16">
+            <polygon points="0,0 0,16 8,8" />
+          </svg>
+        </div>
+        <h3 class="m-faqToggle__category"><?php echo $question; ?></h3>
+      </div>
+      <div id="content-<?php echo $slug; ?>" class="m-faqAnswer --preload">
+        <div class="m-faqAnswer__content">
+          <?php echo $answer; ?>
+        </div>
+      </div>
+    <?php
+    endforeach;
+  endforeach;
   ?>
 </section>
