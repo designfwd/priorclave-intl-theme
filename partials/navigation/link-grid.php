@@ -20,16 +20,15 @@ endif;
       while( have_rows($links, $ID) ): the_row();
         $label = get_sub_field('label');
         $page = get_sub_field('page');
-        setup_postdata( $page );
         ?>
         <?php
-          if( has_post_thumbnail() ):
+          if( has_post_thumbnail( $page->ID ) ):
           ?>
-            <a class="o-linkGrid__item lazyload" href="<?php the_permalink(); ?>" style="background-image:url('<?php the_post_thumbnail('preload'); ?>')" data-bg="<?php the_post_thumbnail('960w'); ?>">
+            <a class="o-linkGrid__item lazyload" href="<?php the_permalink( $page->ID ); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url( $page->ID, 'preload' ); ?>')" data-bg="<?php echo get_the_post_thumbnail_url( $page->ID, '960w' ); ?>">
           <?php
           else:
           ?>
-            <a class="o-linkGrid__item lazyload" href="<?php the_permalink(); ?>" style="background-image:url('//picsum.photos/g/64/64?blur')" data-bg="//picsum.photos/g/960/664">
+            <a class="o-linkGrid__item lazyload" href="<?php the_permalink( $page->ID ); ?>" style="background-image:url('//picsum.photos/g/64/64?blur')" data-bg="//picsum.photos/g/960/664">
           <?php
           endif;
         ?>
@@ -39,7 +38,6 @@ endif;
           </div>
         </a>
         <?php
-        wp_reset_postdata();
       endwhile;
     endif;
   ?>

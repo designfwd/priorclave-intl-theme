@@ -135,22 +135,22 @@ endif;
                             );
                           endif;
                         ?>
-                        <a class="a-navBlock a-navBlock--pictureGrid" href="<?php echo $block->url; ?>">
-                          <img class="a-navBlock__image lazyload"
-                            src="<?php echo $preview['sizes']['preload']; ?>"
-                            data-sizes="auto"
-                            data-srcset = "
-                              <?php echo $preview['sizes']['preload']; ?> 64w,
-                              <?php echo $preview['sizes']['128w']; ?> 65w
-                            "
-                          />
-                          <h3 class="a-navBlock__title">
-                            <?php echo $block->title; ?>
-                          </h3>
-                          <h4 class="a-navBlock__description">
-                            <?php echo $block->description; ?>
-                          </h4>
-                        </a>
+                          <a id="<?php echo $block->ID; ?>" class="a-navBlock a-navBlock--pictureGrid" href="<?php echo $block->url; ?>">
+                            <img class="a-navBlock__image lazyload"
+                              src="<?php echo $preview['sizes']['preload']; ?>"
+                              data-sizes="auto"
+                              data-srcset = "
+                                <?php echo $preview['sizes']['preload']; ?> 64w,
+                                <?php echo $preview['sizes']['128w']; ?> 65w
+                              "
+                            />
+                            <h3 class="a-navBlock__title">
+                              <?php echo $block->title; ?>
+                            </h3>
+                            <h4 class="a-navBlock__description">
+                              <?php echo $block->description; ?>
+                            </h4>
+                          </a>
                         <?php
                         endif;
                       endforeach;

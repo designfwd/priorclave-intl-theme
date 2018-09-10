@@ -96,8 +96,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [],
-                    "taxonomy": [],
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
                     "allow_null": 0,
                     "allow_archives": 1,
                     "multiple": 0
@@ -124,5 +126,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1523547692
+    "modified": 1536265586
 }

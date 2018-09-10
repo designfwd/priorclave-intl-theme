@@ -13,15 +13,15 @@ $author = get_the_author_meta('ID');
 ?>
 <div class="m-articlePreview" data-href="<?php echo get_permalink($post->ID); ?>">
   <?php // Post featured image
-    if( has_post_thumbnail() ):
+    if( has_post_thumbnail($post->ID) ):
   ?>
     <img class="m-articlePreview__featuredImage lazyload"
-      src="<?php get_the_post_thumbnail($post->ID, 'preload'); ?>"
+      src="<?php echo get_the_post_thumbnail_url($post->ID, 'preload'); ?>"
       data-sizes="auto"
-      data-srcset="<?php get_the_post_thumbnail($post->ID, 'preload'); ?> 64w,
-        <?php get_the_post_thumbnail($post->ID, '128w'); ?> 65w,
-        <?php get_the_post_thumbnail($post->ID, '240w'); ?> 129w,
-        <?php get_the_post_thumbnail($post->ID, '320w'); ?> 241w,
+      data-srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'preload'); ?> 64w,
+        <?php echo get_the_post_thumbnail_url($post->ID, '128w'); ?> 65w,
+        <?php echo get_the_post_thumbnail_url($post->ID, '240w'); ?> 129w,
+        <?php echo get_the_post_thumbnail_url($post->ID, '320w'); ?> 241w,
       "
     />
   <?php

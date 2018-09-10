@@ -711,6 +711,114 @@
             "multiple": 0
         },
         {
+            "key": "field_5b969d9027a31",
+            "label": "Call-to-Action 2-up Block Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "This section sets defaults for the related information block at the bottom of some content pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b969db327a32",
+            "label": "CTA 2-up Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These settings define default and fallback content for the 2-up call-to-action block below the main content of many pages<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5b969f95df447",
+            "label": "Calls-to-Action",
+            "name": "media_cta2Up",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5acf7cebc7731"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5b969dec27a33",
+            "label": "Default Testimonials",
+            "name": "",
+            "type": "tab",
+            "instructions": "This section sets defaults for the related information block at the bottom of some content pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b969dfb27a34",
+            "label": "Default Testimonials Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These testimonials will be the default ones to show up throughout the site, apart from the homepage.<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5b96a106b1646",
+            "label": "Testimonials",
+            "name": "media_sliderTestimonial",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5acfbc2ba6c48"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5acbc28d4140b",
             "label": "Footer Content Settings",
             "name": "",
@@ -1135,5 +1243,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531844315
+    "modified": 1536598912
 }

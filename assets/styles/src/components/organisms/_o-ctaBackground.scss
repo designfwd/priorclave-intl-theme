@@ -1,6 +1,7 @@
 // Styles for CTAs with an image background
 .o-ctaBackground {
-  background-size: cover;
+  background-position: bottom -4vw right;
+  background-size: contain;
   background-repeat: no-repeat;
   padding: 4rem 10% 16rem;
 

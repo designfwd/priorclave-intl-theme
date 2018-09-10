@@ -278,6 +278,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_5b96ab1566ee9",
+            "label": "Theme Settings Override",
+            "name": "media_sliderTestimonial_override",
+            "type": "true_false",
+            "instructions": "Should these testimonials override the defaults set for the theme?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Check this to override theme defaults for the testimonials section",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5ade3ec6e2fa1",
             "label": "media_sliderTestimonial",
             "name": "media_sliderTestimonial",
@@ -318,5 +337,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1524514539
+    "modified": 1536600924
 }

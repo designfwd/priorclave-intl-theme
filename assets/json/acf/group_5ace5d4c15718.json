@@ -53,8 +53,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [],
-                    "taxonomy": [],
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
                     "allow_null": 0,
                     "multiple": 0,
                     "return_format": "object",
@@ -82,5 +84,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1523474860
+    "modified": 1536262293
 }
