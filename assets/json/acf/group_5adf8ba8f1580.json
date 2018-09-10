@@ -117,6 +117,65 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5adf9125842de",
+            "label": "Associated Downloads",
+            "name": "autoclave_downloads",
+            "type": "repeater",
+            "instructions": "Datasheets, user manuals, and other documents associated with this autoclave model",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_5adf9181842df",
+                    "label": "File",
+                    "name": "file",
+                    "type": "file",
+                    "instructions": "The file to associate with this item",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5adf91b2842e0",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "The title text to associate with this download",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -138,5 +197,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536603793
+    "modified": 1524601296
 }
