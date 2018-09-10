@@ -23,12 +23,12 @@ endif;
       $slug = str_replace(' ', '-', strtolower($shortName)); // creates a lowercase, JS-able slug
       $specifications = 'autoclave_specifications';
     ?>
-    <div id="<?php echo $shortName . '-productTitle'; ?>" class="o-productSpecifications__product">
+    <div id="<?php echo $slug . '-productTitle'; ?>" class="o-productSpecifications__product">
       <?php echo $shortName; ?> Specifications
     </div>
-    <div id="<?php echo $shortName . '-productSpecs'; ?>" class="o-productSpecifications__table --preload">
+    <div id="<?php echo $slug . '-productSpecs'; ?>" class="o-productSpecifications__table --preload">
       <?php
-        while( have_rows($shortName, $modelID) ): the_row();
+        while( have_rows('autoclave_specifications', $modelID) ): the_row();
           $title = get_sub_field('title');
           $subtitle = get_sub_field('subtitle');
           $content = get_sub_field('content');
