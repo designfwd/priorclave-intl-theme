@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_5adf8bd2fbb35",
-            "label": "Model Name",
-            "name": "autoclave_model",
-            "type": "text",
-            "instructions": "The model name for this autoclave",
+            "label": "Model Names",
+            "name": "autoclave_models",
+            "type": "repeater",
+            "instructions": "The model names associated with this autoclave product",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,11 +15,32 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Model Name",
+            "sub_fields": [
+                {
+                    "key": "field_5b96bdd57e052",
+                    "label": "Model",
+                    "name": "model",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         },
         {
             "key": "field_5adf8bfefbb36",
@@ -197,5 +218,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536605547
+    "modified": 1536605720
 }
