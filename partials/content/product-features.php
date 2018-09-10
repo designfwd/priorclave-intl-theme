@@ -44,16 +44,19 @@ endif;
             </h3>
             <ul class="a-productSection__list">
               <?php
-              foreach( $models as $post ):
-                setup_postdata($post);
-                $headline = get_field('autoclave_model', $post->ID);
-                ?>
-                <li class="a-productSection__item">
-                  Model: <?php echo $headline; ?>
-                </li>
-                <?php
+              foreach( $models as $model ):
+                // If model names are set for each product, display them.
+                if( have_rows('autoclave_models', $model->ID) ):
+                  while( have_rows('autoclave_models', $model->ID) ): the_row();
+                  $modelName = get_sub_field('model');
+                  ?>
+                    <li class="a-productSection__item">
+                      Model: <?php echo $modelName; ?>
+                    </li>
+                  <?php
+                  endwhile;
+                endif;
               endforeach;
-              wp_reset_postdata();
               ?>
             </ul>
           </div>
