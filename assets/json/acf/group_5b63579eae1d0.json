@@ -7,7 +7,7 @@
             "label": "Downloads",
             "name": "navigation_productDownloads_downloads",
             "type": "repeater",
-            "instructions": "Downloadable items for these products",
+            "instructions": "Downloadable items for these products, in addition to any supplied by the models themselves",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -81,5 +81,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1533237355
+    "modified": 1536605468
 }

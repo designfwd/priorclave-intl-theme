@@ -119,7 +119,7 @@
             ]
         },
         {
-            "key": "field_5adf9125842de",
+            "key": "field_5b96bcbbf3dee",
             "label": "Associated Downloads",
             "name": "autoclave_downloads",
             "type": "repeater",
@@ -135,10 +135,10 @@
             "min": 0,
             "max": 0,
             "layout": "row",
-            "button_label": "Add Item",
+            "button_label": "Add File",
             "sub_fields": [
                 {
-                    "key": "field_5adf9181842df",
+                    "key": "field_5b96bd27f3def",
                     "label": "File",
                     "name": "file",
                     "type": "file",
@@ -146,7 +146,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -157,15 +157,15 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5adf91b2842e0",
+                    "key": "field_5b96bd4ef3df0",
                     "label": "Title",
                     "name": "title",
                     "type": "text",
-                    "instructions": "The title text to associate with this download",
+                    "instructions": "The title text to associate with this downloadable file",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -197,5 +197,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1524601296
+    "modified": 1536605547
 }
