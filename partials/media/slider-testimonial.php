@@ -8,7 +8,13 @@
  * @var array $testimonials     Collection of testimonials to display
  */
 if( function_exists('get_field') ):
-  $ID = get_the_ID();
+  // If the page should override those CTAs set for the theme, set the page ID
+  if( get_field('media_sliderTestimonial_override') == 1 ):
+    $ID = get_the_ID();
+  // Otherwise, use theme defaults
+  else:
+    $ID = 'option';
+  endif;
   $headline = get_field('media_sliderTestimonial_headline', $ID);
   $testimonials = get_field('media_sliderTestimonial_testimonials', $ID);
 endif;

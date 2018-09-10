@@ -12,7 +12,13 @@
  */
 
 if( function_exists('get_field') ):
-  $ID = get_the_ID();
+  // If the page should override those CTAs set for the theme, set the page ID
+  if( get_field('media_cta2Up_override') == 1 ):
+    $ID = get_the_ID();
+  // Otherwise, use theme defaults
+  else:
+    $ID = 'option';
+  endif;
   $items = 'media_cta2Up_items';
 endif;
 ?>

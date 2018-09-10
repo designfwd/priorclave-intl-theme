@@ -241,6 +241,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_5b96ad167a465",
+            "label": "Theme CTA Override",
+            "name": "media_cta2Up_override",
+            "type": "true_false",
+            "instructions": "Should this page override the theme settings for the calls-to-action?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Check this if you would like to set separate CTAs for this page",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5acf7e437b3d5",
             "label": "media_cta2Up",
             "name": "media_cta2Up",
@@ -352,6 +371,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_5b96ad8575a56",
+            "label": "Theme Testimonials Override",
+            "name": "media_sliderTestimonial_override",
+            "type": "true_false",
+            "instructions": "Should this page use different testimonials from those in Theme Settings?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Check this if you would like to use testimonials other than those set for the theme as a whole",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5acfbd57a364f",
             "label": "media_sliderTestimonial",
             "name": "media_sliderTestimonial",
@@ -392,5 +430,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1523563896
+    "modified": 1536601532
 }
