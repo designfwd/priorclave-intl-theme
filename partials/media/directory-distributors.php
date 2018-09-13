@@ -4,6 +4,7 @@
  */
 
 // If the current page is not part of the parent site, switch the context
+$currentBlog = get_current_blog_id();
 if( get_current_blog_id() != 1 ):
   switch_to_blog(1);
 endif;
@@ -13,11 +14,6 @@ $regions = get_terms( array(
   'taxonomy' => 'region',
   'hide_empty' => true
 ));
-
-// If necessary, switch context back to original site
-if( get_current_blog_id() != 1 ):
-  restore_current_blog();
-endif;
 ?>
 <section class="o-distributors">
   <?php
@@ -144,3 +140,6 @@ endif;
     endif;
   ?>
 </section>
+<?php
+// Switch back to original blog
+switch_to_blog( $currentBlog );

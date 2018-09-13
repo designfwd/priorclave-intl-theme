@@ -10,21 +10,20 @@
 ?>
 <section class="o-categoryNav">
   <?php
-  // If the current page is not part of the parent site, switch the context
-  if( get_current_blog_id() != 1 ):
-    switch_to_blog(1);
-  endif;
+// If the current page is not part of the parent site, switch the context
+$currentBlog = get_current_blog_id();
+if( get_current_blog_id() != 1 ):
+  switch_to_blog(1);
+endif;
 
-  // Gets the list of regions registered with the site
-  $regions = get_terms( array(
-    'taxonomy' => 'region',
-    'hide_empty' => true
-  ));
+// Gets the list of regions registered with the site
+$regions = get_terms( array(
+  'taxonomy' => 'region',
+  'hide_empty' => true
+));
 
-  // If necessary, switch context back to original site
-  if( get_current_blog_id() != 1 ):
-    restore_current_blog();
-  endif;
+// Switch back to original blog
+switch_to_blog( $currentBlog );
 
   foreach( $regions as $region ):
   ?>
