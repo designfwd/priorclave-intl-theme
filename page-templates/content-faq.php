@@ -19,7 +19,7 @@
         get_partial('content/intro-inverted'); // Intro block
         get_partial('navigation/categories-faq'); // FAQ navigation
         get_partial('media/directory-faq'); // Directory of FAQs
-        get_partial('media/cta-grid'); // CTA grid
+        get_partial('media/cta-2up'); // CTA grid
       ?>
     </main>
     <footer class="universal-footer">
