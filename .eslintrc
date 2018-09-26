@@ -1,11 +1,16 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
   "env": {
     "browser": true,
-    "jquery": true,
-    "node": true
+    "node": true,
+    "jquery": true
   },
   "parser": "babel-eslint",
-  "extends": ["eslint:recommended"],
-  "rules": {
-  }
+  "extends": "eslint:recommended"
 }

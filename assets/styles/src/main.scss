@@ -7,8 +7,9 @@
 // Bourbon
 @import '~bourbon/core/bourbon';
 
-// Modern Normalize
-@import '~modern-normalize/modern-normalize';
+// Modern Normalize SCSS
+@import '~normalize-scss/sass/normalize';
+@include normalize();
 
 // Slick Carousel
 @import '~slick-carousel/slick/slick';

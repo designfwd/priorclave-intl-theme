@@ -1,23 +1,24 @@
-// Don't touch this area, this is extracted with webpack
-import '../../styles/src/main.scss';
 'use strict';
 
+// Don't touch this area, this is extracted with webpack
+require('../../styles/src/main.scss');
+
 // Global JS imports and settings
-import './vendor/dialog-polyfill';
-import './vendor/lazysizes.js';
-import './vendor/jquery-globals.js';
-import 'slick-carousel';
-import './vendor/smoothscroll-polyfill.js';
+require('./vendor/dialog-polyfill');
+require('./vendor/lazysizes.js');
+require('./vendor/jquery-globals.js');
+require('slick-carousel');
+require('./vendor/smoothscroll-polyfill.js');
 
 // Module-level scripts
-import './modules/article-preview.js';
-import './modules/brand-slideshow.js';
-import './modules/directory-faq.js';
-import './modules/distirbutor-country.js';
-import './modules/hero-slider.js';
-import './modules/map-dropdown.js';
-import './modules/primary-nav.js';
-import './modules/product-options.js';
-import './modules/product-specifications.js';
-import './modules/spotlight-slider.js';
-import './modules/testimonial-slider.js';
+require('./modules/article-preview.js');
+require('./modules/brand-slideshow.js');
+require('./modules/directory-faq.js');
+require('./modules/distirbutor-country.js');
+require('./modules/hero-slider.js');
+require('./modules/map-dropdown.js');
+require('./modules/primary-nav.js');
+require('./modules/product-options.js');
+require('./modules/product-specifications.js');
+require('./modules/spotlight-slider.js');
+require('./modules/testimonial-slider.js');

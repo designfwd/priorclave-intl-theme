@@ -1,118 +1,134 @@
 const path = require('path');
 
-// plugins
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractSass = new ExtractTextPlugin({
-  filename: '../../../assets/styles/dist/main.min.css'
-});
+// Require our plugins
+const MagicImporter = require('node-sass-magic-importer');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const magicImporter = require('node-sass-magic-importer');
+
+// Define some values for simpler referencing
+let project = new Object();
+project.root = path.resolve('./');
+project.assets = path.resolve(project.root, 'assets');
+project.fonts = path.resolve(project.assets, 'fonts');
+project.images = path.resolve(project.assets, 'images');
+project.scripts = path.resolve(project.assets, 'scripts');
+project.styles = path.resolve(project.assets, 'styles');
 
 module.exports = {
+  mode: 'production',
   entry: {
-    index: './assets/scripts/src/index.js',
+    main: path.resolve(project.scripts, 'src/index.js')
   },
+  output: {
+    filename: '[name].js',
+    path: path.resolve(project.scripts, 'dist')
+  },
+  devtool: 'source-map',
   plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true
+    new MiniCSSExtractPlugin({
+      filename: '../../styles/dist/[name].css'
     }),
-    extractSass,
     new StyleLintPlugin({
-      configFile: '.stylelintrc',
-      context: 'assets/styles/src',
+      configFile: path.resolve(project.root, '.stylelintrc'),
       failOnError: false,
       quiet: false
     }),
   ],
-  devtool: 'source-map',
-  output: {
-    filename: '[name].min.js',
-    path: path.resolve(__dirname, 'assets/scripts/dist')
-  },
   module: {
-      loaders: [
-        {
-          test: /\.js$/, // JavaScript settings
-          exclude: /(node_modules)/,
-          use: {
+    rules: [
+      {
+        test: /\.(sa|sc|c)ss$/,
+        exclude: /style.css/,
+        use: [
+          {
+            loader: MiniCSSExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: project.config
+              }
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              importer: MagicImporter(),
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(gif|jp(e*)g|png|svg|webp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '../../images/dist'
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 80
+              },
+              optipng: {
+                enabled: false
+              },
+              pngquant: {
+                quality: '65-85',
+                speed: 5,
+                strip: true
+              },
+              gifsicle: {
+                optimizationLevel: 2
+              },
+              webp: {
+                quality: 80,
+                nearLossless: 40
+              }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: [
+          {
             loader: 'babel-loader',
             options: {
-              presets: ['babel-preset-env']
-            },
+              presets: ['@babel/preset-env']
+            }
+          },
+          {
             loader: 'eslint-loader'
           }
-        },
-        {
-          test: /\.scss$/, // SCSS settings
-          use: extractSass.extract({
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  minimize: true,
-                  sourceMap: true
-                }
-              }, {
-                loader: 'postcss-loader'
-              }, {
-                loader: 'sass-loader',
-                options: {
-                  importer: magicImporter()
-                }
-              }
-            ],
-            fallback: 'style-loader'
-          }),
-        },
-        {
-          test: /\.(ttf|eot|woff|woff2)$/, // Font settings
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: '../../../assets/fonts/dist',
+        ]
+      },
+      {
+        test: /\.(ttf|eot|otf|woff|woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '../../fonts/dist'
+            }
           }
-        },
-        {
-          test: /\.(gif)$/, // GIF settings
-          use: [{
-              loader: 'file-loader',
-              options: {
-                  name: '[name].[ext]',
-                  outputPath: '../../../assets/images/dist/gif',
-              }
-          }]
-        },
-        {
-          test: /\.(png)$/, // PNG settings
-          use: [{
-              loader: 'file-loader',
-              options: {
-                  name: '[name].[ext]',
-                  outputPath: '../../../assets/images/dist/png',
-              }
-          }]
-        },
-        {
-          test: /\.(jp(e*)g)$/, // JPEG settings
-          use: [{
-              loader: 'file-loader',
-              options: {
-                  name: '[name].[ext]',
-                  outputPath: '../../../assets/images/dist/jpg',
-              }
-          }]
-        },
-        {
-          test: /\.(svg)$/, // SVG settings
-          use: [{
-              loader: 'file-loader',
-              options: {
-                  name: '[name].[ext]',
-                  outputPath: '../../../assets/images/dist/svg',
-              }
-          }]
-        },
-      ]
-    }
+        ]
+      }
+    ]
+  }
 };

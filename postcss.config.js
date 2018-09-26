@@ -1,5 +1,16 @@
 module.exports = {
-  plugins: [
-    require('autoprefixer'),
-  ]
-};
+  plugins: {
+    'autoprefixer': {},
+    'cssnano': {
+      preset: [
+        'default',
+        {
+          discardComments: {
+            removeAll: true
+          }
+        }
+      ]
+    },
+    'postcss-dialog-polyfill': {}
+  }
+}
