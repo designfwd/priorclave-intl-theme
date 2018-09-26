@@ -33,7 +33,7 @@ endif;
       'item_spacing' => 'preserve',
       'depth' => 0,
       'walker' => '',
-      'theme_location' => 'primary_nav'
+      'theme_location' => 'sitemap_menu'
     );
     wp_nav_menu( $args );
   ?>
