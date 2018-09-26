@@ -30,15 +30,17 @@ if( !isset($url) || ($url == '') ):
 endif;
 ?>
 <section class="o-simpleNav">
-  <img class="o-simpleNav__logo lazyload lazyload--blurUp"
-    alt="<?php echo $logo['alt']; ?>"
-    src="<?php echo $logo['sizes']['preload']; ?>"
-    data-sizes="auto"
-    data-srcset="<?php echo $logo['sizes']['preload']; ?> 64w,
-      <?php echo $logo['sizes']['128w']; ?> 65w,
-      <?php echo $logo['url']; ?> 129w
-    "
-  />
+  <a class="o-simpleNav__logo" href="<?php echo site_url(); ?>">
+    <img class="lazyload lazyload--blurUp"
+      alt="<?php echo $logo['alt']; ?>"
+      src="<?php echo $logo['sizes']['preload']; ?>"
+      data-sizes="auto"
+      data-srcset="<?php echo $logo['sizes']['preload']; ?> 64w,
+        <?php echo $logo['sizes']['128w']; ?> 65w,
+        <?php echo $logo['url']; ?> 129w
+      "
+    />
+  </a>
   <div class="o-simpleNav__button">
     <a class="a-navButton" href="<?php echo $url; ?>">Contact</a>
   </div>

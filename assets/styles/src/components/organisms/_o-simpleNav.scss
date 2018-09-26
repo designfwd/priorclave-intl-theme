@@ -9,6 +9,10 @@
     max-width: 192px;
     padding: 1rem;
     width: 50%;
+
+    img {
+      @include size(100%);
+    }
   }
 
   @include element('button') {
