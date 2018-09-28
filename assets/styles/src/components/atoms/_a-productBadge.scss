@@ -1,9 +1,13 @@
 // Product badge styles
 .a-productBadge {
-  width: 4.5rem;
+  display: flex;
 
   @include element('image') {
     object-fit: contain;
-    width: 100%;
+    width: 2rem;
+
+    @media(min-width: 640px) {
+      width: 4.5rem;
+    }
   }
 }
