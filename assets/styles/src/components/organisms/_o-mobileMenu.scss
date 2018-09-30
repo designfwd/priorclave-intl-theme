@@ -1,0 +1,12 @@
+// Mobile menu styles
+.o-mobileMenu {
+  display: none;
+
+  @include modifier('preload') {
+    @include preload;
+  }
+
+  @include modifier('has-loaded') {
+    display: flex;
+  }
+}

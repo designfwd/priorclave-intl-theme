@@ -1,0 +1,12 @@
+// Country selector styles
+.m-countrySelector {
+  display: none;
+
+  @include modifier('preload') {
+    display: hidden;
+  }
+
+  @include modifier('has-loaded') {
+    display: flex;
+  }
+}

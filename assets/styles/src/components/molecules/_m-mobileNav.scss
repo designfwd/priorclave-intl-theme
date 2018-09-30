@@ -1,0 +1,36 @@
+// Styles for the mobile primary navigation menu
+.m-mobileNav {
+  align-items: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include element('toggle') {
+    @include size(1.6rem);
+    align-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 0;
+
+    svg {
+      @include size(100%);
+      fill: $grey-dark;
+    }
+  }
+
+  @include element('logo') {
+    width: 12rem;
+    margin: .5rem auto .25rem;
+  }
+
+  @include element('menu') {
+    width: 100%;
+  }
+
+  @include element('quicklinks') {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
