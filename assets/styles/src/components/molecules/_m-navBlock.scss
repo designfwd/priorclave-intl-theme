@@ -9,7 +9,11 @@
   top: 100%;
   width: 100%;
 
-  &.--has-loaded {
+  @include modifier('preload') {
+    @include preload;
+  }
+
+  @include modifier('has-loaded') {
     display: flex;
   }
 
