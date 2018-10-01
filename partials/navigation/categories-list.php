@@ -7,33 +7,22 @@
   </div>
   <div class="o-categoriesList__categories">
     <?php
-      // List of categories as placeholders
-      $categories = array(
-        'Product Updates',
-        'Company News',
-        'Service & Support',
-        'Events',
-        'Product Updates',
-        'Company News',
-        'Service & Support',
-        'Events'
-      );
-
-      for( $i=0; $i<count($categories); $i++ ):
-    ?>
-      <?php
-        if($i<(count($categories)-1)):
+    // List of categories as placeholders
+    $categories = get_categories();
+    // var_dump($categories);
+    for( $i=0; $i<count($categories); $i++ ):
+      $name = $categories[$i]->cat_name;
+      $url = get_home_url() . '/category/' . $categories[$i]->slug;
+      if($i<(count($categories)-1)):
       ?>
-        <a class="o-categoriesList__categories--link" href="#"><?php echo $categories[$i]; ?></a>, 
+        <a class="o-categoriesList__categories--link" href="<?php echo $url; ?>"><?php echo $name; ?></a>,
       <?php
-        else:
+      else:
       ?>
-        <a class="o-categoriesList__categories--link" href="#"><?php echo $categories[$i]; ?></a>
+        <a class="o-categoriesList__categories--link" href="<?php echo $url; ?>"><?php echo $name; ?></a>
       <?php
-        endif;
-      ?>
-    <?php
-      endfor;
+      endif;
+    endfor;
     ?>
   </div>
 </section>

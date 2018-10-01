@@ -3,20 +3,20 @@
 ?>
 <section class="o-articleGrid">
   <?php
-    for( $i=0; $i<rand(7,11); $i++):
-  ?>
-    <div class="o-articleGrid__article">
-      <div class="m-articlePreview m-articlePreview--blog" data-href="#">
-          <img class="m-articlePreview__featuredImage lazyload" src="<?php get_picsum(648,382); ?>" />
-          <img class="m-articlePreview__photo lazyload" src="<?php get_picsum(72,72); ?>" />
-          <h3 class="m-articlePreview__headline" href="#">Lorem Ipsum Dolor Sit</h3>
-          <div class="m-articlePreview__article">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...
-          </div>
-          <a class="m-articlePreview__link" href="#">Read More</a>
-      </div>
-    </div>
-  <?php
-    endfor;
+  // Displays a grid of articles
+  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+  $args = array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => 12,
+    'order' => 'DESC',
+    'orderby' => 'date',
+    'paged' => $paged
+  );
+  $posts_query = new WP_Query( $args );
+  while( $posts_query->have_posts() ):
+    $posts_query->the_post();
+    include( locate_template('partials/content/article-preview.php') );
+  endwhile;
   ?>
 </section>
