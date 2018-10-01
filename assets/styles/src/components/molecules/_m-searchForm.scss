@@ -1,0 +1,12 @@
+// Search form styles
+.m-searchForm {
+  display: none;
+
+  @include modifier('preload') {
+    display: hidden;
+  }
+
+  @include modifier('has-loaded') {
+    display: flex;
+  }
+}
