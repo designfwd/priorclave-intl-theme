@@ -1,0 +1,43 @@
+{
+    "key": "group_5bb185dfb6226",
+    "title": "User Options",
+    "fields": [
+        {
+            "key": "field_5bb18731143e1",
+            "label": "Job Title",
+            "name": "job_title",
+            "type": "text",
+            "instructions": "The job title for this user",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "edit"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1538361183
+}
