@@ -11,18 +11,11 @@
     <header>
       <?php
         get_partial('navigation/primary'); // Primary navigation
-        get_partial('hero/general'); // General hero area
+        get_partial('hero/general-404'); // General hero area
       ?>
     </header>
       <main>
-        <?php
-          if ( have_posts() ):
-            while ( have_posts() ): the_post();
-              the_title();
-              the_content();
-            endwhile;
-          endif;
-        ?>
+        It looks like there's nothing here. Try searching for something else or going back to the <a href="<?php echo get_home_url(); ?>">homepage</a>.
       </main>
       <footer class="universal-footer">
         <?php // Universal footer blocks
