@@ -4,21 +4,14 @@
 <section class="o-widget">
   <h2 class="o-widget__headline">News Topics</h2>
   <?php
-    // List of links as placeholder
-    $links = array(
-      'Announcements (10)',
-      'Tips & Tricks (5)',
-      'Technical Support (22)',
-      'Maintenance (8)',
-      'Custom Options (1)',
-      'Laboratory Autoclaves (4)',
-      'Healthcare Autoclaves (30)',
-      'Industrial Autoclaves (6)'
-    );
-    foreach( $links as $link ):
+    // List of category links
+    $categories = get_categories();
+    foreach( $categories as $category ):
+      $name = $category->name;
+      $url = get_home_url() . '/category/' . $category->slug;
   ?>
-    <a class="o-widget__link o-widget__link--related" href="#">
-      <?php echo $link; ?>
+    <a class="o-widget__link o-widget__link--related" href="<?php echo $url; ?>">
+      <?php echo $name; ?>
     </a>
   <?php
     endforeach;
