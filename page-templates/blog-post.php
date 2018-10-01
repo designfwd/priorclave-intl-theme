@@ -11,13 +11,13 @@
     <header>
       <?php
         get_partial('navigation/primary'); // Primary navigation
-        get_partial('hero/general'); // General hero area
+        get_partial('hero/general-post'); // General hero area
       ?>
     </header>
     <main class="content__article">
       <?php
         get_partial('content/article-masthead'); // Article masthead
-        get_partial('content/general-block'); // Page body content
+        get_partial('content/post-block'); // Page body content
       ?>
     </main>
     <aside class="content__sidebar">
