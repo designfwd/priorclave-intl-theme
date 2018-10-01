@@ -12,5 +12,8 @@
     "jquery": true
   },
   "parser": "babel-eslint",
-  "extends": "eslint:recommended"
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-console": 1
+  }
 }
