@@ -39,4 +39,18 @@
     transform: translateX(-50%);
     width: 100%;
   }
+
+  @include element('search') {
+    background-color: $white;
+    border-bottom: 1px solid $grey-light;
+    border-left: 1px solid $grey-light;
+    border-right: 1px solid $grey-light;
+    left: 50%;
+    margin: 0 auto;
+    max-width: 480px;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
 }
