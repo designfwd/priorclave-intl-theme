@@ -11,17 +11,13 @@
     <header>
       <?php
         get_partial('navigation/primary'); // Primary navigation
-        get_partial('hero/general'); // General hero area
+        get_partial('hero/general-post'); // General hero area
       ?>
     </header>
     <main>
       <?php
-        if ( have_posts() ):
-          while ( have_posts() ): the_post();
-            the_title();
-            the_content();
-          endwhile;
-        endif;
+      get_partial('media/article-category-grid'); // Article grid
+      get_partial('navigation/category-pagination'); // Pagination for articles
       ?>
     </main>
     <footer class="universal-footer">
