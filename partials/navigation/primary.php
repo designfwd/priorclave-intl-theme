@@ -303,7 +303,7 @@ endif;
                         foreach( $items as $block ):
                           if( $block->menu_item_parent == $currentSubID ):
                             if( function_exists('get_field') ):
-                              $preview = get_field('page_preview_icon', $block->ID);
+                              $preview = get_field('page_preview_icon', $block->object_id);
                             endif;
                             if(!$preview):
                               $preview = array(
@@ -448,17 +448,17 @@ endif;
     <div class="o-primaryNav__quicklinks">
       <div class="m-navQuicklinks">
         <a class="m-navQuicklinks__phone" href="tel:<?php echo $sitePhone; ?>">CALL <?php echo $sitePhone; ?></a>
-        <a class="m-navQuicklinks__menu" href="#">
-          <svg id="" class="a-dropdownLink a-dropdownLink--icon" viewBox="0 0 640 480">
+        <button class="m-navQuicklinks__menu">
+          <svg class="a-dropdownLink a-dropdownLink--icon" viewBox="0 0 640 480">
             <?php get_svg('flag/gb'); ?>
           </svg>
-        </a>
+        </button>
 
-        <a class="m-navQuicklinks__search" href="#">
+        <button class="m-navQuicklinks__search">
           <svg class="a-navIcon" viewBox="0 0 16 16">
             <?php get_svg('icon-search'); ?>
           </svg>
-        </a>
+        </button>
         <a class="m-navQuicklinks__button" href="<?php echo $contactPage; ?>">
           Request Quote
         </a>
@@ -497,6 +497,16 @@ endif;
 
   <?php // Expandable search form ?>
   <div id="search-form" class="o-primaryNav__search">
+    <form class="m-searchForm" role="search" method="get" action="<?php echo home_url( '/'); ?>">
+      <label class="m-searchForm__label">
+        <input type="search" class="m-searchForm__input"
+          placeholder="<?php echo esc_attr_x( 'Enter a keyword...', 'placeholder' ) ?>"
+          value="<?php echo get_search_query() ?>" name="s"
+          title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+      </label>
+      <input type="submit" class="m-searchForm__submit"
+        value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+    </form>
   </div>
 
 </section>
