@@ -10,7 +10,6 @@
  * @var string $authorLink     Link to the author's post results page
  * @var array $categories      Categories applied to the post
  */
-
 $title = get_the_title();
 $author = get_the_author_meta('display_name');
 $authorLink = get_author_posts_url(get_the_author_meta('ID'));

@@ -9,7 +9,6 @@
     <?php
     // List of categories as placeholders
     $categories = get_categories();
-    // var_dump($categories);
     for( $i=0; $i<count($categories); $i++ ):
       $name = $categories[$i]->cat_name;
       $url = get_home_url() . '/category/' . $categories[$i]->slug;
