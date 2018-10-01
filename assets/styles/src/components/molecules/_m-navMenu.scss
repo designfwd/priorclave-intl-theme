@@ -15,7 +15,7 @@
       transition: background-color $base-duration $base-timing,
         color $base-duration $base-timing;
 
-      &.--has-loaded {
+      &.m-navMenu__label--has-loaded {
         color: $grey-dark;
         cursor: pointer;
 
