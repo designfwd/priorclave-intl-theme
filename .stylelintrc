@@ -35,11 +35,6 @@
     # Block
     "block-no-empty": true,
 
-    # Selector
-    "selector-pseudo-class-no-unknown": true,
-    "selector-pseudo-element-no-unknown": true,
-    "selector-type-no-unknown": true,
-
     # Media feature
     "media-feature-name-no-unknown": true,
 
