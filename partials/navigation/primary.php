@@ -69,6 +69,29 @@ endif;
           $items = wp_get_nav_menu_items( $menu->name );
           ?>
           <ul class="o-mobileMenu o-mobileMenu--preload">
+            <li class="o-mobileMenu__quicklinks">
+              <?php // Quicklinks ?>
+                <a class="a-mobileQuicklink" href="tel:<?php echo $sitePhone; ?>">
+                  <svg class="a-mobileQuicklink__icon" viewBox="0 0 16 16">
+                    <?php get_svg('icon-phone'); ?>
+                  </svg>
+                </a>
+                <button id="mobile-country-toggle" class="a-mobileQuicklink">
+                  <svg class="a-mobileQuicklink__icon" viewBox="0 0 640 480">
+                    <?php get_svg('flag/' . $siteCountry); ?>
+                  </svg>
+                </button>
+                <a class="a-mobileQuicklink" href="<?php echo $contactPage; ?>">
+                  <div class="a-mobileQuicklink__button">
+                    Quote
+                  </div>
+                </a>
+                <button id="mobile-search-toggle" class="a-mobileQuicklink">
+                  <svg class="a-mobileQuicklink__icon" viewBox="0 0 16 16">
+                    <?php get_svg('icon-search'); ?>
+                  </svg>
+                </button>
+            </li>
             <?php
             foreach( $items as $item ):
               // Skip all non-top level items
@@ -80,10 +103,13 @@ endif;
               ?>
               <?php // Menu item ?>
               <li class="o-mobileMenu__item <?php echo $classList; ?>">
-                <div id="menuToggle-<?php echo $currentID; ?>" data-menu="<?php echo $currentID; ?>" class="o-mobileMenu__label">
+                <div id="mobileMenuToggle-<?php echo $currentID; ?>" data-menu="<?php echo $currentID; ?>" class="o-mobileMenu__label">
                   <?php echo $item->title; ?>
+                  <svg class="o-mobileMenu__toggle" viewBox="0 0 16 16">
+                    <?php get_svg('angle-down'); ?>
+                  </svg>
                 </div>
-                <div id="menu-<?php echo $currentID; ?>" class="o-mobileMenu__block o-mobileMenu__block--preload">
+                <div id="mobileMenu-<?php echo $currentID; ?>" class="o-mobileMenu__block o-mobileMenu__block--preload">
                   <?php
                   foreach( $items as $subnav ):
                     if( $subnav->menu_item_parent == $currentID ):
@@ -99,9 +125,6 @@ endif;
                               <h3 class="m-menuItem__title">
                                 <?php echo $item->title; ?>
                               </h3>
-                              <h4 class="m-menuItem__description">
-                                <?php echo $item->description; ?>
-                              </h4>
                             </a>
                           <?php
                           endif;
@@ -116,9 +139,6 @@ endif;
                               <h3 class="m-menuItem__title">
                                 <?php echo $item->title; ?>
                               </h3>
-                              <h4 class="m-menuItem__description">
-                                <?php echo $item->description; ?>
-                              </h4>
                             </a>
                           <?php
                           endif;
@@ -184,137 +204,72 @@ endif;
         endif;
         ?>
       </nav>
-      <?php // Quicklinks ?>
-      <div class="m-mobileNav__quicklinks">
-        <a class="a-mobileQuicklink" href="tel:<?php echo $sitePhone; ?>">
-          <svg class="a-mobileQuicklink__icon" viewBox="0 0 16 16">
-            <?php get_svg('icon-phone'); ?>
-          </svg>
-        </a>
-        <button id="mobile-country-toggle" class="a-mobileQuicklink">
-          <svg class="a-mobileQuicklink__icon" viewBox="0 0 640 480">
-            <?php get_svg('flag/' . $siteCountry); ?>
-          </svg>
-        </button>
-        <a class="a-mobileQuicklink" href="<?php echo $contactPage; ?>">
-          <div class="a-mobileQuicklink__button">
-            Quote
-          </div>
-        </a>
-        <button id="mobile-search-toggle" class="a-mobileQuicklink">
-          <svg class="a-mobileQuicklink__icon" viewBox="0 0 16 16">
-            <?php get_svg('icon-search'); ?>
-          </svg>
-        </button>
-      </div>
     </div>
   </header>
 
   <?php // Primary navigation as it appears on wider screens ?>
   <header class="o-primaryNav__wide">
-    <a class="o-primaryNav__logo" href="<?php echo get_site_url(); ?>">
-      <img class="a-menuLogo lazyload lazyload--blurUp"
-        alt="<?php echo $siteLogo['alt']; ?>"
-        src="<?php echo $siteLogo['sizes']['preload']; ?>"
-        data-sizes="auto"
-        data-srcset="<?php echo $siteLogo['sizes']['preload']; ?> 64w,
-          <?php echo $siteLogo['sizes']['128w']; ?> 65w,
-          <?php echo $siteLogo['sizes']['240w']; ?> 129w
-        "
-      />
-    </a>
+    <div class="m-wideNav">
+      <a class="m-wideNav__logo" href="<?php echo get_site_url(); ?>">
+        <img class="a-menuLogo lazyload lazyload--blurUp"
+          alt="<?php echo $siteLogo['alt']; ?>"
+          src="<?php echo $siteLogo['sizes']['preload']; ?>"
+          data-sizes="auto"
+          data-srcset="<?php echo $siteLogo['sizes']['preload']; ?> 64w,
+            <?php echo $siteLogo['sizes']['128w']; ?> 65w,
+            <?php echo $siteLogo['sizes']['240w']; ?> 129w
+          "
+        />
+      </a>
 
-    <nav class="o-primaryNav__menu">
-      <?php
-      $locations = get_nav_menu_locations();
-      if( isset( $locations['primary_nav'] ) ):
-        $menu = get_term( $locations['primary_nav'], 'nav_menu' );
-        $items = wp_get_nav_menu_items( $menu->name );
-      ?>
-        <ul class="m-navMenu">
-          <?php
-          foreach( $items as $item ):
-            // if the current item is not a top level item, skip it
-            if($item->menu_item_parent != '0'):
-              continue;
-            endif;
-            $currentNavItemID = $item->ID;
-            $classList = implode(' ', $item->classes);
-          ?>
-            <li class="m-navMenu__item <?php echo $classList; ?>">
-              <div id="menuToggle-<?php echo $item->ID; ?>" data-menu="<?php echo $item->ID; ?>" class="m-navMenu__label">
-                <?php echo $item->title; ?>
-              </div>
-              <div id="menu-<?php echo $item->ID; ?>" class="m-navBlock m-navBlock--preload">
-                <?php
-                foreach( $items as $subnav ):
-                  if( $subnav->menu_item_parent == $currentNavItemID ):
-                    $currentSubID = $subnav->ID;
-                    $subClass = implode(' ', $subnav->classes);
+      <nav class="m-wideNav__menu">
+        <?php
+        $locations = get_nav_menu_locations();
+        if( isset( $locations['primary_nav'] ) ):
+          $menu = get_term( $locations['primary_nav'], 'nav_menu' );
+          $items = wp_get_nav_menu_items( $menu->name );
+        ?>
+          <ul class="m-navMenu">
+            <?php
+            foreach( $items as $item ):
+              // if the current item is not a top level item, skip it
+              if($item->menu_item_parent != '0'):
+                continue;
+              endif;
+              $currentNavItemID = $item->ID;
+              $classList = implode(' ', $item->classes);
+            ?>
+              <li class="m-navMenu__item <?php echo $classList; ?>">
+                <div id="menuToggle-<?php echo $item->ID; ?>" data-menu="<?php echo $item->ID; ?>" class="m-navMenu__label">
+                  <?php echo $item->title; ?>
+                </div>
+                <div id="menu-<?php echo $item->ID; ?>" class="m-navBlock m-navBlock--preload">
+                  <?php
+                  foreach( $items as $subnav ):
+                    if( $subnav->menu_item_parent == $currentNavItemID ):
+                      $currentSubID = $subnav->ID;
+                      $subClass = implode(' ', $subnav->classes);
 
-                    // Creates a grid of icon links
-                    if( in_array('grid-items', $subnav->classes) ):
-                    ?>
-                      <div class="m-navBlock__grid">
-                        <?php
-                        foreach( $items as $block ):
-                          if( $block->menu_item_parent == $currentSubID ):
-                            if( function_exists('get_field') ):
-                              $preview = get_field('page_preview_icon', $block->ID);
-                            endif;
-                            if(!$preview):
-                              $preview = array(
-                                'sizes' => array(
-                                  'preload' => '//via.placeholder.com/64x94?text=image',
-                                  '128w' => '//via.placeholder.com/128x188?text=image'
-                                )
-                              );
-                            endif;
-                          ?>
-                          <a class="a-navBlock" href="<?php echo $block->url; ?>">
-                            <img class="a-navBlock__image lazyload"
-                              src="<?php echo $preview['sizes']['preload']; ?>"
-                              data-sizes="auto"
-                              data-srcset = "
-                                <?php echo $preview['sizes']['preload']; ?> 64w,
-                                <?php echo $preview['sizes']['128w']; ?> 65w
-                              "
-                            />
-                            <h3 class="a-navBlock__title">
-                              <?php echo $block->title; ?>
-                            </h3>
-                            <h4 class="a-navBlock__description">
-                              <?php echo $block->description; ?>
-                            </h4>
-                          </a>
+                      // Creates a grid of icon links
+                      if( in_array('grid-items', $subnav->classes) ):
+                      ?>
+                        <div class="m-navBlock__grid">
                           <?php
-                          endif;
-                        endforeach;
-                        ?>
-                      </div>
-                    <?php
-
-                    // Creates a modified grid menu for lists with 'picture grid'
-                    // as an added class
-                    elseif( in_array('picture-grid', $subnav->classes) ):
-                    ?>
-                      <div class="m-navBlock__grid m-navBlock__grid--pictureGrid">
-                        <?php
-                        foreach( $items as $block ):
-                          if( $block->menu_item_parent == $currentSubID ):
-                            if( function_exists('get_field') ):
-                              $preview = get_field('page_preview_icon', $block->object_id);
-                            endif;
-                            if(!$preview):
-                              $preview = array(
-                                'sizes' => array(
-                                  'preload' => '//via.placeholder.com/64x94?text=image',
-                                  '128w' => '//via.placeholder.com/128x188?text=image'
-                                )
-                              );
-                            endif;
-                          ?>
-                            <a id="<?php echo $block->ID; ?>" class="a-navBlock a-navBlock--pictureGrid" href="<?php echo $block->url; ?>">
+                          foreach( $items as $block ):
+                            if( $block->menu_item_parent == $currentSubID ):
+                              if( function_exists('get_field') ):
+                                $preview = get_field('page_preview_icon', $block->ID);
+                              endif;
+                              if(!$preview):
+                                $preview = array(
+                                  'sizes' => array(
+                                    'preload' => '//via.placeholder.com/64x94?text=image',
+                                    '128w' => '//via.placeholder.com/128x188?text=image'
+                                  )
+                                );
+                              endif;
+                            ?>
+                            <a class="a-navBlock" href="<?php echo $block->url; ?>">
                               <img class="a-navBlock__image lazyload"
                                 src="<?php echo $preview['sizes']['preload']; ?>"
                                 data-sizes="auto"
@@ -330,167 +285,229 @@ endif;
                                 <?php echo $block->description; ?>
                               </h4>
                             </a>
-                          <?php
-                          endif;
-                        endforeach;
-                        ?>
-                      </div>
-                    <?php
-
-                    // Creates a list menu
-                    elseif( in_array('list-items', $subnav->classes) ):
-                    ?>
-                      <div class="m-navBlock__list">
-                        <div class="a-navList">
-                          <?php
-                          foreach( $items as $item ):
-                            if( $item->menu_item_parent == $currentSubID ):
-                              if( in_array('list-heading', $item->classes) ):
-                              ?>
-                                <h3 class="a-navList__headline">
-                                  <?php echo $item->title; ?>
-                                </h3>
-                              <?php
-                              endif;
+                            <?php
                             endif;
                           endforeach;
                           ?>
-                          <ul class="a-navList__list">
-                            <?php
-                            foreach( $items as $item ):
-                              if(
-                                $item->menu_item_parent == $currentSubID &&
-                                (in_array('list-heading', $item->classes) == 0)
-                              ):
-                                ?>
-                                <li class="a-navItem">
-                                  <a class="a-navItem__link" href="<?php echo $item->url; ?>">
-                                    <?php echo $item->title; ?>
-                                  </a>
-                                </li>
-                              <?php
-                              endif;
-                            endforeach;
-                            ?>
-                          </ul>
-                        </div>
-                      </div>
-                    <?php
-
-                    // Creates a thinner version of the list menu for use
-                    // alongside a modified grid
-                    elseif( in_array('little-list', $subnav->classes) ):
-                    ?>
-                      <div class="m-navBlock__list m-navBlock__list--littleList">
-                        <div class="a-navList">
-                          <?php
-                          foreach( $items as $item ):
-                            if( $item->menu_item_parent == $currentSubID ):
-                              if( in_array('list-heading', $item->classes) ):
-                              ?>
-                                <h3 class="a-navList__headline">
-                                  <?php echo $item->title; ?>
-                                </h3>
-                              <?php
-                              endif;
-                            endif;
-                          endforeach;
-                          ?>
-                          <ul class="a-navList__list">
-                            <?php
-                            foreach( $items as $item ):
-                              if(
-                                $item->menu_item_parent == $currentSubID &&
-                                (in_array('list-heading', $item->classes) == 0)
-                              ):
-                                ?>
-                                <li class="a-navItem">
-                                  <a class="a-navItem__link" href="<?php echo $item->url; ?>">
-                                    <?php echo $item->title; ?>
-                                  </a>
-                                </li>
-                              <?php
-                              endif;
-                            endforeach;
-                            ?>
-                          </ul>
-                        </div>
-                      </div>
-                    <?php
-                    elseif (in_array('bottom-button', $subnav->classes) ):
-                      if( $subnav->menu_item_parent == $currentNavItemID ):
-                      ?>
-                        <div class="m-navBlock__button">
-                          <a class="a-menuButton" href="<?php echo $subnav->url; ?>">
-                            <div class="a-menuButton__label">
-                              <?php echo $subnav->title; ?>
-                            </div>
-                          </a>
                         </div>
                       <?php
+
+                      // Creates a modified grid menu for lists with 'picture grid'
+                      // as an added class
+                      elseif( in_array('picture-grid', $subnav->classes) ):
+                      ?>
+                        <div class="m-navBlock__grid m-navBlock__grid--pictureGrid">
+                          <?php
+                          foreach( $items as $block ):
+                            if( $block->menu_item_parent == $currentSubID ):
+                              if( function_exists('get_field') ):
+                                $preview = get_field('page_preview_icon', $block->object_id);
+                              endif;
+                              if(!$preview):
+                                $preview = array(
+                                  'sizes' => array(
+                                    'preload' => '//via.placeholder.com/64x94?text=image',
+                                    '128w' => '//via.placeholder.com/128x188?text=image'
+                                  )
+                                );
+                              endif;
+                            ?>
+                              <a id="<?php echo $block->ID; ?>" class="a-navBlock a-navBlock--pictureGrid" href="<?php echo $block->url; ?>">
+                                <img class="a-navBlock__image lazyload"
+                                  src="<?php echo $preview['sizes']['preload']; ?>"
+                                  data-sizes="auto"
+                                  data-srcset = "
+                                    <?php echo $preview['sizes']['preload']; ?> 64w,
+                                    <?php echo $preview['sizes']['128w']; ?> 65w
+                                  "
+                                />
+                                <h3 class="a-navBlock__title">
+                                  <?php echo $block->title; ?>
+                                </h3>
+                                <h4 class="a-navBlock__description">
+                                  <?php echo $block->description; ?>
+                                </h4>
+                              </a>
+                            <?php
+                            endif;
+                          endforeach;
+                          ?>
+                        </div>
+                      <?php
+
+                      // Creates a list menu
+                      elseif( in_array('list-items', $subnav->classes) ):
+                      ?>
+                        <div class="m-navBlock__list">
+                          <div class="a-navList">
+                            <?php
+                            foreach( $items as $item ):
+                              if( $item->menu_item_parent == $currentSubID ):
+                                if( in_array('list-heading', $item->classes) ):
+                                ?>
+                                  <h3 class="a-navList__headline">
+                                    <?php echo $item->title; ?>
+                                  </h3>
+                                <?php
+                                endif;
+                              endif;
+                            endforeach;
+                            ?>
+                            <ul class="a-navList__list">
+                              <?php
+                              foreach( $items as $item ):
+                                if(
+                                  $item->menu_item_parent == $currentSubID &&
+                                  (in_array('list-heading', $item->classes) == 0)
+                                ):
+                                  ?>
+                                  <li class="a-navItem">
+                                    <a class="a-navItem__link" href="<?php echo $item->url; ?>">
+                                      <?php echo $item->title; ?>
+                                    </a>
+                                  </li>
+                                <?php
+                                endif;
+                              endforeach;
+                              ?>
+                            </ul>
+                          </div>
+                        </div>
+                      <?php
+
+                      // Creates a thinner version of the list menu for use
+                      // alongside a modified grid
+                      elseif( in_array('little-list', $subnav->classes) ):
+                      ?>
+                        <div class="m-navBlock__list m-navBlock__list--littleList">
+                          <div class="a-navList">
+                            <?php
+                            foreach( $items as $item ):
+                              if( $item->menu_item_parent == $currentSubID ):
+                                if( in_array('list-heading', $item->classes) ):
+                                ?>
+                                  <h3 class="a-navList__headline">
+                                    <?php echo $item->title; ?>
+                                  </h3>
+                                <?php
+                                endif;
+                              endif;
+                            endforeach;
+                            ?>
+                            <ul class="a-navList__list">
+                              <?php
+                              foreach( $items as $item ):
+                                if(
+                                  $item->menu_item_parent == $currentSubID &&
+                                  (in_array('list-heading', $item->classes) == 0)
+                                ):
+                                  ?>
+                                  <li class="a-navItem">
+                                    <a class="a-navItem__link" href="<?php echo $item->url; ?>">
+                                      <?php echo $item->title; ?>
+                                    </a>
+                                  </li>
+                                <?php
+                                endif;
+                              endforeach;
+                              ?>
+                            </ul>
+                          </div>
+                        </div>
+                      <?php
+                      elseif (in_array('bottom-button', $subnav->classes) ):
+                        if( $subnav->menu_item_parent == $currentNavItemID ):
+                        ?>
+                          <div class="m-navBlock__button">
+                            <a class="a-menuButton" href="<?php echo $subnav->url; ?>">
+                              <div class="a-menuButton__label">
+                                <?php echo $subnav->title; ?>
+                              </div>
+                            </a>
+                          </div>
+                        <?php
+                        endif;
                       endif;
                     endif;
-                  endif;
-                endforeach;
-                ?>
-              </div>
-            </li>
-          <?php
-          endforeach;
-          ?>
-        </ul>
-      <?php
+                  endforeach;
+                  ?>
+                </div>
+              </li>
+            <?php
+            endforeach;
+            ?>
+          </ul>
+        <?php
 
-      endif;
-      ?>
-    </nav>
+        endif;
+        ?>
+      </nav>
 
-    <div class="o-primaryNav__quicklinks">
-      <div class="m-navQuicklinks">
-        <a class="m-navQuicklinks__phone" href="tel:<?php echo $sitePhone; ?>">CALL <?php echo $sitePhone; ?></a>
-        <button class="m-navQuicklinks__menu">
-          <svg class="a-dropdownLink a-dropdownLink--icon" viewBox="0 0 640 480">
-            <?php get_svg('flag/gb'); ?>
-          </svg>
-        </button>
+      <div class="m-wideNav__quicklinks">
+        <div class="m-navQuicklinks">
+          <a class="m-navQuicklinks__phone" href="tel:<?php echo $sitePhone; ?>">CALL <?php echo $sitePhone; ?></a>
+          <button id="nav-country-toggle" class="m-navQuicklinks__menu">
+            <svg class="a-dropdownLink a-dropdownLink--icon" viewBox="0 0 640 480">
+            <?php get_svg('flag/' . $siteCountry); ?>
+            </svg>
+          </button>
 
-        <button class="m-navQuicklinks__search">
-          <svg class="a-navIcon" viewBox="0 0 16 16">
-            <?php get_svg('icon-search'); ?>
-          </svg>
-        </button>
-        <a class="m-navQuicklinks__button" href="<?php echo $contactPage; ?>">
-          Request Quote
-        </a>
+          <button id="nav-search-toggle" class="m-navQuicklinks__search">
+            <svg class="m-navQuicklinks__icon" viewBox="0 0 16 16">
+              <?php get_svg('icon-search'); ?>
+            </svg>
+          </button>
+          <a class="m-navQuicklinks__button" href="<?php echo $contactPage; ?>">
+            Request Quote
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
   <?php // Country selector dropdown ?>
   <div id="country-selector" class="o-primaryNav__countries">
-    <?php $countries = get_parent_site_countries(); ?>
     <nav class="m-countrySelector m-countrySelector--preload">
       <?php
-      foreach( $countries as $country ):
-        $label = $country['country_label'];
-        $language = $country['language'];
-        $value = $country['country_value'];
-        if( $country['external_site'] == true ):
-          $homepage = network_home_url() . $language . '-' . $value;
-        else:
-          $homepage = network_home_url() . $language . '/' . strtolower($label);
-        endif;
-      ?>
-        <a class="m-countrySelector__item" href="<?php echo $homepage; ?>">
-          <svg class="m-countrySelector__flag" viewBox="0 0 640 480">
-            <?php get_svg('flag/' . $value); ?>
-          </svg>
-          <h3 class="m-countrySelector__label">
-            <?php echo $label; ?>
+      $currentSite = get_current_blog_id();
+      $countryArray = array();
+      switch_to_blog(1);
+      while( have_rows( 'intlMenu', 'option') ): the_row();
+        $region = get_sub_field('region');
+        $regionLang = get_sub_field('language')['value'];
+        $regionLink = get_site_url(1) . '/' . $regionLang . '/' . $region['value'];
+        $countries = get_sub_field('countries');
+        ?>
+        <a class="m-countrySelector__item" href="<?php echo $regionLink; ?>">
+          <h3 class="m-countrySelector__region">
+            <?php echo $region['label']; ?>
           </h3>
         </a>
-      <?php
-      endforeach;
+        <?php
+        if( have_rows('countries') ):
+          while( have_rows('countries') ): the_row();
+            $country = get_sub_field('country');
+            $language = get_sub_field('language')['value'];
+            $separateCheck = get_sub_field('external');
+            if( $separateCheck == true ):
+              $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
+            else:
+              $countryLink = get_site_url(1) . '/' . $language . '/' . str_replace(' ', '-', strtolower($country['label']));
+            endif;
+            ?>
+            <a class="m-countrySelector__item" href="<?php echo $countryLink; ?>">
+              <svg class="m-countrySelector__flag" viewBox="0 0 640 480">
+                <?php get_svg('flag/' . $country['value']); ?>
+              </svg>
+              <h3 class="m-countrySelector__country">
+                <?php echo $country['label']; ?>
+              </h3>
+            </a>
+            <?php
+          endwhile;
+        endif;
+      endwhile;
+      switch_to_blog( $currentSite );
       ?>
     </nav>
   </div>
