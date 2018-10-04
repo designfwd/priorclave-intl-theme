@@ -4,6 +4,9 @@ jQuery(document).ready(function() {
   jQuery('.o-mobileMenu').hide();
   jQuery('.o-mobileMenu').addClass('o-mobileMenu--has-loaded');
   jQuery('.o-mobileMenu').removeClass('o-mobileMenu--preload');
+  jQuery('.o-mobileMenu__block').hide();
+  jQuery('.o-mobileMenu__block').addClass('o-mobileMenu__block--has-loaded');
+  jQuery('.o-mobileMenu__block').removeClass('o-mobileMenu__block--preload');
   jQuery('.m-navBlock').hide();
   jQuery('.m-navBlock').addClass('m-navBlock--has-loaded');
   jQuery('.m-navBlock').removeClass('m-navBlock--preload');
@@ -41,6 +44,21 @@ jQuery(document).ready(function() {
     }
   });
 
+  jQuery('#nav-country-toggle').click(function() {
+    //If the menu is open, close it
+    if( jQuery(this).hasClass('--open') ){
+      jQuery('.m-countrySelector').slideToggle();
+      jQuery(this).removeClass('--open');
+    } else {
+      // Hide search form
+      jQuery('.m-searchForm').hide();
+      jQuery('#nav-search-toggle').removeClass('--open');
+
+      jQuery(this).addClass('--open');
+      jQuery('.m-countrySelector').slideToggle();
+    }
+  });
+
   jQuery('#mobile-search-toggle').click(function() {
     //If the menu is open, close it
     if( jQuery(this).hasClass('--open') ){
@@ -53,6 +71,36 @@ jQuery(document).ready(function() {
 
       jQuery(this).addClass('--open');
       jQuery('.m-searchForm').slideToggle();
+    }
+  });
+
+  jQuery('#nav-search-toggle').click(function() {
+    //If the menu is open, close it
+    if( jQuery(this).hasClass('--open') ){
+      jQuery('.m-searchForm').slideToggle();
+      jQuery(this).removeClass('--open');
+    } else {
+      // Hide country selector
+      jQuery('.m-countrySelector').hide();
+      jQuery('#nav-country-toggle').removeClass('--open');
+
+      jQuery(this).addClass('--open');
+      jQuery('.m-searchForm').slideToggle();
+    }
+  });
+
+  //Controls the opening/closing of menu blocks in the mobile menu
+  jQuery('.o-mobileMenu__label').click(function() {
+    let menu = jQuery(this).data('menu');
+    // If the menu is open, close it
+    if( jQuery(this).hasClass('--active') ){
+      jQuery(this).removeClass('--active');
+      jQuery(this).children('.o-mobileMenu__toggle').removeClass('o-mobileMenu__toggle--is-clicked');
+      jQuery('#mobileMenu-' + menu).slideToggle();
+    } else {
+      jQuery(this).addClass('--active');
+      jQuery(this).children('.o-mobileMenu__toggle').addClass('o-mobileMenu__toggle--is-clicked');
+      jQuery('#mobileMenu-' + menu).slideToggle();
     }
   });
 
