@@ -1,5 +1,6 @@
 // Mobile menu styles
 .o-mobileMenu {
+  @include list-reset;
   display: none;
 
   @include modifier('preload') {
@@ -8,5 +9,51 @@
 
   @include modifier('has-loaded') {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @include element('block') {
+    display: none;
+    flex-wrap: wrap;
+
+    @include modifier('preload') {
+      @include preload;
+    }
+
+    @include modifier('has-loaded') {
+      display: flex;
+    }
+  }
+
+  @include element('item') {
+    margin-left: 1rem;
+    width: calc( 100% - 1rem );
+  }
+
+  @include element('label') {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    @include headline-blog;
+    margin: .5rem 0 .25rem;
+  }
+
+  @include element('toggle') {
+    @include size(2rem);
+    margin-right: 1rem;
+    transform: rotate(0deg);
+    transition: transform 300ms ease;
+
+    @include modifier('is-clicked') {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include element('quicklinks') {
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    width: 100%;
   }
 }
