@@ -148,24 +148,3 @@ function priorclave_lang() {
     echo 'lang="' . $lang['value'] . '"';
   endif;
 }
-
-// Gathers a list of countries defined by the parent site
-function get_parent_site_countries() {
-  $currentSite = get_current_blog_id();
-  $countryArray = array();
-  switch_to_blog(1);
-  while( have_rows( 'intlMenu', 'option') ): the_row();
-    $countries = get_sub_field('countries');
-    while( have_rows('countries') ): the_row();
-      $country = array(
-        'country_label' => get_sub_field('country')['label'],
-        'country_value' => get_sub_field('country')['value'],
-        'language' => get_sub_field('language')['value'],
-        'external_site' => get_sub_field('external')
-      );
-      $countryArray[] = $country;
-    endwhile;
-  endwhile;
-  switch_to_blog( $currentSite );
-  return $countryArray;
-}
