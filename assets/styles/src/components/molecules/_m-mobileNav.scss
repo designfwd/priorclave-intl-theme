@@ -20,8 +20,8 @@
   }
 
   @include element('logo') {
-    width: 12rem;
-    margin: .5rem auto .25rem;
+    width: 10rem;
+    margin: .5rem auto;
   }
 
   @include element('menu') {

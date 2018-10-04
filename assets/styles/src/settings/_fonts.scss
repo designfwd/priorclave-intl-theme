@@ -110,7 +110,7 @@ $proxima-nova: proxima-nova, sans-serif;
 
 // Font styles with sizes
 @mixin primary-nav() {
-  font-size: rem(21);
+  font-size: rem(18);
   @include proxima-nova-semibold;
 }
 

@@ -4,33 +4,30 @@
   background-color: $white;
   flex-direction: row;
   flex-wrap: wrap;
-  min-height: 6rem;
+  min-height: 3rem;
   position: relative;
   z-index: 2;
 
   @include element('mobile') {
     @include size(100%);
-    border-bottom: 1px solid $grey-light;
     display: inherit;
 
-    @media(min-width: 800px) {
+    @media(min-width: 960px) {
       display: none;
     }
   }
 
   @include element('wide') {
     display: none;
+    width: 100%;
 
-    @media(min-width: 800px) {
+    @media(min-width: 960px) {
       display: inherit;
     }
   }
 
   @include element('countries') {
-    background-color: $white;
-    border-bottom: 1px solid $grey-light;
-    border-left: 1px solid $grey-light;
-    border-right: 1px solid $grey-light;
+    background-color: $black-50;
     left: 50%;
     margin: 0 auto;
     max-width: 480px;
@@ -42,9 +39,6 @@
 
   @include element('search') {
     background-color: $white;
-    border-bottom: 1px solid $grey-light;
-    border-left: 1px solid $grey-light;
-    border-right: 1px solid $grey-light;
     left: 50%;
     margin: 0 auto;
     max-width: 480px;
