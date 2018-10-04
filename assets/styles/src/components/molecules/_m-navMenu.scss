@@ -2,28 +2,38 @@
 .m-navMenu {
   @include list-reset;
   @include primary-nav;
+  align-content: flex-end;
   display: flex;
   justify-content: center;
+  width: 100%;
 
   @include element('item') {
-    .m-navMenu__label {
-      background-color: $clear-black;
-      color: $grey-medium-light;
-      cursor: default;
-      display: relative;
-      padding: 1rem;
-      transition: background-color $base-duration $base-timing,
-        color $base-duration $base-timing;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 
-      &.m-navMenu__label--has-loaded {
-        color: $grey-dark;
-        cursor: pointer;
+  @include element('label') {
+    background-color: $clear-black;
+    color: $grey-medium-light;
+    cursor: default;
+    padding: .5rem;
+    transition: background-color $base-duration $base-timing,
+      color $base-duration $base-timing,
+      padding $base-duration $base-timing;
 
-        &:hover,
-        &.--active {
-          background-color: $grey-dark;
-          color: $yellow;
-        }
+    @media(min-width: 1024px) {
+      padding: .5rem 1rem;
+    }
+
+    @include modifier('has-loaded') {
+      color: $grey-dark;
+      cursor: pointer;
+
+      &:hover,
+      &.--active {
+        background-color: $grey-dark;
+        color: $yellow;
       }
     }
   }
