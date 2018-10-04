@@ -1,0 +1,13 @@
+// Menu item styles for the mobile menu
+.m-menuItem {
+  width: 100%;
+
+  @include element('headline') {
+    margin: 1rem 0 .5rem .5rem;
+  }
+
+  @include element('title') {
+    @include subheadline;
+    margin: .5rem 0 .5rem 1rem;
+  }
+}
