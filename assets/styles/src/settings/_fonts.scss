@@ -35,26 +35,26 @@ $font-black: 900;
 
 // Open Sans imports
 @font-face {
-  @include font('Open Sans', 'OpenSans-Bold');
+  @include font('Open-Sans', 'OpenSans-Bold');
   font-style: normal;
   font-weight: $font-bold;
 }
 
 @font-face {
-  @include font('Open Sans', 'OpenSans-Light');
+  @include font('Open-Sans', 'OpenSans-Light');
   font-style: normal;
   font-weight: $font-light;
 }
 
 @font-face {
-  @include font('Open Sans', 'OpenSans-Regular');
+  @include font('Open-Sans', 'OpenSans-Regular');
   font-style: normal;
   font-weight: $font-regular;
 }
 
 
 $lato: 'Lato', 'Trebuchet MS', sans-serif;
-$open-sans: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
+$open-sans: 'Open-Sans', 'Segoe UI', Tahoma, sans-serif;
 $proxima-nova: proxima-nova, sans-serif;
 
 
