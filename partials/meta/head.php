@@ -11,17 +11,23 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <?php // Google site verification
-    if( get_field('google_site_verification_id', 'option') ):
+  <?php
+  // Grabs fields from parent site settings if on a different site
+  $blogId = get_current_blog_id();
+  if( get_current_blog_id != 1):
+    switch_to_blog(1);
+  endif;
+
+  // Google site verification
+  if( get_field('google_site_verification_id', 'option') ):
   ?>
     <meta name="google-site-verification" content="<?php the_field('google_site_verification_id', 'option'); ?>" />
   <?php
-    endif;
-  ?>
+  endif;
 
-  <?php // Google Analytics
-    if( get_field('google_analytics_id', 'option') ):
-      $google_analytics_id = get_field('google_analytics_id', 'option');
+  // Google Analytics
+  if( get_field('google_analytics_id', 'option') ):
+    $google_analytics_id = get_field('google_analytics_id', 'option');
   ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_id; ?>"></script>
     <script>
@@ -32,12 +38,11 @@
     gtag('config', '<?php echo $google_analytics_id; ?>');
     </script>
   <?php
-    endif;
-  ?>
+  endif;
 
-  <?php // Typekit integration
-    if( get_field('typekit_id', 'option') ):
-      $typekit_id = get_field('typekit_id', 'option');
+  // Typekit integration
+  if( get_field('typekit_id', 'option') ):
+    $typekit_id = get_field('typekit_id', 'option');
   ?>
     <script>
       (function(d) {
@@ -50,10 +55,12 @@
       })(document);
     </script>
   <?php
-    endif;
-  ?>
+  endif;
 
-  <?php // WordPress head() function
-    wp_head();
+  // Just in case we switched sites, switch back
+  switch_to_blog($blogId);
+
+  // WordPress head() function
+  wp_head();
   ?>
 </head>
