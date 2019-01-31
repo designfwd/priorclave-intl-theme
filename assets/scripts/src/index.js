@@ -4,9 +4,10 @@
 require('../../styles/src/main.scss');
 
 // Global JS imports and settings
+require('./vendor/cookieconsent');
 require('./vendor/dialog-polyfill');
+require('./vendor/jquery-globals');
 require('./vendor/lazysizes.js');
-require('./vendor/jquery-globals.js');
 require('slick-carousel');
 require('./vendor/smoothscroll-polyfill.js');
 
