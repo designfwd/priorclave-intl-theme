@@ -14,7 +14,7 @@
   <?php
   // Grabs fields from parent site settings if on a different site
   $blogId = get_current_blog_id();
-  if( get_current_blog_id != 1):
+  if( get_current_blog_id() != 1 ):
     switch_to_blog(1);
   endif;
 
