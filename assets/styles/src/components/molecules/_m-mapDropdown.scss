@@ -5,7 +5,6 @@
   flex-direction: column;
   left: 0;
   list-style-type: none;
-  padding: .5rem 0;
   position: absolute;
   top: 100%;
   -webkit-margin-after: 0;
@@ -20,7 +19,7 @@
   @include element('country') {
     background-color: $clear-yellow;
     font-weight: $font-regular;
-    padding: .25rem 0 .25rem 2rem;
+    padding: .2rem 0 .2rem 2rem;
     transition: background-color $base-duration $base-timing;
     width: 100%;
 
@@ -33,7 +32,8 @@
     background-color: $clear-yellow;
     font-weight: $font-bold;
     line-height: 1.5rem;
-    padding: .25rem 0 .25rem 2rem;
+    padding: .4rem 0 .4rem 2rem;
+    text-transform: uppercase;
     transition: background-color $base-duration $base-timing;
     width: 100%;
 
