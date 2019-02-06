@@ -3,7 +3,7 @@
   background-size: cover;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 2rem 10% 4rem;
+  padding: 2rem .5rem 4rem;
   text-shadow: 1px 1px 2px $grey-dark;
 
   @include element('headline') {
@@ -20,7 +20,7 @@
     flex-direction: row;
     flex-grow: 0;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
   }
 }
