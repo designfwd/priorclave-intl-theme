@@ -2,11 +2,11 @@
 .m-blockLink {
   align-items: center;
   background-color: $black-25;
-  border: 6px solid $yellow;
+  border: .6rem solid $yellow;
   display: flex;
   flex-direction: column;
-  margin: .25rem;
-  padding: 2rem;
+  margin: 1rem 2rem;
+  padding: 4rem;
   transition: background-color $base-duration $base-timing;
   max-width: 300px;
 
@@ -16,11 +16,12 @@
 
   @include element('icon') {
     margin: auto;
-    max-width: 90px;
+    max-width: 72px;
   }
 
   @include element('text') {
     color: $white;
+    font-size: 1.8rem;
     text-align: center;
 
     &:hover {
