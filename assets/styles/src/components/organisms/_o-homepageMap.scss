@@ -1,6 +1,6 @@
 // Styling for the homepage map section
 .o-homepageMap {
-  padding: 10vh 0;
+  padding: 10vh 1rem;
   text-align: center;
 
   @include element('headline') {
@@ -10,10 +10,20 @@
     margin-bottom: 0;
     font-size: rem(24);
     text-transform: uppercase;
+    transition: font-size $base-duration $base-timing;
+    width: 100%;
 
     @include modifier('subhead') {
       @include lato-black;
-      font-size: 270%;
+      font-size: 180%;
+
+      @media(min-width: 640px) {
+        font-size: 225%;
+      }
+
+      @media(min-width: 960px) {
+        font-size: 270%;
+      }
     }
   }
 
