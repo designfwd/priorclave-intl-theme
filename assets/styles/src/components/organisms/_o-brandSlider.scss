@@ -1,17 +1,22 @@
 .o-brandSlider {
-  padding: 4rem 0;
+  padding: 2rem 0 4rem;
 
-  @include element('headline') {
-    @include headline;
-    padding: 0 5%;
+  @include element('description') {
+    box-sizing: border-box;
+    max-width: 75ch;
+    padding: 0 2rem 2rem;
     text-align: center;
-    text-transform: uppercase;
     width: 100%;
   }
 
-  @include element('description') {
-    max-width: 1440px;
-    padding: 0 10% 2rem;
+  @include element('headline') {
+    @include headline;
+    box-sizing: border-box;
+    font-weight: $font-bold;
+    max-width: 75ch;
+    padding: 0 5%;
+    text-align: center;
+    text-transform: uppercase;
     width: 100%;
   }
 
