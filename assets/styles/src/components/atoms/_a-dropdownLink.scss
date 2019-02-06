@@ -4,6 +4,8 @@
   background-color: $clear-yellow;
   color: $white;
   display: flex;
+  font-size: 1.25rem;
+  font-weight: $font-semibold;
 
   &:hover {
     color: $white;
@@ -13,6 +15,7 @@
     background-color: $clear-yellow;
     @include size(2rem);
     fill: $white;
+    margin-left: 1rem;
     transform: rotate(0);
     transition: transform $base-duration $base-timing;
 
