@@ -19,7 +19,7 @@
 
   @include element('dropdown') {
     background-color: $black-50;
-    margin: 4rem 0;
+    margin: 1rem 0;
     padding: 1rem 2rem;
     position: relative;
     transition: background-color $base-duration $base-timing;
