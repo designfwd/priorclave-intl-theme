@@ -15,15 +15,18 @@
 
   @include element('item') {
     align-content: center;
+    background-color: $clear-yellow;
+    border-bottom: 1px solid $grey-medium-dark;
     display: flex;
+    height: 2.6rem;
     justify-content: flex-start;
-    height: 2.4rem;
+    transition: background-color $base-duration $base-timing;
     width: 100%;
-  }
 
-  @include element('flag') {
-    @include size(2.4rem);
-    margin: 0 1rem;
+    &:hover {
+      background-color: $yellow;
+      color: $grey-medium-dark;
+    }
   }
 
   @include element('country') {
@@ -32,9 +35,24 @@
     width: calc( 100% - 4.4rem );
   }
 
+  @include element('flag') {
+    @include size(2rem);
+    margin: .25rem 1rem .5rem 1.5rem;
+  }
+
+  @include element('heading') {
+    border-bottom: 1px solid $grey-medium-dark;
+    box-sizing: border-box;
+    font-weight: $font-regular;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+  }
+
   @include element('region') {
     font-weight: $font-bold;
-    margin: auto 1rem;
+    margin: auto 1.4rem;
     width: 100%;
   }
 }
