@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 16000,
+    speed: 8000,
     variableWidth: true,
   });
 })
