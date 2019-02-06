@@ -122,15 +122,15 @@ jQuery(document).ready(function() {
   jQuery(document).mouseup(function(e) {
     let target = e.target; // Record target div
     if( jQuery(target).parents('.o-primaryNav').length == 0 ) {
-      jQuery('.o-mobileMenu').hide();
       jQuery('#mobile-navigation-toggle').removeClass('--active');
-      jQuery('.m-countrySelector').hide();
-      jQuery('#mobile-country-toggle').removeClass('--active');
-      jQuery('.m-searchForm').hide();
       jQuery('#mobile-search-toggle').removeClass('--active');
-
-      jQuery('.m-navBlock').hide();
+      jQuery('#nav-country-toggle').removeClass('--open');
+      jQuery('#mobile-country-toggle').removeClass('--active');
       jQuery('.m-navMenu__label').removeClass('--active');
+      jQuery('.o-mobileMenu').hide();
+      jQuery('.m-countrySelector').hide();
+      jQuery('.m-searchForm').hide();
+      jQuery('.m-navBlock').hide();
     }
   });
 });
