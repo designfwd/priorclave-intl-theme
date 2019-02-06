@@ -447,8 +447,8 @@ endif;
         <div class="m-navQuicklinks">
           <a class="m-navQuicklinks__phone" href="tel:<?php echo $sitePhone; ?>">CALL <?php echo $sitePhone; ?></a>
           <button id="nav-country-toggle" class="m-navQuicklinks__menu">
-            <svg class="a-dropdownLink a-dropdownLink--icon" viewBox="0 0 640 480">
-            <?php get_svg('flag/' . $siteCountry); ?>
+            <svg class="m-navQuicklinks__flag" viewBox="0 0 640 480">
+              <?php get_svg('flag/' . $siteCountry); ?>
             </svg>
           </button>
 
@@ -465,65 +465,70 @@ endif;
     </div>
   </header>
 
-  <?php // Country selector dropdown ?>
-  <div id="country-selector" class="o-primaryNav__countries">
-    <nav class="m-countrySelector m-countrySelector--preload">
-      <?php
-      $currentSite = get_current_blog_id();
-      $countryArray = array();
-      switch_to_blog(1);
-      while( have_rows( 'intlMenu', 'option') ): the_row();
-        $region = get_sub_field('region');
-        $regionLang = get_sub_field('language')['value'];
-        $regionLink = get_site_url(1) . '/' . $regionLang . '/' . $region['value'];
-        $countries = get_sub_field('countries');
-        ?>
-        <a class="m-countrySelector__item" href="<?php echo $regionLink; ?>">
-          <h3 class="m-countrySelector__region">
-            <?php echo $region['label']; ?>
-          </h3>
-        </a>
+  <div class="o-primaryNav__dropdowns">
+    <?php // Country selector dropdown ?>
+    <div id="country-selector" class="o-primaryNav__countries">
+      <nav class="m-countrySelector m-countrySelector--preload">
+        <h3 class="m-countrySelector__heading">
+          Select Your Country or Region
+        </h3>
         <?php
-        if( have_rows('countries') ):
-          while( have_rows('countries') ): the_row();
-            $country = get_sub_field('country');
-            $language = get_sub_field('language')['value'];
-            $separateCheck = get_sub_field('external');
-            if( $separateCheck == true ):
-              $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
-            else:
-              $countryLink = get_site_url(1) . '/' . $language . '/' . str_replace(' ', '-', strtolower($country['label']));
-            endif;
-            ?>
-            <a class="m-countrySelector__item" href="<?php echo $countryLink; ?>">
-              <svg class="m-countrySelector__flag" viewBox="0 0 640 480">
-                <?php get_svg('flag/' . $country['value']); ?>
-              </svg>
-              <h3 class="m-countrySelector__country">
-                <?php echo $country['label']; ?>
-              </h3>
-            </a>
-            <?php
-          endwhile;
-        endif;
-      endwhile;
-      switch_to_blog( $currentSite );
-      ?>
-    </nav>
-  </div>
+        $currentSite = get_current_blog_id();
+        $countryArray = array();
+        switch_to_blog(1);
+        while( have_rows( 'intlMenu', 'option') ): the_row();
+          $region = get_sub_field('region');
+          $regionLang = get_sub_field('language')['value'];
+          $regionLink = get_site_url(1) . '/' . $regionLang . '/' . $region['value'];
+          $countries = get_sub_field('countries');
+          ?>
+          <a class="m-countrySelector__item" href="<?php echo $regionLink; ?>">
+            <h3 class="m-countrySelector__region">
+              <?php echo $region['label']; ?>
+            </h3>
+          </a>
+          <?php
+          if( have_rows('countries') ):
+            while( have_rows('countries') ): the_row();
+              $country = get_sub_field('country');
+              $language = get_sub_field('language')['value'];
+              $separateCheck = get_sub_field('external');
+              if( $separateCheck == true ):
+                $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
+              else:
+                $countryLink = get_site_url(1) . '/' . $language . '/' . str_replace(' ', '-', strtolower($country['label']));
+              endif;
+              ?>
+              <a class="m-countrySelector__item" href="<?php echo $countryLink; ?>">
+                <svg class="m-countrySelector__flag" viewBox="0 0 640 480">
+                  <?php get_svg('flag/' . $country['value']); ?>
+                </svg>
+                <h3 class="m-countrySelector__country">
+                  <?php echo $country['label']; ?>
+                </h3>
+              </a>
+              <?php
+            endwhile;
+          endif;
+        endwhile;
+        switch_to_blog( $currentSite );
+        ?>
+      </nav>
+    </div>
 
-  <?php // Expandable search form ?>
-  <div id="search-form" class="o-primaryNav__search">
-    <form class="m-searchForm" role="search" method="get" action="<?php echo home_url( '/'); ?>">
-      <label class="m-searchForm__label">
-        <input type="search" class="m-searchForm__input"
-          placeholder="<?php echo esc_attr_x( 'Enter a keyword...', 'placeholder' ) ?>"
-          value="<?php echo get_search_query() ?>" name="s"
-          title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-      </label>
-      <input type="submit" class="m-searchForm__submit"
-        value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-    </form>
+    <?php // Expandable search form ?>
+    <div id="search-form" class="o-primaryNav__search">
+      <form class="m-searchForm" role="search" method="get" action="<?php echo home_url( '/'); ?>">
+        <label class="m-searchForm__label">
+          <input type="search" class="m-searchForm__input"
+            placeholder="<?php echo esc_attr_x( 'Enter a keyword...', 'placeholder' ) ?>"
+            value="<?php echo get_search_query() ?>" name="s"
+            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+        </label>
+        <input type="submit" class="m-searchForm__submit"
+          value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+      </form>
+    </div>
   </div>
 
 </section>
