@@ -1,12 +1,12 @@
 // Styles for CTAs arranged in grid patterns
 .o-ctaGrid {
-  align-items: center;
+  align-items: stretch;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: auto;
   max-width: 2000px;
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   @include element('item') {
     background-color: $grey-lightest;

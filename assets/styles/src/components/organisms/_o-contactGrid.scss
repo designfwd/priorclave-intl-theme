@@ -4,16 +4,18 @@
   @media(min-width: 640px) {
     align-items: stretch;
     flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    width: calc(100% - 2rem);
   }
 
   @include element('section') {
     background-color: $grey-lightest;
-    margin: 1% 2.5%;
+    margin: 1.5rem 0;
     padding-bottom: 2rem;
     width: 95%;
 
     @media(min-width: 640px) {
-      margin: 1%;
       width: 48%;
     }
   }

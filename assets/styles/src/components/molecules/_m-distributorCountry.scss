@@ -31,7 +31,7 @@
   }
 
   @include element('contact') {
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -40,8 +40,7 @@
     width: 100%;
 
     @media(min-width: 800px) {
-      // margin: -2rem 0 0;
-      padding: 1rem 10vw 0 0;
+      justify-content: flex-end;
       width: 50%;
     }
 
@@ -49,8 +48,9 @@
       @include large-button;
       background-color: $yellow;
       color: $grey-dark;
+      font-size: 1.25rem;
       margin: 0 2rem;
-      padding: 1rem 2rem;
+      padding: 1.5rem;
       text-align: center;
       transition: color $base-duration $base-timing;
 

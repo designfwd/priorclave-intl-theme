@@ -2,12 +2,24 @@
 .m-distributorToggle {
   @include footer-text;
   background-color: $grey-light;
+  cursor: pointer;
   position: relative;
   transition: background-color $base-duration $base-timing;
   width: 100%;
 
+  &:hover {
+    background-color: $yellow;
+  }
+
   &.--toggled {
     background-color: $white;
+  }
+
+  @include element('country') {
+    font-weight: 500;
+    margin: 0;
+    padding: 1rem 0 1rem 4.5rem;
+    text-transform: uppercase;
   }
 
   @include element('icon') {
@@ -29,12 +41,5 @@
     svg {
       @include size(100%);
     }
-  }
-
-  @include element('country') {
-    font-weight: $font-bold;
-    margin: 0;
-    padding: 1rem 0 1rem 3.5rem;
-    text-transform: uppercase;
   }
 }

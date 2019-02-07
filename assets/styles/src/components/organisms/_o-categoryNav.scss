@@ -2,34 +2,21 @@
 .o-categoryNav {
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 2rem 2.5% 0;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 1360px;
+  padding: 2rem 2.5% 0;
 
   @include element('link') {
-    flex-grow: 0;
+    flex: 1 1 50%;
     text-align: center;
-    width: 50%;
 
-    @media(min-width: 540px) {
-      width: 33.3333333333%;
+    @media ( min-width: 540px) {
+      flex: 1 1 33%;
     }
 
-    @media(min-width: 920px) {
-      flex-grow: 1;
-      width: auto;
-    }
-
-    @include modifier('faq') {
-      flex-grow: 1;
-      width: 50%;
-
-      @media(min-width: 660px) {
-        width: 33.3333333333%;
-      }
-
-      @media(min-width: 1080px) {
-        width: auto;
-      }
+    @media ( min-width: 768px) {
+      flex: 1 1 20%;
     }
   }
 

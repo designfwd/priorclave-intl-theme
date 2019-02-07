@@ -1,11 +1,12 @@
 // Styles for the general hero area
 .o-heroGeneral {
-  align-items: center;
   background-size: cover;
-  justify-content: space-around;
 
-  @media(min-width: 720px) {
-    flex-direction: row;
+  @include element('breadcrumbs') {
+    @include cta-small-text;
+    font-size: .75rem;
+    margin-top: 1.2rem;
+    text-transform: none;
   }
 
   @include element('content') {
@@ -13,26 +14,19 @@
     text-align: center;
     text-transform: uppercase;
     max-width: 80%;
-    padding-top: 6rem;
+    padding: 2rem 0 0;
 
     @media(min-width: 720px) {
-      margin-left: 5vw;
       max-width: 50%;
+      padding: 6rem 0 0 2rem;
       text-align: left;
-    }
-
-    @media(min-width: 1100px) {
-      margin-left: 8vw;
-    }
-
-    @media(min-width: 1100px) {
-      margin-left: 12vw;
     }
 
     @include modifier('feature') {
       @include lato-black;
       font-size: rem(36);
       border-bottom: 1px solid $black;
+      line-height: .8;
       transition: font-size $base-duration $base-timing;
 
       @media(min-width: 445px) {
@@ -43,21 +37,30 @@
         font-size: rem(65);
       }
     }
-
-    @include modifier('breadcrumbs') {
-      @include cta-small-text;
-      text-transform: none;
-    }
   }
 
   @include element('image') {
     align-self: center;
+    max-height: 100%;
     max-width: 80%;
     width: 100%;
 
     @media(min-width: 720px) {
       align-self: flex-end;
-      max-width: 40%;
+      max-width: 50%;
+    }
+  }
+
+  @include element('wrapper') {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+
+    @media(min-width: 720px) {
+      flex-direction: row;
     }
   }
 }

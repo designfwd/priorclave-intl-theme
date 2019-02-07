@@ -1,5 +1,7 @@
 // Styling for the distributor table
 .o-distributors {
+  margin: auto;
+  max-width: 1360px;
   padding: 0 2.5% 2rem;
 
   @include element('region') {
