@@ -8,6 +8,7 @@
 
   @include element('headline') {
     @include footer-title;
+    font-weight: $font-bold;
     margin: 0;
     max-width: 80%;
     padding-bottom: .8rem;
