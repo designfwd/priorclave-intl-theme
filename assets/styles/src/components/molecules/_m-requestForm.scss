@@ -18,6 +18,14 @@
     }
   }
 
+  input,
+  select,
+  textarea {
+    color: $grey-dark;
+    font-weight: 500;
+    padding: 1.25rem 1.6rem;
+  }
+
   .gform_footer {
     margin: .25rem;
     width: 100%;
