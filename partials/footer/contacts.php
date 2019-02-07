@@ -5,20 +5,20 @@
  * Address, phone, email, and social contact information
  *
  * @var string $company    Company label for address block
+ * @var string $contact    The contact page for the site
  * @var string $address    Block of text to include as physical address
  * @var string $phone      Phone number
  * @var string $fax        Fax number
- * @var string $email      Mailto link to use for direct email
  * @var array $networks    Social media networks and links
  */
 
 // Sets variables, with fallbacks if ACF is not installed or if variables are empty
 if( function_exists('get_field') ):
   $company = get_field('site_contact_name', 'option');
+  $contact = get_field('site_contactPage', 'option');
   $address = get_field('site_contact_address', 'option');
   $phone = get_field('site_contact_phone', 'option');
   $fax = get_field('site_contact_fax', 'option');
-  $email = get_field('site_contact_email', 'option');
   $networks = 'footer_networks';
 endif;
 ?>
@@ -40,7 +40,7 @@ endif;
     <div class="m-contactBlock__body">
       Phone: <a class="a-footerlink" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a><br />
       Fax: <?php echo $fax; ?><br />
-      <a class="a-footerLink a-footerLink--feature" href="mailto:<?php echo $email; ?>">Email Us</a>
+      <a class="a-footerLink a-footerLink--feature" href="<?php echo $contact; ?>">Email Us</a>
     </div>
   </div>
 
