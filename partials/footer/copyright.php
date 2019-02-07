@@ -32,5 +32,8 @@ endif;
         endwhile;
       endif;
     ?>
+    <span class="o-footerCopyright__fwd">
+      Website Design by <a class="o-footerCopyright__link" href="https://www.designfwd.com/">FWD</a>
+    </span>
   </p>
 </section>
