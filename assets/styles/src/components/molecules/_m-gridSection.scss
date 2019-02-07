@@ -6,14 +6,33 @@
   justify-content: center;
 
   @include element('icon') {
-    @include size(4.8rem);
+    @include size(4.5rem);
     background-color: $white;
     border-radius: 50%;
     margin: 2rem auto;
+    position: relative;
+
+    &:before {
+      border: .5rem solid $white;
+      border-radius: 50%;
+      bottom: -.5rem;
+      content: '';
+      left: -.5rem;
+      position: absolute;
+      right: -.5rem;
+      top: -.5rem;
+    }
 
     @include modifier('phone') {
       border: .25rem solid $yellow;
       padding: 1rem;
+
+      &:before {
+        bottom: -.75rem;
+        left: -.75rem;
+        right: -.75rem;
+        top: -.75rem;
+      }
     }
 
     svg {
@@ -23,6 +42,7 @@
   }
 
   @include element('item') {
+    @include cta-large-text;
     padding: .5rem .25rem;
     text-align: center;
   }
