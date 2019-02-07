@@ -4,8 +4,8 @@ jQuery(document).ready(function() {
   jQuery('.m-distributorCountry').hide();
   jQuery('.m-distributorCountry').removeClass('--preload');
 
-  jQuery('.m-distributorToggle__icon').click(function() {
-    jQuery(this).toggleClass('--toggled');
+  jQuery('.m-distributorToggle').click(function() {
+    jQuery(this).children('.m-distributorToggle__icon').toggleClass('--toggled');
     let country = jQuery(this).data('country');
     jQuery('#toggle-' + country).toggleClass('--toggled');
     jQuery('#content-' + country).slideToggle();
