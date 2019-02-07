@@ -56,7 +56,7 @@ $regions = get_terms( array(
         foreach( $countries as $country ):
           $slug = str_replace(array(' ', '&amp;'), '-', $country); // URL-safe version of country name
         ?>
-          <div id="toggle-<?php echo $slug; ?>" class="m-distributorToggle">
+          <div id="toggle-<?php echo $slug; ?>" class="m-distributorToggle" data-country="<?php echo $slug; ?>">
             <div class="m-distributorToggle__icon" data-country="<?php echo $slug; ?>">
               <svg viewBox="0 0 8 16">
                 <polygon points="0,0 0,16 8,8" />
