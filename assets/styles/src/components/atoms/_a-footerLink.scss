@@ -3,20 +3,13 @@
   color: inherit;
 
   @include modifier('copyright') {
-    &::before {
+    &::after {
       color: $grey-medium;
       content: "|";
-      padding-right: .25rem;
+      padding: 0 .35rem 0 .5rem;
 
       &:hover {
         color: inherit;
-      }
-    }
-
-    &:first-of-type {
-      &::before {
-        content: "";
-        padding-right: inherit;
       }
     }
   }
