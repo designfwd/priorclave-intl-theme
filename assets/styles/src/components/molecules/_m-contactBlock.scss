@@ -3,7 +3,7 @@
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding-left: 5vw;
+  padding-left: 6.5vw;
 
   @include element('headline') {
     @include footer-title();
@@ -16,6 +16,11 @@
     @include footer-text();
     color: $white;
     line-height: 1.22;
+
+    p,
+    div {
+      color: $white;
+    }
   }
 
   @include element('socialLink') {

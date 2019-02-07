@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  padding: 0 1rem;
+  padding: 0 1rem .25rem;
   max-width: 1100px;
   text-align: center;
 
@@ -15,8 +15,9 @@
   }
 
   @include element('content') {
-    @include proxima-nova-semibold;
-    font-size: rem(16);
-    color: $grey-medium;
+    @include proxima-nova-bold;
+    font-size: .65rem;
+    color: $grey-medium-light;
+    text-transform: uppercase;
   }
 }
