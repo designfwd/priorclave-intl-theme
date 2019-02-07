@@ -61,27 +61,28 @@ endif;
 <section class="o-heroGeneral lazyload"
   data-bg="<?php echo $background['url']; ?>"
   style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
-  <h1 class="o-heroGeneral__content">
-    <?php // Lines of text
-      if( have_rows($headline, $ID) ):
-        while( have_rows($headline, $ID) ): the_row();
-          $rows = count(get_field($headline, $ID));
-          $text = get_sub_field('text');
-          // Displays feature text on bottom line
-          if( get_row_index() == $rows ):
-          ?>
-            <span class="o-heroGeneral__content--feature">
-              <?php echo $text . '<br />';?>
-            </span>
-          <?php
-          // All lines above bottom appear normally with a line break
-          else:
-            echo $text . '<br />';
-          endif;
-        endwhile;
-      endif;
-    ?>
-    <span class="breadcrumbs o-heroGeneral__content--breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+  <div class="o-heroGeneral__wrapper">
+    <h1 class="o-heroGeneral__content">
+      <?php // Lines of text
+        if( have_rows($headline, $ID) ):
+          while( have_rows($headline, $ID) ): the_row();
+            $rows = count(get_field($headline, $ID));
+            $text = get_sub_field('text');
+            // Displays feature text on bottom line
+            if( get_row_index() == $rows ):
+            ?>
+              <span class="o-heroGeneral__content--feature">
+                <?php echo $text . '<br />';?>
+              </span>
+            <?php
+            // All lines above bottom appear normally with a line break
+            else:
+              echo $text . '<br />';
+            endif;
+          endwhile;
+        endif;
+      ?>
+      <div class="breadcrumbs o-heroGeneral__breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
       <?php
         if(function_exists('bcn_display')):
           bcn_display();
@@ -89,28 +90,29 @@ endif;
           echo 'Priorclave / Autoclaves / Horizontal Autoclaves';
         endif;
       ?>
-    </span>
-  </h1>
-  <img class="o-heroGeneral__image lazyload lazyload--blurUp"
-    alt="<?php echo $image['alt']; ?>"
-    src="<?php echo $image['sizes']['preload']; ?>"
-    data-sizes="auto"
-    data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
-      <?php echo $image['sizes']['128w']; ?> 65w,
-      <?php echo $image['sizes']['240w']; ?> 129w,
-      <?php echo $image['sizes']['320w']; ?> 241w,
-      <?php echo $image['sizes']['360w']; ?> 321w,
-      <?php echo $image['sizes']['375w']; ?> 361w,
-      <?php echo $image['sizes']['480w']; ?> 376w,
-      <?php echo $image['sizes']['540w']; ?> 481w,
-      <?php echo $image['sizes']['640w']; ?> 541w,
-      <?php echo $image['sizes']['720w']; ?> 641w,
-      <?php echo $image['sizes']['768w']; ?> 721w,
-      <?php echo $image['sizes']['800w']; ?> 769w,
-      <?php echo $image['sizes']['960w']; ?> 801w,
-      <?php echo $image['sizes']['1024w']; ?> 961w,
-      <?php echo $image['sizes']['1280w']; ?> 1025w,
-      <?php echo $image['sizes']['1366w']; ?> 1281w,
-    "
-  />
+      </div>
+    </h1>
+    <img class="o-heroGeneral__image lazyload lazyload--blurUp"
+      alt="<?php echo $image['alt']; ?>"
+      src="<?php echo $image['sizes']['preload']; ?>"
+      data-sizes="auto"
+      data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+        <?php echo $image['sizes']['128w']; ?> 65w,
+        <?php echo $image['sizes']['240w']; ?> 129w,
+        <?php echo $image['sizes']['320w']; ?> 241w,
+        <?php echo $image['sizes']['360w']; ?> 321w,
+        <?php echo $image['sizes']['375w']; ?> 361w,
+        <?php echo $image['sizes']['480w']; ?> 376w,
+        <?php echo $image['sizes']['540w']; ?> 481w,
+        <?php echo $image['sizes']['640w']; ?> 541w,
+        <?php echo $image['sizes']['720w']; ?> 641w,
+        <?php echo $image['sizes']['768w']; ?> 721w,
+        <?php echo $image['sizes']['800w']; ?> 769w,
+        <?php echo $image['sizes']['960w']; ?> 801w,
+        <?php echo $image['sizes']['1024w']; ?> 961w,
+        <?php echo $image['sizes']['1280w']; ?> 1025w,
+        <?php echo $image['sizes']['1366w']; ?> 1281w,
+      "
+    />
+  </div>
 </section>
