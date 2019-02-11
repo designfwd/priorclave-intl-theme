@@ -21,7 +21,7 @@
         get_partial('form/quote-request'); // Quote request form
         get_partial('media/product-related'); // Custom quote block (uses related product layout)
         get_partial('media/slider-testimonial'); // Testimonial slider
-        get_partial('media/cta-grid'); // CTA grid
+        get_partial('media/cta-2up'); // CTA grid
       ?>
     </main>
     <footer class="universal-footer">
