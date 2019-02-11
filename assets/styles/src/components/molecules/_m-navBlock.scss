@@ -1,6 +1,7 @@
 // Styles for dropdown blocks
 .m-navBlock {
   background-color: $grey-dark;
+  box-sizing: border-box;
   display: none;
   flex-wrap: wrap;
   left: 0;
@@ -26,10 +27,10 @@
     width: 100%;
 
     @include modifier('pictureGrid') {
-      width: 100%;
+      flex: 1 0 100%;
 
       @media(min-width: 1140px) {
-        max-width: 80%;
+        flex: 1 0 80%;
       }
     }
   }
@@ -55,5 +56,56 @@
   @include element('button') {
     padding-top: 1rem;
     width: 100%;
+  }
+}
+
+// Autoclave dropdown styles
+#menu-126 {
+  .a-navBlock__image {
+    @media(min-width: 640px) {
+      max-height: 8rem;
+      padding-top: .75rem;
+    }
+  }
+
+  .a-navItem {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: .75rem 0 1.5rem;
+  }
+
+  .a-navList__headline {
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    @media(min-width: 1140px) {
+      padding: .75rem 0 1.5rem;
+    }
+  }
+}
+
+// Customers dropdown styles
+#menu-127 {
+  .a-menuButton__label {
+    margin-left: 1rem;
+    width: calc(100% - 1rem);
+  }
+
+  .a-navItem {
+    font-size: 1.25rem;
+  }
+
+  .a-navList__headline {
+    @media(min-width: 1140px) {
+      padding: .5rem 0 1.5rem;
+    }
+  }
+
+  .a-navList__list {
+    padding-top: 2rem;
+  }
+
+  .m-navBlock {
+    padding: 1rem 3rem;
   }
 }
