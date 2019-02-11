@@ -1,175 +1,116 @@
 <?php
 // Interactive product finder
+/**
+ * Interactive product finder
+ *
+ * Renders a product-finder form based on Autoclave options and passes this to
+ * a results page
+ *
+ * @var array $productFinder      The product finder content
+ */
+
+$productFinder = get_field('form_productFinder');
+  $results = $productFinder['form_productFinder_results'];
+  $uses = $productFinder['form_productFinder_uses'];
+  $materials = $productFinder['form_productFinder_materials'];
+  $orientations = $productFinder['form_productFinder_orientations'];
+  $capacities = $productFinder['form_productFinder_capacities'];
+  $heating = $productFinder['form_productFinder_heating'];
+
+// Creates the arrays for producing the form and starts an index
+$index = 0;
+$sections = array(
+  'uses' => $uses,
+  'materials' => $materials,
+  'orientation' => $orientations,
+  'capacity' => $capacities,
+  'heating' => $heating
+);
 ?>
-<section>
-  <form class="o-productFinder" action="#">
+<section class="o-productFinder">
+  <?php
+  ?>
+  <form class="o-productFinder__form" action="<?php echo $results; ?>" method="POST" name="autoclave_finder">
     <?php
-      // Product finder placeholder array
-      $productFinder = array(
-        array(
-          'title' => 'Uses',
-          'headline' => 'How Will You Use It?',
-          'type' => 'checkbox',
-          'choices' => array(
-            array(
-              'name' => 'Sterilization',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Accelerated Aging',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Product Testing',
-              'preferred' => false,
-            ),
-          ),
-        ),
-        array(
-          'title' => 'Materials',
-          'headline' => 'What Materials?',
-          'type' => 'checkbox',
-          'choices' => array(
-            array(
-              'name' => 'Waste',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Glassware',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Plastic',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Media',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Instruments',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Dry Goods',
-              'preferred' => false,
-            ),
-          ),
-        ),
-        array(
-          'title' => 'Orientations',
-          'headline' => 'What Orientation?',
-          'type' => 'radio',
-          'choices' => array(
-            array(
-              'name' => 'Benchtop',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Front-Loading',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Top-Loading',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Double-Ended',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Power Door',
-              'preferred' => false,
-            ),
-          ),
-        ),
-        array(
-          'title' => 'Capacities',
-          'headline' => 'How Much Capacity?',
-          'type' => 'radio',
-          'choices' => array(
-            array(
-              'name' => '40L - 60L',
-              'preferred' => false,
-            ),
-            array(
-              'name' => '60L - 150L',
-              'preferred' => false,
-            ),
-            array(
-              'name' => '150L - 400L',
-              'preferred' => false,
-            ),
-            array(
-              'name' => '400L+',
-              'preferred' => false,
-            ),
-          ),
-        ),
-        array(
-          'title' => 'Heat Source',
-          'headline' => 'What Heating Source?',
-          'type' => 'radio',
-          'choices' => array(
-            array(
-              'name' => 'Direct Steam',
-              'preferred' => false,
-            ),
-            array(
-              'name' => 'Electrical Heating in Chamber',
-              'preferred' => true,
-            ),
-            array(
-              'name' => 'Steam Generator',
-              'preferred' => false,
-            ),
-          ),
-        ),
-      );
-
-      for( $i=0; $i<count($productFinder); $i++ ):
-        $product = $productFinder[$i];
-        $slug = $product['title'];
+    // Creates the form sections
+    foreach($sections as $taxonomy => $section):
+      $index++;
+      // For alternating sections, apply an 'alternate' modifier class
     ?>
-      <div class="o-productFinder__section <?php if( ($i % 2) != 0 ){echo 'o-productFinder__section--alternate';}?>">
+      <div class="o-productFinder__section <?php if(($index % 2) == 0){echo 'o-productFinder__section--alternate';} ?>">
         <div class="m-finderSection">
+          <?php // Section number ?>
           <div class="m-finderSection__number">
-            <?php echo $i+1; ?>
+            <?php echo $index; ?>
           </div>
+          <?php // Section headline ?>
           <div class="m-finderSection__headline">
-            <?php echo $product['headline']; ?>
+            <?php echo $section['headline']; ?>
           </div>
-          <div class="m-finderSection__choices">
-            <?php
-              for( $j=0; $j<count($product['choices']); $j++):
-                $choice = $product['choices'][$j];
-                $name = $product['name'];
-            ?>
-              <div class="a-finderChoice">
-                <img class="a-finderChoice__image <?php  if($choice['preferred']==true){echo'a-finderChoice__image--preferred';} ?>" src="<?php placeholder_img(150,225,'text=image'); ?>" />
-                <div class="a-finderChoice__label">
-                  <?php echo $choice['name']; ?>
-                  <?php
-                    if( $choice['preferred'] == true ):
-                  ?>
-                    <div class="a-finderChoice__label--subtitle">
-                      (Recommended)
-                    </div>
-                  <?php
-                    endif;
-                  ?>
-                </div>
-                <input class="a-finderChoice__input" type="<?php echo $product['type']; ?>" name="<?php echo $slug; ?>" value="<?php echo $name; ?>" />
-              </div>
-            <?php
-              endfor;
-            ?>
-          </div>
+          <?php
+          // Section choices, as defined by the taxonomy
+          $choices = get_terms( array(
+            'hide_empty' => false,
+            'taxonomy' => $taxonomy
+          ) );
 
+          // Sets the input type for this group
+          $type = $section['style']['value'];
+          ?>
+          <fieldset name="autoclave_<?php echo $taxonomy; ?>">
+            <div class="m-finderSection__choices">
+              <?php
+              foreach( $choices as $choice ):
+                // Grabs data for the taxonomy choice
+                $title = $choice->name;
+                $description = $choice->description;
+                $subtitle = get_field('autoclave_taxonomy_subtitle', $choice->taxonomy . '_' . $choice->term_id);
+                $image = get_field('autoclave_taxonomy_image', $choice->taxonomy . '_' . $choice->term_id);
+
+                // Sets fallback if no image is set
+                if(!$image):
+                  $image = array(
+                    'sizes' => array(
+                      'preload' => '//via.placeholder.com/64x96?text=image',
+                      '128w' => '//via.placeholder.com/128x192?text=image',
+                      '240w' => '//via.placeholder.com/240x360?text=image'
+                    ),
+                  );
+                endif;
+              ?>
+                <div class="a-finderChoice">
+                  <img class="a-finderChoice__image <?php if($subtitle=='(Recommended)'){echo'a-finderChoice__image--preferred';}; ?> lazyload lazyload--blurUp"
+                    data-sizes="auto"
+                    src="<?php echo $image['sizes']['preload']; ?>"
+                    data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+                      <?php echo $image['sizes']['128w']; ?> 65w,
+                      <?php echo $image['sizes']['240w']; ?> 129w
+                    "
+                  />
+                  <div class="a-finderChoice__label">
+                    <?php
+                    echo $title;
+
+                    if( $subtitle ):
+                    ?>
+                      <div class="a-finderChoice__label--subtitle">
+                        <?php echo $subtitle; ?>
+                      </div>
+                    <?php
+                    endif;
+                    ?>
+                  </div>
+                  <input class="a-finderChoice__input" type="<?php echo $type; ?>" name="<?php echo $taxonomy; ?>" value="<?php echo $title; ?>" />
+                </div>
+              <?php
+              endforeach;
+              ?>
+            </div>
+          </fieldset>
         </div>
       </div>
     <?php
-      endfor;
+    endforeach;
     ?>
     <div class="o-productFinder__section">
       <div class="m-finderSection">
