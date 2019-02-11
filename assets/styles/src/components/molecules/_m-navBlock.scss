@@ -60,7 +60,9 @@
 }
 
 // Autoclave dropdown styles
-#menu-126 {
+#menu-126,
+#menu-143
+#menu-160 {
   .a-navBlock__image {
     @media(min-width: 640px) {
       max-height: 8rem;
@@ -85,7 +87,9 @@
 }
 
 // Customers dropdown styles
-#menu-127 {
+#menu-127,
+#menu-144,
+#menu-161 {
   .a-menuButton__label {
     margin-left: 1rem;
     width: calc(100% - 1rem);
