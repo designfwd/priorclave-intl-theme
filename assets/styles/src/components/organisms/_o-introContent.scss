@@ -6,6 +6,11 @@
 
   @include modifier('inverted') {
     background-color: $white;
+
+    .o-introContent__headline,
+    .o-introContent__content > p {
+      color: $grey-dark;
+    }
   }
 
   @include element('content') {
