@@ -100,7 +100,7 @@ $sections = array(
                     endif;
                     ?>
                   </div>
-                  <input class="a-finderChoice__input" type="<?php echo $type; ?>" name="<?php echo $taxonomy; ?>" value="<?php echo $title; ?>" />
+                  <input class="a-finderChoice__input" type="<?php echo $type; ?>" name="<?php echo $taxonomy; ?><?php if($type=='checkbox'){echo'[]';} ?>" value="<?php echo $title; ?>" />
                 </div>
               <?php
               endforeach;
