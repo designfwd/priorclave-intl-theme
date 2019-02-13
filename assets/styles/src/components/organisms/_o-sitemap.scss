@@ -3,7 +3,7 @@
   align-items: center;
   color: $grey-dark;
   text-transform: uppercase;
-  padding: 0 5%;
+  padding: 0 5% 4rem;
 
   @include element('headline') {
     @include headline;
@@ -14,24 +14,15 @@
   @include element('list') {
     @include banner-text;
     @include list-reset;
-    columns: 1;
-
-    @media(min-width: 800px) {
-      columns: 2;
-    }
-
-    @media(min-width: 1140px) {
-      columns: 3;
-    }
 
     .menu-item {
-      margin: .5rem 0;
+      margin: .5rem 0 .5rem .5rem;
     }
 
     .sub-menu {
       @include cta-small-text;
       @include list-reset;
-      margin: .25rem 0;
+      margin: .25rem 0 .25rem .25rem;
       text-transform: none;
     }
 
