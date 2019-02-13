@@ -69,4 +69,11 @@
       display: none;
     }
   }
+
+  @include element('wrapper') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
