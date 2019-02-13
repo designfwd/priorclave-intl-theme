@@ -43,6 +43,7 @@
 
   @include element('item') {
     @include cta-large-text;
+    color: $grey-dark;
     padding: .5rem .25rem;
     text-align: center;
   }
