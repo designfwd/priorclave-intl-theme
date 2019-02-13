@@ -25,8 +25,6 @@
     </main>
     <footer class="universal-footer">
       <?php
-        get_partial('media/product-related'); // Related product block
-
         // Universal footer blocks
         get_partial('footer/newsletter'); // Newsletter signup form
         get_partial('footer/masthead'); // Footer masthead
