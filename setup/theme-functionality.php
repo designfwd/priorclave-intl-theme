@@ -148,3 +148,17 @@ function priorclave_lang() {
     echo 'lang="' . $lang['value'] . '"';
   endif;
 }
+
+/**
+ * Fix pagination on archive pages
+ * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
+
+function mg_news_pagination_rewrite() {
+  add_rewrite_rule(
+    'page/?([0-9]{1,})/?$', 
+    'index.php?&page=$matches[1]', 
+    'top');
+  
+}
+add_action('init', 'mg_news_pagination_rewrite');
+ */
