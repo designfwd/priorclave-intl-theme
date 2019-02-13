@@ -37,7 +37,7 @@ endif;
           );
         endif;
       ?>
-        <a class="o-widget__link" href="<?php echo get_permalink(); ?>">
+        <a class="o-widget__link" href="<?php echo get_permalink($page); ?>">
           <div class="m-richLink">
             <img class="m-richLink__image lazyload"
               src="<?php echo $image['sizes']['preload']; ?>"
