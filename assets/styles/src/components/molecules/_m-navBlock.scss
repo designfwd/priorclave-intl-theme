@@ -113,3 +113,57 @@
     padding: 1rem 3rem;
   }
 }
+
+// "Why Priorclave" dropdown styles
+#menu-128,
+#menu-145,
+#menu-162 {
+  .a-navBlock--pictureGrid {
+    background-color: transparent;
+  }
+
+  .a-navBlock__image {
+    mix-blend-mode: unset;
+  }
+
+  .a-navBlock__description,
+  .a-navBlock__title {
+    color: $white;
+  }
+}
+
+// Support dropdown styles
+#menu-129,
+#menu-146,
+#menu-163 {
+  .a-navBlock--pictureGrid {
+    background-color: transparent;
+  }
+
+  .a-navBlock__image {
+    mix-blend-mode: unset;
+  }
+
+  .a-navBlock__description,
+  .a-navBlock__title {
+    color: $white;
+  }
+}
+
+// Contact dropdown styles
+#menu-130,
+#menu-147,
+#menu-164 {
+  .a-navBlock--pictureGrid {
+    background-color: transparent;
+  }
+
+  .a-navBlock__image {
+    mix-blend-mode: unset;
+  }
+
+  .a-navBlock__description,
+  .a-navBlock__title {
+    color: $white;
+  }
+}
