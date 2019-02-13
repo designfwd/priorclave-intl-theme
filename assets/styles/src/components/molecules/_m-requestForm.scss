@@ -5,6 +5,10 @@
   margin: 0 auto;
   width: 100%;
 
+  @include element('disclosure') {
+    width: 100%;
+  }
+
   @include element('field') {
     border: .25rem solid $clear-white;
     width: 100%;
@@ -19,7 +23,6 @@
   }
 
   input,
-  select,
   textarea {
     color: $grey-dark;
     font-weight: 500;
