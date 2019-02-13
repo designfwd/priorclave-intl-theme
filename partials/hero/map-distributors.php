@@ -13,5 +13,9 @@ if( function_exists('get_field') ):
 endif;
 ?>
 <section class="o-distributorsMap">
-<?php var_dump($map); ?>
+  <?php
+  if( shortcode_exists('wpgmza') ):
+    echo do_shortcode("[wpgmza id=\"$map\"]");
+  endif;
+  ?>
 </section>
