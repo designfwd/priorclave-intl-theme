@@ -85,50 +85,52 @@ $regions = get_terms( array(
               $companySlug = get_post_field( 'post_name', get_post($distributor->ID) );
               $address = 'address';
               ?>
-              <div class="m-distributorCountry__content">
-                <h4 class="m-distributorCountry__content--company"><?php echo $company; ?></h4>
-                <address class="m-distributorCountry__content--address">
-                  <?php
-                  if( have_rows( $address, $distributor->ID) ):
-                    while( have_rows($address, $distributor->ID) ): the_row();
-                      echo get_sub_field('text') . '<br/>';
-                    endwhile;
-                  endif;
-                  if( get_field('city', $distributor->ID) ):
-                    echo get_field('city', $distributor->ID);
-                  endif;
-                  if(
-                    get_field('city', $distributor->ID) &&
-                    (
-                      get_field('state', $distributor->ID) ||
-                      get_field('postal', $distributor->ID)
-                    )
-                  ):
-                    echo ', ';
-                  endif;
-                  if( get_field('state', $distributor->ID) ):
-                    echo get_field('state', $distributor->ID) . '  ';
-                  endif;
-                  if( get_field('postal', $distributor->ID) ):
-                    echo get_field('postal', $distributor->ID);
-                  endif;
-                  ?>
-                  <br/>
-                </address>
+              <div id="<?php echo $slug . '--' . $companySlug; ?>" class="m-distributorCountry__wrapper">
+                <div class="m-distributorCountry__content">
+                  <h4 class="m-distributorCountry__content--company"><?php echo $company; ?></h4>
+                  <address class="m-distributorCountry__content--address">
+                    <?php
+                    if( have_rows( $address, $distributor->ID) ):
+                      while( have_rows($address, $distributor->ID) ): the_row();
+                        echo get_sub_field('text') . '<br/>';
+                      endwhile;
+                    endif;
+                    if( get_field('city', $distributor->ID) ):
+                      echo get_field('city', $distributor->ID);
+                    endif;
+                    if(
+                      get_field('city', $distributor->ID) &&
+                      (
+                        get_field('state', $distributor->ID) ||
+                        get_field('postal', $distributor->ID)
+                      )
+                    ):
+                      echo ', ';
+                    endif;
+                    if( get_field('state', $distributor->ID) ):
+                      echo get_field('state', $distributor->ID) . '  ';
+                    endif;
+                    if( get_field('postal', $distributor->ID) ):
+                      echo get_field('postal', $distributor->ID);
+                    endif;
+                    ?>
+                    <br/>
+                  </address>
+                </div>
+                <div class="m-distributorCountry__contact">
+                  <div class="m-distributorCountry__contact--button" data-country="<?php echo $companySlug; ?>">
+                  Contact Distributor
+                  </div>
+                </div>
+                <dialog id="dialog-<?php echo $companySlug; ?>" class="m-distributorDialog">
+                  <div class="m-distributorDialog__description">
+                    Contact distributor for <?php echo $country; ?>
+                  </div>
+                  <div class="m-distributorDialog__button">
+                    Close
+                  </div>
+                </dialog>
               </div>
-              <div class="m-distributorCountry__contact">
-                <div class="m-distributorCountry__contact--button" data-country="<?php echo $companySlug; ?>">
-                Contact Distributor
-                </div>
-              </div>
-              <dialog id="dialog-<?php echo $companySlug; ?>" class="m-distributorDialog">
-                <div class="m-distributorDialog__description">
-                  Contact distributor for <?php echo $country; ?>
-                </div>
-                <div class="m-distributorDialog__button">
-                  Close
-                </div>
-              </dialog>
               <div class="m-distributorCountry__divider"></div>
             <?php
             endforeach;
