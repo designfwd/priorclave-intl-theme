@@ -30,3 +30,12 @@
 .gform_validation_container {
   display: none;
 }
+
+.gfield {
+  .recaptcha-disclosure {
+    color: $white;
+    font-size: .8rem;
+    margin: .5rem auto;
+    text-align: center;
+  }
+}
