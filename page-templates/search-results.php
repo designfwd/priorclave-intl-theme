@@ -19,7 +19,7 @@ $paginatedLinks = paginate_links( array(
 'current' => $current,
 'total' => $search->max_num_pages,
 'prev_next' => false
-) ); 
+) );
 
 ?>
 <!doctype html>
@@ -28,7 +28,11 @@ $paginatedLinks = paginate_links( array(
   <body <?php body_class('search search--results'); ?>>
     <header>
       <?php
-        get_partial('navigation/primary'); // Primary navigation
+        if( get_current_blog_id() == 1 ):
+          get_partial('navigation/simplified'); // Multisite navigation
+        else:
+          get_partial('navigation/primary'); // Primary navigation
+        endif;
         get_partial('hero/general'); // General hero area
       ?>
     </header>

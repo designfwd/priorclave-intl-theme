@@ -10,7 +10,11 @@
   <body <?php body_class('error error--404'); ?>>
     <header>
       <?php
-        get_partial('navigation/primary'); // Primary navigation
+        if( get_current_blog_id() == 1 ):
+          get_partial('navigation/simplified'); // Multisite navigation
+        else:
+          get_partial('navigation/primary'); // Primary navigation
+        endif;
         get_partial('hero/general-404'); // General hero area
       ?>
     </header>
