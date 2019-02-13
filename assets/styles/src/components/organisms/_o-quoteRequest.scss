@@ -31,6 +31,12 @@
     }
   }
 
+  @include element('disclosure') {
+    color: $grey-medium-light;
+    font-size: .8rem;
+    margin: .35rem auto;
+  }
+
   @include element('form') {
     margin: 0 auto;
     max-width: 800px;
@@ -43,7 +49,7 @@
   }
 
   @include element('subtitle') {
-    padding-top: 3.2rem;
+    padding-top: 2rem;
     text-align: center;
   }
 

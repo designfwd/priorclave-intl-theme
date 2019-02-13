@@ -6,6 +6,17 @@
   );
   padding: 1.6rem 0;
 
+  @include element('disclosure') {
+    color: $grey-dark;
+    font-size: .8rem;
+    margin: .25rem auto;
+    text-align: center;
+
+    a:hover {
+      color: $grey-medium;
+    }
+  }
+
   @include element('headline') {
     @include footer-title;
     font-weight: $font-bold;

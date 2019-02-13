@@ -3,6 +3,14 @@
   color: $grey-dark;
   padding: 1rem 0 0;
 
+  @include element('disclosure') {
+    color: $grey-dark;
+    font-size: .6rem;
+    margin: .25rem auto -.5rem;
+    width: calc(100% - 2rem);
+    text-align: center;
+  }
+
   @include element('headline') {
     @include headline-blog();
     background-color: $grey-lightest;
