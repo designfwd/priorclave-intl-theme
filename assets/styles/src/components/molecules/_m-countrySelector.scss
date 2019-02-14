@@ -13,6 +13,29 @@
     display: flex;
   }
 
+    @include element('country') {
+    color: $white;
+    font-weight: $font-regular;
+    margin: auto 0;
+    width: calc( 100% - 4.4rem );
+  }
+
+  @include element('flag') {
+    @include size(2rem);
+    margin: .25rem 1rem .5rem 1.5rem;
+  }
+
+  @include element('heading') {
+    border-bottom: 1px solid $grey-medium-dark;
+    box-sizing: border-box;
+    color: $white;
+    font-weight: $font-regular;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+  }
+
   @include element('item') {
     align-content: center;
     background-color: $clear-yellow;
@@ -29,28 +52,8 @@
     }
   }
 
-  @include element('country') {
-    font-weight: $font-regular;
-    margin: auto 0;
-    width: calc( 100% - 4.4rem );
-  }
-
-  @include element('flag') {
-    @include size(2rem);
-    margin: .25rem 1rem .5rem 1.5rem;
-  }
-
-  @include element('heading') {
-    border-bottom: 1px solid $grey-medium-dark;
-    box-sizing: border-box;
-    font-weight: $font-regular;
-    margin: 0;
-    padding: 1rem 0;
-    text-align: center;
-    width: 100%;
-  }
-
   @include element('region') {
+    color: $white;
     font-weight: $font-bold;
     margin: auto 1.4rem;
     width: 100%;

@@ -59,7 +59,6 @@
     background-color: $white;
     left: 50%;
     margin: 0 auto;
-    max-width: 480px;
     position: absolute;
     top: 100%;
     transform: translateX(-50%);
@@ -67,8 +66,8 @@
 
     @media(min-width: 960px) {
       left: unset;
-      right: 1.2rem;
-      top: -2.8rem;
+      right: 1.1rem;
+      top: 0;
       transform: unset;
     }
   }

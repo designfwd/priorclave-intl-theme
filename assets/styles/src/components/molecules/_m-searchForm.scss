@@ -1,6 +1,8 @@
 // Search form styles
 .m-searchForm {
+  background-color: $grey-light;
   display: none;
+  width: 100%;
 
   @include modifier('preload') {
     display: hidden;
@@ -8,5 +10,13 @@
 
   @include modifier('has-loaded') {
     display: flex;
+  }
+
+  @include element('input') {
+    background-color: $clear-white;
+  }
+
+  @include element('label') {
+    padding: 0;
   }
 }
