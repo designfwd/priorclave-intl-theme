@@ -26,7 +26,7 @@ endif;
       if( $testimonials ):
         foreach( $testimonials as $post ):
           setup_postdata($post);
-          $content = get_field('testimonial_content', $post->ID);
+          $content = get_nowrap_field('testimonial_content', $post->ID);
           $credit = get_field('testimonial_credit', $post->ID);
           $image = get_field('testimonial_image', $post->ID);
           if( !$image ):
