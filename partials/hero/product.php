@@ -40,36 +40,42 @@ endif;
       <p class="m-productHero__price">
         <?php echo $currency['value'] . $price; ?>
       </p>
+
+      <? // Badges ?>
       <div class="m-productHero__badges">
-        <div class="a-productBadge">
-          <?php // Badges
-          if( $badges ):
-            foreach( $badges as $post):
-              setup_postdata($post);
-              $image = get_field('badge_image_grayscale', $post->ID);
-              if(!$image):
-                $image = array(
-                  'sizes' => array(
-                    'preload' => '//via.placeholder.com/64x85?text=badge',
-                    '128w' => '//via.placeholder.com/128x171?text=badge'
-                  )
-                );
-              endif;
+        <?php
+        if( $badges ):
+          foreach( $badges as $post):
+            setup_postdata($post);
+            $image = get_field('badge_image_grayscale', $post->ID);
+            $label = get_field('badge_label', $post->ID);
+            if(!$image):
+              $image = array(
+                'sizes' => array(
+                  'preload' => '//via.placeholder.com/64x85?text=badge',
+                  '128w' => '//via.placeholder.com/128x171?text=badge'
+                )
+              );
+            endif;
           ?>
-            <img class="a-productBadge__image lazyload"
+            <div class="a-productBadge">
+              <img class="a-productBadge__image lazyload"
               src="<?php echo $image['sizes']['placeholder']; ?>"
               data-sizes="auto"
               data-srcset="
                 <?php echo $image['sizes']['preload']; ?> 64w,
                 <?php echo $image ['sizes']['128w']; ?> 65w
               "
-            />
+              />
+              <h5 class="a-productBadge__subtitle">
+                <?php echo $label; ?>
+              </h5>
+            </div>
           <?php
-            endforeach;
-            wp_reset_postdata();
-          endif;
-          ?>
-        </div>
+          endforeach;
+          wp_reset_postdata();
+        endif;
+        ?>
       </div>
     </div>
   </div>
