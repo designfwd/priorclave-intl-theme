@@ -316,7 +316,7 @@
             "label": "Hero Area Defaults",
             "name": "",
             "type": "tab",
-            "instructions": "This section defines defaults for the header area of content pages",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -397,7 +397,7 @@
             "label": "Newsletter Widget Settings",
             "name": "",
             "type": "tab",
-            "instructions": "Settings for the newsletter signup widget in sidebars on the site",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -468,7 +468,7 @@
             "label": "Featured Pages Widget Settings",
             "name": "",
             "type": "tab",
-            "instructions": "Pages to feature in the sidebar",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -557,6 +557,30 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5c65d8f977423",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "240w",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
                     "key": "field_5ad4d150bf4d0",
                     "label": "Description",
                     "name": "description",
@@ -565,7 +589,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "100",
+                        "width": "60",
                         "class": "",
                         "id": ""
                     },
@@ -582,7 +606,7 @@
             "label": "Related Information Block Settings",
             "name": "",
             "type": "tab",
-            "instructions": "This section sets defaults for the related information block at the bottom of some content pages.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -715,7 +739,7 @@
             "label": "Call-to-Action 2-up Block Settings",
             "name": "",
             "type": "tab",
-            "instructions": "This section sets defaults for the related information block at the bottom of some content pages.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -769,7 +793,7 @@
             "label": "Default Testimonials",
             "name": "",
             "type": "tab",
-            "instructions": "This section sets defaults for the related information block at the bottom of some content pages.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1066,8 +1090,8 @@
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
-                    "ajax": 0,
                     "return_format": "array",
+                    "ajax": 0,
                     "placeholder": ""
                 },
                 {
@@ -1243,5 +1267,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1536598912
+    "modified": 1550178579
 }
