@@ -149,16 +149,36 @@ function priorclave_lang() {
   endif;
 }
 
+
+// Updates the excerpt length to 30 words
+function priorclave_excerpt_length( $length ) {
+  return 30;
+}
+add_filter( 'excerpt_length', 'priorclave_excerpt_length', 999 );
+
+// Removes the wrapping paragraph tags from WYSIWYG editor fields
+function get_nowrap_field( $field_name, $id='' ) {
+  if( $id=='' ):
+    $id = get_the_ID();
+  endif;
+  remove_filter('acf_the_content', 'wpautop');
+  if( function_exists('get_field') ):
+    $field = get_field( $field_name, $id );
+  endif;
+  add_filter('acf_the_content', 'wpautop');
+  return $field;
+}
+
 /**
  * Fix pagination on archive pages
  * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
 
 function mg_news_pagination_rewrite() {
   add_rewrite_rule(
-    'page/?([0-9]{1,})/?$', 
-    'index.php?&page=$matches[1]', 
+    'page/?([0-9]{1,})/?$',
+    'index.php?&page=$matches[1]',
     'top');
-  
+
 }
 add_action('init', 'mg_news_pagination_rewrite');
  */
