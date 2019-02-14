@@ -62,8 +62,7 @@ if( !$image ):
   );
 endif;
 ?>
-<section class="o-heroMarketing lazyload"
-  data-bg="<?php echo $background['url']; ?>" style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
+<section class="o-heroMarketing" style="background-image:linear-gradient(transparent,transparent 50%,rgba(0,0,0,.15)), url('<?php echo $background['url']; ?>');">
   <h1 class="o-heroMarketing__content">
     <?php // Lines of text
       if( have_rows($headline, $ID) ):
