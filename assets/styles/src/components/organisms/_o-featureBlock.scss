@@ -22,5 +22,9 @@
 
   @include element('content') {
     max-width: 960px;
+
+    p {
+      color: $white;
+    }
   }
 }

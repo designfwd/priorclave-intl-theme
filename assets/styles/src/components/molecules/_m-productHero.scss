@@ -2,6 +2,15 @@
 .m-productHero {
   text-align: left;
 
+  @include element('badges') {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include element('description') {
+    max-width: 80%;
+  }
+
   @include element('headline') {
     @include open-sans-regular;
     border-left: 1rem solid $yellow;
@@ -28,10 +37,6 @@
         font-size: rem(65);
       }
     }
-  }
-
-  @include element('description') {
-    max-width: 80%;
   }
 
   @include element('price') {

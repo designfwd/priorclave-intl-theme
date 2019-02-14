@@ -13,6 +13,10 @@
 
   &:hover {
     outline: .2rem solid $yellow;
+
+    .m-productGridItem__title {
+      color: $yellow;
+    }
   }
 
   @media(min-width: 640px) {
@@ -28,5 +32,6 @@
 
   @include element('title') {
     text-align: center;
+    transition: color $base-duration $base-timing;
   }
 }

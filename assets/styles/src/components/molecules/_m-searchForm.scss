@@ -14,9 +14,20 @@
 
   @include element('input') {
     background-color: $clear-white;
+    color: $grey-dark;
+    width: 100%;
+
+    &::placeholder {
+      color: $grey-dark;
+    }
   }
 
   @include element('label') {
     padding: 0;
+    width: calc(100% - 120px);
+  }
+
+  @include element('submit') {
+    width: 120px;
   }
 }

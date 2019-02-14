@@ -1,6 +1,9 @@
 // Styles for the general hero area
 .o-heroGeneral {
-  background-size: cover;
+  background-color: $yellow;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 
   @include element('breadcrumbs') {
     @include cta-small-text;
@@ -11,6 +14,7 @@
 
   @include element('content') {
     @include banner-text;
+    color: $grey-dark;
     text-align: center;
     text-transform: uppercase;
     max-width: 80%;
@@ -18,7 +22,7 @@
 
     @media(min-width: 720px) {
       max-width: 50%;
-      padding: 6rem 0 0 2rem;
+      padding: 3rem 0 3rem 2rem;
       text-align: left;
     }
 

@@ -13,7 +13,7 @@
     display: flex;
   }
 
-    @include element('country') {
+  @include element('country') {
     color: $white;
     font-weight: $font-regular;
     margin: auto 0;

@@ -61,7 +61,7 @@
 
 // Autoclave dropdown styles
 #menu-126,
-#menu-143
+#menu-143,
 #menu-160 {
   .a-navBlock__image {
     @media(min-width: 640px) {
@@ -83,6 +83,12 @@
     @media(min-width: 1140px) {
       padding: .75rem 0 1.5rem;
     }
+  }
+}
+
+#menu-160 {
+  .a-navBlock {
+    width: 20%;
   }
 }
 
@@ -117,45 +123,21 @@
 // "Why Priorclave" dropdown styles
 #menu-128,
 #menu-145,
-#menu-162 {
-  .a-navBlock--pictureGrid {
-    background-color: transparent;
-  }
-
-  .a-navBlock__image {
-    mix-blend-mode: unset;
-  }
-
-  .a-navBlock__description,
-  .a-navBlock__title {
-    color: $white;
-  }
-}
-
+#menu-162,
 // Support dropdown styles
 #menu-129,
 #menu-146,
-#menu-163 {
-  .a-navBlock--pictureGrid {
-    background-color: transparent;
-  }
-
-  .a-navBlock__image {
-    mix-blend-mode: unset;
-  }
-
-  .a-navBlock__description,
-  .a-navBlock__title {
-    color: $white;
-  }
-}
-
+#menu-163,
 // Contact dropdown styles
 #menu-130,
 #menu-147,
 #menu-164 {
   .a-navBlock--pictureGrid {
     background-color: transparent;
+
+    &:hover {
+      background-color: $yellow;
+    }
   }
 
   .a-navBlock__image {

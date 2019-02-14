@@ -8,15 +8,15 @@
 
   @include element('item') {
     background-position: center;
-    background-size: 110%;
+    background-size: 120%;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 48%;
-    margin: 2px;
+    margin: 1px;
     transition: background-size $base-duration $base-timing;
 
     &:hover {
-      background-size: 100%;
+      background-size: 110%;
     }
 
     @media(min-width: 640px) {

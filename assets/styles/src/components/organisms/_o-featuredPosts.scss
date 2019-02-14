@@ -20,6 +20,7 @@
 
   @include element('link') {
     color: $yellow;
+    font-size: 1.15rem;
     padding-top: 2rem;
   }
 }

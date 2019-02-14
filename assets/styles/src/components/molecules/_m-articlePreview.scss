@@ -5,12 +5,12 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  margin: .5rem;
+  margin: .75rem;
   outline: 0 solid $clear-yellow;
   position: relative;
   text-shadow: none;
   transition: outline $base-duration $base-timing;
-  flex-basis: 300px;
+  flex-basis: 340px;
 
   &:hover {
     outline: 4px solid $yellow;
@@ -21,10 +21,36 @@
     color: $white;
   }
 
+  @include element('article') {
+    @include paragraph;
+    color: #333;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    width: 80%;
+  }
+
   @include element('featuredImage') {
-    height: 177px;
+    height: 200px;
     object-fit: cover;
     width: 100%;
+  }
+
+  @include element('headline') {
+    @include lato-bold;
+    color: #333;
+    font-size: 1.25rem;
+    text-align: left;
+    width: 80%;
+  }
+
+  @include element('link') {
+    color: $yellow-dark;
+    font-size: .7rem;
+    font-weight: 800;
+    padding: 1rem 0 2rem;
+    text-align: left;
+    text-transform: uppercase;
+    width: 80%;
   }
 
   @include element('photo') {
@@ -35,24 +61,5 @@
     margin-left: 8%;
     @include size(72px);
     z-index: 1;
-  }
-
-  @include element('headline') {
-    @include subheadline;
-    font-weight: $font-bold;
-    text-align: left;
-    width: 80%;
-  }
-
-  @include element('article') {
-    @include paragraph;
-    width: 80%;
-  }
-
-  @include element('link') {
-    color: $yellow-dark;
-    padding: 1rem 0 2rem;
-    width: 80%;
-    text-align: left;
   }
 }
