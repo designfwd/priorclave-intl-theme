@@ -18,7 +18,9 @@ if( function_exists('get_field') ):
 endif;
 ?>
 <section class="o-productGrid">
-  <h2 class="o-productGrid__headline">Steam Autoclaves</h2>
+  <h2 class="o-productGrid__headline">
+    <?php echo $headline; ?>
+  </h2>
   <div class="o-productGrid__products">
     <?php
       if( have_rows($items, $ID) ):
