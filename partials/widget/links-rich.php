@@ -20,11 +20,11 @@ endif;
       while( have_rows($pages, 'option') ): the_row();
         $label = get_sub_field('label');
         $description = get_sub_field('description');
+        $image = get_sub_field('image');
         $page = get_sub_field('page');
         if( $page ):
           $post = $page;
           setup_postdata($post);
-          $image = get_field('page_preview_image');
         endif;
         if( !$image ):
           $image = array(
