@@ -1,0 +1,8 @@
+// Map location block styles
+
+.o-locationMap {
+
+  @include element('map') {
+    width: 100%;
+  }
+}
