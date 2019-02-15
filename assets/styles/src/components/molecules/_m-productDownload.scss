@@ -1,6 +1,7 @@
 // Styles for individual product downloads
 .m-productDownload {
   align-items: center;
+  break-inside: avoid;
   display: flex;
   margin: 1px 1rem;
 

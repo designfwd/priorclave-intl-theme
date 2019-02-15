@@ -1,16 +1,15 @@
 // Styles for the social sharing sidebar widget
 .o-sidebarSocial {
-  flex-basis: 48px;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 1rem;
 
   @include element('button') {
-    @include size(100%);
     border-radius: .125rem;
+    cursor: pointer;
     flex-grow: 1;
+    margin: 0 .125rem;
     max-height: 48px;
-    margin: 0 .5rem;
     padding: .5rem;
     transition: background-color $base-duration $base-timing;
 

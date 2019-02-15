@@ -13,7 +13,6 @@
   @include element('image') {
     display: none;
     height: 100%;
-    padding: 0 10%;
     width: 100%;
 
     @include modifier('current') {
@@ -22,8 +21,10 @@
   }
 
   @include element('thumbnail') {
+    @include size(48px);
     border-bottom: 2px solid $clear-yellow;
-    margin: .25rem;
+    margin: .125rem;
+    object-fit: contain;
     padding: 1rem 0 .25rem;
     transition: border $base-duration $base-timing;
 

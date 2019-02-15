@@ -14,10 +14,12 @@
   @include element('headline') {
     @include open-sans-regular;
     border-left: 1rem solid $yellow;
+    color: $grey-dark;
     font-size: rem(24);
-    margin-left: -2rem;
+    margin: 0 0 0 -2rem;
     padding-left: 1rem;
     text-transform: uppercase;
+    width: 100%;
 
     @include modifier('capacity') {
       font-weight: $font-bold;
@@ -26,7 +28,7 @@
     @include modifier('category') {
       @include lato-black;
       font-size: rem(36);
-      border-bottom: 1px solid $black;
+      position: relative;
       transition: font-size $base-duration $base-timing;
 
       @media(min-width: 445px) {
@@ -36,10 +38,24 @@
       @media(min-width: 890px) {
         font-size: rem(65);
       }
+
+      &::after {
+        border-bottom: 1px solid $black;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    @include modifier('top') {
+      margin-bottom: -.5rem;
     }
   }
 
   @include element('price') {
     font-weight: $font-bold;
+    margin: 2.4rem 0;
   }
 }

@@ -4,6 +4,11 @@
   background-position: left;
   background-repeat: no-repeat;
   background-size: auto 100%;
+  max-height: unset;
+
+  @media(min-width: 720px) {
+    max-height: 210px;
+  }
 
   @include element('breadcrumbs') {
     @include cta-small-text;
@@ -15,6 +20,7 @@
   @include element('content') {
     @include banner-text;
     color: $grey-dark;
+    margin: auto 0;
     text-align: center;
     text-transform: uppercase;
     max-width: 80%;
@@ -22,7 +28,7 @@
 
     @media(min-width: 720px) {
       max-width: 50%;
-      padding: 3rem 0 3rem 2rem;
+      padding: 1rem 0 1rem 2rem;
       text-align: left;
     }
 

@@ -3,9 +3,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 366px;
 
   @include element('headline') {
     @include cta-small-title;
+    font-size: 2.5rem;
     margin: 0;
     padding: 2rem 1rem 0;
     text-align: center;
@@ -19,6 +21,7 @@
 
   @include element('subhead') {
     @include cta-small-text;
+    color: #666;
     margin: 0;
     padding: 1rem;
     text-align: center;
@@ -30,8 +33,9 @@
   }
 
   @include element('image') {
-    @include size(320px);
     object-fit: contain;
-    object-position: bottom;
+    object-position: center;
+    height: 320px;
+    width: 45%;
   }
 }

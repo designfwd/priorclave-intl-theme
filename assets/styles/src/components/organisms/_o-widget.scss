@@ -14,8 +14,9 @@
   @include element('headline') {
     @include headline-blog();
     background-color: $grey-lightest;
+    font-size: 1rem;
     margin: .25rem 0;
-    padding: 1rem;
+    padding: 1.25rem;
     text-align: center;
     text-transform: uppercase;
     width: 100%;
