@@ -1,7 +1,7 @@
 // Styles for introductory content blocks
 .o-introContent {
   background-color: $grey-dark;
-  padding: 2.5rem 10%;
+  padding: 2.5rem 10% 1rem;
   text-align: center;
 
   @include modifier('inverted') {
@@ -11,6 +11,14 @@
     .o-introContent__content > p {
       color: $grey-dark;
     }
+
+    a {
+      color: $yellow;
+
+      &:hover {
+        color: $grey-dark;
+      }
+    }
   }
 
   @include element('content') {
@@ -19,12 +27,14 @@
 
     p {
       color: $white;
+      margin: .5rem 0;
     }
   }
 
   @include element('headline') {
     @include headline;
     color: $white;
+    margin: .25rem auto;
     max-width: 60ch;
     text-transform: uppercase;
   }

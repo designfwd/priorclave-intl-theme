@@ -1,7 +1,12 @@
 // Sidebar widget styles
 .o-widget {
   color: $grey-dark;
-  padding: 1rem 0 0;
+  padding: 2rem 0 0;
+
+  @include element('authorBox') {
+    background-color: $grey-lightest;
+    width: 100%;
+  }
 
   @include element('disclosure') {
     color: $grey-dark;
@@ -11,41 +16,9 @@
     text-align: center;
   }
 
-  @include element('headline') {
-    @include headline-blog();
-    background-color: $grey-lightest;
-    font-size: 1rem;
-    margin: .25rem 0;
-    padding: 1.25rem;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-  }
-
-  @include element('form') {
-    width: 100%;
-  }
-
-  @include element('link') {
-    background-color: $grey-lightest;
-    max-width: 640px;
-    margin: .125rem 0;
-    width: 100%;
-
-    @include modifier('related') {
-      text-align: center;
-      padding: .5rem;
-    }
-  }
-
-  @include element('authorBox') {
-    background-color: $grey-lightest;
-    width: 100%;
-  }
-
   @include element('featuredPost') {
     background-color: $grey-lightest;
-    margin: 0 0 .25rem;
+    margin: .125rem 0;
     padding: 2rem;
     width: 100%;
 
@@ -58,6 +31,40 @@
       color: $yellow;
       font-size: rem(12);
       text-transform: uppercase;
+    }
+  }
+
+  @include element('form') {
+    width: 100%;
+  }
+
+  @include element('headline') {
+    @include headline-blog();
+    background-color: $grey-lightest;
+    font-size: 1rem;
+    margin: .125rem 0;
+    padding: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  @include element('link') {
+    background-color: $grey-lightest;
+    color: $grey-dark;
+    max-width: 640px;
+    margin: .125rem 0;
+    transition: background-color $base-duration $base-timing;
+    width: 100%;
+
+    &:hover {
+      background-color: $yellow;
+      color: $grey-dark;
+    }
+
+    @include modifier('related') {
+      text-align: center;
+      padding: .75rem;
     }
   }
 }

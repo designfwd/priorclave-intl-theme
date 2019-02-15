@@ -1,5 +1,6 @@
 // Content block styles within the related product module
 .m-relatedContent {
+  box-sizing: border-box;
   margin: auto;
   padding: 0 .5rem 1rem;
   width: 90%;
@@ -8,26 +9,50 @@
     width: 65%;
   }
 
-  @include modifier('image') {
-    max-width: 65%;
-    padding-top: 1.5rem;
-    width: 100%;
-
-    @media(min-width: 1024px) {
-      max-width: 35%;
-    }
-  }
-
   @include element('body') {
     margin: 0 5%;
+    padding-bottom: 2rem;
     width: 90%;
   }
 
   @include element('button') {
     background-color: $yellow;
     margin: 0 5%;
-    padding: 1rem;
     text-align: center;
     width: 90%;
+  }
+
+  @include element('buttonText') {
+    @include large-button;
+    background-color: $yellow;
+    color: $grey-dark;
+    margin: 0 5%;
+    padding: 1.25rem;
+    text-align: center;
+    transition: color $base-duration $base-timing;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  @include modifier('image') {
+    margin: 0 auto;
+    max-width: unset;
+    padding-top: 1.5rem;
+    width: 100%;
+
+    @media(min-width: 1024px) {
+      max-width: 340px;
+    }
+  }
+
+  @include element('link') {
+    max-width: 65%;
+    width: 100%;
+
+    @media(min-width: 1024px) {
+      max-width: 35%;
+    }
   }
 }

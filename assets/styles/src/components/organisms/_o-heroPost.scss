@@ -8,21 +8,27 @@
 
   @include element('image') {
     margin: auto;
+    max-width: 320px;
     padding: 1rem;
   }
 
   @include element('content') {
     @include headline;
+    color: $grey-dark;
+    line-height: .9;
     max-width: 50%;
     padding: 1rem;
 
     @include modifier('description') {
       @include paragraph;
+      font-size: .9rem;
     }
 
     @include modifier('link') {
       @include paragraph;
       color: $yellow;
+      font-size: .7rem;
+      font-weight: 800;
       text-transform: uppercase;
     }
   }
