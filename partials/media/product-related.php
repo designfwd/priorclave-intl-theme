@@ -52,21 +52,29 @@ endif;
       <div class="m-relatedContent__body">
         <?php echo $content; ?>
       </div>
-      <div class="m-relatedContent__button">
-        <a class="a-bigButton" href="<?php echo $page; ?>"><?php echo $label; ?></a>
-      </div>
+      <a class="m-relatedContent__button" href="<?php echo $page; ?>">
+        <div class="m-relatedContent__buttonText">
+          <?php echo $label; ?>
+        </div>
+      </a>
     </div>
-    <img
-      class="m-relatedContent m-relatedContent--image lazyload lazyload--blurUp"
-      alt="<?php echo $image['alt']; ?>"
-      src="<?php echo $image['sizes']['preload']; ?>"
-      data-sizes="auto"
-      data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
-        <?php echo $image['sizes']['128w']; ?> 65w,
-        <?php echo $image['sizes']['240w']; ?> 129w,
-        <?php echo $image['sizes']['320w']; ?> 241w,
-        <?php echo $image['sizes']['360w']; ?> 321w,
-      "
-    />
+    <a class="m-relatedContent__link" href="<?php echo $page; ?>">
+      <img
+        class="m-relatedContent m-relatedContent--image lazyload lazyload--blurUp"
+        alt="<?php echo $image['alt']; ?>"
+        src="<?php echo $image['sizes']['preload']; ?>"
+        data-sizes="auto"
+        data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+          <?php echo $image['sizes']['128w']; ?> 65w,
+          <?php echo $image['sizes']['240w']; ?> 129w,
+          <?php echo $image['sizes']['320w']; ?> 241w,
+          <?php echo $image['sizes']['360w']; ?> 321w,
+          <?php echo $image['sizes']['375w']; ?> 361w,
+          <?php echo $image['sizes']['480w']; ?> 376w,
+          <?php echo $image['sizes']['540w']; ?> 481w,
+          <?php echo $image['sizes']['640w']; ?> 541w
+        "
+      />
+    </a>
   </div>
 </section>
