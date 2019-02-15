@@ -35,10 +35,10 @@ endif;
           );
         endif;
       ?>
-        <a class="o-ctaGrid__item o-ctaGrid__item--large" href="<?php echo $page; ?>">
+        <a class="o-ctaGrid__item" href="<?php echo $page; ?>">
           <div class="m-ctaGridItem">
-            <h3 class="m-ctaGridItem__headline m-ctaGridItem__headline--large"><?php echo $headline; ?></h3>
-            <h4 class="m-ctaGridItem__subhead m-ctaGridItem__subhead--large"><?php echo $subhead; ?></h4>
+            <h3 class="m-ctaGridItem__headline"><?php echo $headline; ?></h3>
+            <h4 class="m-ctaGridItem__subhead"><?php echo $subhead; ?></h4>
             <img class="m-ctaGridItem__image lazyload lazyload--blurUp"
               src="<?php echo $image['sizes']['preload']; ?>"
               data-sizes="auto"
