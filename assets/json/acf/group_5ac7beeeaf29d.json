@@ -557,7 +557,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5c65d8f977423",
+                    "key": "field_5c669d8e01df3",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
@@ -1267,5 +1267,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550178579
+    "modified": 1550228902
 }
