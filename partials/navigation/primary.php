@@ -264,18 +264,21 @@ endif;
                                 $preview = array(
                                   'sizes' => array(
                                     'preload' => '//via.placeholder.com/64x94?text=image',
-                                    '128w' => '//via.placeholder.com/128x188?text=image'
+                                    '128w' => '//via.placeholder.com/128x188?text=image',
+                                    '240w' => '//via.placeholder.com/240x352?text=image',
+                                    '320w' => '//via.placeholder.com/320x470?text=image'
                                   )
                                 );
                               endif;
                             ?>
                             <a class="a-navBlock" href="<?php echo $block->url; ?>">
                               <img class="a-navBlock__image lazyload"
-                                src="<?php echo $preview['sizes']['preload']; ?>"
-                                data-sizes="auto"
+                                src="<?php echo $preview['sizes']['preload']; ?>" data-sizes="auto"
                                 data-srcset = "
                                   <?php echo $preview['sizes']['preload']; ?> 64w,
-                                  <?php echo $preview['sizes']['128w']; ?> 65w
+                                  <?php echo $preview['sizes']['128w']; ?> 65w,
+                                  <?php echo $preview['sizes']['240w']; ?> 129w,
+                                  <?php echo $preview['sizes']['320w']; ?> 241w
                                 "
                               />
                               <h3 class="a-navBlock__title">
@@ -307,7 +310,9 @@ endif;
                                 $preview = array(
                                   'sizes' => array(
                                     'preload' => '//via.placeholder.com/64x94?text=image',
-                                    '128w' => '//via.placeholder.com/128x188?text=image'
+                                    '128w' => '//via.placeholder.com/128x188?text=image',
+                                    '240w' => '//via.placeholder.com/240x352?text=image',
+                                    '320w' => '//via.placeholder.com/320x470?text=image'
                                   )
                                 );
                               endif;
@@ -318,7 +323,9 @@ endif;
                                   data-sizes="auto"
                                   data-srcset = "
                                     <?php echo $preview['sizes']['preload']; ?> 64w,
-                                    <?php echo $preview['sizes']['128w']; ?> 65w
+                                    <?php echo $preview['sizes']['128w']; ?> 65w,
+                                    <?php echo $preview['sizes']['240w']; ?> 129w,
+                                    <?php echo $preview['sizes']['320w']; ?> 241w
                                   "
                                 />
                                 <h3 class="a-navBlock__title">
