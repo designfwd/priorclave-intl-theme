@@ -1,7 +1,10 @@
 <?php
 // Sidebar widget to display post author information
 $ID = get_the_author_meta('ID');
-$avatar = get_avatar_url( $ID, 129 );
+$args = array(
+  'size' => 120
+);
+$avatar = get_avatar_url( $ID, $args );
 ?>
 <section class="o-widget">
   <h2 class="o-widget__headline">Author</h2>
