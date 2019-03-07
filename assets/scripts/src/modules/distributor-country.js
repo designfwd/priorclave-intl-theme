@@ -20,4 +20,10 @@ jQuery(document).ready(function() {
     let button = jQuery(this).parent().attr('id');
     document.getElementById(button).close();
   });
+
+  jQuery('.o-distributorMap__button').click(function() {
+    let distributor = jQuery(this).data('slug');
+    alert('dialog-' + distributor);
+    document.getElementById('dialog-' + distributor).showModal();
+  });
 });

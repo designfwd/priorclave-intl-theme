@@ -15,7 +15,7 @@ require('./vendor/smoothscroll-polyfill.js');
 require('./modules/article-preview.js');
 require('./modules/brand-slideshow.js');
 require('./modules/directory-faq.js');
-require('./modules/distirbutor-country.js');
+require('./modules/distributor-country.js');
 require('./modules/hero-slider.js');
 require('./modules/map-dropdown.js');
 // require('./modules/nav-block.js'); // TODO: Fix this
