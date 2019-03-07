@@ -1,0 +1,45 @@
+{
+    "key": "group_5c7ff7d77844e",
+    "title": "form_contactDistributor",
+    "fields": [
+        {
+            "key": "field_5c7ff7fe0601e",
+            "label": "Gravity Forms ID",
+            "name": "form_contactDistributor_form",
+            "type": "text",
+            "instructions": "The form ID to use with Gravity Forms.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1551894920
+}
