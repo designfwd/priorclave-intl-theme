@@ -1,0 +1,19 @@
+// Styles for the distributor map area
+
+.o-distributorMap__button {
+  background-color: $yellow;
+  color: $grey-dark;
+  margin: 1rem auto 0 1.5rem;
+  transition: color $base-duration $base-timing;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.o-distributorMap__country {
+  color: $grey-dark;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.38;
+}

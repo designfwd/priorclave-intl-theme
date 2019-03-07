@@ -1,19 +1,85 @@
 // Styles for the dialog windows for distributor tables
 .m-distributorDialog {
+  margin-top: 0;
   max-width: 800px;
+  position: relative;
+  width: 90%;
+
+  @include element('address') {
+    max-width: 360px;
+    width: 100%;
+
+    @media(min-width: 640px) {
+      width: 60%;
+    }
+  }
 
   @include element('button') {
-    @include large-button;
-    background-color: $yellow;
     color: $grey-dark;
     cursor: pointer;
-    margin: 1rem auto;
-    padding: 1rem 2rem;
+    position: absolute;
+    padding: .25rem;
+    right: .5rem;
+    top: .5rem;
     text-align: center;
     transition: color $base-duration $base-timing;
 
     &:hover {
-      color: $white;
+      color: $yellow;
     }
+  }
+
+  @include element('description') {
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+  }
+
+  @include element('form') {
+    padding-top: 1rem;
+
+    .m-requestForm__field {
+      margin: 0 0 .5rem;
+
+      @media(min-width: 840px) {
+        margin: .25rem;
+      }
+    }
+
+    .m-requestForm__field--half {
+
+      @media(min-width: 840px) {
+        width: calc( 50% - .5rem );
+      }
+    }
+
+    .gform_heading {
+      display: none;
+    }
+
+    .ginput_container input,
+    .ginput_container select,
+    .ginput_container textarea {
+      border: 1px solid $grey-dark;
+    }
+  }
+
+  @include element('logo') {
+    display: none;
+    margin: 0 auto;
+    max-width: 180px;
+    object-fit: contain;
+    object-position: top;
+    width: 40%;
+
+    @media(min-width: 640px) {
+      display: inherit;
+    }
+  }
+
+  @include element('title') {
+    padding-bottom: .25rem;
+    width: 100%;
   }
 }

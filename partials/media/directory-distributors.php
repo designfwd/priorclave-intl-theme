@@ -122,12 +122,64 @@ $regions = get_terms( array(
                   Contact Distributor
                   </div>
                 </div>
+                <?php
+                // Distributor dialog box
+                $form = get_field('form_contactDistributor_form');
+                $logo = get_field('site_logo', 'option');
+                ?>
                 <dialog id="dialog-<?php echo $companySlug; ?>" class="m-distributorDialog">
+                  <button class="m-distributorDialog__button">
+                    X
+                  </button>
                   <div class="m-distributorDialog__description">
-                    Contact distributor for <?php echo $country; ?>
+                    <h4 class="m-distributorDialog__title">
+                      <?php echo $company; ?>
+                    </h4>
+                    <address class="m-distributorDialog__address">
+                      <?php
+                      if( have_rows( $address, $distributor->ID) ):
+                        while( have_rows($address, $distributor->ID) ): the_row();
+                        echo get_sub_field('text') . '<br/>';
+                      endwhile;
+                    endif;
+                    if( get_field('city', $distributor->ID) ):
+                      echo get_field('city', $distributor->ID);
+                    endif;
+                    if(
+                      get_field('city', $distributor->ID) &&
+                      (
+                        get_field('state', $distributor->ID) ||
+                        get_field('postal', $distributor->ID)
+                        )
+                        ):
+                        echo ', ';
+                      endif;
+                      if( get_field('state', $distributor->ID) ):
+                        echo get_field('state', $distributor->ID) . '  ';
+                      endif;
+                      if( get_field('postal', $distributor->ID) ):
+                        echo get_field('postal', $distributor->ID);
+                      endif;
+                      ?>
+                      <br/>
+                    </address>
+                    <img class="m-distributorDialog__logo lazyload"
+                      alt="<?php echo $logo['alt']; ?>"
+                      data-src="<?php echo $logo['sizes']['preload']; ?>"
+                      data-sizes="auto"
+                      data-srcset="<?php echo $logo['sizes']['preload']; ?> 64w,
+                        <?php echo $logo['sizes']['128w']; ?> 65w,
+                        <?php echo $logo['sizes']['240w']; ?> 129w,
+                        <?php echo $logo['sizes']['320w']; ?> 241w,
+                        <?php echo $logo['sizes']['360w']; ?> 321w
+                      "
+                    />
                   </div>
-                  <div class="m-distributorDialog__button">
-                    Close
+                  <div class="m-distributorDialog__form">
+                    <?php
+                    // Distributor contact form, with populated hidden fields
+                    echo do_shortcode( '[gravityforms id=' . $form . ' field_values=\'distributor_country=' . $country . '&distributor_company=' . $company . '\']' );
+                    ?>
                   </div>
                 </dialog>
               </div>
