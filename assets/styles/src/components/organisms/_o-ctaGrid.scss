@@ -10,20 +10,32 @@
 
   @include element('item') {
     background-color: $grey-lightest;
-    flex: 1 1 300px;
-    height: 100%;
-    max-width: 400px;
     margin: .5rem;
     outline: 0 solid $clear-yellow;
     transition: outline $base-duration $base-timing,
       margin $base-duration $base-timing;
+    width: calc( 50% - 1rem );
+
+    @media(min-width: 640px) {
+      width: calc( 33% - 1rem );
+    }
+
+    @media(min-width: 960px) {
+      width: calc( 25% - 1rem );
+    }
 
     &:hover {
       outline: .5rem solid $yellow;
     }
 
     @include modifier('large') {
+      height: 100%;
+      width: calc( 100% - 1rem );
       max-width: 720px;
+
+      @media(min-width: 640px) {
+        width: calc( 50% - 1rem );
+      }
     }
   }
 }

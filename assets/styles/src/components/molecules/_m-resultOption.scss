@@ -3,6 +3,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
   text-align: center;
   text-transform: uppercase;
 
@@ -19,5 +21,15 @@
     @include lato-black;
     font-size: rem(48);
     margin: .25rem;
+  }
+
+  @include element('image') {
+    @include size(50vw);
+    max-height: 320px;
+    max-width: 320px;
+
+    @media(min-width: 720px) {
+      @include size(25vw);
+    }
   }
 }
