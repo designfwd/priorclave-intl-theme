@@ -14,6 +14,7 @@ require('./vendor/smoothscroll-polyfill.js');
 // Module-level scripts
 require('./modules/article-preview.js');
 require('./modules/brand-slideshow.js');
+require('./modules/cta-grid.js');
 require('./modules/directory-faq.js');
 require('./modules/distributor-country.js');
 require('./modules/hero-slider.js');
@@ -21,6 +22,7 @@ require('./modules/map-dropdown.js');
 // require('./modules/nav-block.js'); // TODO: Fix this
 require('./modules/primary-nav.js');
 require('./modules/product-options.js');
+require('./modules/product-results.js');
 require('./modules/product-specifications.js');
 require('./modules/spotlight-slider.js');
 require('./modules/testimonial-slider.js');
