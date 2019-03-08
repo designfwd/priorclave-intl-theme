@@ -42,16 +42,19 @@ endif;
         endif;
       ?>
         <a class="o-ctaGrid__item o-ctaGrid__item--large" href="<?php echo $page; ?>">
-          <div class="m-ctaGridItem">
+          <div class="m-ctaGridItem m-ctaGridItem--large">
             <h3 class="m-ctaGridItem__headline m-ctaGridItem__headline--large"><?php echo $headline; ?></h3>
             <h4 class="m-ctaGridItem__subhead m-ctaGridItem__subhead--large"><?php echo $subhead; ?></h4>
-            <img class="m-ctaGridItem__image lazyload lazyload--blurUp"
+            <img class="m-ctaGridItem__image m-ctaGridItem__image--large lazyload lazyload--blurUp"
               src="<?php echo $image['sizes']['preload']; ?>"
               data-sizes="auto"
               data-srcset="<?php echo $image['sizes']['preload']; ?> 64w,
                 <?php echo $image['sizes']['128w']; ?> 65w,
                 <?php echo $image['sizes']['240w']; ?> 129w,
                 <?php echo $image['sizes']['320w']; ?> 241w,
+                <?php echo $image['sizes']['360w']; ?> 321w,
+                <?php echo $image['sizes']['375w']; ?> 361w,
+                <?php echo $image['sizes']['480w']; ?> 376w
               "
             />
           </div>

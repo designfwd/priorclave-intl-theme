@@ -35,8 +35,8 @@ endif;
           );
         endif;
       ?>
-        <a class="o-ctaGrid__item" href="<?php echo $page; ?>">
-          <div class="m-ctaGridItem">
+        <a class="o-ctaGrid__item o-ctaGrid__item--small" href="<?php echo $page; ?>">
+          <div class="m-ctaGridItem m-ctaGridItem--small">
             <h3 class="m-ctaGridItem__headline"><?php echo $headline; ?></h3>
             <h4 class="m-ctaGridItem__subhead"><?php echo $subhead; ?></h4>
             <img class="m-ctaGridItem__image lazyload lazyload--blurUp"
