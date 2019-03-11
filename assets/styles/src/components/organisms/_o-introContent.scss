@@ -2,7 +2,6 @@
 .o-introContent {
   background-color: $grey-dark;
   padding: 2.5rem 10% 1rem;
-  text-align: center;
 
   @include modifier('inverted') {
     background-color: $white;
@@ -36,6 +35,7 @@
     color: $white;
     margin: .25rem auto;
     max-width: 60ch;
+    text-align: center;
     text-transform: uppercase;
   }
 
