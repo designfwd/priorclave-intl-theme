@@ -6,6 +6,20 @@
   margin: .25rem 0;
   width: 100%;
 
+  @include element('group') {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @include element('headline') {
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
   @include element('item') {
     background-position: center;
     background-size: 120%;
@@ -21,6 +35,13 @@
 
     @media(min-width: 640px) {
       flex-basis: 32%;
+    }
+  }
+
+  @include modifier('group') {
+
+    .o-linkGrid__item {
+      flex-grow: 0;
     }
   }
 }
