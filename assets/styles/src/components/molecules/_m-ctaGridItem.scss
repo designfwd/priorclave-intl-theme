@@ -25,23 +25,6 @@
     }
   }
 
-  @include element('subhead') {
-    @include cta-small-text;
-    color: $grey-dark;
-    font-size: .8rem;
-    margin: .25rem .5rem .5rem;
-    text-align: center;
-    width: 100%;
-
-    @media(min-width: 540px) {
-      margin: .5rem .5rem 0;
-    }
-
-    @include modifier('large') {
-      @include cta-large-text;
-    }
-  }
-
   @include element('image') {
     @include size(96px);
     object-fit: contain;
@@ -69,6 +52,23 @@
       height: auto;
       width: 60%;
       max-width: 360px;
+    }
+  }
+
+  @include element('subhead') {
+    @include cta-small-text;
+    color: $grey-dark;
+    font-size: .8rem;
+    margin: .25rem .5rem .5rem;
+    text-align: center;
+    width: 100%;
+
+    @media(min-width: 540px) {
+      margin: .5rem .5rem 0;
+    }
+
+    @include modifier('large') {
+      @include cta-large-text;
     }
   }
 }

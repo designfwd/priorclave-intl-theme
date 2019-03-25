@@ -7,29 +7,6 @@
   transition: background-color $base-duration $base-timing;
   width: 100%;
 
-  @include element('content') {
-    padding: 0 1rem;
-    transition: padding $base-duration $base-timing;
-    width: 100%;
-
-    @media(min-width: 800px) {
-      padding: 0 0 2rem 3.5rem;
-      width: 50%;
-    }
-
-    @include modifier('company') {
-      font-weight: $font-bold;
-    }
-
-    @include modifier('address') {
-      font-style: normal;
-    }
-
-    @include modifier('link') {
-      color: $yellow;
-    }
-  }
-
   @include element('contact') {
     align-items: flex-start;
     cursor: pointer;
@@ -57,6 +34,29 @@
       &:hover {
         color: $white;
       }
+    }
+  }
+
+  @include element('content') {
+    padding: 0 1rem;
+    transition: padding $base-duration $base-timing;
+    width: 100%;
+
+    @media(min-width: 800px) {
+      padding: 0 0 2rem 3.5rem;
+      width: 50%;
+    }
+
+    @include modifier('company') {
+      font-weight: $font-bold;
+    }
+
+    @include modifier('address') {
+      font-style: normal;
+    }
+
+    @include modifier('link') {
+      color: $yellow;
     }
   }
 

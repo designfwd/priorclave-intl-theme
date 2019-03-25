@@ -5,20 +5,6 @@
   background-repeat: no-repeat;
   padding: 4rem 10% 16rem;
 
-  @include element('headline') {
-    @include cta-small-title;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  @include element('description') {
-    @include cta-small-text;
-    max-width: 800px;
-    padding-bottom: 1.6rem;
-    text-align: center;
-    width: 80%;
-  }
-
   @include element('button') {
     @include large-button;
     background-color: $yellow;
@@ -32,5 +18,19 @@
     &:hover {
       color: $white;
     }
+  }
+
+  @include element('description') {
+    @include cta-small-text;
+    max-width: 800px;
+    padding-bottom: 1.6rem;
+    text-align: center;
+    width: 80%;
+  }
+
+  @include element('headline') {
+    @include cta-small-title;
+    text-align: center;
+    text-transform: uppercase;
   }
 }

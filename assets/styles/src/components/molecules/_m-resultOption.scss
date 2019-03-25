@@ -17,12 +17,6 @@
     }
   }
 
-  @include element('subhead') {
-    @include lato-black;
-    font-size: rem(48);
-    margin: .25rem;
-  }
-
   @include element('image') {
     @include size(50vw);
     max-height: 320px;
@@ -31,5 +25,11 @@
     @media(min-width: 720px) {
       @include size(25vw);
     }
+  }
+
+  @include element('subhead') {
+    @include lato-black;
+    font-size: rem(48);
+    margin: .25rem;
   }
 }

@@ -2,12 +2,6 @@
 .m-richLink {
   display: flex;
 
-  @include element('image') {
-    margin: auto;
-    max-width: 40%;
-    padding: 1rem;
-  }
-
   @include element('content') {
     @include lato-black;
     align-content: center;
@@ -19,5 +13,11 @@
     @include modifier('description') {
       @include open-sans-regular;
     }
+  }
+
+  @include element('image') {
+    margin: auto;
+    max-width: 40%;
+    padding: 1rem;
   }
 }

@@ -3,17 +3,17 @@
   @include testimonial-text;
   line-height: 1.5;
 
+  @include element('credit') {
+    font-size: rem(18);
+    font-weight: $font-regular;
+    padding: 1rem 0;
+  }
+
   @include element('quote') {
     font-size: rem(36);
     font-weight: $font-regular;
     line-height: 0;
     margin: 0 .25rem;
     vertical-align: middle;
-  }
-
-  @include element('credit') {
-    font-size: rem(18);
-    font-weight: $font-regular;
-    padding: 1rem 0;
   }
 }

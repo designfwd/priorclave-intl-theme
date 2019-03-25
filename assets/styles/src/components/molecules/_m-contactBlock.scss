@@ -5,13 +5,6 @@
   flex-wrap: wrap;
   padding-left: 6.5vw;
 
-  @include element('headline') {
-    @include footer-title();
-    color: $white;
-    margin-bottom: .5rem;
-    width: 100%;
-  }
-
   @include element('body') {
     @include footer-text();
     color: $white;
@@ -21,6 +14,13 @@
     div {
       color: $white;
     }
+  }
+
+  @include element('headline') {
+    @include footer-title();
+    color: $white;
+    margin-bottom: .5rem;
+    width: 100%;
   }
 
   @include element('socialLink') {

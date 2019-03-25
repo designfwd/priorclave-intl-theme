@@ -9,12 +9,12 @@
   text-transform: uppercase;
   width: 95%;
 
-  @include element('headline') {
-    color: $yellow;
-  }
-
   @include element('categories') {
     color: $grey-dark;
     padding: 0 1rem;
+  }
+
+  @include element('headline') {
+    color: $yellow;
   }
 }

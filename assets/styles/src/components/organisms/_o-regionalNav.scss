@@ -3,6 +3,31 @@
   background-color: $grey-dark;
   padding: 2rem;
 
+  @include element('country') {
+    font-weight: $font-regular;
+    margin: auto;
+    width: 10rem;
+
+    @media(min-width: 960px) {
+      margin: inherit;
+    }
+
+    @include modifier('link') {
+      background-color: $clear-yellow;
+      display: block;
+      line-height: 1.38;
+      overflow-x: hidden;
+      padding: .125rem 25% .125rem .125rem;
+      transition: background-color $base-duration $base-timing;
+      width: 100%;
+
+      &:hover {
+        background-color: $yellow;
+        color: $white;
+      }
+    }
+  }
+
   @include element('menu') {
     @include proxima-nova;
     color: $white;
@@ -32,31 +57,6 @@
 
   @include element('region') {
     font-weight: $font-bold;
-    margin: auto;
-    width: 10rem;
-
-    @media(min-width: 960px) {
-      margin: inherit;
-    }
-
-    @include modifier('link') {
-      background-color: $clear-yellow;
-      display: block;
-      line-height: 1.38;
-      overflow-x: hidden;
-      padding: .125rem 25% .125rem .125rem;
-      transition: background-color $base-duration $base-timing;
-      width: 100%;
-
-      &:hover {
-        background-color: $yellow;
-        color: $white;
-      }
-    }
-  }
-
-  @include element('country') {
-    font-weight: $font-regular;
     margin: auto;
     width: 10rem;
 

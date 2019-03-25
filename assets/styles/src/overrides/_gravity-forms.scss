@@ -12,6 +12,12 @@
   display: none;
 }
 
+.gform_fields {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
 .gform_body {
   width: 100%;
 
@@ -34,12 +40,6 @@
   .large {
     width: 100%;
   }
-}
-
-.gform_fields {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 0;
 }
 
 .gform_validation_container {

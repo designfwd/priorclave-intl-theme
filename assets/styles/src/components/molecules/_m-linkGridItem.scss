@@ -4,6 +4,18 @@
   padding: 5vw 2vw;
   position: relative;
 
+  @include element('overlay') {
+    @include overlay;
+    background-color: $black-50;
+    mix-blend-mode: multiply;
+    transition: background-color $base-duration $base-timing;
+    z-index: 1;
+
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+
   @include element('title') {
     @include cta-grid;
     color: $white;
@@ -14,18 +26,6 @@
 
     &:hover {
       color: $white;
-    }
-  }
-
-  @include element('overlay') {
-    @include overlay;
-    background-color: $black-50;
-    mix-blend-mode: multiply;
-    transition: background-color $base-duration $base-timing;
-    z-index: 1;
-
-    &:hover {
-      background-color: $yellow;
     }
   }
 }

@@ -3,11 +3,19 @@
   background-size: cover;
   padding: 4rem 10%;
 
-  @include element('headline') {
-    @include cta-small-title;
-    margin: 0;
+  @include element('button') {
+    @include large-button;
+    background-color: $yellow;
+    font-weight: 500;
+    min-width: 240px;
+    max-width: 640px;
+    padding: 1.25rem;
     text-align: center;
-    text-shadow: 0 0 2rem $white;
+    width: 70%;
+
+    &:hover {
+      color: $white;
+    }
   }
 
   @include element('description') {
@@ -23,18 +31,10 @@
     }
   }
 
-  @include element('button') {
-    @include large-button;
-    background-color: $yellow;
-    font-weight: 500;
-    min-width: 240px;
-    max-width: 640px;
-    padding: 1.25rem;
+  @include element('headline') {
+    @include cta-small-title;
+    margin: 0;
     text-align: center;
-    width: 70%;
-
-    &:hover {
-      color: $white;
-    }
+    text-shadow: 0 0 2rem $white;
   }
 }

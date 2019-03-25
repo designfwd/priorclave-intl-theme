@@ -3,6 +3,18 @@
   padding: 10vh 1rem;
   text-align: center;
 
+  @include element('dropdown') {
+    background-color: $black-50;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    position: relative;
+    transition: background-color $base-duration $base-timing;
+
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+
   @include element('headline') {
     @include open-sans-bold;
     color: $white;
@@ -24,18 +36,6 @@
       @media(min-width: 960px) {
         font-size: 270%;
       }
-    }
-  }
-
-  @include element('dropdown') {
-    background-color: $black-50;
-    margin: 1rem 0;
-    padding: 1rem 2rem;
-    position: relative;
-    transition: background-color $base-duration $base-timing;
-
-    &:hover {
-      background-color: $yellow;
     }
   }
 }

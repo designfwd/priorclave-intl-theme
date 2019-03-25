@@ -5,6 +5,10 @@
   justify-content: space-between;
   z-index: 1;
 
+  @include element('button') {
+    padding-right: 2rem;
+  }
+
   @include element('logo') {
     background-color: $white;
     max-width: 192px;
@@ -14,9 +18,5 @@
     img {
       @include size(100%);
     }
-  }
-
-  @include element('button') {
-    padding-right: 2rem;
   }
 }
