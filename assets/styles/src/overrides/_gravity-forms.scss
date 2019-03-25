@@ -1,8 +1,15 @@
 // Resets basic styles
-.gform_fields {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 0;
+.gfield {
+  .recaptcha-disclosure {
+    color: $white;
+    font-size: .8rem;
+    margin: .5rem auto;
+    text-align: center;
+  }
+}
+
+.gfield_label {
+  display: none;
 }
 
 .gform_body {
@@ -13,8 +20,10 @@
     flex-wrap: wrap;
   }
 }
-.gfield_label {
-  display: none;
+
+.gform_confirmation_message {
+  margin: auto;
+  padding: .5rem;
 }
 
 .ginput_container {
@@ -27,15 +36,12 @@
   }
 }
 
-.gform_validation_container {
-  display: none;
+.gform_fields {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
 }
 
-.gfield {
-  .recaptcha-disclosure {
-    color: $white;
-    font-size: .8rem;
-    margin: .5rem auto;
-    text-align: center;
-  }
+.gform_validation_container {
+  display: none;
 }
