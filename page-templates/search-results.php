@@ -39,8 +39,10 @@ $paginatedLinks = paginate_links( array(
     <main>
       <?php
         get_partial('form/site-search'); // Site search
+
         set_query_var('search', $search);
         get_partial('media/results-posts'); // Results grid
+
         set_query_var('paginatedLinks', $paginatedLinks);
         get_partial('navigation/search-pagination'); // Pagination
       ?>
