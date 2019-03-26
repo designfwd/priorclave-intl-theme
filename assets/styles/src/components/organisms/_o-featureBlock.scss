@@ -15,6 +15,12 @@
     p {
       color: $white;
     }
+
+    @include modifier('inverted') {
+      p {
+        color: $grey-dark;
+      }
+    }
   }
 
   @include element('headline') {
