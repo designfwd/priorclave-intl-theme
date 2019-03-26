@@ -19,7 +19,6 @@
         get_partial('media/featured-video'); // Featured video
         get_partial('content/intro-inverted'); // Intro content
         get_partial('media/video-grid'); // Video grid
-        get_partial('navigation/pagination'); // Pagination for videos
         get_partial('content/feature-inverted'); // Other resources info block
         get_partial('media/cta-grid'); // Grid of links
       ?>
