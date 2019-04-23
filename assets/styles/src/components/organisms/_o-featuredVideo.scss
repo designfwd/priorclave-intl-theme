@@ -1,0 +1,97 @@
+// Styles for the featured video block
+.o-featuredVideo {
+  box-sizing: border-box;
+  padding: 2rem 2rem 0;
+  width: 100%;
+}
+
+.o-featuredVideo__button {
+  @include size(6rem);
+  background-color: $black-50;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: scale(.99) translate(-50%, -50%);
+  transition: transform $base-duration $base-timing;
+}
+
+.o-featuredVideo__close {
+  background-color: $yellow;
+  box-sizing: border-box;
+  color: $black;
+  cursor: pointer;
+  font-weight: $font-bold;
+  padding: .5rem;
+  text-align: center;
+  transition: color $base-duration $base-timing;
+  width: 100%;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.o-featuredVideo__dialog {
+  @include proxima-nova;
+  border: none;
+  max-width: 1100px;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 80%;
+
+  &::backdrop,
+  & + .backdrop {
+    @include position(fixed, 0);
+    background-color: $black-75;
+  }
+}
+
+.o-featuredVideo__embed {
+  box-sizing: border-box;
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  embed,
+  iframe,
+  object {
+    @include size(100%);
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.o-featuredVideo__image {
+  width: 100%;
+}
+
+.o-featuredVideo__preview {
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    .o-featuredVideo__button {
+      transform: scale(.75) translate(-62.5%, -62.5%);
+    }
+
+    .o-featuredVideo__triangle {
+      fill: $white;
+    }
+  }
+}
+
+.o-featuredVideo__triangle {
+  @include size(3rem);
+  fill: $yellow;
+  left: 62.5%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill $base-duration $base-timing;
+}
