@@ -17,6 +17,7 @@ require('./modules/brand-slideshow.js');
 require('./modules/cta-grid.js');
 require('./modules/directory-faq.js');
 require('./modules/distributor-country.js');
+require('./modules/featured-video.js');
 require('./modules/hero-slider.js');
 require('./modules/map-dropdown.js');
 // require('./modules/nav-block.js'); // TODO: Fix this
