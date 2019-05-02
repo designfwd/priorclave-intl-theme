@@ -198,10 +198,12 @@
 @import './components/organisms/o-widget.scss';
 
 // Templates
+@import './components/templates/contact.scss'; // Contact page styles
 @import './components/templates/content.scss'; // Content page styles
 @import './components/templates/homepage.scss'; // Homepage styles
+@import './components/templates/sitemap.scss'; // Sitemap styles
+@import './components/templates/terms.scss'; // Terms page styles
 @import './components/templates/universal-footer.scss'; // Footer modules
-
 
 /**
  * Overrides

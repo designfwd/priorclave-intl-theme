@@ -2,9 +2,14 @@
 .m-faqToggle {
   @include footer-text;
   background-color: $grey-light;
+  border-bottom: .5px solid $white;
   position: relative;
   transition: background-color $base-duration $base-timing;
   width: 100%;
+
+  &:hover {
+    background-color: $yellow;
+  }
 
   &.--toggled {
     background-color: $white;

@@ -14,6 +14,7 @@
     display: none;
     height: 100%;
     width: 100%;
+    padding: 0 5%;
 
     @include modifier('current') {
       display: inherit;

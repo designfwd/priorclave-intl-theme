@@ -1,7 +1,7 @@
 // Styles for the product downloads module
 .o-productDownloads {
   background-color: $grey-light;
-  padding: 2rem 5vw;
+  padding: 2rem 5%;
 
   @include element('headline') {
     color: $grey-medium-dark;
@@ -12,11 +12,11 @@
   @include element('grid') {
     columns: 1;
     padding: 1rem 0;
-    width: 80%;
+    max-width: 1000px;
+    width: 100%;
 
     @media(min-width: 900px) {
       columns: 2;
-      width: 100%;
     }
   }
 }

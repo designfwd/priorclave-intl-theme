@@ -29,8 +29,8 @@
     padding: 0;
 
     svg {
-      @include size(100%);
       fill: $grey-dark;
+      width: 100%;
     }
   }
 }
