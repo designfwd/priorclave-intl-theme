@@ -1,0 +1,55 @@
+.page-template-content-video {
+
+  .o-heroGeneral {
+    background-color: #fcc215;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @media (min-width: 720px) {
+      flex-direction: row;
+    }
+
+    .o-heroGeneral__content {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #39383d;
+      margin: auto 0;
+      text-align: center;
+      text-transform: uppercase;
+      max-width: 80%;
+      padding: 2rem 0 0;
+
+      @media (min-width: 720px) {
+        max-width: 50%;
+        padding: 1rem 0 1rem 2rem;
+        text-align: left;
+      }
+
+      .breadcrumbs {
+        display: inline-block;
+        font-weight: 400;
+        font-size: .75rem;
+        margin-top: 1.2rem;
+        text-transform: none;
+      }
+    }
+
+    .o-heroGeneral__image {
+      padding-top: 2rem;
+
+      @media (min-width: 720px) {
+        max-width: 20%;
+        padding-top: 0;
+      }
+    }
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 3rem 5%;
+  }
+}

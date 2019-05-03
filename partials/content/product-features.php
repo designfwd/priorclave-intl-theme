@@ -25,6 +25,7 @@ if( !isset($description) ):
 endif;
 ?>
 <section id="productFeatures" class="o-productFeatures">
+  <div class="o-productFeaturesWrapper">
 
   <div class="o-productFeatures__content">
     <div class="m-productDescription">
@@ -126,5 +127,5 @@ endif;
       </ul>
     </div>
   </div>
-
+  </div>
 </section>

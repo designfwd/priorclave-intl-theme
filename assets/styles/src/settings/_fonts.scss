@@ -126,6 +126,7 @@ $proxima-nova: proxima-nova, sans-serif;
 
 @mixin headline() {
   font-size: rem(30);
+  line-height: 2.4rem;
   @include lato-black;
 }
 

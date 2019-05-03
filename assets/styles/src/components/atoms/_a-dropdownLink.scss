@@ -6,14 +6,15 @@
   display: flex;
   font-size: 1.25rem;
   font-weight: $font-semibold;
+  text-transform: capitalize;
 
   &:hover {
     color: $white;
   }
 
   @include modifier('flag') {
-    @include size(2.4rem);
-    margin-right: .5rem;
+    @include size(1.8rem);
+    margin-right: 1rem;
   }
 
   @include modifier('icon') {

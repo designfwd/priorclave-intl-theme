@@ -1,11 +1,15 @@
 .m-ctaGridItem {
   @include size(100%);
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  padding-bottom: 1rem;
+  padding-top: 5rem;
+
+  @media(max-width: 640px) {
+    padding-top: 0;
+  }
 
   @include element('headline') {
     @include cta-small-title;

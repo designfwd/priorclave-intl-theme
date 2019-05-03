@@ -18,5 +18,12 @@
     @media(min-width: 640px) {
       width: 30%;
     }
+
+    @media(max-width: 639px) {
+      width: 90%;
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+    }
   }
 }

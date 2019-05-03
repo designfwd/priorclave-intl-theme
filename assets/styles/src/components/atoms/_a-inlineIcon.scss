@@ -1,6 +1,8 @@
 // Inline icon styles
 .a-inlineIcon {
-  @include size(2rem);
   fill: $white;
+  flex: 0 1 35%;
   margin-right: 1rem;
+  max-height: 2rem;
+  max-width: 2rem;
 }

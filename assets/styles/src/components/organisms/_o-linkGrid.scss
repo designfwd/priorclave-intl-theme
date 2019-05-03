@@ -3,7 +3,7 @@
   align-items: stretch;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: .25rem 0;
+  margin: .1rem 0;
   width: 100%;
 
   @include element('group') {
@@ -34,7 +34,7 @@
     }
 
     @media(min-width: 640px) {
-      flex-basis: 32%;
+      flex-basis: 33%;
     }
   }
 

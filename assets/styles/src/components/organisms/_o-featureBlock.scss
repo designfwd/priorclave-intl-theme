@@ -2,7 +2,7 @@
 .o-featureBlock {
   background-color: $grey-dark;
   color: $white;
-  padding: 4rem 10%;
+  padding: 4rem 5%;
 
   @include modifier('inverted') {
     background-color: $white;
@@ -10,7 +10,8 @@
   }
 
   @include element('content') {
-    max-width: 960px;
+    margin: 0 auto;
+    max-width: 1000px;
 
     p {
       color: $white;
@@ -28,6 +29,8 @@
     color: $yellow;
     text-align: center;
     text-transform: uppercase;
+    margin: 0 auto;
+    max-width: 1000px;
 
     @include modifier('inverted') {
       color: $grey-dark;

@@ -14,6 +14,7 @@
         get_partial('hero/general'); // General hero area
       ?>
     </header>
+    <section class="content__main_aside_wrapper">
     <main class="content__article">
       <?php
         get_partial('content/general-block'); // Page body content
@@ -27,6 +28,7 @@
         get_partial('widget/links-related'); // Related links list
       ?>
     </aside>
+    </section>
     <footer class="universal-footer">
       <?php
         get_partial('media/product-related'); // Related product block

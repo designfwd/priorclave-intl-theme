@@ -24,10 +24,11 @@
 
   @include element('flag') {
     @include size(2.4rem);
+    transition: .3s ease-in-out;
   }
 
   @include element('icon') {
-    @include size(.75rem);
+    @include size(.9rem);
     fill: $white;
     margin: .5rem auto 0;
   }
@@ -36,14 +37,20 @@
     align-content: center;
     background-color: $clear-black;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 0;
     transition: background-color $base-duration $base-timing;
     width: 3.2rem;
 
     &:hover,
     &.--open {
-      background-color: $grey-dark;
+      opacity: .5;
+
+      .m-navQuicklinks__flag {
+        @include size(2rem);
+        margin-top: .4rem;
+        transition: .3s ease-in-out;
+      }
     }
 
     &:focus {
@@ -60,7 +67,7 @@
 
   @include element('search') {
     background-color: $grey-light;
-    padding: .44rem .9rem;
+    padding: .365rem .8rem;
     transition: background-color $base-duration $base-timing;
 
     &:hover {

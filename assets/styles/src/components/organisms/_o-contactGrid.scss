@@ -1,22 +1,25 @@
 // Styles for the contact grid module
 .o-contactGrid {
+  padding: .5% .25%;
 
   @media(min-width: 640px) {
     align-items: stretch;
     flex-direction: row;
     justify-content: space-around;
     margin: auto;
-    width: calc(100% - 2rem);
+    width: 100%;
   }
 
   @include element('section') {
     background-color: $grey-lightest;
-    margin: 1.5rem 0;
-    padding-bottom: 2rem;
-    width: 95%;
+    height: 100%;
+    margin: .5% 1%;
+    width: 98%;
+    padding: 1rem 0;
 
     @media(min-width: 640px) {
-      width: 48%;
+      margin: 0 .5%;
+      width: 49%;
     }
   }
 }
