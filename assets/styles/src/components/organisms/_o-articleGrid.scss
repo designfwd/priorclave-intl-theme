@@ -1,5 +1,6 @@
 // Styles for a grid of articles
 .o-articleGrid {
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;

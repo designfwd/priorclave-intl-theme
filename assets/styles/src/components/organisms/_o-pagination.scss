@@ -85,5 +85,12 @@
     @media(min-width: 960px) {
       width: 33.3333333333%;
     }
+
+    .page-numbers {
+
+      &:hover {
+        color: #39383d;
+      }
+    }
   }
 }

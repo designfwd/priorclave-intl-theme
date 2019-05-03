@@ -14,11 +14,17 @@
     background-color: $clear-yellow;
     border: 1px solid shade($yellow, 20%);
     color: $white;
-    margin: .5rem 0;
+    margin: .5rem 5%;
     padding: 1.2rem 2.8rem;
+    width: 100%;
     text-align: center;
     transition: background-color $base-duration $base-timing,
       border $base-duration $base-timing;
+
+    @media(min-width: 640px) {
+      width: 30%;
+      margin: .5rem 0;
+    }
 
     &:hover {
       background-color: $yellow;

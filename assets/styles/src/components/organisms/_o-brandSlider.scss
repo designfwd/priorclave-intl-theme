@@ -3,8 +3,8 @@
 
   @include element('description') {
     box-sizing: border-box;
-    max-width: 75ch;
-    padding: 0 2rem 2rem;
+    max-width: 1000px;
+    padding: 0 5% 2rem;
     text-align: center;
     width: 100%;
   }
@@ -13,7 +13,7 @@
     @include headline;
     box-sizing: border-box;
     font-weight: $font-bold;
-    max-width: 75ch;
+    max-width: 1000px;
     padding: 0 5%;
     text-align: center;
     text-transform: uppercase;
