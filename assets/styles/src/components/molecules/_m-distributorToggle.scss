@@ -2,6 +2,7 @@
 .m-distributorToggle {
   @include footer-text;
   background-color: $grey-light;
+  border-bottom: .5px solid #fff;
   cursor: pointer;
   position: relative;
   transition: background-color $base-duration $base-timing;
