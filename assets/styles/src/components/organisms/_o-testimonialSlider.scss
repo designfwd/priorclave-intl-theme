@@ -4,10 +4,11 @@
 
   @include element('headline') {
     @include headline;
-    padding-bottom: 2rem;
+    padding: 0 5% 2rem;
     text-align: center;
     text-transform: uppercase;
-    width: 90%;
+    width: 100%;
+    max-width: 1100px;
   }
 
   @include element('slides') {

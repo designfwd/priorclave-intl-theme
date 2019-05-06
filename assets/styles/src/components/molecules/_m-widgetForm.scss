@@ -5,6 +5,10 @@
   margin: auto;
   max-width: 800px;
 
+  @media(max-width: 920px) {
+    max-width: none;
+  }
+
   .gform_body {
     width: 65%;
 

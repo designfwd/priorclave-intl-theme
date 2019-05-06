@@ -7,6 +7,7 @@
   width: 100%;
 
   @include element('content') {
+    line-height: 1.8rem;
     padding: 0 1rem;
     transition: padding $base-duration $base-timing;
 

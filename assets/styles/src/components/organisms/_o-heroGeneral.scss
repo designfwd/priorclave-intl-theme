@@ -27,16 +27,16 @@
     padding: 2rem 0 0;
 
     @media(min-width: 720px) {
-      max-width: 50%;
       padding: 1rem 0 1rem 2rem;
       text-align: left;
     }
 
     @include modifier('feature') {
       @include lato-black;
-      font-size: rem(36);
       border-bottom: 1px solid $black;
+      font-size: rem(36);
       line-height: .8;
+      position: relative;
       transition: font-size $base-duration $base-timing;
 
       @media(min-width: 445px) {
@@ -67,6 +67,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 1100px;
+    padding: 0 3%;
     width: 100%;
 
     @media(min-width: 720px) {

@@ -17,10 +17,14 @@
 p {
   @include paragraph();
   color: $grey-dark;
-  line-height: 1.38;
+  line-height: 1.5;
   orphans: 3;
   widows: 3;
 }
+
+ul {
+  line-height: 1.5;
+ }
 
 // pre {}
 // ul {}

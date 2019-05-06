@@ -2,17 +2,16 @@
 .m-relatedContent {
   box-sizing: border-box;
   margin: auto;
-  padding: 0 .5rem 1rem;
-  width: 90%;
+  padding: 0 .0 1rem;
+  width: 100%;
 
   @media(min-width: 1024px) {
     width: 65%;
   }
 
   @include element('body') {
-    margin: 0 5%;
     padding-bottom: 2rem;
-    width: 90%;
+    width: 100%;
   }
 
   @include element('button') {
@@ -53,6 +52,7 @@
 
     @media(min-width: 1024px) {
       max-width: 35%;
+      padding-left: 3%;
     }
   }
 }

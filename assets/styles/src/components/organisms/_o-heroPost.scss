@@ -3,15 +3,38 @@
   background-color: $grey-lightest;
   flex-direction: row;
   justify-content: center;
-  margin: 1rem;
+  margin: 1%;
   width: 98%;
+
+  @media(max-width: 800px) {
+    margin: 2%;
+    width: 96%;
+  }
+
+  @media(max-width: 500px) {
+    flex-wrap: wrap;
+  }
+
+  a {
+    flex: 0 1 30%;
+
+    @media(max-width: 500px) {
+      flex: 0 1 100%;
+      text-align: center;
+    }
+  }
 
   @include element('content') {
     @include headline;
     color: $grey-dark;
     line-height: .9;
-    max-width: 50%;
+    flex: 0 1 60%;
+    max-width: 800px;
     padding: 1rem;
+
+    @media(max-width: 500px) {
+      flex: 0 1 100%;
+    }
 
     @include modifier('description') {
       @include paragraph;
@@ -21,6 +44,7 @@
     @include modifier('link') {
       @include paragraph;
       color: $yellow;
+      display: inline-block;
       font-size: .7rem;
       font-weight: 800;
       text-transform: uppercase;
@@ -31,5 +55,6 @@
     margin: auto;
     max-width: 320px;
     padding: 1rem;
+    width: 100%;
   }
 }
