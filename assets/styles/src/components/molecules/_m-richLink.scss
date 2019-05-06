@@ -4,6 +4,10 @@
   display: flex;
   padding: 1rem 0;
 
+  @media(max-width: 920px) {
+    flex-wrap: wrap;
+  }
+
   @include element('content') {
     @include lato-black;
     align-content: center;
@@ -12,9 +16,21 @@
     flex-wrap: wrap;
     padding-right: 1rem;
 
+    @media(max-width: 920px) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
     @include modifier('description') {
       @include open-sans-regular;
       font-size: 1rem;
+
+      @media(max-width: 920px) {
+        padding-top: .5rem;
+        text-align: center;
+        width: 100%;
+      }
     }
   }
 

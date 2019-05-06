@@ -52,7 +52,6 @@
   @include element('link') {
     background-color: $grey-lightest;
     color: $grey-dark;
-    max-width: 640px;
     margin: .125rem 0;
     transition: background-color $base-duration $base-timing;
     width: 100%;
