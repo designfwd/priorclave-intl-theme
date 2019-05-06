@@ -10,6 +10,7 @@
   <body <?php body_class('error error--404'); ?>>
     <header>
       <?php
+        var_dump(get_current_blog_id());
         if( get_current_blog_id() == 1 ):
           get_partial('navigation/simplified'); // Multisite navigation
         else:
