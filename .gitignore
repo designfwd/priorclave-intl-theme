@@ -62,3 +62,7 @@ typings/
 
 # Editor files
 /.vscode/*
+
+# Dist files
+assets/styles/dist/
+assets/scipts/dist/
