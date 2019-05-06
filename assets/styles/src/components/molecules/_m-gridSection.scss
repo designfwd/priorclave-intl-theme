@@ -42,9 +42,9 @@
   }
 
   @include element('item') {
-    @include cta-large-text;
     color: $grey-dark;
-    padding: .5rem .25rem;
+    font-size: 1.3rem;
+    padding: .3rem .25rem;
     text-align: center;
   }
 }

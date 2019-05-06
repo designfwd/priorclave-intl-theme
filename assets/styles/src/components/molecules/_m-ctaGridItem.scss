@@ -1,11 +1,9 @@
 .m-ctaGridItem {
   @include size(100%);
-  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  padding-top: 5rem;
 
   @media(max-width: 640px) {
     padding-top: 0;
@@ -14,14 +12,12 @@
   @include element('headline') {
     @include cta-small-title;
     font-size: 1rem;
-    margin: .5rem .5rem 0;
     text-align: center;
     text-transform: uppercase;
     width: 100%;
 
     @media(min-width: 540px) {
       font-size: 1.5rem;
-      margin: 1rem .5rem 0;
     }
 
     @include modifier('large') {
@@ -56,6 +52,7 @@
       height: auto;
       width: 60%;
       max-width: 360px;
+      align-self: flex-end;
     }
   }
 
