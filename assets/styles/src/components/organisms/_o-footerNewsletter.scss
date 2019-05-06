@@ -17,6 +17,13 @@
     }
   }
 
+  @include element('form') {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
   @include element('headline') {
     @include footer-title;
     font-weight: $font-bold;
@@ -25,12 +32,5 @@
     padding-bottom: .8rem;
     text-align: center;
     text-transform: uppercase;
-  }
-
-  @include element('form') {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
 }

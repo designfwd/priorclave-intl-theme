@@ -9,6 +9,20 @@
     color: $grey-dark;
   }
 
+  @include element('content') {
+    max-width: 960px;
+
+    p {
+      color: $white;
+    }
+
+    @include modifier('inverted') {
+      p {
+        color: $grey-dark;
+      }
+    }
+  }
+
   @include element('headline') {
     @include headline;
     color: $yellow;
@@ -17,14 +31,6 @@
 
     @include modifier('inverted') {
       color: $grey-dark;
-    }
-  }
-
-  @include element('content') {
-    max-width: 960px;
-
-    p {
-      color: $white;
     }
   }
 }

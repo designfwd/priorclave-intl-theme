@@ -1,0 +1,128 @@
+{
+    "key": "group_5c86c2e630063",
+    "title": "navigation_linkGridGroup",
+    "fields": [
+        {
+            "key": "field_5c86c3222759c",
+            "label": "Link Lists",
+            "name": "navigation_linkGridGroup_lists",
+            "type": "repeater",
+            "instructions": "The lists of links to show in a grid",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add List",
+            "sub_fields": [
+                {
+                    "key": "field_5c86c34a2759d",
+                    "label": "Headline",
+                    "name": "headline",
+                    "type": "text",
+                    "instructions": "Headline text associated with this list",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c86c3632759e",
+                    "label": "Links",
+                    "name": "links",
+                    "type": "repeater",
+                    "instructions": "The links to include in this list",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Link",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c86c3812759f",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "The label to give this link",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c86c38e275a0",
+                            "label": "Page",
+                            "name": "page",
+                            "type": "post_object",
+                            "instructions": "The page associated with this link",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "object",
+                            "ui": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1552335814
+}

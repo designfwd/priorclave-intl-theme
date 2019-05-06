@@ -16,6 +16,23 @@
     background-color: $black-75;
   }
 
+  @include element('button') {
+    background-color: $yellow;
+    cursor: pointer;
+    font-weight: $font-bold;
+    padding: .5rem;
+    text-align: center;
+    transition: color $base-duration $base-timing;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  @include element('description') {
+    padding: 0 1rem;
+  }
+
   @include element('thumbnail') {
     float: none;
     margin: 0;
@@ -32,22 +49,5 @@
     font-size: rem(24);
     font-weight: $font-bold;
     padding: 0 1rem;
-  }
-
-  @include element('description') {
-    padding: 0 1rem;
-  }
-
-  @include element('button') {
-    background-color: $yellow;
-    cursor: pointer;
-    font-weight: $font-bold;
-    padding: .5rem;
-    text-align: center;
-    transition: color $base-duration $base-timing;
-
-    &:hover {
-      color: $white;
-    }
   }
 }

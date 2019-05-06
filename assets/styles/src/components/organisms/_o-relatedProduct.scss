@@ -3,12 +3,6 @@
   background-color: $white;
   padding-bottom: 2rem;
 
-  @include element('headline') {
-    padding: 1rem;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
   @include element('content') {
     align-items: center;
     display: flex;
@@ -16,5 +10,11 @@
     justify-content: center;
     max-width: 960px;
     width: 90%;
+  }
+
+  @include element('headline') {
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
   }
 }

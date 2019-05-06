@@ -23,10 +23,10 @@ if(
 endif;
 ?>
 <section class="o-introContent o-introContent--inverted">
-  <h1 class="o-introContent__headline">
+  <h1 class="o-introContent__headline o-introContent__headline--inverted">
     <?php echo $headline; ?>
   </h1>
-  <div class="o-introContent__content">
+  <div class="o-introContent__content o-introContent__content--inverted">
     <?php echo $body; ?>
   </div>
 </section>

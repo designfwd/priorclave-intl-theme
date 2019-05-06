@@ -10,18 +10,6 @@
     width: 150px;
   }
 
-  @include element('label') {
-    @include footer-title;
-    padding: .5rem 0;
-    text-align: center;
-
-    @include modifier('subtitle') {
-      color: $grey-medium;
-      font-size: 75%;
-      font-weight: $font-regular;
-    }
-  }
-
   @include element('input') {
     @include size(2rem);
     appearance: none;
@@ -55,6 +43,18 @@
           transform: translateY(-50%);
         }
       }
+    }
+  }
+
+  @include element('label') {
+    @include footer-title;
+    padding: .5rem 0;
+    text-align: center;
+
+    @include modifier('subtitle') {
+      color: $grey-medium;
+      font-size: 75%;
+      font-weight: $font-regular;
     }
   }
 }

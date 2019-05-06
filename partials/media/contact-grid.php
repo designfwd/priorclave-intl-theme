@@ -11,6 +11,7 @@
 
 if( function_exists('get_field') ):
   $phone = get_field('site_contact_phone', 'option');
+  $phone2 = get_field('site_contact_phone2', 'option');
   $fax = get_field('site_contact_fax', 'option');
   $times = 'site_operation_times';
 endif;
@@ -26,6 +27,16 @@ endif;
       <div class="m-gridSection__item">
         Phone: <a class="m-gridSection__link" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
       </div>
+      <?php
+      // Optional second phone number
+      if( $phone2 ):
+      ?>
+        <div class="m-gridSection__item">
+          Phone: <a class="m-gridSection__link" href="tel:<?php echo $phone2; ?>"><?php echo $phone2; ?></a>
+        </div>
+      <?php
+      endif;
+      ?>
       <div class="m-gridSection__item">
         Fax: <a class="m-gridSection__link" href="fax:<?php echo $fax; ?>"><?php echo $fax; ?></a>
       </div>

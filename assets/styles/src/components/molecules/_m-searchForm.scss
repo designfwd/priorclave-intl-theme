@@ -4,12 +4,12 @@
   display: none;
   width: 100%;
 
-  @include modifier('preload') {
-    display: hidden;
-  }
-
   @include modifier('has-loaded') {
     display: flex;
+  }
+
+  @include modifier('preload') {
+    display: hidden;
   }
 
   @include element('input') {

@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Content - Video
- * Description: A page to shocase linked videos
+ * Template Name: Content - Customers
+ * Description: Parent template for general content pages
  */
 ?>
 <!doctype html>
 <html <?php priorclave_lang(); ?>>
   <?php get_partial('meta/head'); ?>
-  <body <?php body_class('content content--video'); ?>>
+  <body <?php body_class('content content--category'); ?>>
     <header>
       <?php
         get_partial('navigation/primary'); // Primary navigation
@@ -16,11 +16,11 @@
     </header>
     <main>
       <?php
-        get_partial('media/featured-video'); // Featured video
-        get_partial('content/intro-inverted'); // Intro content
-        get_partial('media/video-grid'); // Video grid
-        get_partial('content/feature-inverted'); // Other resources info block
-        get_partial('media/cta-grid'); // Grid of links
+        get_partial('content/intro-inverted'); // Intro content block
+        get_partial('navigation/link-grid-group'); // Grid of headlined links
+        get_partial('content/feature-block'); // Feature content block
+        get_partial('media/featured-posts'); // Featured posts
+        get_partial('media/slider-testimonial'); // Testimonial slider
       ?>
     </main>
     <footer class="universal-footer">

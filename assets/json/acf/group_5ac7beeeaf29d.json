@@ -36,25 +36,32 @@
             "esc_html": 0
         },
         {
-            "key": "field_5ac7bf127fb76",
-            "label": "Website Language",
-            "name": "site",
-            "type": "clone",
-            "instructions": "Please select the language to use for meta information in the <html> tag.",
+            "key": "field_5ac7bf127fb76_field_5ad6194d32041",
+            "label": "Language",
+            "name": "site_language",
+            "type": "select",
+            "instructions": "Please select a language",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_5ad61945f3687"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 1
+            "choices": {
+                "en": "English"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "array",
+            "placeholder": "",
+            "_clone": "field_5ac7bf127fb76",
+            "__key": "field_5ad6194d32041",
+            "__name": "language",
+            "__label": "Language"
         },
         {
             "key": "field_5ac7c1d0542e2",
@@ -76,25 +83,38 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5ac7c4682cbb1",
-            "label": "Website Country",
-            "name": "site",
-            "type": "clone",
-            "instructions": "Please select the country this site represents",
+            "key": "field_5ac7c4682cbb1_field_5ac7f19094fc4",
+            "label": "Country",
+            "name": "site_country",
+            "type": "select",
+            "instructions": "Select a country",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_5ac7f15476528"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 1
+            "choices": {
+                "none": "None - International or Regional",
+                "au": "Australia",
+                "ca": "Canada",
+                "my": "Malaysia",
+                "ph": "Philippines",
+                "gb": "United Kingdom",
+                "us": "United States of America"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "array",
+            "placeholder": "",
+            "_clone": "field_5ac7c4682cbb1",
+            "__key": "field_5ac7f19094fc4",
+            "__name": "country",
+            "__label": "Country"
         },
         {
             "key": "field_5ac7d72b5c9ad",
@@ -176,11 +196,30 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "default_value": "+12 34 5678 9012",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c829760c7802",
+            "label": "Additional Phone Number (optional)",
+            "name": "site_contact_phone2",
+            "type": "text",
+            "instructions": "An additional phone number of the company, for contact purposes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -195,7 +234,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "34",
                 "class": "",
                 "id": ""
             },
@@ -768,11 +807,11 @@
             "esc_html": 0
         },
         {
-            "key": "field_5b969f95df447",
-            "label": "Calls-to-Action",
-            "name": "media_cta2Up",
-            "type": "clone",
-            "instructions": "",
+            "key": "field_5b969f95df447_field_5acf7d0446098",
+            "label": "Items",
+            "name": "media_cta2Up_items",
+            "type": "repeater",
+            "instructions": "The items to include in the call-to-action grid, with a max of 2",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -780,13 +819,100 @@
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_5acf7cebc7731"
-            ],
-            "display": "seamless",
+            "collapsed": "",
+            "min": 1,
+            "max": 2,
             "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "button_label": "Add CTA",
+            "_clone": "field_5b969f95df447",
+            "__key": "field_5acf7d0446098",
+            "__name": "media_cta2Up_items",
+            "__label": "Items",
+            "sub_fields": [
+                {
+                    "key": "field_5acf7d7446099",
+                    "label": "Headline",
+                    "name": "headline",
+                    "type": "text",
+                    "instructions": "Short text description of the CTA's purpose",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Find",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5acf7d904609a",
+                    "label": "Subhead",
+                    "name": "subhead",
+                    "type": "text",
+                    "instructions": "Longer description of what the CTA link accomplishes",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Find the Perfect Autoclave Fast.",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5acf7de64609b",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "The image to use in the CTA block",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "240w",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,svg"
+                },
+                {
+                    "key": "field_5acf7e064609c",
+                    "label": "Page",
+                    "name": "page",
+                    "type": "page_link",
+                    "instructions": "The linked page for the CTA",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                }
+            ]
         },
         {
             "key": "field_5b969dec27a33",
@@ -822,11 +948,11 @@
             "esc_html": 0
         },
         {
-            "key": "field_5b96a106b1646",
-            "label": "Testimonials",
-            "name": "media_sliderTestimonial",
-            "type": "clone",
-            "instructions": "",
+            "key": "field_5b96a106b1646_field_5acfbc44cd19b",
+            "label": "Headline",
+            "name": "media_sliderTestimonial_headline",
+            "type": "text",
+            "instructions": "Header text for this section",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -834,13 +960,47 @@
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_5acfbc2ba6c48"
+            "default_value": "Trusted All Over the World",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "_clone": "field_5b96a106b1646",
+            "__key": "field_5acfbc44cd19b",
+            "__name": "media_sliderTestimonial_headline",
+            "__label": "Headline"
+        },
+        {
+            "key": "field_5b96a106b1646_field_5acfbc67cd19c",
+            "label": "Testimonials",
+            "name": "media_sliderTestimonial_testimonials",
+            "type": "relationship",
+            "instructions": "The testimonials you'd like included in the slider",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "testimonials"
             ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object",
+            "_clone": "field_5b96a106b1646",
+            "__key": "field_5acfbc67cd19c",
+            "__name": "media_sliderTestimonial_testimonials",
+            "__label": "Testimonials"
         },
         {
             "key": "field_5acbc28d4140b",
@@ -1267,5 +1427,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550228902
+    "modified": 1552082274
 }

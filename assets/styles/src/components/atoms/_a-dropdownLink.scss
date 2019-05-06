@@ -11,6 +11,11 @@
     color: $white;
   }
 
+  @include modifier('flag') {
+    @include size(2.4rem);
+    margin-right: .5rem;
+  }
+
   @include modifier('icon') {
     background-color: $clear-yellow;
     @include size(2rem);
@@ -26,10 +31,5 @@
     @include modifier('toggled') {
       transform: rotate(180deg);
     }
-  }
-
-  @include modifier('flag') {
-    @include size(2.4rem);
-    margin-right: .5rem;
   }
 }

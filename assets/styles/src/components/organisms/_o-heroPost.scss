@@ -6,12 +6,6 @@
   margin: 1rem;
   width: 98%;
 
-  @include element('image') {
-    margin: auto;
-    max-width: 320px;
-    padding: 1rem;
-  }
-
   @include element('content') {
     @include headline;
     color: $grey-dark;
@@ -31,5 +25,11 @@
       font-weight: 800;
       text-transform: uppercase;
     }
+  }
+
+  @include element('image') {
+    margin: auto;
+    max-width: 320px;
+    padding: 1rem;
   }
 }

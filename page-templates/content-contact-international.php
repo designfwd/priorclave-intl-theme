@@ -7,7 +7,7 @@
 <!doctype html>
 <html <?php priorclave_lang(); ?>>
   <?php get_partial('meta/head'); ?>
-  <body <?php body_class('content content--contact'); ?>>
+  <body <?php body_class('content content--contact content--international'); ?>>
     <header>
       <?php
         get_partial('navigation/simplified'); // Simplified navigation

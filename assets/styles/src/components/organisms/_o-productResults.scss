@@ -3,6 +3,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
+  max-width: 1300px;
 
   @include element('item') {
     background-color: $grey-lightest;
@@ -10,9 +12,14 @@
     outline: 0 solid $clear-yellow;
     padding: 2rem;
     transition: outline $base-duration $base-timing;
+    width: calc( 100% - 2rem );
 
     &:hover {
       outline: .25rem solid $yellow;
+    }
+
+    @media(min-width: 720px) {
+      width: calc( 50% - 2rem );
     }
   }
 }

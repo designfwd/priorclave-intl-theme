@@ -3,6 +3,25 @@
     "title": "Product Options Template",
     "fields": [
         {
+            "key": "field_5c9a6d84f8bd2",
+            "label": "Part Number",
+            "name": "product_options_number",
+            "type": "text",
+            "instructions": "The part number associated with this product option",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5adf927bab441",
             "label": "Description",
             "name": "product_options_description",
@@ -56,7 +75,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -65,5 +84,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1524601654
+    "modified": 1553624503
 }

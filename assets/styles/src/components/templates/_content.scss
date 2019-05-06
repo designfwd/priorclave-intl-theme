@@ -56,4 +56,14 @@
       padding: 2rem 10vw 0;
     }
   }
+
+  &.content--international {
+    .o-heroGeneral {
+      margin-top: 4rem;
+    }
+
+    .o-simpleNav {
+      margin-top: -4rem;
+    }
+  }
 }

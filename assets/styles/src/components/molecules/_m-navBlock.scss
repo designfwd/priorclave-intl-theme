@@ -18,6 +18,11 @@
     display: flex;
   }
 
+  @include element('button') {
+    padding-top: 1rem;
+    width: 100%;
+  }
+
   @include element('grid') {
     display: flex;
     flex-wrap: wrap;
@@ -51,11 +56,6 @@
         width: 20%;
       }
     }
-  }
-
-  @include element('button') {
-    padding-top: 1rem;
-    width: 100%;
   }
 }
 

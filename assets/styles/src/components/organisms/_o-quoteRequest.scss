@@ -3,20 +3,6 @@
   background-color: $grey-dark;
   color: $white;
 
-  @include element('headline') {
-    color: $yellow;
-    margin: 0 auto;
-    max-width: 800px;
-    padding-top: 4rem;
-    text-align: center;
-    text-transform: uppercase;
-    width: calc( 100% - 4rem );
-
-    @media(min-width: 840px) {
-      width: 100%;
-    }
-  }
-
   @include element('description') {
     margin: 0 auto;
     max-width: 800px;
@@ -48,9 +34,18 @@
     }
   }
 
-  @include element('subtitle') {
-    padding-top: 2rem;
+  @include element('headline') {
+    color: $yellow;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 4rem;
     text-align: center;
+    text-transform: uppercase;
+    width: calc( 100% - 4rem );
+
+    @media(min-width: 840px) {
+      width: 100%;
+    }
   }
 
   @include element('phone') {
@@ -62,5 +57,10 @@
     &:hover {
       color: $yellow;
     }
+  }
+
+  @include element('subtitle') {
+    padding-top: 2rem;
+    text-align: center;
   }
 }

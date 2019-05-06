@@ -21,9 +21,14 @@ jQuery(document).ready(function() {
     document.getElementById(button).close();
   });
 
-  jQuery('.o-distributorMap__button').click(function() {
+  jQuery(document).on('click', '.o-distributorMap__button', function() {
+
+    let country = jQuery(this).data('country');
+    jQuery('#toggle-' + country).toggleClass('--toggled');
+    jQuery('#toggle-' + country).children('.m-distributorToggle__icon').toggleClass('--toggled');
+    jQuery('#content-' + country).slideToggle();
+
     let distributor = jQuery(this).data('slug');
-    alert('dialog-' + distributor);
     document.getElementById('dialog-' + distributor).showModal();
   });
 });

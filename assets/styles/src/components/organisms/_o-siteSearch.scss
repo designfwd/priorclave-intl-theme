@@ -9,6 +9,7 @@
     .search-field {
       @include cta-large-text;
       background-color: $grey-lightest;
+      box-sizing: border-box;
       line-height: 1.5;
       padding: 1rem;
       width: 100%;

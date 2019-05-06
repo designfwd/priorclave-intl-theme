@@ -9,14 +9,6 @@
     flex-wrap: wrap;
   }
 
-  @include element('headline') {
-    @include headline;
-    margin: 1.5rem auto;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-  }
-
   @include element('content') {
     display: flex;
     flex-direction: column;
@@ -32,5 +24,13 @@
     @media(min-width: 1100px) {
       padding: 0 2rem 0 0;
     }
+  }
+
+  @include element('headline') {
+    @include headline;
+    margin: 1.5rem auto;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
   }
 }

@@ -3,6 +3,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
   text-align: center;
   text-transform: uppercase;
 
@@ -12,6 +14,16 @@
 
     @include modifier('regular') {
       font-weight: $font-regular;
+    }
+  }
+
+  @include element('image') {
+    @include size(50vw);
+    max-height: 320px;
+    max-width: 320px;
+
+    @media(min-width: 720px) {
+      @include size(25vw);
     }
   }
 

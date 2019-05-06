@@ -24,7 +24,7 @@ endif;
 ?>
 <section class="o-featureBlock o-featureBlock--inverted">
   <h2 class="o-featureBlock__headline o-featureBlock__headline--inverted"><?php echo $headline; ?></h2>
-  <div class="o-featureBlock__content">
+  <div class="o-featureBlock__content o-featureBlock__content--inverted">
     <?php echo $content; ?>
   </div>
 </section>
