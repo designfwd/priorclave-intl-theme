@@ -5,9 +5,10 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
- @media(max-width: 640px) {
-    padding-top: 0;
-  }
+
+    @media(max-width: 640px) {
+      padding-top: 0;
+    }
 
   @include element('headline') {
     @include cta-small-title;
@@ -62,11 +63,11 @@
       width: 60%;
 
       @media(max-width: 1000px) {
-        max-height: 230px;    
+        max-height: 230px;
       }
 
       @media(max-width: 760px) {
-        max-height: 190px;    
+        max-height: 190px;
       }
 
       @media(max-width: 640px) {
