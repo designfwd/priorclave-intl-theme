@@ -5,8 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  max-width: 1300px;
-  padding: 2rem 1rem;
+  padding: .5% .25%;
 
   @include element('item') {
     background-color: $grey-lightest;
@@ -30,11 +29,23 @@
 
     @include modifier('large') {
       height: 100%;
-      width: calc( 100% - 1rem );
-      max-width: 720px;
+      margin: .5% 1%;
+      width: 98%;
 
       @media(min-width: 640px) {
-        width: calc( 50% - 1rem );
+        margin: 0 .5%;
+        width: 49%;
+      }
+    }
+
+    @include modifier('small') {
+      height: 100%;
+      margin: .5% 1%;
+      width: 98%;
+
+      @media(min-width: 640px) {
+        margin: .4%;
+        width: 32.5%;
       }
     }
   }

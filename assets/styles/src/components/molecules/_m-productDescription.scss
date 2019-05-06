@@ -2,10 +2,6 @@
 .m-productDescription {
   padding: 0;
 
-  @media(min-width: 640px) {
-    padding: 0 5% 0 0;
-  }
-
   @include element('description') {
     padding: .25rem 0 .5rem;
 

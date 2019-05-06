@@ -12,7 +12,7 @@
   }
 
   @include element('logo') {
-    margin-top: auto;
+    margin-top: .65rem;
     width: 13.375rem;
   }
 
@@ -26,7 +26,6 @@
     align-content: flex-end;
     display: flex;
     justify-content: flex-end;
-    padding-bottom: .25rem;
     width: 14rem;
   }
 }

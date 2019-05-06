@@ -38,12 +38,12 @@
   }
 
   @include element('content') {
-    padding: 0 1rem;
+    padding: 0 1rem 0 4.5rem;
     transition: padding $base-duration $base-timing;
     width: 100%;
 
     @media(min-width: 800px) {
-      padding: 0 0 2rem 3.5rem;
+      padding: 0 0 2rem 4.5rem;
       width: 50%;
     }
 

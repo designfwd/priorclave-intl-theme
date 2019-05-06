@@ -10,6 +10,11 @@
     color: $white;
     line-height: 1.22;
 
+    @media(max-width: 639px) {
+      text-align: center;
+      width: 100%;
+    }
+
     p,
     div {
       color: $white;
@@ -21,6 +26,9 @@
     color: $white;
     margin-bottom: .5rem;
     width: 100%;
+    @media(max-width: 639px) {
+      text-align: center;
+    }
   }
 
   @include element('socialLink') {

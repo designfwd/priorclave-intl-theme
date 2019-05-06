@@ -1,7 +1,9 @@
 // Styles for a grid of articles
 .o-articleGrid {
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0 5vw 1rem;
 
   @include element('article') {

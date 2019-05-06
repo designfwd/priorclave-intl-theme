@@ -1,6 +1,6 @@
 // Dropdown styling
 .m-mapDropdown {
-  background-color: $black-50;
+  background-color: rgba(0,0,0,.8);
   display: flex;
   flex-direction: column;
   left: 0;
@@ -18,8 +18,9 @@
 
   @include element('country') {
     background-color: $clear-yellow;
+    border-bottom: 1px solid #919191;
     font-weight: $font-regular;
-    padding: .2rem 0 .2rem 2rem;
+    padding: .3rem 0 .3rem 2rem;
     transition: background-color $base-duration $base-timing;
     width: 100%;
 
@@ -30,12 +31,17 @@
 
   @include element('region') {
     background-color: $clear-yellow;
+    border-bottom: 1px solid #919191;
     font-weight: $font-bold;
     line-height: 1.5rem;
-    padding: .4rem 0 .4rem 2rem;
+    padding: .5rem 0 .5rem 2rem;
     text-transform: uppercase;
     transition: background-color $base-duration $base-timing;
     width: 100%;
+
+    a {
+      text-transform: uppercase;
+    }
 
     &:hover {
       background-color: $yellow;

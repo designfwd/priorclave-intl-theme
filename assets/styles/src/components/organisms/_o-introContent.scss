@@ -1,7 +1,12 @@
 // Styles for introductory content blocks
 .o-introContent {
   background-color: $grey-dark;
-  padding: 2.5rem 10% 1rem;
+  padding: 2.5rem 5% 1rem;
+  width: 100%;
+
+  @media(min-width: 640px) {
+    padding: 2.5rem 0 1rem;
+  }
 
   @include modifier('inverted') {
     background-color: $white;
@@ -21,8 +26,13 @@
   }
 
   @include element('content') {
-    max-width: 75ch;
-    padding-bottom: 1rem;
+    padding: 0 5% 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @media(max-width: 1100px) {
+      padding: 0 5%;
+    }
 
     p {
       color: $white;
@@ -33,10 +43,11 @@
   @include element('headline') {
     @include headline;
     color: $white;
-    margin: .25rem auto;
-    max-width: 60ch;
     text-align: center;
     text-transform: uppercase;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 5% 1rem;
   }
 
   @include element('icon') {

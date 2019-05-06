@@ -1,8 +1,8 @@
 // Styling for the distributor table
 .o-distributors {
   margin: auto;
-  max-width: 1360px;
-  padding: 0 2.5% 2rem;
+  max-width: 1280px;
+  padding: 0 0 2rem;
 
   @include element('region') {
     @include proxima-nova-bold;

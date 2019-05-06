@@ -1,5 +1,10 @@
 // Styles for the product "standard features" block
 .m-productStandards {
+  padding: 0;
+
+  @media(min-width: 640px) {
+    padding: 0 0 0 8%;
+  }
 
   @include element('headline') {
     color: $yellow;

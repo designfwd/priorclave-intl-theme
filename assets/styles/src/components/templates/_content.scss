@@ -17,11 +17,12 @@
   }
 
   @include element('article') {
-    padding: 1rem 1rem 0;
+    flex: 0 1 auto;
+    padding: 1rem 5%;
     width: 100%;
 
     @media(min-width: 920px) {
-      padding: 1rem 1% 1rem 6%;
+      padding: 1rem 1% 1rem 5%;
       width: 60%;
     }
   }
@@ -30,17 +31,18 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    max-width: 960px;
-    padding: 1rem 1rem 2rem;
+    max-width: 1100px;
+    padding: 1rem 5% 2rem;
     width: 100%;
   }
 
   @include element('sidebar') {
-    padding: 1rem 1rem 0;
+    flex: 0 1 auto;
+    padding: 1rem 5% 0;
     width: 100%;
 
     @media(min-width: 920px) {
-      padding: 1rem 1%;
+      padding: 1rem 5% 1rem 1%;
       width: 35%;
     }
   }
@@ -53,7 +55,9 @@
 
   &.content--distributors {
     .o-generalBlock {
-      padding: 2rem 10vw 0;
+      padding: 2rem 5% 0;
+      max-width: 1100px;
+      margin: 0 auto;
     }
   }
 
@@ -66,4 +70,11 @@
       margin-top: -4rem;
     }
   }
+.content__main_aside_wrapper {
+  align-items: self-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1280px;
 }

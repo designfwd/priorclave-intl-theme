@@ -23,7 +23,7 @@
       padding $base-duration $base-timing;
 
     @media(min-width: 1036px) {
-      padding: .5rem 1rem;
+      padding: .625rem 1rem;
     }
 
     @include modifier('has-loaded') {
@@ -32,8 +32,8 @@
 
       &:hover,
       &.--active {
-        background-color: $grey-dark;
-        color: $yellow;
+        background-color: $yellow;
+        color: $grey-dark;
       }
     }
   }
