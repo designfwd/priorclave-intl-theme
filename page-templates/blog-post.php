@@ -14,7 +14,7 @@
         get_partial('hero/news'); // General hero area
       ?>
     </header>
-    <div class="content__articleWrapper">
+    <section class="content__articleWrapper">
     <main class="content__article">
       <?php
         get_partial('content/article-masthead'); // Article masthead
@@ -29,7 +29,7 @@
         get_partial('widget/featured-articles'); // Featured articles block
         get_partial('widget/links-tags'); // Tags list
       ?>
-    </div></aside>
+    </section></aside>
     <footer class="universal-footer">
       <?php
         get_partial('media/product-related'); // Related product block

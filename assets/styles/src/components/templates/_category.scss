@@ -1,0 +1,28 @@
+.category {
+
+  .o-heroGeneral {
+
+    .o-heroGeneral__image {
+
+      @media (min-width: 720px) {
+        max-width: 30%;
+      }
+
+      @media (max-width: 720px) {
+        padding-top: 2rem;
+      }
+    }
+
+    .breadcrumbs {
+      @include cta-small-text;
+      display: inline-block;
+      font-size: .75rem;
+      margin-top: 1.2rem;
+      text-transform: none;
+    }
+  }
+
+  .o-articleGrid {
+    padding: 2rem 5vw 1rem;
+  }
+}

@@ -53,6 +53,7 @@ endif;
 <section class="o-heroGeneral lazyload"
   data-bg="<?php echo $background['url']; ?>"
   style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
+  <div class="o-heroGeneral__wrapper">
   <h1 class="o-heroGeneral__content">
     <span class="o-heroGeneral__content--feature">News</span>
     <br/>
@@ -88,4 +89,5 @@ endif;
       <?php echo $image['sizes']['1366w']; ?> 1281w,
     "
   />
+  </div>
 </section>
