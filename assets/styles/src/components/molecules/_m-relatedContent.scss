@@ -6,7 +6,7 @@
   width: 100%;
 
   @media(min-width: 1024px) {
-    width: 65%;
+    width: 60%;
   }
 
   @include element('body') {
@@ -47,7 +47,7 @@
   }
 
   @include element('link') {
-    max-width: 65%;
+    max-width: 60%;
     width: 100%;
 
     @media(min-width: 1024px) {

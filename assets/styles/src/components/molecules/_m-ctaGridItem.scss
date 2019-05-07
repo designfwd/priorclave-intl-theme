@@ -6,9 +6,9 @@
   justify-content: center;
   margin: auto;
 
-    @media(max-width: 640px) {
-      padding-top: 0;
-    }
+  @media(max-width: 640px) {
+    padding-top: 0;
+  }
 
   @include element('headline') {
     @include cta-small-title;
