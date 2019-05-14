@@ -4,12 +4,10 @@ jQuery(document).ready(function() {
     e.preventDefault();
     jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
     jQuery('#homepageMap-dropdownList').fadeToggle();
-    jQuery('#homepageMap-dropdownList').fadeToggle();
-  });
+  }).children().click(function(){ return false;});
 
   jQuery('.o-homepageMap__dropdown').on('focusout', (e) => {
     e.preventDefault();
-    console.log(e.target.hash);
     jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
     jQuery('#homepageMap-dropdownList').fadeToggle();
   });
