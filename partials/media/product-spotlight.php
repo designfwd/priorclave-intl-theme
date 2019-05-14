@@ -42,7 +42,7 @@ endif;
             endif;
         ?>
           <img data-img="spotlight-<?php echo $row; ?>"
-            class="m-spotlightSlider__thumbnail <?php if($row==1){echo 'm-spotlightSlider__thumbnail--current';} ?> lazyload"
+            class="m-spotlightSlider__thumbnail <?php if($row==3){echo 'm-spotlightSlider__thumbnail--current';} ?> lazyload"
             alt="<?php echo $image['alt']; ?>"
             src="<?php echo $image['sizes']['preload']; ?>"
             data-sizes="auto"
@@ -78,7 +78,7 @@ endif;
               );
             endif;
         ?>
-          <img class="m-spotlightSlider__image <?php if($row==1){echo'm-spotlightSlider__image--current';} ?> lazyload"
+          <img class="m-spotlightSlider__image <?php if($row==3){echo'm-spotlightSlider__image--current';} ?> lazyload"
             id="spotlight-<?php echo $row; ?>"
             alt="<?php echo $image['alt']; ?>"
             src="<?php echo $image['sizes']['preload']; ?>"
