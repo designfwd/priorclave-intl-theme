@@ -71,6 +71,16 @@
   width: 100%;
 }
 
+.o-featuredVideo__triangle {
+  @include size(3rem);
+  fill: $yellow;
+  left: 62.5%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill $base-duration $base-timing;
+}
+
 .o-featuredVideo__preview {
   cursor: pointer;
   position: relative;
@@ -84,13 +94,4 @@
       fill: $white;
     }
   }
-}
-.o-featuredVideo__triangle {
-  @include size(3rem);
-  fill: $yellow;
-  left: 62.5%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: fill $base-duration $base-timing;
 }

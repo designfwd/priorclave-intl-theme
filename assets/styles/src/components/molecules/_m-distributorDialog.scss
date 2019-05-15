@@ -5,6 +5,7 @@
   max-width: 800px;
   position: relative;
   width: 90%;
+  background-color: #39383d;
 
   @include element('address') {
     max-width: 360px;
@@ -63,6 +64,7 @@
     .ginput_container select,
     .ginput_container textarea {
       border: 1px solid $grey-dark;
+      resize: vertical;
     }
   }
 

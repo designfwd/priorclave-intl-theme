@@ -33,7 +33,7 @@ $paginatedLinks = paginate_links( array(
         else:
           get_partial('navigation/primary'); // Primary navigation
         endif;
-        get_partial('hero/news'); // General hero area
+        get_partial('hero/search'); // General hero area
       ?>
     </header>
     <main>

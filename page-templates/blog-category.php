@@ -11,7 +11,7 @@
     <header>
       <?php
         get_partial('navigation/primary'); // Primary navigation
-        get_partial('hero/general-post'); // General hero area
+        get_partial('hero/general-category'); // General hero area
       ?>
     </header>
     <main>
