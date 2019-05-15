@@ -82,7 +82,7 @@ $regions = get_terms( array(
             <?php
             foreach( $distributors as $distributor):
               $company = get_field('company', $distributor->ID);
-              $companySlug = get_post_field( 'post_name', get_post($distributor->ID) );
+              $companySlug = str_replace(' ', '', get_post_field( 'post_name', get_post($distributor->ID) ));
               $address = 'address';
               ?>
               <div id="<?php echo $slug . '--' . $companySlug; ?>" class="m-distributorCountry__wrapper">

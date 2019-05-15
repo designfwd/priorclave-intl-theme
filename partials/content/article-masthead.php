@@ -18,7 +18,7 @@ $categories = get_the_category();
 <section class="o-articleMasthead">
   <h1 class="o-articleMasthead__title"><?php echo $title; ?></h1>
   <h2 class="o-articleMasthead__byline">
-    By <a class="o-articleMasthead__byline--link" href="<?php echo $authorLink; ?>"><?php echo $author; ?></a>
+    By: <a class="o-articleMasthead__byline--link" href="<?php echo $authorLink; ?>"><?php echo $author; ?></a>
   </h2>
   <?php
   // If there are tags for the post, list them

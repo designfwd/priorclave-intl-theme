@@ -24,9 +24,13 @@
     <aside class="content__sidebar">
       <?php // Sidebar widgets
         get_partial('widget/social-sharing'); // Social media sharing links
+        get_partial('widget/featured-post'); // Featured post
+
         get_partial('widget/newsletter-signup'); // Newsletter signup form
         get_partial('widget/author'); // Author information widget
-        get_partial('widget/featured-articles'); // Featured articles block
+        get_partial('widget/links-rich'); // Rich links block
+
+        get_partial('widget/featured-articles-blog'); // Featured articles block
         get_partial('widget/links-tags'); // Tags list
       ?>
     </section></aside>

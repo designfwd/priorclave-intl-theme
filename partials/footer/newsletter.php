@@ -38,7 +38,7 @@ endif;
       </form>
     <?php
       elseif( isset($form) && function_exists('gravity_form') ):
-        gravity_form( $form, false, false, false, null, true, 1, true);
+        gravity_form( $form, false, false, false, null, true, 9999, true);
       endif;
     ?>
   </div>
