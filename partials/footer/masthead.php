@@ -42,4 +42,5 @@ endif;
       <?php echo $logo['sizes']['360w']; ?> 321w,
     "
   />
+  <div class="o-footerMasthead__tagline">Autoclaves are our Business</div>
 </section>
