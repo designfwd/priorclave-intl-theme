@@ -15,7 +15,6 @@ document.body.addEventListener('click', function (e) {
     }
 
   } else {
-    e.preventDefault();
     const countrySelectorDropdown = document.getElementById('homepageMap-dropdownMenu');
     rect = countrySelectorDropdown.getBoundingClientRect();
     clickedIn = rect.top <= e.clientY && e.clientY <= rect.top + rect.height
