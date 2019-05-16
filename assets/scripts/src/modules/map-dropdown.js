@@ -2,27 +2,31 @@
 
 document.body.addEventListener('click', function (e) {
   const countrySelector = document.getElementById('homepageMap-dropdownList');
-  if (countrySelector.offsetParent) {
+  if(countrySelector){
+    if (countrySelector.offsetParent) {
 
-    var rect = countrySelector.getBoundingClientRect();
-    var clickedIn = rect.top <= e.clientY && e.clientY <= rect.top + rect.height
-      && rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
+      var rect = countrySelector.getBoundingClientRect();
+      var clickedIn = rect.top <= e.clientY && e.clientY <= rect.top + rect.height
+        && rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
 
 
-    if (!clickedIn){
-      jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
-      jQuery('#homepageMap-dropdownList').fadeToggle();
-    }
-
-  } else {
-    const countrySelectorDropdown = document.getElementById('homepageMap-dropdownMenu');
-    rect = countrySelectorDropdown.getBoundingClientRect();
-    clickedIn = rect.top <= e.clientY && e.clientY <= rect.top + rect.height
-      && rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
-    if(clickedIn){
-      jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
-      jQuery('#homepageMap-dropdownList').fadeToggle();
-    }
-
-  }
+      if (!clickedIn){
+        jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
+        jQuery('#homepageMap-dropdownList').fadeToggle();
+      }
+    } else {
+      const countrySelectorDropdown = document.getElementById('homepageMap-dropdownMenu');
+      if (countrySelectorDropdown) {
+        if (countrySelectorDropdown.offsetParent) {
+          rect = countrySelectorDropdown.getBoundingClientRect();
+          clickedIn = rect.top <= e.clientY && e.clientY <= rect.top + rect.height
+            && rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
+          if (clickedIn) {
+            jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
+            jQuery('#homepageMap-dropdownList').fadeToggle();
+          }
+        }
+      }
+    } 
+  } 
 });
