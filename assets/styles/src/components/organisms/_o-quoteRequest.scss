@@ -61,6 +61,10 @@
     @media(min-width: 840px) {
       width: 100%;
     }
+
+    @media(max-width: 640px) {
+      padding-top: 2rem;
+    }
   }
 
   @include element('phone') {
