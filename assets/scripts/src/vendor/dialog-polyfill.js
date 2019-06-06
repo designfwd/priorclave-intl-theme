@@ -6,7 +6,7 @@ dialog.forEach(function(element) {
 
 document.body.addEventListener('click', function (e) {
   const openDialogId = $('dialog[open]').attr('id');
-  if(openDialogId){
+  if (typeof(openDialogId) != "undefined"){
     let i = 0;
     
     for(i = 0; i < dialog.length; i++){
@@ -14,7 +14,7 @@ document.body.addEventListener('click', function (e) {
         break;
       }
     }
-
+    
     var rect = dialog.item(i).getBoundingClientRect();
     var clickedIn = rect.top <= e.clientY && e.clientY <= rect.top + rect.height
       && rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
