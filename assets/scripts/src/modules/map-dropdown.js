@@ -1,14 +1,32 @@
 // Handles URL switching based on dropdown options on the multiregion homepage map
-jQuery(document).ready(function() {
-  jQuery('#homepageMap-dropdownMenu').click(function(e) {
-    e.preventDefault();
-    jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
-    jQuery('#homepageMap-dropdownList').fadeToggle();
-  }).children().click(function(){ return false;});
 
-  jQuery('.o-homepageMap__dropdown').on('focusout', (e) => {
-    e.preventDefault();
-    jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
-    jQuery('#homepageMap-dropdownList').fadeToggle();
-  });
+document.body.addEventListener('click', function (e) {
+  const countrySelector = document.getElementById('homepageMap-dropdownList');
+  if(countrySelector){
+    if (countrySelector.offsetParent) {
+
+      var rect = countrySelector.getBoundingClientRect();
+      var clickedIn = rect.top <= e.clientY && e.clientY <= rect.top + rect.height
+        && rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
+
+
+      if (!clickedIn){
+        jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
+        jQuery('#homepageMap-dropdownList').fadeToggle();
+      }
+    } else {
+      const countrySelectorDropdown = document.getElementById('homepageMap-dropdownMenu');
+      if (countrySelectorDropdown) {
+        if (countrySelectorDropdown.offsetParent) {
+          rect = countrySelectorDropdown.getBoundingClientRect();
+          clickedIn = rect.top <= e.clientY && e.clientY <= rect.top + rect.height
+            && rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
+          if (clickedIn) {
+            jQuery('#homepageMap-toggleIcon').toggleClass('a-dropdownLink--icon--toggled');
+            jQuery('#homepageMap-dropdownList').fadeToggle();
+          }
+        }
+      }
+    } 
+  } 
 });
