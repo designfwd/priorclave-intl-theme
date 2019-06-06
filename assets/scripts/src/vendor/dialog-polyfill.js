@@ -20,8 +20,10 @@ document.body.addEventListener('click', function (e) {
       && rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
 
 
-    if (!clickedIn)
+    if (!clickedIn) {
+      $('dialog[open]').parent().parent().slideToggle();
       dialog.item(i).close();
+    }
 
   }
 });

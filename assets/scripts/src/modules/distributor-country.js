@@ -19,6 +19,7 @@ jQuery(document).ready(function() {
   jQuery('.m-distributorDialog__button').click(function() {
     let button = jQuery(this).parent().attr('id');
     document.getElementById(button).close();
+    jQuery(this).parent().parent().parent().slideToggle();
   });
 
   jQuery(document).on('click', '.o-distributorMap__button', function() {
