@@ -42,9 +42,14 @@ endif;
         ?>
           <div class="o-testimonialSlider__slides--wrapper">
             <div class="m-testimonialSlide --preload">
-              <img class="m-testimonialSlide__logo lazyload"
-                src="<?php placeholder_img( 280, 187, ('text=Testimonial ' . ($i+1))); ?>"
-              />
+            <img class="m-testimonialSlide__logo"
+              src="<?php echo $image['sizes']['preload']; ?>"
+              srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+                <?php echo $image['sizes']['128w']; ?> 65w,
+                <?php echo $image['sizes']['240w']; ?> 129w,
+                <?php echo $image['sizes']['320w']; ?> 241w,
+              "
+            />
               <div class="m-testimonialSlide__content a-testimonial">
                 <span class="a-testimonial__quote">&#8220;</span><?php echo $content; ?><span class="a-testimonial__quote">&#8221;</span>
                 <div class="a-testimonial__credit">
