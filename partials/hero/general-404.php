@@ -53,10 +53,10 @@ endif;
 <section class="o-heroGeneral lazyload"
   data-bg="<?php echo $background['url']; ?>"
   style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
+  <div class="o-heroGeneral__wrapper">
   <h1 class="o-heroGeneral__content">
     <span class="o-heroGeneral__content--feature">Uh-oh...</span>
-    <br/>
-    <span class="breadcrumbs o-heroGeneral__content--breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <span class="breadcrumbs o-heroGeneral__breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
       <?php
         if(function_exists('bcn_display')):
           bcn_display();
@@ -88,4 +88,5 @@ endif;
       <?php echo $image['sizes']['1366w']; ?> 1281w,
     "
   />
+  </div>
 </section>

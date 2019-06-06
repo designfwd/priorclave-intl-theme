@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   padding: 4rem 10% 16rem;
 
+  @media(min-width: 640px) {
+    padding: 2rem 10% 6rem;
+  }
+
   @include element('button') {
     @include large-button;
     background-color: $yellow;
@@ -26,6 +30,10 @@
     padding-bottom: 1.6rem;
     text-align: center;
     width: 80%;
+
+    @media(max-width: 640px) {
+      width: 100%;
+    }
   }
 
   @include element('headline') {

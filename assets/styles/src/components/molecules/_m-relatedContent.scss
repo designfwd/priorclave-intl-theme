@@ -1,12 +1,13 @@
 // Content block styles within the related product module
 .m-relatedContent {
   box-sizing: border-box;
+  flex: 0 1 60%;
   margin: auto;
   padding: 0 0 1rem;
   width: 100%;
 
-  @media(min-width: 1024px) {
-    width: 60%;
+  @media(max-width: 720px) {
+    flex: 0 1 100%;
   }
 
   @include element('body') {
@@ -41,18 +42,20 @@
     padding-top: 1.5rem;
     width: 100%;
 
-    @media(min-width: 1024px) {
-      max-width: 340px;
+    @media(max-width: 720px) {
+      max-width: 50%;
     }
   }
 
   @include element('link') {
-    max-width: 60%;
+    flex: 0 1 40%;
     width: 100%;
 
-    @media(min-width: 1024px) {
-      max-width: 35%;
-      padding-left: 3%;
+    @media(max-width: 720px) {
+      align-items: flex-start;
+      display: flex;
+      flex: 0 1 100%;
+      justify-content: center;
     }
   }
 }

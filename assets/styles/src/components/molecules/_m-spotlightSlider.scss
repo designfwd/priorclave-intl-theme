@@ -10,9 +10,9 @@
 
   @include element('image') {
     display: none;
-    height: 80%;
+    height: 100%;
     margin: 2rem auto 0;
-    width: 80%;
+    width: 100%;
 
     @media(min-width: 640px) {
       margin: 0 auto;

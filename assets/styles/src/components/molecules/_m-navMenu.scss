@@ -17,14 +17,10 @@
     background-color: $clear-black;
     color: $grey-medium-light;
     cursor: default;
-    padding: .5rem;
+    padding: .4rem .7rem;
     transition: background-color $base-duration $base-timing,
       color $base-duration $base-timing,
       padding $base-duration $base-timing;
-
-    @media(min-width: 1036px) {
-      padding: .625rem 1rem;
-    }
 
     @include modifier('has-loaded') {
       color: $grey-dark;
