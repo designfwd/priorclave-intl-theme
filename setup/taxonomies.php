@@ -321,3 +321,43 @@ if( ! function_exists( 'subject_taxonomy' ) ):
   }
   add_action( 'init', 'subject_taxonomy', 0 );
 endif;
+
+if (!function_exists('download_taxonomy')):
+    function download_taxonomy()
+{
+        $labels = array(
+            'name' => _x('Downloads', 'Taxonomy General Name', 'priorclave'),
+            'singular_name' => _x('Category', 'Taxonomy Singular Name', 'priorclave'),
+            'menu_name' => __('Downloads Categories', 'priorclave'),
+            'all_items' => __('All Downloads', 'priorclave'),
+            'parent_item' => __('Parent Downloads', 'priorclave'),
+            'parent_item_colon' => __('Parent Downloads:', 'priorclave'),
+            'new_item_name' => __('New Downloads', 'priorclave'),
+            'add_new_item' => __('Add New Downloads', 'priorclave'),
+            'edit_item' => __('Edit Downloads', 'priorclave'),
+            'update_item' => __('Update Downloads', 'priorclave'),
+            'view_item' => __('View Downloads', 'priorclave'),
+            'separate_items_with_commas' => __('Separate Downloads with commas', 'priorclave'),
+            'add_or_remove_items' => __('Add or remove Downloads', 'priorclave'),
+            'choose_from_most_used' => __('Choose from the most used', 'priorclave'),
+            'popular_items' => __('Popular Downloads', 'priorclave'),
+            'search_items' => __('Search Downloads', 'priorclave'),
+            'not_found' => __('Not Found', 'priorclave'),
+            'no_terms' => __('No Downloads', 'priorclave'),
+            'items_list' => __('Downloads list', 'priorclave'),
+            'items_list_navigation' => __('Downloads list navigation', 'priorclave'),
+        );
+        $args = array(
+            'labels' => $labels,
+            'hierarchical' => false,
+            'public' => true,
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'show_in_nav_menus' => false,
+            'show_tagcloud' => false,
+            'show_in_rest' => true,
+        );
+        register_taxonomy('download', array('downloads'), $args);
+    }
+    add_action('init', 'download_taxonomy', 0);
+endif;
