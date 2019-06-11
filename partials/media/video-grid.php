@@ -10,16 +10,30 @@
 
 // Sets variable
 $videos = get_field('media_videoGallery_videos');
-var_dump($videos);
 ?>
 <section class="o-videoGrid">
   <?php
-    for( $i=0; $i<9; $i++ ):
+    foreach($videos as $video):
+      $title_slug = strtolower(str_replace(" ", "-", $video['title']));
+      $image = $video['preview'];
   ?>
-    <div class="o-videoGrid__video">
-      <iframe src='https://www.youtube.com/embed/QILiHiTD3uc' frameborder='0' allowfullscreen></iframe>
+    <div class="o-videoGrid__video" data-dialog="<?php echo $title_slug; ?>">
+      <img class="m-videoGrid__previewImg"
+        src="<?php echo $image['sizes']['preload']; ?>"
+        srcset="<?php echo $image['sizes']['preload']; ?> 64w,
+                <?php echo $image['sizes']['128w']; ?> 65w,
+                <?php echo $image['sizes']['240w']; ?> 129w,
+                <?php echo $image['sizes']['320w']; ?> 241w,
+              "
+      />
+      <div class="m-videoGrid__description">
+        <?php echo $video['description']; ?>
+      </div>
+      <dialog id="dialog-<?php echo $title_slug;?>">
+        <iframe src='<?php echo $video['url']; ?>' frameborder='0' allowfullscreen></iframe>
+      </dialog>
     </div>
   <?php
-    endfor;
+    endforeach;
   ?>
 </section>
