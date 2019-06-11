@@ -78,7 +78,7 @@
         },
         {
             "key": "field_5cf932a9a8582",
-            "label": "FAQ Subjects",
+            "label": "Download Categories",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -106,7 +106,7 @@
                 "id": ""
             },
             "clone": [
-                "group_5b6b26361ba47"
+                "group_5cfe9ac493a06"
             ],
             "display": "seamless",
             "layout": "block",
@@ -189,5 +189,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1559835592
+    "modified": 1560261811
 }

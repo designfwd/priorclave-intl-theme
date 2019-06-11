@@ -1,0 +1,48 @@
+{
+    "key": "group_5cfe9ac493a06",
+    "title": "navigation_categoriesDownloads",
+    "fields": [
+        {
+            "key": "field_5cfe9ac4a11e3",
+            "label": "Download Categories",
+            "name": "navigation_categoriesDownloads_categories",
+            "type": "taxonomy",
+            "instructions": "Please select which categories to include. Once selected they can be dragged into whichever order you would like them to appear.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "download",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1560261939
+}
