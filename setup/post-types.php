@@ -339,3 +339,61 @@ if( ! function_exists('faq_post_type') ):
   }
   add_action( 'init', 'faq_post_type', 0 );
 endif;
+
+if (!function_exists('download_post_type')):
+    function download_post_type()
+{
+        $labels = array(
+            'name' => _x('Downloads', 'Post Type General Name', 'priorclave'),
+            'singular_name' => _x('Download', 'Post Type Singular Name', 'priorclave'),
+            'menu_name' => __('Downloads', 'priorclave'),
+            'name_admin_bar' => __('Download', 'priorclave'),
+            'archives' => __('Download Archives', 'priorclave'),
+            'attributes' => __('Download Attributes', 'priorclave'),
+            'parent_item_colon' => __('Parent Download:', 'priorclave'),
+            'all_items' => __('All Downloads', 'priorclave'),
+            'add_new_item' => __('Add New Download', 'priorclave'),
+            'add_new' => __('Add Download', 'priorclave'),
+            'new_item' => __('New Download', 'priorclave'),
+            'edit_item' => __('Edit Download', 'priorclave'),
+            'update_item' => __('Update Download', 'priorclave'),
+            'view_item' => __('View Download', 'priorclave'),
+            'view_items' => __('View Downloads', 'priorclave'),
+            'search_items' => __('Search Download', 'priorclave'),
+            'not_found' => __('Not found', 'priorclave'),
+            'not_found_in_trash' => __('Not found in Trash', 'priorclave'),
+            'featured_image' => __('Featured Image', 'priorclave'),
+            'set_featured_image' => __('Set featured image', 'priorclave'),
+            'remove_featured_image' => __('Remove featured image', 'priorclave'),
+            'use_featured_image' => __('Use as featured image', 'priorclave'),
+            'insert_into_item' => __('Insert into Download', 'priorclave'),
+            'uploaded_to_this_item' => __('Uploaded to this Download', 'priorclave'),
+            'items_list' => __('Downloads list', 'priorclave'),
+            'items_list_navigation' => __('Downloads list navigation', 'priorclave'),
+            'filter_items_list' => __('Filter Downloads list', 'priorclave'),
+        );
+        $args = array(
+            'label' => __('Download', 'priorclave'),
+            'description' => __('Downloads', 'priorclave'),
+            'labels' => $labels,
+            'supports' => array('title', 'editor'),
+            'taxonomies' => array('download'),
+            'hierarchical' => true,
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'menu_position' => 15,
+            'menu_icon' => 'dashicons-lightbulb',
+            'show_in_admin_bar' => true,
+            'show_in_nav_menus' => false,
+            'can_export' => true,
+            'has_archive' => false,
+            'exclude_from_search' => true,
+            'publicly_queryable' => true,
+            'capability_type' => 'page',
+            'show_in_rest' => true,
+        );
+        register_post_type('downloads', $args);
+    }
+    add_action('init', 'download_post_type', 0);
+endif;

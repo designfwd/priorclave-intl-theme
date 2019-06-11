@@ -10,4 +10,15 @@ jQuery(document).ready(function() {
     jQuery('#toggle-' + question).toggleClass('--toggled');
     jQuery('#content-' + question).slideToggle();
   });
+
+  jQuery('a.o-categoryNav__link--faq').on('click', (e) => {
+    e.preventDefault();
+    const navHeight = jQuery('.o-primaryNav').height();
+    let navLink = e.currentTarget.hash;
+
+    linkHeight = jQuery(navLink).position();
+    scrollAmount = linkHeight.top-navHeight;
+
+    window.scrollTo({top:scrollAmount, left: 0, behavior: 'smooth'});
+  });
 });
