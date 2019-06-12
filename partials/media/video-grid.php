@@ -29,10 +29,12 @@ $videos = get_field('media_videoGallery_videos');
       <div class="m-videoGrid__description">
         <?php echo $video['description']; ?>
       </div>
-      <dialog id="dialog-<?php echo $title_slug;?>">
+    </div>
+      <dialog id="dialog-<?php echo $title_slug;?>" ><button class="m-videoDialog__button">
+                    X
+                  </button>
         <iframe src='<?php echo $video['url']; ?>' frameborder='0' allowfullscreen></iframe>
       </dialog>
-    </div>
   <?php
     endforeach;
   ?>
