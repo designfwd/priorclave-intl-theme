@@ -11,7 +11,8 @@ jQuery(document).ready(function() {
     jQuery('#content-' + country).slideToggle();
   });
 
-  jQuery('.m-distributorCountry__contact--button').click(function() {
+  jQuery('.m-distributorCountry__contact--button').click(function(e) {
+    e.stopPropagation();
     let country = jQuery(this).data('country');
     document.getElementById('dialog-' + country).showModal();
   });
