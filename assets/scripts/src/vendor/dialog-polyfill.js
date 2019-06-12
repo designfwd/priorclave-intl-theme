@@ -21,7 +21,11 @@ document.body.addEventListener('click', function (e) {
 
 
     if (!clickedIn) {
-      $('dialog[open]').parent().parent().slideToggle();
+      if($('dialog[open').parent().parent().hasClass('m-distributorCountry')){
+        $('dialog[open]').parent().parent().slideToggle();
+        $('.--toggled').removeClass('--toggled');
+      }
+      $('#' + openDialogId+' iframe').attr('src','');
       dialog.item(i).close();
     }
 

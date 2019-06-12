@@ -27,3 +27,5 @@ require('./modules/product-results.js');
 require('./modules/product-specifications.js');
 require('./modules/spotlight-slider.js');
 require('./modules/testimonial-slider.js');
+require('./modules/video-gallery.js');
+
