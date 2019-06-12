@@ -25,7 +25,7 @@ document.body.addEventListener('click', function (e) {
         $('dialog[open]').parent().parent().slideToggle();
         $('.--toggled').removeClass('--toggled');
       }
-
+      $('#' + openDialogId+' iframe').attr('src','');
       dialog.item(i).close();
     }
 

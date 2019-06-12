@@ -33,7 +33,7 @@ $videos = get_field('media_videoGallery_videos');
       <dialog id="dialog-<?php echo $title_slug;?>" ><button class="m-videoDialog__button">
                     X
                   </button>
-        <iframe src='<?php echo $video['url']; ?>' frameborder='0' allowfullscreen></iframe>
+        <iframe data-src='<?php echo $video['url']; ?>' frameborder='0' allowfullscreen class="ytVideo" src=""></iframe>
       </dialog>
   <?php
     endforeach;
