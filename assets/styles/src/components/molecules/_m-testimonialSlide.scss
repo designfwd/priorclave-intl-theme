@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
 
   @media(min-width: 640px) {
-    align-items: flex-start;
     flex-direction: row;
   }
 
@@ -17,5 +17,25 @@
     @media(min-width: 640px) {
       padding: 0 0 0 2rem;
     }
+  }
+}
+
+.m-testimonialSlide__logo {
+  padding-right: .5rem;
+  width: 30%;
+
+  @media(max-width: 780px) {
+    padding-bottom: 1.5rem;
+    padding-right: 0;
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+.m-testimonialSlide__content {
+  flex: 0 1 50%;
+
+  @media(max-width: 780px) {
+    flex: 0 1 100%;
   }
 }
