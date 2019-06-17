@@ -13,7 +13,8 @@
 
 if( function_exists('get_field') ):
   $ID = get_the_ID();
-  $background = get_field('media_featuredPosts_background', $ID);
+  $background = (get_field('media_featuredPosts_background', $ID) ? get_field('media_featuredPosts_background', $ID) : get_field('content_background_image', $ID));
+
   $headline = get_field('media_featuredPosts_headline', $ID);
   $articles = get_field('media_featuredPosts_articles', $ID);
   $exclude = get_field('media_featuredPosts_articles', $ID, false);
