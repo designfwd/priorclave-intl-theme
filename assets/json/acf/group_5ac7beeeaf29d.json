@@ -290,6 +290,27 @@
             "multiple": 0
         },
         {
+            "key": "field_5d07c4566ab68",
+            "label": "Request Quote Page",
+            "name": "site_requestQuote",
+            "type": "page_link",
+            "instructions": "The page to use for request quote page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
             "key": "field_5b451b2ad9e56",
             "label": "News & Events Page",
             "name": "site_newsPage",
@@ -411,6 +432,54 @@
             "key": "field_5ad0f38a07aee",
             "label": "Hero Image",
             "name": "default_hero_image",
+            "type": "image",
+            "instructions": "The default image to use in foreground of hero areas, when one is not set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d07bf701a4e6",
+            "label": "Hero Background Image 404 Page",
+            "name": "default_hero_backgroundImage_404",
+            "type": "image",
+            "instructions": "The default background image to use for hero areas, when one is not set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d07bf8a1a4e7",
+            "label": "Hero Image 404",
+            "name": "default_hero_image_404",
             "type": "image",
             "instructions": "The default image to use in foreground of hero areas, when one is not set.",
             "required": 0,
@@ -1504,5 +1573,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1557952328
+    "modified": 1560790251
 }

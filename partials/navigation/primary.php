@@ -18,8 +18,9 @@
 if( function_exists('get_field') ):
   $siteLogo = get_field('site_logo', 'option');
   $sitePhone = get_field('site_contact_phone', 'option');
-  $contactPage = get_field('site_contactPage', 'option');
+  $contactPage = get_field('site_requestQuote', 'option');
   $siteCountry = get_field('site_country', 'option')['value'];
+
 endif;
 
 // Fallback logo if none is set

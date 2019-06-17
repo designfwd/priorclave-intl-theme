@@ -12,8 +12,9 @@
  the_post();
 if(function_exists('get_field') ):
   $ID = get_the_ID();
-  $background = get_field('default_hero_backgroundImage', 'option');
-  $image = get_field('default_hero_image', 'option');
+  $background = get_field('default_hero_backgroundImage_404', 'option');
+  $image = get_field('default_hero_image_404', 'option');
+
 endif;
 
 // Creates fallbacks if no defaults are set
