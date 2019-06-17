@@ -139,6 +139,7 @@
 @import './components/molecules/m-specificationCell.scss';
 @import './components/molecules/m-spotlightSlider.scss';
 @import './components/molecules/m-testimonialSlide.scss';
+@import './components/molecules/m-videoGrid.scss';
 @import './components/molecules/m-wideNav';
 @import './components/molecules/m-widgetForm.scss';
 
@@ -207,6 +208,7 @@
 @import './components/templates/homepage.scss'; // Homepage styles
 @import './components/templates/page-template-content-category.scss'; // Content Category page styles
 @import './components/templates/page-template-content-customers.scss'; // Customers page styles
+@import './components/templates/page-template-content-downloads.scss'; // Download page styles
 @import './components/templates/page-template-content-faq.scss'; // FAQ page styles
 @import './components/templates/page-template-homepage-multiregion.scss'; // Multiregion page styles
 @import './components/templates/page-template-product-categories.scss'; // Product Category page styles
@@ -215,7 +217,6 @@
 @import './components/templates/terms.scss'; // Terms page styles
 @import './components/templates/universal-footer.scss'; // Footer modules
 @import './components/templates/video.scss'; // Video page styles
-
 
 /**
  * Overrides
