@@ -27,8 +27,8 @@
   }
 
   @include element('item') {
-    margin-left: 1rem;
-    width: calc( 100% - 1rem );
+    padding: 0 1rem;
+    width: 100%;
   }
 
   @include element('label') {
