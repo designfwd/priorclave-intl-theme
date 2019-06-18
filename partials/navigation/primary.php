@@ -62,7 +62,7 @@ endif;
         />
       </a>
       <?php // Navigation menu ?>
-      <nav class="m-mobileNav__menu">
+      <nav class="m-mobileNav__menu" data-simplebar>
         <?php
         $locations = get_nav_menu_locations();
         if( isset( $locations['primary_nav'] ) ):
