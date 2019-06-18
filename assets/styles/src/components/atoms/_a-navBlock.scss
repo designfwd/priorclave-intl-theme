@@ -43,11 +43,8 @@
   @include element('title') {
     @include proxima-nova-semibold;
     font-size: rem(16);
+    line-height: 1.3rem;
     margin: 0 auto;
     width: 65%;
-
-    @media(max-width: 900px) {
-      line-height: 1.4rem;
-    }
   }
 }
