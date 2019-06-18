@@ -1,15 +1,10 @@
 .error--404 {
 
-  .o-heroGeneral__image {
-
-    @media (min-width: 720px) {
-      max-width: 20%;
-    }
-  }
-
   main {
+    background-color: $white;
     margin: 0 auto;
     max-width: 1280px;
     padding: 3rem 5%;
+    position: relative;
   }
 }

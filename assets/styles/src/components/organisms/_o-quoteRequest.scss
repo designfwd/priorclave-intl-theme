@@ -2,6 +2,7 @@
 .o-quoteRequest {
   background-color: $grey-dark;
   color: $white;
+  position: relative;
 
   @include element('description') {
     margin: 0 auto;

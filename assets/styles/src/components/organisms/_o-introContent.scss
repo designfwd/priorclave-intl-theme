@@ -2,6 +2,7 @@
 .o-introContent {
   background-color: $grey-dark;
   padding: 2.5rem 5% 1rem;
+  position: relative;
   width: 100%;
 
   @media(min-width: 640px) {
@@ -10,6 +11,7 @@
 
   @include modifier('inverted') {
     background-color: $white;
+    position: relative;
 
     .o-introContent__headline,
     .o-introContent__content > p {
@@ -17,7 +19,7 @@
     }
 
     a {
-      color: $yellow;
+      color: $yellow-dark;
 
       &:hover {
         color: $grey-dark;

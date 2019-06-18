@@ -18,12 +18,24 @@
     cursor: pointer;
     font-size: rem(24);
     margin-top: 1px;
-    max-width: 1100px;
+    max-width: 400px;
     padding: 1.2rem;
     text-align: center;
     transition: background-color $base-duration $base-timing,
       color $base-duration $base-timing;
-    width: 100%;
+    width: 80%;
+
+    @media(min-width: 640px) {
+      max-width: 560px;
+    }
+
+    @media(min-width: 950px) {
+      max-width: 840px;
+    }
+
+    @media(min-width: 1264px) {
+      max-width: 1100px;
+    }
 
     &:hover {
       background-color: $yellow;
@@ -39,8 +51,8 @@
   @include element('table') {
     display: flex;
     flex-wrap: wrap;
-    max-width: 280px;
-    width: 100%;
+    max-width: 400px;
+    width: 80%;
 
     @media(min-width: 640px) {
       max-width: 560px;
@@ -51,11 +63,7 @@
     }
 
     @media(min-width: 1264px) {
-      max-width: 1120px;
-    }
-
-    @media(min-width: 1573px) {
-      max-width: 1400px;
+      max-width: 1100px;
     }
   }
 }

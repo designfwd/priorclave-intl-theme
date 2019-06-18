@@ -5,7 +5,7 @@
   max-width: 800px;
   position: relative;
   width: 90%;
-  background-color: #39383d;
+  background-color: $white;
 
   @include element('address') {
     max-width: 360px;
@@ -17,7 +17,8 @@
   }
 
   @include element('button') {
-    color: $grey-dark;
+    background-color: $grey-dark;
+    color: $white;
     cursor: pointer;
     position: absolute;
     padding: .25rem;

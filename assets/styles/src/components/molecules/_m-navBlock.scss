@@ -38,7 +38,7 @@
     @include modifier('pictureGrid') {
       flex: 1 0 100%;
 
-      @media(min-width: 1140px) {
+      @media(min-width: 900px) {
         flex: 1 0 80%;
       }
     }
@@ -56,7 +56,7 @@
         width: 100%;
       }
 
-      @media(min-width: 1140px) {
+      @media(min-width: 900px) {
         width: 20%;
       }
     }
@@ -71,6 +71,10 @@
     @media(min-width: 640px) {
       max-height: 8rem;
       padding-top: .75rem;
+    }
+
+    @media(min-width: 900px) {
+      max-height: 6rem;
     }
   }
 

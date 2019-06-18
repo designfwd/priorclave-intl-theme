@@ -10,6 +10,13 @@
   transform: translate(0, -50%);
   width: 80%;
 
+  @media(max-width: 768px) {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   &::backdrop,
   & + .backdrop {
     @include position(fixed, 0);
@@ -19,11 +26,17 @@
   @include element('button') {
     background-color: $yellow;
     cursor: pointer;
+    display: flex;
     font-weight: $font-bold;
-    margin-top: 5rem;
+    justify-content: center;
+    margin-top: 7.5rem;
     padding: .5rem;
-    text-align: center;
     transition: color $base-duration $base-timing;
+    width: 100%;
+
+    @media(max-width: 768px) {
+      margin-top: 2rem;
+    }
 
     &:hover {
       color: $white;
@@ -45,6 +58,10 @@
       margin-right: 5%;
       margin-bottom: 2rem;
     }
+
+    @media(max-width: 768px) {
+      max-width: 70%;
+    }
   }
 
   @include element('title') {
@@ -52,5 +69,9 @@
     font-weight: $font-bold;
     margin: 0 0 1rem;
     padding: 0 1rem;
+
+    @media(max-width: 768px) {
+      margin-top: 2rem;
+    }
   }
 }

@@ -1,18 +1,33 @@
 .single-post {
 
-  .o-heroGeneral__image {
-
-    @media (min-width: 720px) {
-      max-width: 30%;
-    }
-  }
-
   .content__articleWrapper {
     align-items: self-start;
+    background-color: $white;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
     max-width: 1100px;
+    position: relative;
+  }
+
+  .o-heroPost { 
+    flex-wrap: wrap;
+    width: 100%;
+
+    a {
+      flex: 0 1 100%;
+    }
+
+    .o-heroPost__content {
+      flex: 0 1 100%;
+      font-size: 1.125rem;
+      padding: 0 1rem 1rem;
+
+      @media(max-width: 920px) {
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
   }
 }

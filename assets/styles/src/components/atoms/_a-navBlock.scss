@@ -45,5 +45,9 @@
     font-size: rem(16);
     margin: 0 auto;
     width: 65%;
+
+    @media(max-width: 900px) {
+      line-height: 1.4rem;
+    }
   }
 }
