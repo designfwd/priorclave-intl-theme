@@ -2,6 +2,10 @@
 .m-menuItem {
   width: 100%;
 
+  &:hover {
+    background-color: $yellow;
+  }
+
   @include element('headline') {
     margin: 1rem 0 .5rem .5rem;
   }
@@ -9,5 +13,12 @@
   @include element('title') {
     @include subheadline;
     margin: .2rem 0 .2rem 1rem;
+  }
+}
+
+div.m-menuItem {
+
+  &:hover {
+    background-color: $white;
   }
 }
