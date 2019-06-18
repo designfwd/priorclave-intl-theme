@@ -8,6 +8,7 @@ require('./vendor/cookieconsent');
 require('./vendor/dialog-polyfill');
 require('./vendor/jquery-globals');
 require('./vendor/lazysizes.js');
+require('simplebar');
 require('slick-carousel');
 require('./vendor/smoothscroll-polyfill.js');
 
