@@ -1,9 +1,9 @@
 // Styles for the featured post in the hero section of the blog homepage
 .o-heroPost {
-  background-color: $grey-lightest;
+  background-color:$grey-lightest;
   flex-direction: row;
   justify-content: center;
-  margin: 1%;
+  margin: 0 auto;
   width: 98%;
 
   @media(max-width: 800px) {

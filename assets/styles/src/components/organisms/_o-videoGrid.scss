@@ -13,10 +13,29 @@
     min-width: 280px;
     overflow: hidden;
     position: relative;
+    transition: outline $base-duration $base-timing;
     width: calc(33% - 2rem);
+
+    &:hover {
+      background-color: $yellow;
+      outline: 4px solid $yellow;
+    }
+
     .m-videoGrid__description{
       background-color: $grey-dark;
+
+      p {
+
+        &:last-child {
+          color: $yellow-dark;
+          font-size: .7rem;
+          font-weight: 800;
+          text-align: left;
+          text-transform: uppercase;
+        }
+      }
     }
+
     p{
       margin: 0;
       color: white;

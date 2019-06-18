@@ -1,9 +1,8 @@
 .blog {
 
-  .o-heroGeneral__image {
-
-    @media (min-width: 720px) {
-      max-width: 30%;
-    }
+  main {
+    background-color: $white;
+    padding-top: 1rem;
+    position: relative;
   }
 }

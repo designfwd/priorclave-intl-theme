@@ -1,16 +1,19 @@
-.m-productDownload {
+.page-template-content-downloads {
 
-  &:hover {
-    background-color: $yellow;
+  .m-productDownload {
+
+    &:hover {
+      background-color: $yellow;
+    }
   }
-}
 
-.m-productDownload__icon {
-  background-color: transparent;
-}
+  .m-productDownload__icon {
+    background-color: transparent;
+  }
 
-.m-productDownload__title {
-  background-color: transparent;
-  border-left: none;
-  color: $grey-medium-dark;
+  .m-productDownload__title {
+    background-color: transparent;
+    border-left: none;
+    color: $grey-medium-dark;
+  }
 }

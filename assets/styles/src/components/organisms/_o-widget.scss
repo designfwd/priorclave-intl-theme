@@ -22,6 +22,18 @@
     padding: 2rem;
     width: 100%;
 
+    &:hover {
+      background-color: $yellow;
+
+      .m-featuredPost__content--title {
+        color: #39383d;
+      }
+
+      .m-featuredPost__content--link {
+        color: $white;
+      }
+    }
+
     @include modifier('title') {
       @include subheadline;
     }
@@ -66,4 +78,13 @@
       padding: .75rem;
     }
   }
+}
+
+.m-featuredPost__content--link {
+  color: $yellow-dark;
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  width: 100%;
 }
