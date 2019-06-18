@@ -5,15 +5,19 @@ jQuery(document).ready(function() {
   jQuery('#productOptions-list').removeClass('--preload');
 
   jQuery('#productOptions-toggle').click(function() {
-    jQuery('#productOptions-list').slideToggle();
+    jQuery('#productOptions-list').slideToggle('5000', "linear", function () {
+      // Animation complete.
+    });
   });
 
-  jQuery('.m-featuredOption').click(function() {
+  jQuery('.m-featuredOption').click(function(e) {
+    e.stopPropagation();
     let optionID = jQuery(this).attr('id').replace('productOption-','');
     document.getElementById('optionDialog-' + optionID).showModal();
   });
 
-  jQuery('.o-productOptions__item').click(function() {
+  jQuery('.o-productOptions__item').click(function (e) {
+    e.stopPropagation();
     let optionID = jQuery(this).attr('id').replace('productOption-','');
     document.getElementById('optionDialog-' + optionID).showModal();
   });
