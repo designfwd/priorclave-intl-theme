@@ -124,7 +124,7 @@ $regions = get_terms( array(
                 </div>
                 <?php
                 // Distributor dialog box
-                $form = get_field('form_contactDistributor_form');
+                $form = get_query_var('form');
                 $logo = get_field('site_logo', 'option');
                 ?>
                 <dialog id="dialog-<?php echo $companySlug; ?>" class="m-distributorDialog">

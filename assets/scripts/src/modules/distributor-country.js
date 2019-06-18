@@ -21,6 +21,7 @@ jQuery(document).ready(function() {
     let button = jQuery(this).parent().attr('id');
     document.getElementById(button).close();
     jQuery(this).parent().parent().parent().slideToggle();
+    jQuery('.--toggled').removeClass('--toggled');
   });
 
   jQuery(document).on('click', '.o-distributorMap__button', function() {

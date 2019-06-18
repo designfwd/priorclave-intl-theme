@@ -49,10 +49,17 @@ $sections = array(
           </div>
           <?php
           // Section choices, as defined by the taxonomy
+
           $choices = get_terms( array(
             'hide_empty' => false,
-            'taxonomy' => $taxonomy
-          ) );
+            'taxonomy' => $taxonomy,
+            'orderby'   => 'meta_value',
+            'meta_query' => array(
+                array(
+                    'key' => 'autoclave_taxonomy_menu_order',
+                )
+              )
+            ));
 
           // Sets the input type for this group
           $type = $section['style']['value'];
