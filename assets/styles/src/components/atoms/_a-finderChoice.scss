@@ -4,6 +4,58 @@
   display: flex;
   flex-direction: column;
 
+  .tooltip{
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    .a-finderChoice__image--descriptionIcon {
+      width: 1.2rem;
+      margin-left: .58rem;
+    }
+    .top {
+      min-width: 200px;
+      top: -20px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      padding: 10px 20px;
+      color: black;
+      background-color: $grey-light;
+      font-weight: normal;
+      font-size: 13px;
+      border-radius: 8px;
+      position: absolute;
+      z-index: 99999999;
+      box-sizing: border-box;
+      visibility: hidden;
+      transition: opacity .8s;
+      line-height: 1.2rem;
+      i {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -12px;
+        width: 24px;
+        height: 12px;
+        overflow: hidden;
+
+        &:after{
+          content: '';
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          left: 50%;
+          transform: translate(-50%,-50%) rotate(45deg);
+          background-color: $grey-light;
+        }
+      }
+    }
+    &:hover .top{
+      visibility: visible;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
   @include element('image') {
     height: 225px;
     object-fit: contain;

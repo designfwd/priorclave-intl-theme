@@ -97,6 +97,20 @@ $sections = array(
                   <div class="a-finderChoice__label">
                     <?php
                     echo $title;
+                    if( $description ):
+                    ?>
+                    <div class="btn btn-primary tooltip">
+                      <img class="a-finderChoice__image--descriptionIcon lazyload lazyload--blurUp"
+                        data-sizes="auto"
+                        src="/wp-content/uploads/2019/06/large-autoclave-info-icons.png"
+                      />
+                      <div class="a-finderChoice__label--description top">
+                        <?php echo $description; ?>
+                      </div>
+                      <i></i>
+                    </div>
+                    <?php
+                    endif;
 
                     if( $subtitle ):
                     ?>

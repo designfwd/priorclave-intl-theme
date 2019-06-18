@@ -44,14 +44,22 @@ if( !$image ):
 endif;
 ?>
 <section class="o-relatedProduct">
+  <?php
+    if($headline) :
+  ?>
   <h2 class="o-relatedProduct__headline">
     <?php echo $headline; ?>
   </h2>
+  <?php endif;?>
   <div class="o-relatedProduct__content">
     <div class="m-relatedContent">
+  <?php
+    if($content) :
+  ?>      
       <div class="m-relatedContent__body">
         <?php echo $content; ?>
       </div>
+  <?php endif;?>      
       <a class="m-relatedContent__button" href="<?php echo $page; ?>">
         <div class="m-relatedContent__buttonText">
           <?php echo $label; ?>
