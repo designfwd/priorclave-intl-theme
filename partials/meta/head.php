@@ -29,6 +29,7 @@
   if( get_field('google_analytics_id', 'option') ):
     $google_analytics_id = get_field('google_analytics_id', 'option');
   ?>
+    <link rel="preconnect" href="https://www.googletagmanager.com/" crossorigin>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_id; ?>"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -44,6 +45,7 @@
   if( get_field('typekit_id', 'option') ):
     $typekit_id = get_field('typekit_id', 'option');
   ?>
+    <link rel="preconnect" href="https://use.typekit.net/" crossorigin>
     <script>
       (function(d) {
         var config = {
