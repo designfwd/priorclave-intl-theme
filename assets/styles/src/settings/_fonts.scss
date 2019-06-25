@@ -17,18 +17,21 @@ $font-black: 900;
 // Lato font imports
 @font-face {
   @include font('Lato', 'Lato-Regular');
+  font-display: swap;
   font-style: normal;
   font-weight: $font-regular;
 }
 
 @font-face {
   @include font('Lato', 'Lato-Bold');
+  font-display: swap;
   font-style: normal;
   font-weight: $font-bold;
 }
 
 @font-face {
   @include font('Lato', 'Lato-Black');
+  font-display: swap;
   font-style: normal;
   font-weight: $font-black;
 }
@@ -36,18 +39,21 @@ $font-black: 900;
 // Open Sans imports
 @font-face {
   @include font('Open-Sans', 'OpenSans-Bold');
+  font-display: swap;
   font-style: normal;
   font-weight: $font-bold;
 }
 
 @font-face {
   @include font('Open-Sans', 'OpenSans-Light');
+  font-display: swap;
   font-style: normal;
   font-weight: $font-light;
 }
 
 @font-face {
   @include font('Open-Sans', 'OpenSans-Regular');
+  font-display: swap;
   font-style: normal;
   font-weight: $font-regular;
 }
