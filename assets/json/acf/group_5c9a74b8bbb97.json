@@ -40,7 +40,7 @@
         {
             "key": "field_5c9a7ce78fb0f",
             "label": "Featured Video Thumbnail",
-            "name": "media_featureVideo_thumbnail",
+            "name": "media_featuredVideo_thumbnail",
             "type": "image",
             "instructions": "The image to use for preview purposes.",
             "required": 0,
@@ -81,5 +81,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1553628583
+    "modified": 1561567757
 }
