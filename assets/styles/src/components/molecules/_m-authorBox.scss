@@ -17,8 +17,10 @@
   }
 
   @include element('photo') {
+    @include size(120px);
     border: .25rem solid $yellow;
     border-radius: 50%;
+    object-fit: cover;
   }
 
   @include element('title') {
