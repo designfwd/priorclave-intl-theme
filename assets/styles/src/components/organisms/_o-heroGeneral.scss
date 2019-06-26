@@ -1,22 +1,31 @@
 // Styles for the general hero area
 .o-heroGeneral {
   background-color: $yellow;
-  background-position: 5% center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
+  display: block;
   margin-top: 4.9rem;
   max-height: unset;
-
-  @media(min-width: 1280px) {
-    background-position: 20% center;
-  }
+  position: relative;
 
   @media(min-width: 720px) {
     max-height: 210px;
   }
 
-  @media(max-width: 720px) {
-    background-position: center;
+  @include element('background') {
+    height: 100%;
+    left: 0;
+    max-height: unset;
+    max-width: 1100px;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+
+    @media (min-width: 720px) {
+      left: 5%;
+      width: 70%;
+    }
   }
 
   @include element('breadcrumbs') {
@@ -75,28 +84,18 @@
 
   @include element('image') {
     align-self: center;
-    max-height: 100%;
-    max-width: 80%;
+    max-height: 210px;
+    margin-left: 0;
+    margin-top: 1rem;
+    object-fit: contain;
+    object-position: bottom;
+    overflow: hidden;
     position: relative;
-    width: 100%;
-
-    @media(max-width: 850px) {
-      max-width: 53%;
-    }
-
-    @media(min-width: 851px) {
-      max-width: 50%;
-    }
+    width: 50%;
 
     @media(min-width: 720px) {
-      align-self: flex-end;
-      top: 0;
-      position: absolute;
-      right: 0;
-    }
-
-    @media(min-width: 1200px) {
-      top: -2rem;
+      margin-left: 1rem;
+      margin-top: 0;
     }
   }
 
@@ -106,15 +105,16 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 1100px;
-    padding: 1rem 3%;
+    padding: 0 3%;
     width: 100%;
-
-    @media(max-width: 768px) {
-      padding: 0 3%;
-    }
+    z-index: 1;
 
     @media(min-width: 720px) {
       flex-direction: row;
+    }
+
+    @media(min-width: 1100px) {
+      margin: 0 auto;
     }
   }
 }
