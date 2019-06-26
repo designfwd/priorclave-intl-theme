@@ -14,3 +14,25 @@ jQuery(document).ready(function () {
     dialogBox.close();
   });
 });
+
+// Maintains video description height across the entire grid
+jQuery(document).ready(function() {
+
+  // Grab the heights of items and set them to be equal
+  function setDescHeight() {
+    let height = 0;
+
+    jQuery('.m-videoGrid__description').each(function() {
+      console.log(height);
+      if( jQuery(this).outerHeight() > height ) {
+        height = jQuery(this).outerHeight();
+      }
+    });
+
+    jQuery('.m-videoGrid__description').outerHeight(height);
+  }
+
+  setDescHeight();
+  jQuery(window).resize( setDescHeight() );
+
+});
