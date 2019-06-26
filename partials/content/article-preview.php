@@ -10,6 +10,8 @@
  */
 
 $author = get_the_author_meta('ID');
+$image = get_field( 'profile_image', "user_{$author}" );
+$name = get_the_author_meta( 'display_name', $author );
 ?>
 <div class="m-articlePreview" data-href="<?php echo get_permalink($post->ID); ?>">
   <?php // Post featured image
@@ -40,10 +42,11 @@ $author = get_the_author_meta('ID');
     endif;
   ?>
   <img class="m-articlePreview__photo lazyload"
-    src="<?php echo get_avatar_url($author, array('size'=>16)); ?>"
+    alt="<?php echo $name; ?>"
+    src="<?php echo $image['sizes']['preload']; ?>"
     data-sizes="auto"
-    data-srcset="<?php echo get_avatar_url($author, array('size'=>16)); ?> 16w,
-     <?php echo get_avatar_url($author, array('size'=>72)); ?> 65w,
+    data-srcset="<?php echo $image['sizes']['preload']; ?> 16w,
+     <?php echo $image['sizes']['128w']; ?> 65w,
     "
   />
   <h3 class="m-articlePreview__headline"><?php echo get_the_title($post->ID); ?></h3>
