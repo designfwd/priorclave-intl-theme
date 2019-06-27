@@ -83,7 +83,10 @@
 
 .o-featuredVideo__preview {
   cursor: pointer;
+  margin: auto;
+  max-width: 848px;
   position: relative;
+  width: 100%;
 
   &:hover {
     .o-featuredVideo__button {

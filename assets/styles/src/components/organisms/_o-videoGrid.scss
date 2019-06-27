@@ -10,11 +10,19 @@
     height: auto;
     margin: 1rem;
     max-width: 100%;
-    min-width: 280px;
+    min-width: 240px;
     overflow: hidden;
     position: relative;
     transition: outline $base-duration $base-timing;
-    width: calc(33% - 2rem);
+    width: calc(100% - 2rem);
+
+    @media(min-width: 640px) {
+      width: calc(48% - 2rem);
+    }
+
+    @media(min-width: 940px) {
+      width: calc(30% - 2rem);
+    }
 
     &:hover {
       background-color: $yellow;

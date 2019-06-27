@@ -23,7 +23,6 @@ jQuery(document).ready(function() {
     let height = 0;
 
     jQuery('.m-videoGrid__description').each(function() {
-      console.log(height);
       if( jQuery(this).outerHeight() > height ) {
         height = jQuery(this).outerHeight();
       }
