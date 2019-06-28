@@ -62,6 +62,12 @@
     }
   }
 
+  &.content--video {
+    .o-ctaGrid {
+      background-color: $white;
+    }
+  }
+
   .content__main_aside_wrapper {
     align-items: self-start;
     background: $white;
