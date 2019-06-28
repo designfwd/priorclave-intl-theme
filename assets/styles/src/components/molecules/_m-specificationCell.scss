@@ -1,15 +1,28 @@
 // Styles for individual cells within a product specifications table
 .m-specificationCell {
   @include product-labels-grid;
-  margin: 1px;
+  margin: 1px 0;
   text-align: center;
-  width: 278px;
+  width: 100%;
+
+  @media(min-width: 640px) {
+    margin: 1px;
+    width: calc( 50% - 2px );
+  }
+
+  @media(min-width: 950px) {
+    width: 33%;
+  }
+
+  @media(min-width: 1100px) {
+    width: calc( 25% - 2px );
+  }
 
   @include modifier('filler') {
     flex-basis: 278px;
     flex-grow: 1;
     flex-shrink: 1;
-    width: 100%;
+    width: calc( 100% - 2px );
   }
 
   @include modifier('fillerHider') {
