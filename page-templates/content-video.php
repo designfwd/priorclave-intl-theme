@@ -20,16 +20,18 @@
         get_partial('content/intro-inverted'); // Intro content
         get_partial('media/video-grid'); // Video grid
         get_partial('content/feature-inverted'); // Other resources info block
-        get_partial('media/cta-grid'); // Grid of links
-      ?>
+        ?>
     </main>
     <footer class="universal-footer">
-      <?php // Universal footer blocks
+      <?php
+        get_partial('media/cta-grid'); // Grid of links
+
+        // Universal footer blocks
         get_partial('footer/newsletter'); // Newsletter signup form
         get_partial('footer/masthead'); // Footer masthead
         get_partial('footer/quicklinks'); // Quicklink buttons
         get_partial('footer/contacts'); // Contact blocks
-        get_partial('footer/badges'); // Crediibility badges
+        get_partial('footer/badges'); // Credibility badges
         get_partial('footer/copyright'); // Copyright phrasing and links
       ?>
     </footer>
