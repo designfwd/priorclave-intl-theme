@@ -2,4 +2,12 @@
 .o-generalBlock {
   line-height: 1.4;
   width: 100%;
+
+  a {
+    color: $yellow-dark;
+
+    &:hover {
+      color: $grey-medium-light;
+    }
+  }
 }
