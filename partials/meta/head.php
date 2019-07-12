@@ -12,6 +12,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <?php
+  // Places alternate links for the page
+  if( have_rows( 'hreflang' ) ):
+    while( have_rows( 'hreflang' ) ): the_row();
+      $link = get_sub_field( 'link' );
+      $lang = get_sub_field( 'lang' );
+
+      echo '<link rel="alternate" href="' . $link . '" hreflang="' . $lang . '" />' . PHP_EOL;
+    endwhile;
+  endif;
+  ?>
+
+  <?php
   // Grabs fields from parent site settings if on a different site
   $blogId = get_current_blog_id();
   if( get_current_blog_id() != 1 ):
