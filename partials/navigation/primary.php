@@ -481,16 +481,24 @@ endif;
           Select Your Country or Region
         </h3>
         <?php
+        // Gets relative link
+        $relLink = str_replace( get_home_url(), '', get_permalink() );
+
         $currentSite = get_current_blog_id();
         $countryArray = array();
         switch_to_blog(1);
         while( have_rows( 'intlMenu', 'option') ): the_row();
           $region = get_sub_field('region');
           $regionLang = get_sub_field('language')['value'];
-          $regionLink = get_site_url(1) . '/' . $regionLang . '/' . $region['value'];
           $countries = get_sub_field('countries');
+
+          if( $relLink != '/' ):
+            $regionLink = get_site_url(1) . '/' . $regionLang . $relLink;
+          else:
+            $regionLink = get_site_url(1) . '/' . $regionLang . '/' . $region['value'];
+          endif;
           ?>
-          <a class="m-countrySelector__item" href="<?php echo $regionLink; ?>">
+          <a class="m-countrySelector__item" href="<?php echo $regionLink; ?>" target="_blank" rel="noopener noreferrer">
             <h3 class="m-countrySelector__region">
               <?php echo $region['label']; ?>
             </h3>
@@ -502,12 +510,12 @@ endif;
               $language = get_sub_field('language')['value'];
               $separateCheck = get_sub_field('external');
               if( $separateCheck == true ):
-                $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . '/';
+                $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . $relLink;
               else:
-                $countryLink = get_site_url(1) . '/' . $language . '/' . str_replace(' ', '-', strtolower($country['label']));
+                $countryLink = get_site_url(1) . '/' . $language . $relLink;
               endif;
               ?>
-              <a class="m-countrySelector__item" href="<?php echo $countryLink; ?>">
+              <a class="m-countrySelector__item" href="<?php echo $countryLink; ?>" target="_blank" rel="noopener noreferrer">
                 <svg class="m-countrySelector__flag" viewBox="0 0 640 480">
                   <?php get_svg('flag/' . $country['value']); ?>
                 </svg>
