@@ -4,8 +4,6 @@
 
   @include element('logo') {
     max-width: 300px;
-    object-fit: contain;
-    width: 65%;
   }
 }
 
