@@ -38,18 +38,4 @@
       flex-basis: 33%;
     }
   }
-
-  @include modifier('group') {
-
-    .o-linkGrid__item {
-      flex-grow: 0;
-    }
-  }
-
-  @include modifier('group') {
-
-    .o-linkGrid__item {
-      flex-grow: 0;
-    }
-  }
 }
