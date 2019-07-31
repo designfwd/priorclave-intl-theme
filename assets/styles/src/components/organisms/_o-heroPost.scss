@@ -36,6 +36,10 @@
       flex: 0 1 100%;
     }
 
+    @include modifier('headline') {
+      line-height: 2.2rem;
+    }
+
     @include modifier('description') {
       @include paragraph;
       font-size: .9rem;

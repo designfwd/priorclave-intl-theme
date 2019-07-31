@@ -14,6 +14,10 @@
     p {
       font-size: .95rem;
     }
+
+    a {
+      color: $yellow;
+    }
   }
 
   @include element('headline') {

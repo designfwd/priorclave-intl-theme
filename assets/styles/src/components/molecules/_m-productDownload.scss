@@ -7,6 +7,8 @@
   margin: 1px 0;
 
   &:hover {
+    background-color: $yellow;
+    
     .m-productDownload__icon {
       background-color: $yellow;
     }

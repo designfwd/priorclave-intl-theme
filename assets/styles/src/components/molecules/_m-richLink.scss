@@ -24,7 +24,7 @@
 
     @include modifier('description') {
       @include open-sans-regular;
-      font-size: 1rem;
+      font-size: .85rem;
 
       @media(max-width: 920px) {
         padding-top: .5rem;
