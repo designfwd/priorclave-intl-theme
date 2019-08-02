@@ -54,7 +54,7 @@
     "stylelint": "^10.1.0",
     "stylelint-scss": "^3.9.2",
     "stylelint-webpack-plugin": "^0.10.5",
-    "webpack": "^4.38.0",
+    "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   },
   "dependencies": {
