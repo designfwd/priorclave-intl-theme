@@ -5,6 +5,11 @@
   break-inside: avoid;
   display: flex;
   margin: 1px 0;
+  width: 100%;
+
+  @media(min-width: 800px) {
+    width: 49%;
+  }
 
   &:hover {
     background-color: $yellow;

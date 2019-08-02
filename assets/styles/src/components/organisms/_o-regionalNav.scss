@@ -17,7 +17,7 @@
       display: block;
       line-height: 1.38;
       overflow-x: hidden;
-      padding: .125rem 25% .125rem .125rem;
+      padding: .125rem 25% .125rem .75rem !important;
       transition: background-color $base-duration $base-timing;
       width: 100%;
 
@@ -59,6 +59,7 @@
     font-weight: $font-bold;
     margin: auto;
     width: 10rem;
+    border-left: 1px solid #eee;
 
     @media(min-width: 960px) {
       margin: inherit;
@@ -69,7 +70,7 @@
       display: block;
       line-height: 1.38;
       overflow-x: hidden;
-      padding: .125rem 25% .125rem .125rem;
+      padding: .125rem 25% .125rem .75rem;
       transition: background-color $base-duration $base-timing;
       width: 100%;
 

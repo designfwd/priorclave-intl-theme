@@ -63,6 +63,7 @@ endif;
   style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
   <div class="o-heroGeneral__wrapper">
     <h1 class="o-heroGeneral__content">
+    Search <br />
       <?php // Lines of text
         if( have_rows($headline, $ID) ):
           while( have_rows($headline, $ID) ): the_row();
@@ -72,7 +73,7 @@ endif;
             if( get_row_index() == $rows ):
             ?>
               <span class="o-heroGeneral__content--feature">
-                Search Results
+                Results
               </span>
             <?php
             // All lines above bottom appear normally with a line break

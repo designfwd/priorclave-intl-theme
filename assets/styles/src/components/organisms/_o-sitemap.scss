@@ -16,6 +16,11 @@
 
     ul {
       @include list-reset;
+      column-count: 1;
+
+      @media(min-width: 500px) {
+        column-count: 2;
+      }
     }
 
     .menu-item {
