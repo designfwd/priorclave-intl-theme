@@ -13,6 +13,10 @@
   @include element('body') {
     padding-bottom: 2rem;
     width: 100%;
+
+    a {
+      color: $yellow;
+    }
   }
 
   @include element('button') {

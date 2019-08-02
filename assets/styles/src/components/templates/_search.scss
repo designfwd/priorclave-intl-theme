@@ -1,5 +1,16 @@
 .search-results {
 
+  .o-heroGeneral {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media(min-width: 720px) {
+      background-size: 80%;
+      background-position: 5rem center;
+    }
+  }
+
   main {
     background-color: $white;
     position: relative;
@@ -12,6 +23,14 @@
 
   .o-articleGrid__article {
     width: 100%;
+  }
+
+  .m-articlePreview__article {
+    width: 100%;
+
+    p {
+      color: #39383d;
+    }
   }
 
   .m-articlePreview__featuredImage {

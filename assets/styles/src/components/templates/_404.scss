@@ -1,5 +1,16 @@
 .error--404 {
 
+  .o-heroGeneral {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media(min-width: 720px) {
+      background-size: 80%;
+      background-position: 5rem center;
+    }
+  }
+
   main {
     background-color: $white;
     margin: 0 auto;

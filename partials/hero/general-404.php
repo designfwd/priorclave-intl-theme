@@ -56,7 +56,8 @@ endif;
   style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
   <div class="o-heroGeneral__wrapper">
   <h1 class="o-heroGeneral__content">
-    <span class="o-heroGeneral__content--feature">Uh-oh...</span>
+    Page<br/>
+    <span class="o-heroGeneral__content--feature">Not Found</span>
     <span class="breadcrumbs o-heroGeneral__breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
       <?php
         if(function_exists('bcn_display')):

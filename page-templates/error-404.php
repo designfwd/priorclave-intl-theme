@@ -19,7 +19,7 @@
       ?>
     </header>
       <main>
-        It looks like there's nothing here. Try searching for something else or going back to the <a href="<?php echo get_home_url(); ?>">homepage</a>.
+      <p>Unfortunately, we can't seem to find the page you're looking for. This could be due to a deleted page, a broken link, or a mistyped web page address.</p>
       </main>
       <footer class="universal-footer">
         <?php // Universal footer blocks
