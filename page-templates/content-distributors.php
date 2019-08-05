@@ -25,8 +25,8 @@
         
 
         $form = get_field('form_contactDistributor_form');
-        set_query_var('form',$form);
-
+        set_query_var('form', $form);
+        var_dump ($form);
         get_partial('media/directory-distributors'); // Directory of distributors
         get_partial('media/cta-2up'); // CTA grid
       ?>

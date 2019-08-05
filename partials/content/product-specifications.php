@@ -56,10 +56,6 @@ endif;
       <?php
         endwhile;
       ?>
-      <div class="m-specificationCell m-specificationCell--filler">
-        <div class="m-specificationCell__header"></div>
-        <div class="m-specificationCell__contents"></div>
-      </div>
     </div>
   <?php
     endforeach;
