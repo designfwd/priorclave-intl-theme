@@ -39,14 +39,14 @@ endif;
       $answer = $faq->post_content;
     ?>
       <div id="toggle-<?php echo $slug; ?>" class="m-faqToggle">
-        <div class="m-faqToggle__icon" data-question="<?php echo $slug; ?>">
+        <div class="m-faqToggle__icon" data-question="<?php echo $slug.'-'.$subject->term_id; ?>">
           <svg viewBox="0 0 8 16">
             <polygon points="0,0 0,16 8,8" />
           </svg>
         </div>
         <h3 class="m-faqToggle__category"><?php echo $question; ?></h3>
       </div>
-      <div id="content-<?php echo $slug; ?>" class="m-faqAnswer --preload">
+      <div id="content-<?php echo $slug.'-'.$subject->term_id;; ?>" class="m-faqAnswer --preload">
         <div class="m-faqAnswer__content">
           <?php echo $answer; ?>
         </div>

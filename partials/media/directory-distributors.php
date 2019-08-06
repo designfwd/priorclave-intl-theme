@@ -124,7 +124,7 @@ $regions = get_terms( array(
                 </div>
                 <?php
                 // Distributor dialog box
-                $form = get_query_var('form');
+                $form = (int)get_query_var('form');
                 $logo = get_field('site_logo', 'option');
                 ?>
                 <dialog id="dialog-<?php echo $companySlug; ?>" class="m-distributorDialog">
@@ -178,7 +178,9 @@ $regions = get_terms( array(
                   <div class="m-distributorDialog__form">
                     <?php
                     // Distributor contact form, with populated hidden fields
+                    switch_to_blog($currentBlog);
                     echo do_shortcode( '[gravityforms id=' . $form . ' field_values=\'distributor_country=' . $country . '&distributor_company=' . $company . '\']' );
+                    switch_to_blog(1);
                     ?>
                   </div>
                 </dialog>

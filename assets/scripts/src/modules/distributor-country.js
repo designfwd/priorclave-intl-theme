@@ -34,4 +34,16 @@ jQuery(document).ready(function() {
     let distributor = jQuery(this).data('slug');
     document.getElementById('dialog-' + distributor).showModal();
   });
+
+  //county nav scroll amount
+  jQuery('a.o-categoryNav__link').on('click', (e) => {
+    e.preventDefault();
+    const navHeight = jQuery('.o-primaryNav').height();
+    let navLink = e.currentTarget.hash;
+
+    linkHeight = jQuery(navLink).position();
+    scrollAmount = linkHeight.top-navHeight;
+
+    window.scrollTo({top:scrollAmount, left: 0, behavior: 'smooth'});
+  });  
 });

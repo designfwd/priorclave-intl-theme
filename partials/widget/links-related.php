@@ -15,7 +15,6 @@ if( function_exists('get_field') ):
   $headline = get_field('widget_relatedLinks_headline', $ID);
   $links = 'widget_relatedLinks_links';
 endif;
-
 if( have_rows($links, $ID) ):
 ?>
   <section class="o-widget">

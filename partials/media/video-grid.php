@@ -26,6 +26,11 @@ $videos = get_field('media_videoGallery_videos');
                 <?php echo $image['sizes']['320w']; ?> 241w,
               "
       />
+      <div class="o-Video__button">
+      <svg class="o-Video__triangle" viewBox="0 0 16 16">
+        <polygon points="0,0 12,8 0,16"></polygon>
+      </svg>
+    </div>
       <div class="m-videoGrid__description">
         <?php echo $video['description']; ?>
       </div>
@@ -33,7 +38,7 @@ $videos = get_field('media_videoGallery_videos');
       <dialog id="dialog-<?php echo $title_slug;?>" ><button class="m-videoDialog__button">
                     X
                   </button>
-        <iframe data-src='<?php echo $video['url']; ?>' frameborder='0' allowfullscreen class="ytVideo" src=""></iframe>
+        <iframe data-src='<?php echo $video['url']; ?>' frameborder='0' allowfullscreen class="ytVideo" src="" width="100%" height="80%"></iframe>
       </dialog>
   <?php
     endforeach;
