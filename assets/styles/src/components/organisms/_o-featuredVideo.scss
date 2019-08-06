@@ -17,18 +17,30 @@
 }
 
 .o-Video__button {
-  @include size(2rem);
+  @include size(5rem);
   background-color: $black-50;
   border-radius: 50%;
   left: 50%;
   position: absolute;
-  top: 10%;
+  top: 23%;
   transform: scale(.99) translate(-50%, -50%);
   transition: transform $base-duration $base-timing;
 }
-
-
-
+.o-videoGrid{
+  dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 80vw;
+    height: calc(33vw + 7rem);
+    margin: auto;
+    border: solid;
+    padding: 1em;
+    background: #fff;
+    color: #000;
+    display: block;
+  }
+}
 .o-featuredVideo__close {
   background-color: $yellow;
   box-sizing: border-box;
@@ -95,7 +107,7 @@
 }
 
 .o-Video__triangle {
-  @include size(1rem);
+  @include size(3rem);
   fill: $yellow;
   left: 62.5%;
   position: absolute;
