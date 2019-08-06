@@ -60,7 +60,7 @@ endif;
 ?>
 <section class="o-heroGeneral lazyload"
   data-bg="<?php echo $background['url']; ?>"
-  style="background-image:url('<?php echo $background['sizes']['preload']; ?>')">
+  style="background-image:url('<?php echo $background['sizes']['preload']; ?>'); background-repeat:no-repeat; background-size:cover;">
   <div class="o-heroGeneral__wrapper">
     <h1 class="o-heroGeneral__content">
       <?php // Lines of text

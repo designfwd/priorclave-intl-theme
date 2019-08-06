@@ -16,6 +16,19 @@
   transition: transform $base-duration $base-timing;
 }
 
+.o-Video__button {
+  @include size(2rem);
+  background-color: $black-50;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  top: 10%;
+  transform: scale(.99) translate(-50%, -50%);
+  transition: transform $base-duration $base-timing;
+}
+
+
+
 .o-featuredVideo__close {
   background-color: $yellow;
   box-sizing: border-box;
@@ -73,6 +86,16 @@
 
 .o-featuredVideo__triangle {
   @include size(3rem);
+  fill: $yellow;
+  left: 62.5%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill $base-duration $base-timing;
+}
+
+.o-Video__triangle {
+  @include size(1rem);
   fill: $yellow;
   left: 62.5%;
   position: absolute;

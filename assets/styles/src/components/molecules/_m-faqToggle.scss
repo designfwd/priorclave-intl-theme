@@ -12,7 +12,11 @@
   }
 
   &.--toggled {
-    background-color: $white;
+    background-color: $yellow;
+    .m-faqToggle__icon{
+      fill: $white;
+      transform: rotate(90deg);
+    }
   }
 
   @include element('icon') {

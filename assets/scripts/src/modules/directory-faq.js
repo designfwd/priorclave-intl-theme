@@ -4,10 +4,9 @@ jQuery(document).ready(function() {
   jQuery('.m-faqAnswer').hide();
   jQuery('.m-faqAnswer').removeClass('--preload');
 
-  jQuery('.m-faqToggle').click(function() {
+  jQuery('.m-faqToggle').on('click',function() {
     jQuery(this).toggleClass('--toggled');
     let question = jQuery('.m-faqToggle__icon', this).data('question');
-    jQuery('#toggle-' + question).toggleClass('--toggled');
     jQuery('#content-' + question).slideToggle();
   });
 
