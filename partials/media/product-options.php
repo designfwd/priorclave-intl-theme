@@ -106,6 +106,11 @@ endif;
       </div>
       <?php // Creates the dialog boxes associated with the list above
       for( $i=10; $i<$rows; $i++):
+        $post = $items[$i];
+        setup_postdata($post);
+        $title = get_the_title($post->ID);
+        $description = get_field('product_options_description', $post->ID);
+        $image = get_field('product_options_image', $post->ID);        
         set_query_var( 'dialogID', ('optionDialog-' . $i));
         set_query_var( 'dialogTitle', $title);
         set_query_var( 'dialogDescription', $description);
