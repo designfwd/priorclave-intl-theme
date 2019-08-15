@@ -12,6 +12,7 @@
 
   &:hover {
     background-color: $yellow;
+    text-shadow: none;
   }
 
   @include element('icon') {

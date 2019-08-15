@@ -5,17 +5,29 @@
   margin: 0 auto;
   width: calc( 100% - 4rem );
 
+  @media(max-width: 640px) {
+    flex-wrap: wrap;
+  }
+
   @include element('email') {
-    width: 100%;
+    flex: 0 1 33%;
+
+    @media(max-width: 640px) {
+      flex: 0 1 100%;
+    }
   }
 
   input[type="email"] {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
+
+    @media(max-width: 640px) {
+      margin-top: 2px;
+    }
 
     &::placeholder {
       color: #39383d;
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 500;
     }
   }
@@ -23,6 +35,11 @@
   input[type="submit"] {
     padding: .8rem 2.4rem;
     transition: color $base-duration $base-timing;
+
+    @media(max-width: 640px) {
+      margin-top: 2px;
+      width: 100%;
+    }
 
     &:hover {
       color: $white;

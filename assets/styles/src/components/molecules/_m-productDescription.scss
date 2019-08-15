@@ -9,6 +9,10 @@
       color: $white;
       line-height: 1.5;
     }
+
+    a {
+      color: $yellow;
+    }
   }
 
   @include element('headline') {

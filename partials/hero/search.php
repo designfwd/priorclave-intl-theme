@@ -72,8 +72,7 @@ endif;
             // Displays feature text on bottom line
             if( get_row_index() == $rows ):
             ?>
-              <span class="o-heroGeneral__content--feature">
-                Results
+              <span class="o-heroGeneral__content--feature">Results
               </span>
             <?php
             // All lines above bottom appear normally with a line break
