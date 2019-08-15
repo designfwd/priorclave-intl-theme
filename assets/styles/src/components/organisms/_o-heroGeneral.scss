@@ -83,10 +83,11 @@
 
   @include element('image') {
     align-self: center;
-    max-height: 260px;
+    max-height: none;
     margin-left: 0;
     margin-top: 0;
     position: relative;
+    width: 80%;
 
     @media(min-width: 720px) {
       bottom: -3.5rem;

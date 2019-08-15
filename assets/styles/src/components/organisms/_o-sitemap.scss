@@ -25,12 +25,15 @@
 
     .menu-item {
       margin: .5rem 0 .5rem .5rem;
+      width: 100%;
     }
 
     .sub-menu,
     .children {
       @include cta-small-text;
       @include list-reset;
+      display: flex;
+      flex-wrap: wrap;
       margin: .25rem 0 .25rem .5rem;
       text-transform: none;
     }
