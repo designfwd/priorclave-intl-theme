@@ -24,7 +24,7 @@
   }
 
   @include element('thumbnail') {
-    @include size(15%);
+    width: 15%;
     border-bottom: .125rem solid $clear-yellow;
     margin: .5rem;
     padding: 0 0 .25rem;

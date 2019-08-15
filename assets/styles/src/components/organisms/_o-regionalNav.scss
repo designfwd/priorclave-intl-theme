@@ -3,6 +3,11 @@
   background-color: $grey-dark;
   padding: 2rem;
 
+  @include element('subList') {
+    margin: 0;
+    padding: 0;
+  }
+
   @include element('country') {
     font-weight: $font-regular;
     margin: auto;
