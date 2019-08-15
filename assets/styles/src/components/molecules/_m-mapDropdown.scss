@@ -12,6 +12,8 @@
   -webkit-padding-start: 0;
   width: 100%;
   z-index: 1;
+  margin: 0;
+  padding: 0;
 
   @include modifier('hidden') {
     display: none;
