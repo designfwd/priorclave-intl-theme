@@ -36,7 +36,7 @@ endif;
     foreach( $faqs as $faq ):
       $slug = $faq->post_name;
       $question = $faq->post_title;
-      $answer = $faq->post_content;
+      $answer = apply_filters('the_content', $faq->post_content);
     ?>
       <div id="toggle-<?php echo $slug; ?>" class="m-faqToggle">
         <div class="m-faqToggle__icon" data-question="<?php echo $slug.'-'.$subject->term_id; ?>">

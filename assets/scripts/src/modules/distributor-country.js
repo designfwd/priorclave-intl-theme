@@ -38,9 +38,11 @@ jQuery(document).ready(function() {
   //county nav scroll amount
   jQuery('a.o-categoryNav__link').on('click', (e) => {
     e.preventDefault();
-    const navHeight = jQuery('.o-primaryNav').height();
+    let navHeight = jQuery('.o-primaryNav').height();
+    if(!navHeight)
+      navHeight = jQuery('.o-simpleNav').height();
     let navLink = e.currentTarget.hash;
-
+    
     linkHeight = jQuery(navLink).position();
     scrollAmount = linkHeight.top-navHeight;
 
