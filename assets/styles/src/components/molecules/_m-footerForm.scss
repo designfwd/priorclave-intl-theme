@@ -1,7 +1,7 @@
 // Styles specific to the Gravity Forms form in the newsletter footer module
 .m-footerForm {
   display: flex;
-  max-width: 640px;
+  max-width: 700px;
   margin: 0 auto;
   width: calc( 100% - 4rem );
 
@@ -20,6 +20,7 @@
   input[type="email"] {
     font-size: 1rem;
     font-weight: 500;
+    padding: 1rem 1.6rem;
 
     @media(max-width: 640px) {
       margin-top: 2px;
