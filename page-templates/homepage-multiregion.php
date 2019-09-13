@@ -33,6 +33,10 @@ endif;
 <html <?php priorclave_lang(); ?>>
   <?php get_partial('meta/head'); ?>
   <body <?php body_class('homepage homepage--multiregion'); ?>>
+    <?php
+    wp_body_open();
+    get_partial('meta/gtm-noscript');
+    ?>
     <header class="homepage__header lazyload"
       data-bg="<?php echo $headerBackground['url']; ?>"
       style="background-image:url('<?php echo $headerBackground['sizes']['preload']; ?>');"

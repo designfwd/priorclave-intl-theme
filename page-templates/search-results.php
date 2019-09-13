@@ -26,6 +26,10 @@ $paginatedLinks = paginate_links( array(
 <html <?php priorclave_lang(); ?>>
   <?php get_partial('meta/head'); ?>
   <body <?php body_class('search search--results'); ?>>
+    <?php
+    wp_body_open();
+    get_partial('meta/gtm-noscript');
+    ?>
     <header>
       <?php
         if( get_current_blog_id() == 1 ):
