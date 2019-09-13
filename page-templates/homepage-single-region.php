@@ -8,6 +8,10 @@
 <html <?php priorclave_lang(); ?>>
   <?php get_partial('meta/head'); ?>
   <body <?php body_class('homepage homepage--regional'); ?>>
+    <?php
+    wp_body_open();
+    get_partial('meta/gtm-noscript');
+    ?>
     <header>
       <?php
         get_partial('navigation/primary'); // Primary navigation

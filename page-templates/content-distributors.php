@@ -8,6 +8,10 @@
 <html <?php priorclave_lang(); ?>>
   <?php get_partial('meta/head'); ?>
   <body <?php body_class('content content--distributors'); ?>>
+    <?php
+    wp_body_open();
+    get_partial('meta/gtm-noscript');
+    ?>
     <header>
       <?php
         if( get_current_blog_id() == 1 ):
@@ -22,7 +26,7 @@
       <?php
         get_partial('content/general-block'); // Intro general block
         get_partial('navigation/regions-blocks'); // Distributors navigation
-        
+
 
         $form = get_field('form_contactDistributor_form');
         set_query_var('form', $form);
