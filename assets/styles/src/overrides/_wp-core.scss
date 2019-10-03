@@ -1,0 +1,9 @@
+// Additional styles for WP Core style
+
+img.size-medium {
+  width: 100%;
+
+  @media(min-width: 540px) {
+    width: inherit;
+  }
+}
