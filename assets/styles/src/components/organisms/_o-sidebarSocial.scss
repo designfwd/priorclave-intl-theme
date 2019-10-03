@@ -28,9 +28,5 @@
     @include modifier('linkedIn') {
       background-color: $color-linkedin;
     }
-
-    @include modifier('googlePlus') {
-      background-color: $color-googleplus;
-    }
   }
 }
