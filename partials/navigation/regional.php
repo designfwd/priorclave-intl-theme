@@ -20,21 +20,21 @@ if( !isset($language) || ($language == '') ):
 endif;
 ?>
 <nav class="o-regionalNav">
-  <div class="o-regionalNav__menu">
+  <ul class="o-regionalNav__menu">
     <?php
       if( have_rows($options, $ID) ):
         while( have_rows( $options, $ID) ): the_row();
           $region = get_sub_field('region');
           $regionLink = get_site_url(1) . '/' . $language . '/' . $region['value'];
         ?>
-          <div class="o-regionalNav__region">
+          <li class="o-regionalNav__region">
             <a class="o-regionalNav__region--link" href="<?php echo $regionLink; ?>">
               <?php echo $region['label']; ?>
             </a>
           <?php
           if( have_rows('countries') ):
           ?>
-            <div class="o-regionalNav__subList">
+            <ul class="o-regionalNav__subList">
             <?php
             while( have_rows('countries') ): the_row();
               $country = get_sub_field('country');
@@ -45,22 +45,22 @@ endif;
                 $countryLink = get_site_url(1) . '/' . $language . '/' . str_replace(' ', '-', strtolower($country['label']));
               endif;
             ?>
-              <div class="o-regionalNav__country">
+              <li class="o-regionalNav__country">
                 <a class="o-regionalNav__country--link" href="<?php echo $countryLink; ?>">
                   <?php echo $country['label']; ?>
                 </a>
-              </div>
+              </li>
             <?php
             endwhile;
             ?>
-            </div>
+            </ul>
           <?php
           endif;
           ?>
-          </div>
+          </li>
           <?php
         endwhile;
       endif;
     ?>
-  </div>
+  </ul>
 </nav>
