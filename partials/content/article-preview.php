@@ -8,9 +8,11 @@
  * @var object $post      The post object used to define content
  * @var string $author    The ID of the author avatar to query
  */
-
+//var_dump(get_sites());
 $author = get_the_author_meta('ID');
-$image = get_field( 'profile_image', "user_{$author}" );
+switch_to_blog( 1 );
+$image = (get_field( 'profile_image', "user_{$author}" ) ? get_field( 'profile_image', "user_{$author}" ) : $image = get_field('profile_image', "user_2"));
+restore_current_blog();
 $name = get_the_author_meta( 'display_name', $author );
 ?>
 <div class="m-articlePreview" data-href="<?php echo get_permalink($post->ID); ?>">
@@ -40,6 +42,7 @@ $name = get_the_author_meta( 'display_name', $author );
     />
   <?php
     endif;
+    
   ?>
   <img class="m-articlePreview__photo lazyload"
     alt="<?php echo $name; ?>"

@@ -169,19 +169,6 @@ function get_nowrap_field( $field_name, $id='' ) {
   return $field;
 }
 
-/**
- * Fix pagination on archive pages
- * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
-
-function mg_news_pagination_rewrite() {
-  add_rewrite_rule(
-    'page/?([0-9]{1,})/?$',
-    'index.php?&page=$matches[1]',
-    'top');
-
-}
-add_action('init', 'mg_news_pagination_rewrite');
- */
 
 //redirect distributor to thank you page after ajax submission.
  add_filter( 'gform_confirmation', 'custom_confirmation', 10, 4 );
