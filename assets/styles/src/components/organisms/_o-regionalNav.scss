@@ -11,7 +11,7 @@
   @include element('country') {
     font-weight: $font-regular;
     margin: auto;
-    width: 10rem;
+    width: 12rem;
 
     @media(min-width: 960px) {
       margin: inherit;
@@ -63,7 +63,7 @@
   @include element('region') {
     font-weight: $font-bold;
     margin: auto;
-    width: 10rem;
+    width: 12rem;
     border-left: 1px solid #eee;
 
     @media(min-width: 960px) {
