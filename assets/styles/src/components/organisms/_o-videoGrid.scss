@@ -7,6 +7,7 @@
 
   // Video styles from embedresponsively.com
   @include element('video') {
+    cursor: pointer;
     height: auto;
     margin: 1rem;
     max-width: 100%;
@@ -35,15 +36,6 @@
       font-size: .8rem;
     }
 
-    iframe,
-    object,
-    embed {
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
     .m-videoGrid__description{
       background-color: $grey-dark;
 
@@ -58,5 +50,56 @@
         }
       }
     }
+  }
+}
+
+.o-videoGrid__close {
+  background-color: $yellow;
+  box-sizing: border-box;
+  color: $black;
+  cursor: pointer;
+  font-weight: $font-bold;
+  padding: .5rem;
+  text-align: center;
+  transition: color $base-duration $base-timing;
+  width: 100%;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.o-videoGrid__dialog {
+  @include proxima-nova;
+  border: none;
+  max-width: 1100px;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 80%;
+
+  &::backdrop,
+  & + .backdrop {
+    @include position(fixed, 0);
+    background-color: $black-75;
+  }
+}
+
+.o-videoGrid__embed {
+  box-sizing: border-box;
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  embed,
+  iframe,
+  object {
+    @include size(100%);
+    left: 0;
+    position: absolute;
+    top: 0;
   }
 }

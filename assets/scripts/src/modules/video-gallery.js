@@ -8,8 +8,7 @@ jQuery(document).ready(function () {
     document.getElementById(dialogId).showModal();
   });
 
-  jQuery('.m-videoDialog__button').on('click', (e)=> {
-    e.currentTarget.nextElementSibling.src = '';
+  jQuery('.o-videoGrid__close').on('click', (e)=> {
     const dialogBox = e.currentTarget.parentElement;
     dialogBox.close();
   });
