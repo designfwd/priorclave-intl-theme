@@ -8,6 +8,17 @@
   }
 }
 
+.gform_wrapper {
+
+  .validation_error,
+  .validation_message {
+    color: $color-googleplus;
+    font-size: .8rem;
+    font-style: italic;
+    margin-left: .5rem;
+  }
+}
+
 .gfield_label {
   display: none;
 }
