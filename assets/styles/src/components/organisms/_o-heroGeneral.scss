@@ -31,10 +31,17 @@
     @include cta-small-text;
     display: block;
     font-size: .75rem;
-    margin-top: .5rem;
+    margin: .5rem auto 0;
+    max-width: 70%;
     position: relative;
+    text-align: center;
     text-transform: none;
     z-index: 1;
+
+    @media( min-width: 720px ) {
+      margin: .5rem 0 0;
+      text-align: left;
+    }
 
     a {
 
