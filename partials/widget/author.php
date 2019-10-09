@@ -1,7 +1,9 @@
 <?php
 // Sidebar widget to display post author information
 $ID = get_the_author_meta('ID');
-$image = get_field( 'profile_image', "user_{$ID}" );
+switch_to_blog( 1 );
+$image = (get_field( 'profile_image', "user_{$ID}" ) ? get_field( 'profile_image', "user_{$ID}" ) : $image = get_field('profile_image', "user_2"));
+restore_current_blog();
 $name = get_the_author_meta( 'display_name', $ID );
 ?>
 <section class="o-widget">
