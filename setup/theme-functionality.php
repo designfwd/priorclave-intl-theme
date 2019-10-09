@@ -182,3 +182,18 @@ function mg_news_pagination_rewrite() {
 }
 add_action('init', 'mg_news_pagination_rewrite');
  */
+
+//redirect distributor to thank you page after ajax submission.
+ add_filter( 'gform_confirmation', 'custom_confirmation', 10, 4 );
+function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
+    $home_url = get_bloginfo( 'url' );
+
+    if( $form['id'] == '14' ) { // international site
+        $confirmation = array( 'redirect' => $home_url . '/find-a-distributor-thank-you' );
+    }else if( $form['id'] == '24' ) { // gb site
+      $confirmation = array( 'redirect' => $home_url . '/contact-distributor-thank-you' );
+    }else if( $form['id'] == '26' ) { //us site
+      $confirmation = array( 'redirect' => $home_url . '/contact-distributor-thank-you' );
+    }
+    return $confirmation;
+}
