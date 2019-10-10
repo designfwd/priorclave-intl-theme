@@ -188,6 +188,9 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 // Gets a link from the hreflang data or returns a search string
 function get_lang_link( $hreflang = 'x-default' ) {
 
+  // Sets default result
+  $result = '/?s=' . urlencode( get_the_title() );
+
   // Builds links array
   $links = array();
   if( have_rows( 'hreflang' ) ):
@@ -211,8 +214,6 @@ function get_lang_link( $hreflang = 'x-default' ) {
   // If the hreflang needed exists in the array, return the value associated
   if( array_key_exists( $hreflang, $links ) ):
     $result = $links[$hreflang];
-  else:
-    $result = '/?s=' . urlencode( get_the_title() );
   endif;
 
   return $result;
