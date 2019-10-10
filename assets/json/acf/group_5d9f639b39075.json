@@ -116,7 +116,15 @@
             "type": "select",
             "instructions": "Select a country",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f644e3ad28",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -135,7 +143,7 @@
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
-            "return_format": "value",
+            "return_format": "array",
             "ajax": 0,
             "placeholder": ""
         }
@@ -159,5 +167,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1570728273
+    "modified": 1570728577
 }
