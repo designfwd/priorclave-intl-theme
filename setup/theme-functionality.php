@@ -184,3 +184,36 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
     }
     return $confirmation;
 }
+
+// Gets a link from the hreflang data or returns a search string
+function get_lang_link( $hreflang = 'x-default' ) {
+
+  // Builds links array
+  $links = array();
+  if( have_rows( 'hreflang' ) ):
+    while( have_rows( 'hreflang' ) ): the_row();
+      $lang = get_sub_field( 'lang' );
+
+      $start = get_sub_field( 'link' );
+      // truncate $start to just the relative URL
+      $cut = str_replace( get_site_url(1), '', $start );
+      // If $hreflang is defined, take the URL 6 spaces after the start
+      if( $lang == 'x-default' ):
+        $link = substr( $cut, 3 );
+      else:
+        $link = substr( $cut, 6 );
+      endif;
+
+      $links[$lang] = $link;
+    endwhile;
+  endif;
+
+  // If the hreflang needed exists in the array, return the value associated
+  if( array_key_exists( $hreflang, $links ) ):
+    $result = $links[$hreflang];
+  else:
+    $result = '/?s=' . urlencode( get_the_title() );
+  endif;
+
+  return $result;
+}
