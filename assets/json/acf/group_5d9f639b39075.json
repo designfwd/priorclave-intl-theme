@@ -1,0 +1,163 @@
+{
+    "key": "group_5d9f639b39075",
+    "title": "navigation_overrides",
+    "fields": [
+        {
+            "key": "field_5d9f644e3ad28",
+            "label": "Override nav settings?",
+            "name": "navigation_override_check",
+            "type": "true_false",
+            "instructions": "Override site settings for navigation?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d9f6788b6b6a",
+            "label": "Logo",
+            "name": "navigation_override_logo",
+            "type": "image",
+            "instructions": "The logo to be used to represent the company throughout the website",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f644e3ad28",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "360w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d9f67b6b6b6b",
+            "label": "Contact Phone Number",
+            "name": "navigation_override_phone",
+            "type": "text",
+            "instructions": "The phone number of the company, for contact purposes",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f644e3ad28",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9f688fb6b6c",
+            "label": "Request Quote Page",
+            "name": "navigation_override_requestQuote",
+            "type": "page_link",
+            "instructions": "The page to use for request quote page",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f644e3ad28",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5d9f68e7b6b6d",
+            "label": "Country",
+            "name": "navigation_override_country",
+            "type": "select",
+            "instructions": "Select a country",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None - International or Regional",
+                "au": "Australia",
+                "ca": "Canada",
+                "my": "Malaysia",
+                "ph": "Philippines",
+                "gb": "United Kingdom",
+                "us": "United States of America"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1570728273
+}
