@@ -20,7 +20,14 @@ if( function_exists('get_field') ):
   $sitePhone = get_field('site_contact_phone', 'option');
   $contactPage = get_field('site_requestQuote', 'option');
   $siteCountry = get_field('site_country', 'option')['value'];
+endif;
 
+// If there's an override set for the page, set that instead
+if( get_field('navigation_override_check') ):
+  $siteLogo = get_field('navigation_override_logo');
+  $sitePhone = get_field('navigation_override_phone');
+  $contactPage = get_field('navigation_override_requestQuote');
+  $siteCountry = get_field('navigation_override_country')['value'];
 endif;
 
 // Fallback logo if none is set
