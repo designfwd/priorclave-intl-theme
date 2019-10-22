@@ -3,6 +3,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  max-width: 25%;
+  min-width: 240px;
 
   .tooltip{
     display: inline-block;
