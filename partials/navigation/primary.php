@@ -20,7 +20,14 @@ if( function_exists('get_field') ):
   $sitePhone = get_field('site_contact_phone', 'option');
   $contactPage = get_field('site_requestQuote', 'option');
   $siteCountry = get_field('site_country', 'option')['value'];
+endif;
 
+// If there's an override set for the page, set that instead
+if( get_field('navigation_override_check') ):
+  $siteLogo = get_field('navigation_override_logo');
+  $sitePhone = get_field('navigation_override_phone');
+  $contactPage = get_field('navigation_override_requestQuote');
+  $siteCountry = get_field('navigation_override_country')['value'];
 endif;
 
 // Fallback logo if none is set
@@ -33,9 +40,6 @@ if( !$siteLogo ):
       '240w' => '//via.placeholder.com/240x62?text=logo'
     )
   );
-endif;
-if( !$siteCountry || $siteCountry == 'none' ):
-  $siteCountry = 'gb';
 endif;
 ?>
 <section class="o-primaryNav">
@@ -456,7 +460,13 @@ endif;
           <a class="m-navQuicklinks__phone" href="tel:<?php echo $sitePhone; ?>">CALL <?php echo $sitePhone; ?></a>
           <button id="nav-country-toggle" class="m-navQuicklinks__menu">
             <svg class="m-navQuicklinks__flag" viewBox="0 0 640 480">
-              <?php get_svg('flag/' . $siteCountry); ?>
+              <?php
+              if( !$siteCountry || $siteCountry == 'none' ):
+                get_svg('icon-globe');
+              else:
+                get_svg('flag/' . $siteCountry);
+              endif;
+              ?>
             </svg>
           </button>
 
@@ -481,19 +491,19 @@ endif;
           Select Your Country or Region
         </h3>
         <?php
-        // Gets relative link
-        $relLink = str_replace( get_home_url(), '', get_permalink() );
+        $countryArray = array();
+        $templateSlug = get_page_template_slug();
+        $regLink = get_lang_link();
 
         $currentSite = get_current_blog_id();
-        $countryArray = array();
         switch_to_blog(1);
         while( have_rows( 'intlMenu', 'option') ): the_row();
           $region = get_sub_field('region');
           $regionLang = get_sub_field('language')['value'];
           $countries = get_sub_field('countries');
 
-          if( $relLink != '/' ):
-            $regionLink = get_site_url(1) . '/' . $regionLang . $relLink;
+          if( $templateSlug != 'page-templates/homepage-single-region.php' ):
+            $regionLink = get_site_url(1) . '/' . $regionLang . $regLink;
           else:
             $regionLink = get_site_url(1) . '/' . $regionLang . '/' . $region['value'];
           endif;
@@ -509,10 +519,31 @@ endif;
               $country = get_sub_field('country');
               $language = get_sub_field('language')['value'];
               $separateCheck = get_sub_field('external');
+
+              // set cLink
+              switch_to_blog( $currentSite );
               if( $separateCheck == true ):
-                $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . $relLink;
+                $cLink = get_lang_link( $language . '-' . $country['value'] );
               else:
-                $countryLink = get_site_url(1) . '/' . $language . $relLink;
+                $cLink = get_lang_link();
+              endif;
+              switch_to_blog( 1 );
+
+              // if the link is from a regional homepage, only link to other homepages
+              if( $templateSlug == 'page-templates/homepage-single-region.php' ):
+                // If the link should go to a separate website, go there
+                if( $separateCheck == true ):
+                  $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'];
+                else:
+                  $countryLink = get_site_url(1) . '/' . $language . '/' . strtolower($country['label']);
+                endif;
+              else:
+                // If the link should go to a separate website, go there
+                if( $separateCheck == true ):
+                  $countryLink = get_site_url(1) . '/' . $language . '-' . $country['value'] . $cLink;
+                else:
+                  $countryLink = get_site_url(1) . '/' . $language . $cLink;
+                endif;
               endif;
               ?>
               <a class="m-countrySelector__item" href="<?php echo $countryLink; ?>" target="_blank" rel="noopener noreferrer">

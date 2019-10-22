@@ -3,6 +3,43 @@
     "title": "Page Template - Single Region Homepage",
     "fields": [
         {
+            "key": "field_5d9f6301b5928",
+            "label": "Navigation",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d9f66beb5929",
+            "label": "navigation_overrides",
+            "name": "navigation_overrides",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d9f639b39075"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5acd1d550b0d4",
             "label": "Header Area",
             "name": "",
@@ -430,5 +467,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536601532
+    "modified": 1570727734
 }
