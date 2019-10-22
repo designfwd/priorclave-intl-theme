@@ -26,8 +26,8 @@ $videos = get_field('media_videoGallery_videos');
                 <?php echo $image['sizes']['320w']; ?> 241w,
               "
       />
-      <div class="o-video__button">
-      <svg class="o-video__triangle" viewBox="0 0 16 16">
+      <div class="o-videoGrid__button">
+      <svg class="o-videoGrid__triangle" viewBox="0 0 16 16">
         <polygon points="0,0 12,8 0,16"></polygon>
       </svg>
     </div>
