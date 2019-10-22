@@ -53,6 +53,17 @@
   }
 }
 
+.o-videoGrid__button {
+  @include size(6rem);
+  background-color: $black-50;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  top: 25%;
+  transform: scale(.99) translate(-50%, -50%);
+  transition: transform $base-duration $base-timing;
+}
+
 .o-videoGrid__close {
   background-color: $yellow;
   box-sizing: border-box;
@@ -102,4 +113,14 @@
     position: absolute;
     top: 0;
   }
+}
+
+.o-videoGrid__triangle {
+  @include size(3rem);
+  fill: $yellow;
+  left: 62.5%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill $base-duration $base-timing;
 }
