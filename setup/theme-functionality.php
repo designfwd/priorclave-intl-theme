@@ -171,15 +171,16 @@ function get_nowrap_field( $field_name, $id='' ) {
 
 
 //redirect distributor to thank you page after ajax submission.
- add_filter( 'gform_confirmation', 'custom_confirmation', 10, 4 );
+add_filter( 'gform_confirmation', 'custom_confirmation', 10, 4 );
 function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
     $home_url = get_bloginfo( 'url' );
+    $blog = get_current_blog_id();
 
-    if( $form['id'] == '14' ) { // international site
+    if( $form['id'] == '14' && $blog == '1' ) { // international site
         $confirmation = array( 'redirect' => $home_url . '/find-a-distributor-thank-you' );
-    }else if( $form['id'] == '24' ) { // gb site
+    }else if( $form['id'] == '24' && $blog == '2' ) { // gb site
       $confirmation = array( 'redirect' => $home_url . '/contact-distributor-thank-you' );
-    }else if( $form['id'] == '26' ) { //us site
+    }else if( $form['id'] == '26' && $blog == '3' ) { //us site
       $confirmation = array( 'redirect' => $home_url . '/contact-distributor-thank-you' );
     }
     return $confirmation;
