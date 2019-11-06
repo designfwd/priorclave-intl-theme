@@ -28,6 +28,7 @@
     flex-shrink: 0;
     flex-basis: 48%;
     margin: 1px;
+    max-width: 48%;
     transition: all .3s ease-in-out;
 
     @media(min-width: 480px) {
@@ -36,6 +37,7 @@
 
     @media(min-width: 640px) {
       flex-basis: 33%;
+      max-width: 33%;
     }
 
     @media(min-width: 700px) {

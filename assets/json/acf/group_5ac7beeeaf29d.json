@@ -3,120 +3,6 @@
     "title": "Site-Specific Settings",
     "fields": [
         {
-            "key": "field_5ac7d6c064cb3",
-            "label": "Site Meta",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5ad7b2656186a",
-            "label": "Site Meta Description",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "<h2>These fields define information used in meta tags and links to and from other Priorclave sites<\/h2>",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_5ac7bf127fb76_field_5ad6194d32041",
-            "label": "Language",
-            "name": "site_language",
-            "type": "select",
-            "instructions": "Please select a language",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "en": "English"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "array",
-            "placeholder": "",
-            "_clone": "field_5ac7bf127fb76",
-            "__key": "field_5ad6194d32041",
-            "__name": "language",
-            "__label": "Language"
-        },
-        {
-            "key": "field_5ac7c1d0542e2",
-            "label": "Show Language in Navigation?",
-            "name": "site_language_show",
-            "type": "true_false",
-            "instructions": "If selected, the abbreviation for the language will show in the top navigation of internal pages.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5ac7c4682cbb1_field_5ac7f19094fc4",
-            "label": "Country",
-            "name": "site_country",
-            "type": "select",
-            "instructions": "Select a country",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "none": "None - International or Regional",
-                "au": "Australia",
-                "ca": "Canada",
-                "my": "Malaysia",
-                "ph": "Philippines",
-                "gb": "United Kingdom",
-                "us": "United States of America"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "array",
-            "placeholder": "",
-            "_clone": "field_5ac7c4682cbb1",
-            "__key": "field_5ac7f19094fc4",
-            "__name": "country",
-            "__label": "Country"
-        },
-        {
             "key": "field_5ac7d72b5c9ad",
             "label": "Site Settings",
             "name": "",
@@ -148,6 +34,30 @@
             "message": "<h2>These fields define information used in various portions of the website and define basic contact information<\/h2>",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_5ac7d74f5c9ae",
+            "label": "Logo",
+            "name": "site_logo",
+            "type": "image",
+            "instructions": "The logo to be used to represent the company throughout the website",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "360w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_5acbc6f8dc875",
@@ -245,93 +155,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5ac7d74f5c9ae",
-            "label": "Logo",
-            "name": "site_logo",
-            "type": "image",
-            "instructions": "The logo to be used to represent the company throughout the website",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "360w",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5ac7d7855c9af",
-            "label": "Contact Page",
-            "name": "site_contactPage",
-            "type": "page_link",
-            "instructions": "The page to use for contact links throughout the site",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
-            "key": "field_5d07c4566ab68",
-            "label": "Request Quote Page",
-            "name": "site_requestQuote",
-            "type": "page_link",
-            "instructions": "The page to use for request quote page",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
-            "key": "field_5b451b2ad9e56",
-            "label": "News & Events Page",
-            "name": "site_newsPage",
-            "type": "page_link",
-            "instructions": "The page to use for news and events",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
             "key": "field_5ad4fd6af60e8",
             "label": "Operation Days & Times",
             "name": "site_operation_times",
@@ -372,6 +195,183 @@
             ]
         },
         {
+            "key": "field_5ac7d7855c9af",
+            "label": "Contact Page",
+            "name": "site_contactPage",
+            "type": "page_link",
+            "instructions": "The page to use for contact links throughout the site",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5b451b2ad9e56",
+            "label": "News & Events Page",
+            "name": "site_newsPage",
+            "type": "page_link",
+            "instructions": "The page to use for news and events",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5d07c4566ab68",
+            "label": "Request Quote Page",
+            "name": "site_requestQuote",
+            "type": "page_link",
+            "instructions": "The page to use for request quote page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5ac7d6c064cb3",
+            "label": "Site Meta",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b2656186a",
+            "label": "Site Meta Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These fields define information used in meta tags and links to and from other Priorclave sites<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ac7c4682cbb1_field_5ac7f19094fc4",
+            "label": "Country",
+            "name": "site_country",
+            "type": "select",
+            "instructions": "Select a country",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None - International or Regional",
+                "au": "Australia",
+                "ca": "Canada",
+                "my": "Malaysia",
+                "ph": "Philippines",
+                "gb": "United Kingdom",
+                "us": "United States of America"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "array",
+            "placeholder": "",
+            "_clone": "field_5ac7c4682cbb1",
+            "__key": "field_5ac7f19094fc4",
+            "__name": "country",
+            "__label": "Country"
+        },
+        {
+            "key": "field_5ac7bf127fb76_field_5ad6194d32041",
+            "label": "Language",
+            "name": "site_language",
+            "type": "select",
+            "instructions": "Please select a language",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "en": "English"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "array",
+            "placeholder": "",
+            "_clone": "field_5ac7bf127fb76",
+            "__key": "field_5ad6194d32041",
+            "__name": "language",
+            "__label": "Language"
+        },
+        {
+            "key": "field_5ac7c1d0542e2",
+            "label": "Show Language in Navigation?",
+            "name": "site_language_show",
+            "type": "true_false",
+            "instructions": "If selected, the abbreviation for the language will show in the top navigation of internal pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5ad10d5a54dea",
             "label": "Hero Area Defaults",
             "name": "",
@@ -405,30 +405,6 @@
             "esc_html": 0
         },
         {
-            "key": "field_5accea9126fa0",
-            "label": "Hero Background Image",
-            "name": "default_hero_backgroundImage",
-            "type": "image",
-            "instructions": "The default background image to use for hero areas, when one is not set.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "640w",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_5ad0f38a07aee",
             "label": "Hero Image",
             "name": "default_hero_image",
@@ -453,9 +429,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_5d07bf701a4e6",
-            "label": "Hero Background Image 404 Page",
-            "name": "default_hero_backgroundImage_404",
+            "key": "field_5accea9126fa0",
+            "label": "Hero Background Image",
+            "name": "default_hero_backgroundImage",
             "type": "image",
             "instructions": "The default background image to use for hero areas, when one is not set.",
             "required": 0,
@@ -501,8 +477,32 @@
             "mime_types": ""
         },
         {
-            "key": "field_5ad4cb7853520",
-            "label": "Newsletter Widget Settings",
+            "key": "field_5d07bf701a4e6",
+            "label": "Hero Background Image 404 Page",
+            "name": "default_hero_backgroundImage_404",
+            "type": "image",
+            "instructions": "The default background image to use for hero areas, when one is not set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "640w",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5cdc716bfb511",
+            "label": "Featured Articles Widget",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -517,8 +517,8 @@
             "endpoint": 0
         },
         {
-            "key": "field_5ad7b3915dfbe",
-            "label": "Newsletter Widget Description",
+            "key": "field_5cdc7199fb512",
+            "label": "Featured Articles Description",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -529,47 +529,53 @@
                 "class": "",
                 "id": ""
             },
-            "message": "<h2>These settings define the content of the newsletter signup widget in sidebars on the site<\/h2>",
+            "message": "<h2>These settings define the content of the featured articles widget in sidebars on the site<\/h2>",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
-            "key": "field_5ad4cba953521",
-            "label": "Headline",
-            "name": "widget_newsletter_headline",
-            "type": "text",
-            "instructions": "Header text for the widget",
+            "key": "field_5cdc71effb513",
+            "label": "Featured Articles",
+            "name": "widget_featured_articles",
+            "type": "repeater",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "Stay Informed",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5ad4cbd453522",
-            "label": "Gravity Forms ID",
-            "name": "widget_newsletter_form",
-            "type": "text",
-            "instructions": "The ID of the form to use for this sidebar",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "collapsed": "field_5cdc73f0fb514",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5cdc73f0fb514",
+                    "label": "Article",
+                    "name": "widget_featured_article",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post",
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
         },
         {
             "key": "field_5ad4ce92bf4cc",
@@ -665,6 +671,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5ad4d150bf4d0",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "Short description of the linked page",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5c669d8e01df3",
                     "label": "Image",
                     "name": "image",
@@ -687,27 +712,167 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
-                },
-                {
-                    "key": "field_5ad4d150bf4d0",
-                    "label": "Description",
-                    "name": "description",
-                    "type": "text",
-                    "instructions": "Short description of the linked page",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "60",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5ad4cb7853520",
+            "label": "Newsletter Widget Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad7b3915dfbe",
+            "label": "Newsletter Widget Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These settings define the content of the newsletter signup widget in sidebars on the site<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ad4cba953521",
+            "label": "Headline",
+            "name": "widget_newsletter_headline",
+            "type": "text",
+            "instructions": "Header text for the widget",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Stay Informed",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad4cbd453522",
+            "label": "Gravity Forms ID",
+            "name": "widget_newsletter_form",
+            "type": "text",
+            "instructions": "The ID of the form to use for this sidebar",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b969dec27a33",
+            "label": "Default Testimonials",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b969dfb27a34",
+            "label": "Default Testimonials Description",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h2>These testimonials will be the default ones to show up throughout the site, apart from the homepage.<\/h2>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5b96a106b1646_field_5acfbc44cd19b",
+            "label": "Headline",
+            "name": "media_sliderTestimonial_headline",
+            "type": "text",
+            "instructions": "Header text for this section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Trusted All Over the World",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "_clone": "field_5b96a106b1646",
+            "__key": "field_5acfbc44cd19b",
+            "__name": "media_sliderTestimonial_headline",
+            "__label": "Headline"
+        },
+        {
+            "key": "field_5b96a106b1646_field_5acfbc67cd19c",
+            "label": "Testimonials",
+            "name": "media_sliderTestimonial_testimonials",
+            "type": "relationship",
+            "instructions": "The testimonials you'd like included in the slider",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "testimonials"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object",
+            "_clone": "field_5b96a106b1646",
+            "__key": "field_5acfbc67cd19c",
+            "__name": "media_sliderTestimonial_testimonials",
+            "__label": "Testimonials"
         },
         {
             "key": "field_5ad10d8954deb",
@@ -984,94 +1149,6 @@
             ]
         },
         {
-            "key": "field_5b969dec27a33",
-            "label": "Default Testimonials",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5b969dfb27a34",
-            "label": "Default Testimonials Description",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "<h2>These testimonials will be the default ones to show up throughout the site, apart from the homepage.<\/h2>",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_5b96a106b1646_field_5acfbc44cd19b",
-            "label": "Headline",
-            "name": "media_sliderTestimonial_headline",
-            "type": "text",
-            "instructions": "Header text for this section",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Trusted All Over the World",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "_clone": "field_5b96a106b1646",
-            "__key": "field_5acfbc44cd19b",
-            "__name": "media_sliderTestimonial_headline",
-            "__label": "Headline"
-        },
-        {
-            "key": "field_5b96a106b1646_field_5acfbc67cd19c",
-            "label": "Testimonials",
-            "name": "media_sliderTestimonial_testimonials",
-            "type": "relationship",
-            "instructions": "The testimonials you'd like included in the slider",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "testimonials"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search",
-                "taxonomy"
-            ],
-            "elements": [
-                "featured_image"
-            ],
-            "min": "",
-            "max": "",
-            "return_format": "object",
-            "_clone": "field_5b96a106b1646",
-            "__key": "field_5acfbc67cd19c",
-            "__name": "media_sliderTestimonial_testimonials",
-            "__label": "Testimonials"
-        },
-        {
             "key": "field_5acbc28d4140b",
             "label": "Footer Content Settings",
             "name": "",
@@ -1127,6 +1204,143 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5acbd032f1cde",
+            "label": "Credibility Badges",
+            "name": "footer_badges",
+            "type": "relationship",
+            "instructions": "Badges to include in the footer of the site",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "badges"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_5acbd4b3acef8",
+            "label": "Footer Links",
+            "name": "footer_links",
+            "type": "repeater",
+            "instructions": "Links to the sitemap, terms of service, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Link",
+            "sub_fields": [
+                {
+                    "key": "field_5acbd4fbacef9",
+                    "label": "Link Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "The label text for this link",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Sitemap",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b4e16500e457",
+                    "label": "Internal Link?",
+                    "name": "linkType",
+                    "type": "true_false",
+                    "instructions": "Specify whether this link is linked to an internal page or an outside URL. If linking to another Priorclave WordPress install, please select \"No\".",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5acbd518acefa",
+                    "label": "Link URL",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "The URL associated with this link",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5b4e16500e457",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "https:\/\/www.google.com\/search?q=priorclave",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5b4e169a0e458",
+                    "label": "Link Page",
+                    "name": "page",
+                    "type": "page_link",
+                    "instructions": "The page associated with this link",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5b4e16500e457",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                }
+            ]
         },
         {
             "key": "field_5acbc2ae4140c",
@@ -1312,7 +1526,7 @@
                     },
                     "choices": {
                         "facebook": "Facebook",
-                        "linkedIn": "LinkedIn",
+                        "linkedin": "LinkedIn",
                         "twitter": "Twitter"
                     },
                     "default_value": [],
@@ -1340,220 +1554,6 @@
                     "placeholder": ""
                 }
             ]
-        },
-        {
-            "key": "field_5acbd032f1cde",
-            "label": "Credibility Badges",
-            "name": "footer_badges",
-            "type": "relationship",
-            "instructions": "Badges to include in the footer of the site",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "badges"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object"
-        },
-        {
-            "key": "field_5acbd4b3acef8",
-            "label": "Footer Links",
-            "name": "footer_links",
-            "type": "repeater",
-            "instructions": "Links to the sitemap, terms of service, etc.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "row",
-            "button_label": "Add Link",
-            "sub_fields": [
-                {
-                    "key": "field_5acbd4fbacef9",
-                    "label": "Link Label",
-                    "name": "label",
-                    "type": "text",
-                    "instructions": "The label text for this link",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Sitemap",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5b4e16500e457",
-                    "label": "Internal Link?",
-                    "name": "linkType",
-                    "type": "true_false",
-                    "instructions": "Specify whether this link is linked to an internal page or an outside URL. If linking to another Priorclave WordPress install, please select \"No\".",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 1,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
-                },
-                {
-                    "key": "field_5acbd518acefa",
-                    "label": "Link URL",
-                    "name": "url",
-                    "type": "url",
-                    "instructions": "The URL associated with this link",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5b4e16500e457",
-                                "operator": "!=",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "https:\/\/www.google.com\/search?q=priorclave",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_5b4e169a0e458",
-                    "label": "Link Page",
-                    "name": "page",
-                    "type": "page_link",
-                    "instructions": "The page associated with this link",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5b4e16500e457",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "page"
-                    ],
-                    "taxonomy": [],
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
-                }
-            ]
-        },
-        {
-            "key": "field_5cdc716bfb511",
-            "label": "Featured Articles Widget",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5cdc7199fb512",
-            "label": "Featured Articles Description",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "<h2>These settings define the content of the featured articles widget in sidebars on the site<\/h2>",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_5cdc71effb513",
-            "label": "Featured Articles",
-            "name": "widget_featured_articles",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "field_5cdc73f0fb514",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5cdc73f0fb514",
-                    "label": "Article",
-                    "name": "widget_featured_article",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "post",
-                        "page"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
-                }
-            ]
         }
     ],
     "location": [
@@ -1573,5 +1573,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560790251
+    "modified": 1572977780
 }

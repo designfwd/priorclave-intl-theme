@@ -30,7 +30,7 @@
   <div class="o-sidebarSocial__button o-sidebarSocial__button--linkedIn" href="<?php echo $linkedInLink; ?>" target="_blank">
     <a class="a-socialIcon" href="<?php echo $linkedInLink; ?>" target="_blank">
       <svg class="a-socialIcon__svg" viewBox="0 0 16 16">
-        <?php get_svg('social-linkedIn'); ?>
+        <?php get_svg('social-linkedin'); ?>
       </svg>
     </a>
   </div>
