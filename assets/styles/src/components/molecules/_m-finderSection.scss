@@ -57,6 +57,7 @@
       color: $grey-dark;
       cursor: pointer;
       max-width: 800px;
+      min-width: 240px;
       transition: color $base-duration $base-timing;
       width: 50%;
 
