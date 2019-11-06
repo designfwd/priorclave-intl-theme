@@ -6,8 +6,12 @@
   width: 100%;
 
   @include element('logo') {
-    width: 18rem;
+    width: 14rem;
     margin: .5rem auto;
+
+    @media(min-width: 375px) {
+      width: 18rem;
+    }
   }
 
   @include element('menu') {
