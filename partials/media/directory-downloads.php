@@ -50,7 +50,7 @@ endif;
       <div id="content-<?php echo $slug; ?>" class="m-faqAnswer --preload">
         <div class="m-faqAnswer__content">
           <?php echo $answer; ?>
-          <a class="m-productDownload" href="<?php echo $file; ?>" target="_blank" download>
+          <a class="m-productDownload" href="<?php echo $file; ?>" target="_blank" rel="noopener noreferrer">
             <div class="m-productDownload__icon">
               <svg class="m-productDownload__icon--svg" viewBox="0 0 16 16">
                 <?php get_svg('icon-file-alt'); ?>
