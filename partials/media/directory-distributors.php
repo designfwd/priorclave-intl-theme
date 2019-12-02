@@ -55,7 +55,6 @@ $regions = get_terms(array(
           asort($countries);
 
           $form = (int) get_query_var('form');
-          $logo = get_field('site_logo', 'option');
 
           foreach ($countries as $country) :
             $slug = str_replace(array(' ', '&amp;'), '-', $country); // URL-safe version of country name
@@ -149,12 +148,6 @@ $regions = get_terms(array(
       <address class="m-distributorDialog__address">
 
       </address>
-      <img class="m-distributorDialog__logo lazyload" alt="<?php echo $logo['alt']; ?>" data-src="<?php echo $logo['sizes']['preload']; ?>" data-sizes="auto" data-srcset="<?php echo $logo['sizes']['preload']; ?> 64w,
-                        <?php echo $logo['sizes']['128w']; ?> 65w,
-                        <?php echo $logo['sizes']['240w']; ?> 129w,
-                        <?php echo $logo['sizes']['320w']; ?> 241w,
-                        <?php echo $logo['sizes']['360w']; ?> 321w
-                      " />
     </div>
     <div class="m-distributorDialog__form">
       <?php
