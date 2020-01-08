@@ -1,5 +1,10 @@
 'use strict';
 
+// forEach polyfill
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
 // Don't touch this area, this is extracted with webpack
 require('../../styles/src/main.scss');
 
