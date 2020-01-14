@@ -219,3 +219,32 @@ function get_lang_link( $hreflang = 'x-default' ) {
 
   return $result;
 }
+add_filter( 'gform_field_value_ACuses', 'finder_populate_uses' );
+function finder_populate_uses( $value ) {
+  $value = flatten_result($_POST['uses']);
+  return $value;
+}
+
+add_filter( 'gform_field_value_ACmaterials', 'finder_populate_materials' );
+function finder_populate_materials( $value ) {
+  $value = flatten_result($_POST['materials']);
+  return $value;
+}
+
+add_filter( 'gform_field_value_ACorientation', 'finder_populate_orientation' );
+function finder_populate_orientation( $value ) {
+  $value = flatten_result($_POST['orientation']);
+  return $value;
+}
+
+add_filter( 'gform_field_value_ACcapacity', 'finder_populate_capacity' );
+function finder_populate_capacity( $value ) {
+  $value = flatten_result($_POST['capacity']);
+  return $value;
+}
+
+add_filter( 'gform_field_value_ACheatingsource', 'finder_populate_heating_source' );
+function finder_populate_heating_source( $value ) {
+  $value = flatten_result($_POST['heating']);
+  return $value;
+}

@@ -9,7 +9,6 @@
  * @var string $form            The form ID to use with Gravity Forms
  * @var string $phone           The site's contact phone number
  */
-
 if( function_exists('get_field') ):
   $ID = get_the_ID();
   $headline = get_field('form_quoteRequest_headline', $ID);
