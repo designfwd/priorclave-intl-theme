@@ -14,7 +14,7 @@ $videos = get_field('media_videoGallery_videos');
 <section class="o-videoGrid">
   <?php
     foreach($videos as $video):
-      $title_slug = strtolower(str_replace(" ", "-", $video['title']));
+      $title_slug = strtolower(str_replace(array(" ","'",","), "-", $video['title']));
       $image = $video['preview'];
   ?>
     <div class="o-videoGrid__video" data-dialog="<?php echo $title_slug; ?>">
