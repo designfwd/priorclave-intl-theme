@@ -12,7 +12,6 @@
 
 // Set the results from product finder form
 $results = $_POST;
-
 // For items that are arrays, flatten them
 function flatten_result($array) {
   $result = '';
@@ -33,7 +32,6 @@ $materials = flatten_result($results['materials']);
 $orientation = flatten_result($results['orientation']);
 $capacity = flatten_result($results['capacity']);
 $heating = flatten_result($results['heating']);
-
 // Sets query variables for passing to forms later in the page
 set_query_var( 'autoclave_uses', $uses );
 set_query_var( 'autoclave_materials', $materials );
