@@ -19,7 +19,7 @@ window.addEventListener("load", function(){
     "content": {
       "dismiss": "Got it!",
       "link": "Privacy Policy",
-      "href": "priorclaveintl.wpengine.com/privacy-policy"
+      "href": "https://www.priorclave.com/terms-of-service/"
     }
   })
 });
