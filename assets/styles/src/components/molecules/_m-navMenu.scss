@@ -33,4 +33,14 @@
       }
     }
   }
+
+  // Highlight the contact dropdowns
+  #menuToggle-130,
+  #menuToggle-147,
+  #menuToggle-164 {
+
+    background-color: $yellow;
+    color: $grey-dark;
+
+  }
 }
