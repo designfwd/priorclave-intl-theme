@@ -4,10 +4,10 @@
 <section class="o-articleGrid">
   <?php
   // Displays a grid of articles
-  $category = get_the_category()[0]->cat_ID;
+  $category = single_cat_title( '', false);
   $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
   $args = array(
-    'cat' => $category,
+    'category_name' => $category,
     'post_type' => 'post',
     'post_status' => 'publish',
     'posts_per_page' => 12,

@@ -16,7 +16,15 @@ $url_array = wp_parse_url(get_bloginfo( 'url' ));
   </div>
   <div class="o-pagination__pages">
     <?php
-    echo $paginatedLinks;
+    $count = count($paginatedLinks);
+    for( $i=0; $i<$count; $i++ ):
+      echo $paginatedLinks[$i];
+      if( $i<($count-1) ):
+      ?>
+        <span class="o-pagination__pages--divider"> - </span>
+      <?php
+      endif;
+    endfor;
     ?>
   </div>
   <div class="o-pagination__adjacent o-pagination__adjacent--next" onClick="window.location=('<?php echo $nextLink; ?>')">

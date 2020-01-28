@@ -1,10 +1,10 @@
 <?php
 // Pagination links for placement on archive pages
 $big = 999999999; // need an unlikely integer
-$category = get_the_category()[0]->cat_ID;
+$category = single_cat_title( '', false);
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
-  'cat' => $category,
+  'category_name' => $category,
   'post_type' => 'post',
   'post_status' => 'publish',
   'posts_per_page' => 12,
@@ -13,7 +13,8 @@ $args = array(
   'paged' => $paged
 );
 $posts_query = new WP_Query( $args );
-$paginatedLinks = paginate_links( array(
+
+$pagination_args = array(
   'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
   'end_size' => 5,
 	'format' => '?paged=%#%',
@@ -21,9 +22,12 @@ $paginatedLinks = paginate_links( array(
   'prev_next' => false,
   'total' => $posts_query->max_num_pages,
   'type' => 'array'
-) );
+);
+$paginatedLinks = paginate_links( $pagination_args );
 $previousLink = get_previous_posts_page_link();
 $nextLink = get_next_posts_page_link();
+
+if( $paginatedLinks ):
 ?>
 <section class="o-pagination">
   <div class="o-pagination__adjacent o-pagination__adjacent--previous" onClick="window.location=('<?php echo $previousLink; ?>')">
@@ -46,3 +50,5 @@ $nextLink = get_next_posts_page_link();
     Next
   </div>
 </section>
+<?php
+endif;

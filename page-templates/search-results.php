@@ -8,17 +8,19 @@ wp_parse_str( $query_string, $search_query );
 $current = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $query_var = get_query_var("s");
 $search_query['post_type'] = 'any';
-$search_query['posts_per_page'] = 5;
+$search_query['posts_per_page'] = 12;
 $search_query['paged'] = $current;
 $search = new WP_Query( $search_query );
 
 $big = 999999999;
 $paginatedLinks = paginate_links( array(
-'base' => @add_query_arg('paged','%#%'),
+'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+'end_size' => 5,
 'format' => '?page=%#%',
-'current' => $current,
+'current' => max( 1, get_query_var('paged') ),
 'total' => $search->max_num_pages,
-'prev_next' => false
+'prev_next' => false,
+'type' => 'array'
 ) );
 
 ?>
