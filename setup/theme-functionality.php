@@ -10,6 +10,7 @@ function priorclave_supports() {
 
   // Enable wide images
   add_theme_support('align-wide');
+
 }
 add_action( 'after_setup_theme', 'priorclave_supports' );
 
