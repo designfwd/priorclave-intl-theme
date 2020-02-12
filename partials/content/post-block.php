@@ -26,11 +26,6 @@ endif;
         <?php echo get_the_post_thumbnail_url( $feature, '480w' ); ?> 376w,
         <?php echo get_the_post_thumbnail_url( $feature, '540w' ); ?> 481w,
         <?php echo get_the_post_thumbnail_url( $feature, '640w' ); ?> 541w,
-        <?php echo get_the_post_thumbnail_url( $feature, '720w' ); ?> 641w,
-        <?php echo get_the_post_thumbnail_url( $feature, '800w' ); ?> 721w,
-        <?php echo get_the_post_thumbnail_url( $feature, '960w' ); ?> 801w,
-        <?php echo get_the_post_thumbnail_url( $feature, '1024w' ); ?> 961w,
-        <?php echo get_the_post_thumbnail_url( $feature, '1280w' ); ?> 1025w,
       "
     />
   <?php
