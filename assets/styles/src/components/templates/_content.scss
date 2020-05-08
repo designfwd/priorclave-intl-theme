@@ -55,7 +55,8 @@
   }
 
   &.content--distributors {
-    .o-generalBlock {
+    .o-generalBlock,
+    .o-secondaryBlock {
       padding: 2rem 5% 0;
       max-width: 1100px;
       margin: 0 auto;
