@@ -95,7 +95,7 @@
         {
             "key": "field_5c8009c58af36",
             "label": "form_contactDistributor",
-            "name": "contact_form_copy",
+            "name": "form_contactDistributor",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -107,6 +107,43 @@
             },
             "clone": [
                 "group_5c7ff7d77844e"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5eb5bc4f4c944",
+            "label": "Secondary Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eb5bc634c945",
+            "label": "content_secondaryBlock",
+            "name": "content_secondaryblock",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5eb5bc2595317"
             ],
             "display": "seamless",
             "layout": "block",
@@ -189,5 +226,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1551895005
+    "modified": 1588968574
 }
