@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Lorem Ipsum Dolor Sit amet, Consect Etur Adipiscing\u0003\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Eam si varietatem diceres, intellegerem, ut etiam non dicente te intellego; Nam illud vehementer repugnat, eundem beatum esse et multis malis oppressum. Quamquam te quidem video minime esse deterritum. Idem iste, inquam, de voluptate quid sentit? Omnia peccata paria dicitis.",
+            "default_value": "",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -41,5 +41,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1588968519
+    "modified": 1589810842
 }
