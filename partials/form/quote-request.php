@@ -38,5 +38,10 @@ endif;
   <div class="o-quoteRequest__subtitle">
     Or Contact an Expert by Phone at:
   </div>
-  <a class="o-quoteRequest__phone" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+  <a style="padding-bottom: 0" class="o-quoteRequest__phone" href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a><br>
+  <div class="o-quoteRequest__subtitle" style="padding-top: 0">
+  (for Canada, Mexico, and the USA)
+  </div>
+<a class="o-quoteRequest__phone" href="tel:800-748-1459">800-748-1459</a> 
+
 </section>
